@@ -27,10 +27,6 @@ maps package) is set at package load time \emph{if it does not
 already exist}. Hence setting the environment variable before loading
 the package can override the default location of the binary datasets.
 }
-\source{
-http://www.grid.unep.ch/data/grid/gnv159.php
-}.
-}
 \seealso{
 \code{\link{map}}
 }
