@@ -58,8 +58,8 @@ static int swap_override = 0;
  */
 static void *AdjustBuffer(void *p, unsigned num_items, unsigned item_size)
 {
-  int z=1;
-  unsigned char *c=(unsigned char *)&z;
+  /* int z=1; */
+  /* unsigned char *c=(unsigned char *)&z; */
 
   /* ^ is xor */
   /* if((c[0]==0) ^ swap_override) */
