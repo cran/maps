@@ -193,7 +193,7 @@ static double maptype_factor(long type)
  * in sl in the first call.  Range and fill determine which
  * polygons are ignored:
  *	polygons lying entirely outside range when fill is FALSE
- *	[no longer ...]
+ *	[but no longer ...]
  *	polygons lying partially outside range when fill is TRUE
  * If an error is encountered, retlines will be set to -1 on return.
  */

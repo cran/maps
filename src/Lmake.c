@@ -101,6 +101,7 @@ struct pair *xy;
 	plh->sw.y = ymin;
 	plh->ne.x = xmax;
 	plh->ne.y = ymax;
+/*	printf("%f12 %f12 %f12 %f12\n", xmin, ymin, xmax, ymax); */
 }
 
 void

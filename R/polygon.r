@@ -21,6 +21,8 @@ map.where <- function(database = "world", x, y)
     names(nam)[gon]
   }
   else {
+    if(num.polygons(database) != length(database$names))
+      stop("map object must have polygons (fill=TRUE)")
     n = length(database$x)
     result = .C("map_in_polygon", PACKAGE="maps",
        as.double(database$x), as.double(database$y), as.integer(n),

@@ -95,6 +95,7 @@ Polyline r[];
 	rh->sw.y = ymin;
 	rh->ne.x = xmax;
 	rh->ne.y = ymax;
+/*	printf("%f12 %f12 %f12 %f12\n", xmin, ymin, xmax, ymax); */
 }
 
 struct line_h *
