@@ -8,16 +8,18 @@
 map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
-  xlim = NULL, ylim = NULL, wrap = FALSE,
-  resolution = if(plot) 1 else 0, type = "l", bg, mar, ...)
+  xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
+  type = "l", bg = par("bg"), mar = c(0, 0, par("mar")[3], 0.1),
+  border = 0.01, ...)
 }
 \usage{
 map(database, regions)  # simple form
 map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
-  xlim = NULL, ylim = NULL, wrap = FALSE, resolution = 1, type = "l",
-  bg, mar, ...)
+  xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
+  type = "l", bg = par("bg"), mar = c(0, 0, par("mar")[3], 0.1),
+  border = 0.01, ...)
 }
 \arguments{
   \item{database}{
@@ -66,10 +68,9 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   \item{projection}{
     character string that names a map projection to use.
     See \code{\link[mapproj]{mapproject}} (in the \code{mapproj} library).
-    The default is to use a
-    rectangular projection with the aspect ratio
-    chosen so that longitude and latitude scales are equivalent
-    at the center of the picture.
+    The default is to use a rectangular projection with the aspect ratio
+    chosen so that longitude and latitude scales are equivalent at the
+    center of the picture.
   }
   \item{parameters}{
     numeric vector of parameters for use with the
@@ -160,13 +161,17 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     Aside from the default \code{type = "l"}, the value \code{type = "n"}
     can be used
     to set up the coordinate system and projection for a map that will
-    be added-to in later calls.
+    be added to in later calls.
   }
   \item{bg}{
-    background color
+    background color.
   }
   \item{mar}{
     margins, as in \code{\link{par}}.
+  }
+  \item{border}{
+    scalar or vector of length 2 specifying the porportion of the plot
+    to add to the defined or computed limits as borders.
   }
   \item{...}{Extra arguments passed to \code{polygon} or \code{lines}.}
 }
@@ -176,7 +181,6 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   \code{regions}, \code{xlim}, and \code{ylim} arguments, are outlined
   (\code{fill} is \code{FALSE}) or filled (\code{fill} is \code{TRUE})
   with the colors in \code{col}.  
-
 
   The return value is a list with
   \code{x}, \code{y}, \code{range}, and \code{names} components.  
@@ -189,9 +193,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   Thus the return value can be handed directly to \code{lines} or
   \code{polygon}, as appropriate.
 
-
   When \code{namesonly} is \code{TRUE}, only the names component is returned.
-
 
   After a call to \code{map} for which the \code{projection} argument was
   specified there will be a global variable \code{.Last.projection}
@@ -204,7 +206,8 @@ map()	# low resolution map of the world
 map('usa')	# national boundaries
 map('county', 'new jersey')	# county map of New Jersey
 map('state', region = c('new york', 'new jersey', 'penn'))	# map of three states
-map("state", ".*dakota")  # map of the dakotas
+map("state", ".*dakota", border = 0)	# map of the dakotas
+map.axes()				# show the effect of border = 0
 if(require(mapproj))
   map('state', proj = 'bonne', param = 45)	# Bonne equal-area projection of states
 

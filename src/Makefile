@@ -3,7 +3,6 @@
 
 PKGNAME = maps
 CP = cp
-RM = rm
 ECHO = echo
 
 OBJS = mapget.o		\
