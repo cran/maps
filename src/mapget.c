@@ -7,7 +7,7 @@
 
 #undef Realloc
 
-#define Seek(f,n)	fseek(f, (long)(n), 0)
+#define Seek(f,n)	fseek(f, (int)(n), 0)
 #define Read(f,s,n)	fread((char *)(s), sizeof(*(s)), (int)(n), f)
 #define Write(f,s,n)	fwrite((char *)(s), sizeof(*(s)), (int)(n), f)
 #define Alloc(s,n,t)	s = (t *)calloc((unsigned)(n), sizeof(t))
@@ -151,7 +151,7 @@ char *s, *data, *suffix;
  */
 void maptype(database, type)
 char **database;
-long *type;
+int *type;
 {
   char Lname[100];
   int Coordtype;
@@ -174,7 +174,7 @@ long *type;
   fclose(lf);
 }
 
-static double maptype_factor(long type)
+static double maptype_factor(int type)
 {
   if((type == SPHERE) || (type == SPHERE0)) return DEG2RAD(1.0);
   else return(1.0);
@@ -205,7 +205,7 @@ double *range;
 	Region region, total;
 	char Gname[100];
 	int i, maxsize = 0, k;
-	long type;
+	int type;
 	double factor, xmin, xmax, ymin, ymax;
 	Polyline *line = NULL;
 	struct region_h rh;
@@ -308,7 +308,7 @@ double *x, *y, *range;
   Polyline line, total;
 	char Lname[100];
 	int i, Coordtype, k, maxsize = 0, start, end, incr;
-	long type;
+	int type;
 	double factor, xmin, xmax, ymin, ymax, ox, dx, wind;
 	struct line_h lh;
 	struct pair *xy = NULL, XY;
@@ -426,11 +426,11 @@ double *x, *y, *range;
  * The last point returned is the same as the first one.
  */
 static void
-getpoly(char **database, long poly, double **x, double **y, int *n)
+getpoly(char **database, int poly, double **x, double **y, int *n)
 {
-  long i, j, status, zero = 0, one = 1, nline, npair;
+  int i, j, status, zero = 0, one = 1, nline, npair;
   double range[4];
-  static long *lines, *lengths;
+  static int *lines, *lengths;
   static double *X, *Y;
 
   /* no restriction on range */
@@ -445,7 +445,7 @@ getpoly(char **database, long poly, double **x, double **y, int *n)
   if(status < 0) error("mapgetg failure from getpoly");
 
   /* get the polyline numbers in lines */
-  lines = Calloc(nline, long);
+  lines = Calloc(nline, int);
   status = 1;
   mapgetg(database, &poly, &one, lines, &status, range, &one);
 
@@ -454,7 +454,7 @@ getpoly(char **database, long poly, double **x, double **y, int *n)
     error("mapgetg failure from getpoly");
 
   /* in lengths get the number of pairs in each polyline */
-  lengths = Calloc(nline, long);
+  lengths = Calloc(nline, int);
   for(i = 0; i < nline; i++)
     lengths[i] = lines[i];
   status = nline;
@@ -574,7 +574,7 @@ map_where(char **database, double *x, double *y, int *n, int *poly)
   fclose(rf);
 
   /* check bounding box and possibly full polygon for each input point */
-  memset(poly,0,sizeof(long)*(*n));
+  memset(poly,0,sizeof(int)*(*n));
   for(j = 0; j < npoly; j++) {
     getpoly(database, j+1, &X, &Y, &nv);
     for(i = 0; i < *n; i++) {

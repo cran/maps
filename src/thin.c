@@ -181,7 +181,7 @@ int thin(x, y, n, delta, symmetric)
 
 void mapthin(x, y, n, delta, symmetric)
      double *x, *y, *delta;
-     long *n, *symmetric;
+     int *n, *symmetric;
 {
 	int start, end, m, from, to, wasna, isna, i;
 

@@ -17,7 +17,7 @@ char Usage[] = "Usage: %s precision {spherical|planar} {ascii|binary} in-file in
 int Precision, Coordtype;
 char *Me, *getword(), *Infile;
 Polyline n;
-long int nl, maxp;
+int nl, maxp;
 
 extern int
 isspace(int c);
@@ -131,16 +131,16 @@ FILE *in, *out;
 		fatal("No memory for data");
 	for(i = 0; i < n; i++) {
 		if((m = lh[i].npair) <= 0)
-			fatal("Negative pair count at header %ld", (long)i);
+			fatal("Negative pair count at header %d", (int)i);
 		if(Seek(in, lh[i].offset) < 0)
-			fatal("Cannot seek to record %ld", (long)i);
+			fatal("Cannot seek to record %d", (int)i);
 		/*
 		 * Simple read; change this to use other means of
 		 * storing the polyline data.
 		 */
 		if(Read(in, xy, m) != m)
-			fatal("Cannot read record %ld", (long)i);
-		fprintf(out, "%ld %ld\n", (long)lh[i].left, (long)lh[i].right);
+			fatal("Cannot read record %d", (int)i);
+		fprintf(out, "%d %d\n", (int)lh[i].left, (int)lh[i].right);
 		column = 0;
 		for(j = 0; j < m; j++) {
 			sprintf(buf, " %.*f %.*f", Precision, xy[j].x, Precision, xy[j].y);
@@ -163,7 +163,7 @@ FILE *in, *out;
 	Polyline i;
 	Pair m; 
 	int t;
-	long l, r;
+	int l, r;
 	struct line_h *lh;
 	struct pair *xy;
 
@@ -174,8 +174,8 @@ FILE *in, *out;
 	if(lh == NULL || xy == NULL)
 		fatal("No memory");
 	for(i = 0; i < nl; i++) {
-		if(fscanf(in, "%ld%ld", &l, &r) != 2)
-			fatal("Cannot read left and right at line %ld", (long)i+1);
+		if(fscanf(in, "%d%d", &l, &r) != 2)
+			fatal("Cannot read left and right at line %d", (int)i+1);
 		lh[i].left = l;
 		lh[i].right = r;
 		m = 0;
@@ -186,7 +186,7 @@ FILE *in, *out;
 				m++;
 		}
 		if(t < 0)
-			fatal("Read, line=%ld word=%ld", (long)i+1, (long)2+m*2);
+			fatal("Read, line=%d word=%d", (int)i+1, (int)2+m*2);
 		lh[i].offset = ftell(out);
 		lh[i].npair = m;
 		set_range(lh+i, xy);
@@ -195,7 +195,7 @@ FILE *in, *out;
 		 * storing the polyline data.
 		 */
 		if(Write(out, xy, m) != m)
-			fatal("Cannot write record %ld", (long)i);
+			fatal("Cannot write record %d", (int)i);
 	}
 	if(Seek(out, 0) < 0)
 		fatal("Cannot seek to beginning of output file");
@@ -224,7 +224,7 @@ char *av[];
                 fatal("Cannot open %s for reading", av[4]);
 	if((in2 = fopen(av[5], "rb")) == NULL)
                 fatal("Cannot open %s for reading", av[5]);
-	if(fscanf(in2, "%ld%ld", &nl, &maxp) != 2)
+	if(fscanf(in2, "%d%d", &nl, &maxp) != 2)
 		fatal("Cannot read stats data file %s", av[3]);
 	n = nl;
         if((out = fopen(av[6], "wb")) == NULL)

@@ -17,7 +17,7 @@ char Usage[] = "Usage: %s a in-file in-file-statsfile out-file\n   or: %s b in-f
 char *Me, *getword(), *Infile, *Linefile;
 FILE *Lin;
 Region n;
-long int np, maxl;
+int np, maxl;
 
 extern int
 isspace(int c);
@@ -138,14 +138,14 @@ FILE *in, *out;
 		fatal("No memory for data");
 	for(i = 0; i < n; i++) {
 		if((m = rh[i].nline) <= 0)
-			fatal("Negative line count at header %ld", (long)i);
+			fatal("Negative line count at header %d", (int)i);
 		if(Seek(in, rh[i].offset) < 0)
-			fatal("Cannot seek to record %ld", (long)i);
+			fatal("Cannot seek to record %d", (int)i);
 		if(Read(in, r, m) != m)
-			fatal("Cannot read record %ld", (long)i);
+			fatal("Cannot read record %d", (int)i);
 		column = 0;
 		for(j = 0; j < m; j++) {
-			sprintf(buf, " %ld", (long)r[j]);
+			sprintf(buf, " %d", (int)r[j]);
 			k = strlen(buf);
 			if(column + k >= 80) {
 				fputc('\n', out);
@@ -179,13 +179,13 @@ FILE *in, *out;
 		while((t = getpoly(in, &r[m++])) > 0)
 			;
 		if(t < 0)
-			fatal("Read, line=%ld word=%ld", (long)i, (long)m);
+			fatal("Read, line=%d word=%d", (int)i, (int)m);
 		--m;
 		rh[i].offset = ftell(out);
 		rh[i].nline = m;
 		set_range(rh+i, r);
 		if(Write(out, r, m) != m)
-			fatal("Cannot write record %ld", (long)i);
+			fatal("Cannot write record %d", (int)i);
 	}
 	if(Seek(out, 0) < 0)
 		fatal("Cannot seek to beginning of output file");
@@ -214,7 +214,7 @@ char *av[];
 		fatal("Cannot open %s for reading", av[2]);
 	if((in2 = fopen(av[3], "rb")) == NULL)
                 fatal("Cannot open %s for reading", av[3]);
-	if(fscanf(in2, "%ld%ld", &np, &maxl) != 2)
+	if(fscanf(in2, "%d%d", &np, &maxl) != 2)
 		fatal("Cannot read stats data file %s", av[3]);
 	n = np;	/* won't read directly */
 	if((out = fopen(av[4], "wb")) == NULL)
