@@ -88,7 +88,7 @@ smooth.map(m, z, res = 50, span = 1/10, averages = FALSE, type = c("smooth",
 }
 \examples{
 # compare to the example for match.map
-data(state, package = base)
+data(state, package = "base")
 data(votes.repub)
 z = votes.repub[, "1900"]
 m = map("state", fill = TRUE, plot = FALSE)

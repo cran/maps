@@ -26,10 +26,10 @@ function()
 }
 
 "map.cities" <-
-function(x = NULL, country = "", label = NULL, minpop = 0, maxpop = Inf, 
+function(x = world.cities, country = "", label = NULL, minpop = 0, maxpop = Inf, 
 	capitals = 0, cex = par("cex"), ...)
 {
-        if(is.null(x)) { data(world.cities); x <- world.cities }
+        if(missing(x)) data(world.cities)	# Using lazy evaluation
 	usr <- par("usr")
 	if(usr[2] > 180)
 		x$long[x$long < 0] <- 360 + x$long[x$long < 0]
