@@ -35,18 +35,22 @@ map.poly <- function(database, regions = ".", exact = FALSE,
   if(!is.character(database)) {
     if(!as.polygon) stop("map objects require as.polygon=TRUE")
     the.map <- database
-    if(regions == ".") {
+    if(identical(regions,".")) {
       # speed up the common case
       nam = the.map$names
       coord <- the.map[c("x", "y")]
     } else {
-      regions <- tolower(regions)
-      # bug: doesn't implement exact
+      # same as mapname()
+      if(exact) {
+        i = match(regions, the.map$names)
+        if(any(is.na(i))) i = NULL
+      } else {
       regexp <- paste("(^", regions, ")", sep = "", collapse = "|")
-      r <- grep(regexp, the.map$names)
-      if(length(r) == 0) stop("no recognized region names")
-      nam <- the.map$names[r]
-      coord <- sub.polygon(the.map, r)
+        i <- grep(regexp, the.map$names, ignore.case = TRUE)
+      }
+      if(length(i) == 0) stop("no recognized region names")
+      nam <- the.map$names[i]
+      coord <- sub.polygon(the.map, i)
     }
     coord$range <- c(range(coord$x, na.rm = TRUE), range(coord$y, na.rm = TRUE))
   } else {
@@ -87,11 +91,12 @@ function(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
          interior = TRUE, projection = "", parameters = NULL, 
          orientation = NULL, fill = FALSE, color = 1,
          plot = TRUE, add = FALSE, namesonly = FALSE, 
-         xlim = NULL, ylim = NULL, wrap = FALSE, resolution = 1, type = "l",
+         xlim = NULL, ylim = NULL, wrap = FALSE,
+         resolution = if(plot) 1 else 0, type = "l",
          bg = par("bg"), mar = c(0, 0, par("mar")[3], 0.1), ...)
 {
   # parameter checks
-  if(!missing(resolution) && !plot) 
+  if(resolution>0 && !plot) 
     stop("must have plot=TRUE if resolution is given")
   if(!fill && !boundary && !interior)
     stop("one of boundary and interior must be TRUE")
@@ -116,6 +121,9 @@ function(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     library(mapproj)
     coord <- mapproject(coord, pr = projection, pa = parameters,
                         or = orientation)
+    coord$projection = projection
+    coord$parameters = parameters
+    coord$orientation = orientation
     if(plot && coord$error)
       if(all(is.na(coord$x)))
         stop("projection failed for all data")

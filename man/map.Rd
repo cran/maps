@@ -8,8 +8,8 @@
 map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
   fill = FALSE, color = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
-  xlim = NULL, ylim = NULL, wrap = FALSE, resolution = 1, type = "l",
-  bg, mar, ...)
+  xlim = NULL, ylim = NULL, wrap = FALSE,
+  resolution = if(plot) 1 else 0, type = "l", bg, mar, ...)
 }
 \usage{
 map(database, regions)  # simple form

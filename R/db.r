@@ -91,8 +91,10 @@ function(database = "world", patterns, exact = FALSE)
   fname <- paste(sep = "", mapbase, ".N")
   cnames <- read.delim(fname, as.is = TRUE, header = FALSE)
   nam <- as.character(cnames[[1]])
-  if(exact) i = match(patterns, nam)
-  else {
+  if(exact) {
+    i = match(patterns, nam)
+    if(any(is.na(i))) i = NULL
+  } else {
     regexp <- paste("(^", patterns, ")", sep = "", collapse = "|")
     i <- grep(regexp, nam, ignore.case = TRUE)
   }
@@ -105,6 +107,7 @@ function(database = "world", patterns, exact = FALSE)
 "maptype" <-
 function(database = "world")
 {
+  if(is.character(database)) {
 	dbname <- paste(database, "MapEnv", sep = "")
 	data(list = dbname)
 	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
@@ -112,6 +115,10 @@ function(database = "world")
 	switch(.C("maptype", PACKAGE="maps",
 		as.character(mapbase),
 		integer(1))[[2]] + 2, "unknown", "spherical", "planar", "spherical")
+  } else {
+    # map object
+    "spherical"
+  }
 }
 
 char.to.ascii <- function(s) {

@@ -12,7 +12,7 @@ smooth.map <- function(m, z, res = 50, span = 1/10, averages = FALSE,
   #if(is.data.frame(z)) z = as.named.vector(z)
   if(averages) {
     # turn averages into sums
-    z = z * area.map(m, names(z))
+    z = z * area.map(m, names(z), sqmi=FALSE)
   }
   # sampling grid
   xlim <- range(m$x, na.rm = TRUE)

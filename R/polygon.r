@@ -120,11 +120,15 @@ range.polygon <- function(p) {
 
 map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
                      move = FALSE, ...) {
-  if(is.character(database) || regions != ".") {
-    m = map(database, regions, fill = TRUE, plot = FALSE, ...)
-  } else {
-    m = database
-  }
+  if(!add) map(database, regions, ...)
+  # get polygons
+  cc = match.call(expand.dots=TRUE)
+  cc[[1]] = as.name("map")
+  cc$fill = TRUE
+  cc$plot = FALSE
+  cc$move = cc$add = cc$cex = cc$labels = NULL
+  cc$resolution = 0
+  m = eval(cc)
   if(missing(labels)) {
     labels = gsub(".*,", "", m$names)
   }
@@ -133,11 +137,6 @@ map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
   x = apply.polygon(m, centroid.polygon)
   # convert m into a matrix
   x <- t(array(unlist(x), c(2, length(x))))
-  if(!add) {
-    if(!is.character(database)) map(database, regions, fill = TRUE,
-    col = 8, ...)
-    else map(database, regions, ...)
-  }
   if(move) {
     library(mining)
     w = strwidth(labels, units = "inches", cex = cex)
@@ -162,17 +161,31 @@ identify.map <- function(x, n = 1, index = FALSE, ...) {
   if(index) i else m$names[i]
 }
 
-area.map <- function(m, regions = ".", ...) {
+area.map <- function(m, regions = ".", sqmi=TRUE, ...) {
   # returns the areas of given regions,
   # combining the areas of all regions which match.
   if(!is.list(m)) stop("must provide a map object")
   if(num.polygons(m) != length(m$names))
     stop("map object must have polygons (fill=TRUE)")
+  proj = m$projection
+  m = map.poly(m,regions,as.polygon=TRUE,...)
   area = unlist(apply.polygon(m, area.polygon))
   merge <- regions[match.map(m, regions, ...)]
   names(merge) <- m$names
   merge = factor(merge, levels = regions)
-  drop(indicators.factor(merge) %*% area)
+  area = drop(indicators.factor(merge) %*% area)
+  areaSqMiles <- function(proj) {
+    # returns a factor f such that f*area.map() is in square miles.
+    if(is.null(proj)) proj = "no projection"
+    if(proj %in% c("mollweide","azequalarea","aitoff")) 2*15732635
+    else if(proj %in% c("sinusoidal","bonne","cylequalarea","albers")) 15732635
+    else if(proj == "sp_albers") 15745196
+    else {
+      warning(paste("sq.mile correction unavailable for",proj))
+      1
+    }
+  }
+  if(sqmi) area*areaSqMiles(proj) else area
 }
 indicators.factor <- function(y) {
   # convert a factor into a matrix of indicators
