@@ -97,8 +97,11 @@ function(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     stop("one of boundary and interior must be TRUE")
   doproj <- !missing(projection) || !missing(parameters) || !missing(
           orientation)
-  # minka: all existing maps are spherical
-  coordtype <- "spherical"
+  coordtype <- maptype(database)
+  if (coordtype == "unknown") 
+     stop("missing database or unknown coordinate type")
+  if (doproj && coordtype != "spherical") 
+    stop(paste(database, "database is not spherical; projections not allowed"))
   # turn the region names into x and y coordinates
   if(is.character(database)) as.polygon = fill
   else as.polygon = TRUE
