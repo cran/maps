@@ -1,9 +1,10 @@
 #-*- Makefile -*-
-.SUFFIXES: .G .L .N .gon .line .n
+.SUFFIXES: .G .L .N .gon .line .name
 
 PKGNAME = maps
 CP = cp
 ECHO = echo
+RM = rm
 
 OBJS = mapget.o		\
 	smooth.o	\
@@ -11,15 +12,29 @@ OBJS = mapget.o		\
 
 GDATA = county.G state.G usa.G nz.G world.G world2.G italy.G france.G
 LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L
-
-all: $(PKGNAME).so Gmake Lmake $(LDATA) $(GDATA)
+NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 
 .line.L:
 	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
-	@$(CP) ${*}.n ../inst/mapdata/${*}.N	# needed here for Mac
+
+.name.N:
+	@$(CP) ${*}.name ../inst/mapdata/${*}.N
+
+.PHONY: all gdata ldata
+
+all: $(PKGNAME).so gdata ndata
+
+gdata: Gmake ldata
+	$(MAKE) $(GDATA)
+
+ldata: Lmake world2.line
+	$(MAKE) $(LDATA)
+
+ndata:
+	$(MAKE) $(NDATA)
 
 $(PKGNAME).so: $(OBJS)
 	$(R_HOME)/bin/R CMD SHLIB -o $(PKGNAME).so $(OBJS)
@@ -28,11 +43,9 @@ world2.line: world.line
 	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < world.line > world2.line
 	@$(CP) world.linestats world2.linestats
-
-world2.gon: world.gon world.n
 	@$(CP) world.gon world2.gon
 	@$(CP) world.gonstats world2.gonstats
-	@$(CP) world.n world2.n
+	@$(CP) world.name world2.name
 
 clean:
 	$(RM) -f $(PKGNAME).so $(OBJS) Gmake Lmake ../inst/mapdata/* world2.*

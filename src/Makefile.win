@@ -1,7 +1,7 @@
 #-*- Makefile -*-
 include $(RHOME)/src/gnuwin32/MkRules
 
-.SUFFIXES: .G .L .N .gon .line .n
+.SUFFIXES: .G .L .N .gon .line .name
 
 DLLNAME = maps
 
@@ -19,7 +19,14 @@ GDATA = county.G state.G usa.G nz.G world.G world2.G italy.G france.G
 LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L
 NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 
-all: ../libs/$(DLLNAME).dll Gmake Lmake $(LDATA) $(GDATA) $(NDATA) instdata
+.line.L:
+	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
+
+.gon.G:
+	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
+
+.name.N:
+	@$(CP) ${*}.name ../inst/mapdata/${*}.N
 
 ifeq ($(strip $(BUILD)),CROSS)
 Gmake:
@@ -29,15 +36,22 @@ Lmake:
 	$(MAKE) CC=gcc Lmake
 endif
 
-.line.L:
-	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
+.PHONY: all gdata instdata ldata ndata
 
-.gon.G:
-	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
-	@$(CP) ${*}.n ../inst/mapdata/${*}.N	# seem to need this
+all: ../libs/$(DLLNAME).dll instdata
 
-.n.N:
-	@$(CP) ${*}.n ../inst/mapdata/${*}.N
+gdata: Gmake ldata
+	$(MAKE) $(GDATA)
+
+ldata: Lmake world2.line
+	$(MAKE) $(LDATA)
+
+ndata:
+	$(MAKE) $(NDATA)
+
+instdata: gdata ndata
+	@$(ECHO) "copying new inst files"
+	$(CP) -r ../inst/* $(RLIB)/$(PKG)
 
 $(DLLNAME).a: $(OBJS)
 	$(RM) -f $@
@@ -56,18 +70,9 @@ world2.line: world.line
 	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < world.line > world2.line
 	@$(CP) world.linestats world2.linestats
-	@$(CP) world.n world2.n	# also need this ..
-
-world2.gon: world.gon
 	@$(CP) world.gon world2.gon
 	@$(CP) world.gonstats world2.gonstats
-
-world2.n: world.n
-	@$(CP) world.n world2.n	# .. since this doesn't
-
-instdata:
-	@$(ECHO) "copying new inst files"
-	$(CP) -r ../inst/* $(RLIB)/$(PKG)
+	@$(CP) world.name world2.name
 
 clean:
 	$(RM) $(DLLNAME).dll *.a $(OBJS) $(DLLNAME).def *.rc Gmake.exe Lmake.exe ../inst/mapdata/* ../libs/$(DLLNAME).dll world2.*
