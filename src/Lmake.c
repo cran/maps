@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
-#include <math.h>
-*/
 #include <float.h>
 #include "map.h"
 
@@ -13,37 +10,99 @@
 #define Max(a,b)	((a) > (b) ? (a) : (b))
 #define R2FMT		"%hd%hd"	/* format for reading two Region's */
 
+#define WORDSIZE 100
+
 char Usage[] = "Usage: %s precision {spherical|planar} {ascii|binary} in-file in-file-stats-file out-file";
 int Precision, Coordtype;
 char *Me, *getword(), *Infile;
 Polyline n;
-int nl, maxp;
+long int nl, maxp;
 
-main(ac, av)
-char *av[];
+extern int
+isspace(int c);
+
+int
+fatal(s, a, b)
+char *s;
 {
-
-	FILE *in, *in2, *out;
-
-	Me = av[0];
-	if(ac != 7)
-		fatal(Usage, Me);
-	Precision = atoi(av[1]);
-	Coordtype = av[2][0] == 's' ? SPHERE : PLANE;
-	Infile = av[4];
-	if((in = fopen(av[4], "rb")) == NULL)
-                fatal("Cannot open %s for reading", av[4]);
-	if((in2 = fopen(av[5], "rb")) == NULL)
-                fatal("Cannot open %s for reading", av[5]);
-	if(fscanf(in2, "%ld%ld", &nl, &maxp) != 2)
-		fatal("Cannot read stats data file %s", av[3]);
-	n = nl;
-        if((out = fopen(av[6], "wb")) == NULL)
-                fatal("Cannot open %s for writing", av[6]);
-        av[3][0] == 'a' ? to_ascii(in, out) : to_binary(in, out);
-	exit(0);
+	fprintf(stderr, s, a, b);
+	fprintf(stderr, "\n");
+	exit(1);
 }
 
+/*
+ * Read one pair of coordinates.  The return value should be
+ * 1 if a pair was read, 0 if the end-of-record indicator was
+ * read and -1 if there was a read fatal.
+ */
+int
+getpair(f, xy)
+FILE *f;
+struct pair *xy;
+{
+	char *w;
+
+	if((w = getword(f)) == 0)
+		return(-1);
+	if(strcmp(w, EOR) == 0)
+		return(0);
+	xy->x = atof(w);
+
+	if((w = getword(f)) == 0)
+		return(-1);
+	if(strcmp(w, EOR) == 0)
+		return(0);
+	xy->y = atof(w);
+
+	return(1);
+}
+
+char *
+getword(f)
+FILE *f;
+{
+	static char word[WORDSIZE];
+	char *s = word;
+	int c;
+
+	do
+		if((c = fgetc(f)) < 0)
+			return(0);
+
+	while(isspace(c));
+	do {
+		if(s - word >= WORDSIZE-1)
+			return(0);
+		*s++ = c;
+		c = fgetc(f);
+	} while(c >= 0 && !isspace(c));
+	*s++ = 0;
+	return(word);
+}
+
+void
+set_range(plh, xy)
+struct line_h *plh;
+struct pair *xy;
+{
+	int n = plh->npair;
+	float xmin = FLT_MAX, ymin = FLT_MAX;
+	float xmax = -FLT_MAX, ymax = -FLT_MAX;
+
+	while(n--) {
+		xmin = MIN(xmin, xy->x);
+		xmax = MAX(xmax, xy->x);
+		ymin = MIN(ymin, xy->y);
+		ymax = MAX(ymax, xy->y);
+		xy++;
+	}
+	plh->sw.x = xmin;
+	plh->sw.y = ymin;
+	plh->ne.x = xmax;
+	plh->ne.y = ymax;
+}
+
+void
 to_ascii(in, out)
 FILE *in, *out;
 {
@@ -95,6 +154,7 @@ FILE *in, *out;
 	}
 }
 
+void
 to_binary(in, out)
 FILE *in, *out;
 {
@@ -145,83 +205,28 @@ FILE *in, *out;
 		fatal("Cannot write headers to output file");
 }
 
-/*
- * Read one pair of coordinates.  The return value should be
- * 1 if a pair was read, 0 if the end-of-record indicator was
- * read and -1 if there was a read fatal.
- */
-getpair(f, xy)
-FILE *f;
-struct pair *xy;
+int
+main(ac, av)
+char *av[];
 {
-	char *w;
 
-	if((w = getword(f)) == 0)
-		return(-1);
-	if(strcmp(w, EOR) == 0)
-		return(0);
-	xy->x = atof(w);
+	FILE *in, *in2, *out;
 
-	if((w = getword(f)) == 0)
-		return(-1);
-	if(strcmp(w, EOR) == 0)
-		return(0);
-	xy->y = atof(w);
-
-	return(1);
-}
-
-#define WORDSIZE 100
-
-char *
-getword(f)
-FILE *f;
-{
-	static char word[WORDSIZE];
-	char *s = word;
-	int c;
-
-	do
-		if((c = fgetc(f)) < 0)
-			return(0);
-
-	while(isspace(c));
-	do {
-		if(s - word >= WORDSIZE-1)
-			return(0);
-		*s++ = c;
-		c = fgetc(f);
-	} while(c >= 0 && !isspace(c));
-	*s++ = 0;
-	return(word);
-}
-
-set_range(plh, xy)
-struct line_h *plh;
-struct pair *xy;
-{
-	int n = plh->npair;
-	float xmin = FLT_MAX, ymin = FLT_MAX;
-	float xmax = -FLT_MAX, ymax = -FLT_MAX;
-
-	while(n--) {
-		xmin = MIN(xmin, xy->x);
-		xmax = MAX(xmax, xy->x);
-		ymin = MIN(ymin, xy->y);
-		ymax = MAX(ymax, xy->y);
-		xy++;
-	}
-	plh->sw.x = xmin;
-	plh->sw.y = ymin;
-	plh->ne.x = xmax;
-	plh->ne.y = ymax;
-}
-
-/* VARARGS */
-fatal(s, a, b)
-char *s;
-{
-	fprintf(stderr, s, a, b);
-	fprintf(stderr, "\n");
-	exit(1);
+	Me = av[0];
+	if(ac != 7)
+		fatal(Usage, Me);
+	Precision = atoi(av[1]);
+	Coordtype = av[2][0] == 's' ? SPHERE : PLANE;
+	Infile = av[4];
+	if((in = fopen(av[4], "rb")) == NULL)
+                fatal("Cannot open %s for reading", av[4]);
+	if((in2 = fopen(av[5], "rb")) == NULL)
+                fatal("Cannot open %s for reading", av[5]);
+	if(fscanf(in2, "%ld%ld", &nl, &maxp) != 2)
+		fatal("Cannot read stats data file %s", av[3]);
+	n = nl;
+        if((out = fopen(av[6], "wb")) == NULL)
+                fatal("Cannot open %s for writing", av[6]);
+        av[3][0] == 'a' ? (void) to_ascii(in, out) : (void) to_binary(in, out);
+	exit(0);
 }
