@@ -5,7 +5,7 @@ include $(RHOME)/src/gnuwin32/MkRules
 
 DLLNAME = maps
 
-CFLAGS = -I$(RHOME)/src/include $(DEBUGFLAG) -O2 -DWin32
+CFLAGS = -I$(RHOME)/src/include -Wall -pedantic -O2 -DWin32
 
 DLLLIBS = -L$(RHOME)/src/gnuwin32 -lR 
 
@@ -19,7 +19,7 @@ GDATA = county.G state.G usa.G nz.G world.G world2.G
 LDATA = county.L state.L usa.L nz.L world.L world2.L 
 NDATA = county.N state.N usa.N nz.N world.N world2.N 
 
-all: ../libs/$(DLLNAME).dll Gmake Lmake $(LDATA) $(GDATA) $(NDATA)
+all: ../libs/$(DLLNAME).dll Gmake Lmake $(LDATA) $(GDATA) $(NDATA) instdata
 
 ifeq ($(strip $(BUILD)),CROSS)
 Gmake:
@@ -64,6 +64,10 @@ world2.gon: world.gon
 
 world2.n: world.n
 	$(CP) world.n world2.n	# .. since this doesn't
+
+instdata:
+	@$(ECHO) "copying new inst files"
+	$(CP) -r ../inst/* $(RLIB)/$(PKG)
 
 clean:
 	$(RM) $(DLLNAME).dll *.a $(OBJS) $(DLLNAME).def *.rc Gmake.exe Lmake.exe ../inst/mapdata/* ../libs/$(DLLNAME).dll world2.*
