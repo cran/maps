@@ -12,18 +12,15 @@ OBJS = mapget.o		\
 
 GDATA = county.G state.G usa.G nz.G world.G world2.G 
 LDATA = county.L state.L usa.L nz.L world.L world2.L 
-NDATA = county.N state.N usa.N nz.N world.N world2.N 
 
-all: $(PKGNAME).so Gmake Lmake $(LDATA) $(GDATA) $(NDATA)
+all: $(PKGNAME).so Gmake Lmake $(LDATA) $(GDATA)
 
 .line.L:
 	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
-
-.n.N:
-	$(CP) ${*}.n ../inst/mapdata/${*}.N
+	$(CP) ${*}.n ../inst/mapdata/${*}.N	# needed here for Mac
 
 $(PKGNAME).so: $(OBJS)
 	$(R_HOME)/bin/R CMD SHLIB -o $(PKGNAME).so $(OBJS)
@@ -33,11 +30,9 @@ world2.line: world.line
 	$(AWK) -f convert.awk < world.line > world2.line
 	$(CP) world.linestats world2.linestats
 
-world2.gon: world.gon
+world2.gon: world.gon world.n
 	$(CP) world.gon world2.gon
 	$(CP) world.gonstats world2.gonstats
-
-world2.n: world.n
 	$(CP) world.n world2.n
 
 clean:

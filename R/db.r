@@ -6,7 +6,7 @@ function(database = "world", gons, fill = FALSE, xlim = c(-1e30, 1e30),
 	gnames <- names(gons)
 	dbname <- paste(database, "MapEnv", sep = "")
 	data(list = dbname)
-	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "/")
+	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
 	z <- .C("mapgetg", PACKAGE="maps",
 		as.character(mapbase),
 		gons = as.integer(gons),
@@ -43,7 +43,7 @@ function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
 		return(integer(0))
 	dbname <- paste(database, "MapEnv", sep = "")
 	data(list = dbname)
-	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "/")
+	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
 	z <- .C("mapgetl", PACKAGE="maps",
 		as.character(mapbase),
 		linesize = as.integer(lines),
@@ -86,7 +86,7 @@ function(database = "world", patterns, exact = FALSE)
 {
   dbname <- paste(database, "MapEnv", sep = "")
   data(list = dbname)
-  mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "/")
+  mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
   # rewritten by Tom Minka
   fname <- paste(sep = "", mapbase, ".N")
   cnames <- read.delim(fname, as.is = TRUE, header = FALSE)
@@ -107,7 +107,7 @@ function(database = "world")
 {
 	dbname <- paste(database, "MapEnv", sep = "")
 	data(list = dbname)
-	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "/")
+	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
         # minka: maptypes are now 1,2 instead of 0,1
 	switch(.C("maptype", PACKAGE="maps",
 		as.character(mapbase),
@@ -137,7 +137,7 @@ match.map <- function(database, regions, exact = FALSE, warn = TRUE) {
   if(is.character(database)) {
     dbname <- paste(database, "MapEnv", sep = "")
     data(list = dbname)
-    mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "/")
+    mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
     fname <- paste(sep = "", mapbase, ".N")
     x <- read.delim(fname, header = FALSE)
     nam <- as.character(x[[1]])
