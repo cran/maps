@@ -1,81 +1,96 @@
 "mapthin" <-
 function(xy, delta, symmetric = TRUE)
 {
-	x <- xy$x
-	y <- xy$y
-	xy <- .C("mapthin", PACKAGE="maps",
-		x = as.double(x),
-		y = as.double(y),
-		n = as.integer(length(x)),
-		as.double(delta),
-		as.integer(symmetric),
-		NAOK = TRUE)[c("x", "y", "n")]
-	length(xy$x) <- xy$n
-	length(xy$y) <- xy$n
-	xy[c("x", "y")]
+    x <- xy$x
+    y <- xy$y
+    xy <- .C("mapthin", PACKAGE="maps",
+        x = as.double(x),
+        y = as.double(y),
+        n = as.integer(length(x)),
+        as.double(delta),
+        as.integer(symmetric),
+        NAOK = TRUE)[c("x", "y", "n")]
+    length(xy$x) <- xy$n
+    length(xy$y) <- xy$n
+    xy[c("x", "y")]
 }
 
 # add axes to a map
 "map.axes" <-
 function()
 {
-	axis(1)
-	axis(2)
-	box()
-	invisible()
+    axis(1)
+    axis(2)
+    box()
+    invisible()
 }
 
 "map.cities" <-
-function(x = world.cities, country = "", label = NULL, minpop = 0, maxpop = Inf, 
-	capitals = 0, cex = par("cex"), ...)
+function (x = world.cities, country = "", label = NULL, minpop = 0, 
+    maxpop = Inf, capitals = 0, cex = par("cex"), projection = FALSE,
+    parameters = NULL, orientation = NULL, ...) 
 {
-        if(missing(x)) data(world.cities)	# Using lazy evaluation
-	usr <- par("usr")
-	if(usr[2] > 180)
-		x$long[x$long < 0] <- 360 + x$long[x$long < 0]
-	selection <- x$long >= usr[1] & x$long <= usr[2] & x$lat >= usr[3] & x$
-		lat <= usr[4] & (x$pop >= minpop & x$pop <= maxpop) & ((
-		capitals == 0) | (x$capital >= 1))
-	if(country != "")
-		selection <- selection & x$country.etc == country
-	selection0 <- selection & (x$capital == 0) & (capitals == 0)
-	selection01 <- selection & (x$capital <= 1) & (capitals <= 1)
-	selection1 <- selection & (x$capital == 1) & (capitals == 1)
-	selection2 <- selection & (x$capital == 2) & (capitals == 2)
-	selection3 <- selection & (x$capital == 3) & (capitals == 3)
-	if(is.null(label))
-		label <- sum(selection) < 20
-	cxy <- par("cxy")
-	if(sum(selection01) > 0)
-		points(x$long[selection01], x$lat[selection01], pch = 1, cex = 
-			cex * 0.6, ...)
-	if(sum(selection0) > 0)
-		if(label)
-			text(x$long[selection0], x$lat[selection0] + cxy[
-				2] * cex * 0.7, paste(" ", x$name[selection0], 
-				sep = ""), cex = cex * 0.7, ...)
-	if(sum(selection1) > 0) {
-		points(x$long[selection1], x$lat[selection1], pch = 1, cex = 
-			cex, ...)
-		text(x$long[selection1], x$lat[selection1] + cxy[2] * cex,
-			paste(" ", x$name[selection1], sep = ""), cex = cex * 
-			1.2, ...)
-	}
-	if(sum(selection2) > 0) {
-		points(x$long[selection2], x$lat[selection2], pch = 1, cex = 
-			cex, ...)
-		text(x$long[selection2], x$lat[selection2] + cxy[2] * cex *
-			1.1, paste(" ", x$name[selection2], sep = ""), cex = 
-			cex * 1.1, ...)
-	}
-	if(sum(selection3) > 0) {
-		points(x$long[selection3], x$lat[selection3], pch = 1, cex = 
-			cex, ...)
-		text(x$long[selection3], x$lat[selection3] + cxy[2] * cex *
-			0.9, paste(" ", x$name[selection3], sep = ""), cex = 
-			cex * 0.9, ...)
-	}
-	invisible()
+    if (missing(x)) 
+        data(world.cities)	# uses lazy evaluation
+    usr <- par("usr")
+    if (!missing(projection) && projection != FALSE) {
+        if (is.character(projection)) {
+	    projx <- mapproject(x$long, x$lat, projection = projection,
+	        parameters = parameters, orientation = orientation)
+	} else {
+            if (exists(".Last.projection")) {
+	        projx <- mapproject(x$long, x$lat)
+	    } else stop("No projection defined\n")
+        }
+	x$long <- projx$x
+	x$lat <- projx$y
+    } else {
+	if (usr[2] > 180) 
+	    x$long[x$long < 0] <- 360 + x$long[x$long < 0]
+    }
+    selection <- x$long >= usr[1] & x$long <= usr[2] & x$lat >= 
+        usr[3] & x$lat <= usr[4] & (x$pop >= minpop & x$pop <= 
+        maxpop) & ((capitals == 0) | (x$capital >= 1))
+    if (country != "") 
+        selection <- selection & x$country.etc == country
+    selection0 <- selection & (x$capital == 0) & (capitals == 0)
+    selection01 <- selection & (x$capital <= 1) & (capitals <= 1)
+    selection1 <- selection & (x$capital == 1) & (capitals == 1)
+    selection2 <- selection & (x$capital == 2) & (capitals == 2)
+    selection3 <- selection & (x$capital == 3) & (capitals == 3)
+    if (is.null(label)) 
+        label <- sum(selection) < 20
+    cxy <- par("cxy")
+    if (sum(selection01) > 0) 
+        points(x$long[selection01], x$lat[selection01], pch = 1, 
+            cex = cex * 0.6, ...)
+    if (sum(selection0) > 0) 
+        if (label) 
+            text(x$long[selection0], x$lat[selection0] + cxy[2] * 
+                cex * 0.7, paste(" ", x$name[selection0], sep = ""), 
+                cex = cex * 0.7, ...)
+    if (sum(selection1) > 0) {
+        points(x$long[selection1], x$lat[selection1], pch = 1, 
+            cex = cex, ...)
+        text(x$long[selection1], x$lat[selection1] + cxy[2] * 
+            cex, paste(" ", x$name[selection1], sep = ""), cex = cex * 
+            1.2, ...)
+    }
+    if (sum(selection2) > 0) {
+        points(x$long[selection2], x$lat[selection2], pch = 1, 
+            cex = cex, ...)
+        text(x$long[selection2], x$lat[selection2] + cxy[2] * 
+            cex * 1.1, paste(" ", x$name[selection2], sep = ""), 
+            cex = cex * 1.1, ...)
+    }
+    if (sum(selection3) > 0) {
+        points(x$long[selection3], x$lat[selection3], pch = 1, 
+            cex = cex, ...)
+        text(x$long[selection3], x$lat[selection3] + cxy[2] * 
+            cex * 0.9, paste(" ", x$name[selection3], sep = ""), 
+            cex = cex * 0.9, ...)
+    }
+    invisible()
 }
 
 # draw a scale bar on a map
