@@ -2392,7 +2392,7 @@ south dakota,tripp	 2391
 south dakota,turner	 2392
 south dakota,union	 2393
 south dakota,walworth	 2394
-south dakota,washabaugh	 2395
+south dakota	 2395
 south dakota,yankton	 2396
 south dakota,ziebach	 2397
 tennessee,anderson	 2398
@@ -2849,7 +2849,7 @@ virginia,mathews	 2848
 virginia,mecklenburg	 2849
 virginia,middlesex	 2850
 virginia,montgomery	 2851
-virginia,nansemond	 2852
+virginia,suffolk	 2852
 virginia,nelson	 2853
 virginia,new kent	 2854
 virginia,northampton	 2855
