@@ -5,7 +5,7 @@ Add Cities to Existing Map
 }
 \usage{
 map.cities(x = world.cities, country = "", label = NULL, minpop = 0,
-maxpop = Inf, capitals = 0, cex = par()$cex, \dots)
+maxpop = Inf, capitals = 0, cex = par("cex"), \dots)
 }
 \description{
   Adds city locations and (optionally) names to an existing map using a
