@@ -1,7 +1,7 @@
 \name{map.scale}
 \alias{map.scale}
 \title{
-Add Scale to Existing Map
+Add Scale to Existing Unprojected Map
 }
 \description{
 Adds a scale to an existing map, both as a ratio and a distance gauge.
@@ -18,7 +18,7 @@ map.scale(x, y, relwidth = 0.15, metric = TRUE, ratio = TRUE, \dots)
 }
 \item{y}{
 Location of left end of distance gauge.  If not specified, this will be
-taken to be near the lower right corner of the map.
+taken to be near the lower left corner of the map.
 }
 \item{relwidth}{
 Proportion of width of display to be used for the scale.  The default is
