@@ -15,9 +15,9 @@ OBJS = mapget.o		\
 	smooth.o	\
 	thin.o
 
-GDATA = county.G state.G usa.G nz.G world.G world2.G 
-LDATA = county.L state.L usa.L nz.L world.L world2.L 
-NDATA = county.N state.N usa.N nz.N world.N world2.N 
+GDATA = county.G state.G usa.G nz.G world.G world2.G italy.G france.G
+LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L
+NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 
 all: ../libs/$(DLLNAME).dll Gmake Lmake $(LDATA) $(GDATA) $(NDATA) instdata
 
@@ -34,10 +34,10 @@ endif
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
-	$(CP) ${*}.n ../inst/mapdata/${*}.N	# seem to need this
+	@$(CP) ${*}.n ../inst/mapdata/${*}.N	# seem to need this
 
 .n.N:
-	$(CP) ${*}.n ../inst/mapdata/${*}.N
+	@$(CP) ${*}.n ../inst/mapdata/${*}.N
 
 $(DLLNAME).a: $(OBJS)
 	$(RM) -f $@
@@ -55,15 +55,15 @@ $(DLLNAME).dll: $(DLLNAME).a
 world2.line: world.line
 	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < world.line > world2.line
-	$(CP) world.linestats world2.linestats
-	$(CP) world.n world2.n	# also need this ..
+	@$(CP) world.linestats world2.linestats
+	@$(CP) world.n world2.n	# also need this ..
 
 world2.gon: world.gon
-	$(CP) world.gon world2.gon
-	$(CP) world.gonstats world2.gonstats
+	@$(CP) world.gon world2.gon
+	@$(CP) world.gonstats world2.gonstats
 
 world2.n: world.n
-	$(CP) world.n world2.n	# .. since this doesn't
+	@$(CP) world.n world2.n	# .. since this doesn't
 
 instdata:
 	@$(ECHO) "copying new inst files"
