@@ -12,7 +12,7 @@ Treviso	11
 Bergamo	12
 Gorizia	13
 Vicenza	14
-Valle d'Aosta	15
+Aosta	15
 Vercelli	16
 Venezia	17
 Verona	18
