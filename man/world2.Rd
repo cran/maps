@@ -27,7 +27,7 @@ the package can override the default location of the binary datasets.
 }
 \source{
 The CIA World Data Bank II is currently (mid-2003) available from 
-http://www.evl.uic.edu/pape/data/WDB/.
+\url{http://www.evl.uic.edu/pape/data/WDB/}.
 }
 \seealso{
 \code{\link{map}}, \code{\link{world}}

@@ -65,7 +65,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   }
   \item{projection}{
     character string that names a map projection to use.
-    See \code{\link{mapproject}} (in the \code{mapproj} library).
+    See \code{\link[mapproj]{mapproject}} (in the \code{mapproj} library).
     The default is to use a
     rectangular projection with the aspect ratio
     chosen so that longitude and latitude scales are equivalent
@@ -226,7 +226,7 @@ box()
 }
 \seealso{
   \code{\link{map.text}}, \code{\link{map.axes}},
-  \code{\link{map.scale}}, \code{\link{map.grid}} (in the \code{mapproj} library)
+  \code{\link{map.scale}}, \code{\link[mapproj]{map.grid}} (in the \code{mapproj} library)
 }
 \references{
   Richard A. Becker, and Allan R. Wilks,
