@@ -18,13 +18,25 @@ area.map(m, regions = ".", ...)
 \details{
   The area of each matching region in the map is computed, and
   regions which match the same element of \code{regions} have their
-  areas combined.
+  areas combined.  Each region is assumed planar, with vertices
+  specified by the \code{x} and \code{y} components of the map object.
+
+  Note that \code{\link{map}} returns projected coordinates,
+  so running \code{area.map} on the output of \code{\link{map}} gives
+  the area of a region after it is projected onto the screen.
+  If the projection is area-preserving (such as \code{albers}),
+  then the area on the screen will match the area on the globe, up to a
+  constant.
+  The coordinates from \code{\link{map}} are also affected by 
+  its \code{resolution} argument (use \code{resolution=0} for the most
+  accurate areas).
 }
 \value{
   a named vector of region areas.
 }
 \seealso{\code{area.polygon}, \code{apply.polygon}}
 \examples{
+# because the projection is rectangular, these are not true areas on the globe.
 m = map("state", fill = TRUE)
 area.map(m)
 area.map(m, ".*dakota")
