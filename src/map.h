@@ -40,7 +40,7 @@ typedef int Polyline;		/* all polylines (signed) */
 /* stucture for hash tables */
 typedef struct s_x_h {
 	char *name;
-	long index;
+	int index;
 	struct s_x_h *next;
 } x_h;
 

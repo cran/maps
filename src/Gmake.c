@@ -4,7 +4,7 @@
 #include <float.h>
 #include "map.h"
 
-#define Seek(f,n)	fseek(f, (long)(n), 0)
+#define Seek(f,n)	fseek(f, (int)(n), 0)
 #define Read(f,s,n)	fread((char *)(s), sizeof(*(s)), (int)(n), f)
 #define Write(f,s,n)	fwrite((char *)(s), sizeof(*(s)), (int)(n), f)
 #define Alloc(s,n,t)	s = (t *)calloc((unsigned)(n), sizeof(t))
