@@ -1,0 +1,18 @@
+area.map                Area of map regions
+county                  United States County Map
+identify.map            Identify regions on a map
+map                     Draw Geographical Maps
+map.axes                Draw Axes on Geographical Maps
+map.cities              Add Cities to Existing Map
+map.scale               Add Scale to Existing Map
+map.text                Draw a map with labeled regions
+map.where               Locate points on a map
+match.map               Index map regions
+nz                      New Zealand Basic Map
+ozone                   Sample datasets
+smooth.map              Smooth out aggregated data
+state                   United States State Boundaries Map
+usa                     United States Coast Map
+world                   Low resolution World Map
+world.cities            Database of world cities
+world2                  Pacific Centric Low resolution World Map
