@@ -174,6 +174,12 @@ long *type;
   fclose(lf);
 }
 
+static double maptype_factor(long type)
+{
+  if((type == SPHERE) || (type == SPHERE0)) return DEG2RAD(1.0);
+  else return(1.0);
+}
+
 /*
  * mapgetg:
  * Retrieve polygon information from the named database.
@@ -209,7 +215,7 @@ double *range;
 		*retlines = -1;
 		return;
 	}
-	factor = type == SPHERE ? DEG2RAD(1.0) : 1.0;
+	factor = maptype_factor(type);
 	xmin = range[XMIN] * factor;
 	xmax = range[XMAX] * factor;
 	ymin = range[YMIN] * factor;
@@ -307,7 +313,7 @@ double *x, *y, *range;
 		*nwhich = -1;
 		return;
 	}
-	factor = type == SPHERE ? DEG2RAD(1.0) : 1.0;
+	factor = maptype_factor(type);
 	xmin = range[XMIN] * factor;
 	xmax = range[XMAX] * factor;
 	ymin = range[YMIN] * factor;
