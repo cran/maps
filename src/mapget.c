@@ -62,7 +62,8 @@ static void *AdjustBuffer(void *p, unsigned num_items, unsigned item_size)
   unsigned char *c=(unsigned char *)&z;
 
   /* ^ is xor */
-  if((c[0]==0) ^ swap_override)
+  /* if((c[0]==0) ^ swap_override) */
+  if(swap_override)
     return SwapBuffer(p, num_items, item_size);
   return p;
 }
@@ -146,6 +147,7 @@ char *s, *data, *suffix;
  * maptype:
  * Discover whether the coordinate data is spherical
  * or planar and return as type.
+ * type=-1 on error.
  */
 void maptype(database, type)
 char **database;
