@@ -193,6 +193,7 @@ static double maptype_factor(long type)
  * in sl in the first call.  Range and fill determine which
  * polygons are ignored:
  *	polygons lying entirely outside range when fill is FALSE
+ *	[no longer ...]
  *	polygons lying partially outside range when fill is TRUE
  * If an error is encountered, retlines will be set to -1 on return.
  */
@@ -238,6 +239,7 @@ double *range;
     AdjustRegionH(&rh,1);
 		if(!*retlines) {
 			*sl = rh.nline;
+	/* Don't ignore partial polygon if fill=TRUE
 			if(*fill &&
 				(rh.sw.x < xmin ||
 				 rh.sw.y < ymin ||
@@ -246,9 +248,12 @@ double *range;
 					*which = *sl = 0;
 			if(!*fill &&
 				(rh.sw.x > xmax ||
+	*/
+			if(rh.sw.x > xmax ||
 				 rh.sw.y > ymax ||
 				 rh.ne.x < xmin ||
-				 rh.ne.y < ymin))
+	/*			 rh.ne.y < ymin))	*/
+				 rh.ne.y < ymin)
 					*which = *sl = 0;
 			sl++;
 		} else {
@@ -285,7 +290,8 @@ double *range;
  * 		- replace each polyline number with the number
  * 		  of coordinate pairs in that polyline
  * 		- set this number to 0 if the polyline falls
- *		  entirely outside the bounds given in range
+ *		  entirely outside the bounds given in range and
+ *		  fill is not TRUE
  * 	getcoords = 1:
  * 		- fill the x and y arrays with the coordinates
  * 		  of the points in the polylines, reversing the
@@ -294,9 +300,9 @@ double *range;
  * 		  and return these in range
  * If an error is encountered, nwhich will be set to -1 on return.
  */
-void mapgetl(database, which, nwhich, getcoords, x, y, range)
+void mapgetl(database, which, nwhich, getcoords, x, y, range, fill)
 char **database;
-int *which, *nwhich, *getcoords;
+int *which, *nwhich, *getcoords, *fill;
 double *x, *y, *range;
 {
   Polyline line, total;
@@ -345,10 +351,12 @@ double *x, *y, *range;
 		/* range only */
 		if(!*getcoords) {
 			which[i] = lh.npair;
-			if(lh.sw.x > xmax ||
+			/* Only eliminate lines if not filling. */
+			if(!*fill &&
+			  (lh.sw.x > xmax ||
 			   lh.sw.y > ymax ||
 			   lh.ne.x < xmin ||
-			   lh.ne.y < ymin)
+			   lh.ne.y < ymin))
 				which[i] = 0;
 			continue;
 		}
@@ -450,7 +458,7 @@ getpoly(char **database, long poly, double **x, double **y, int *n)
   for(i = 0; i < nline; i++)
     lengths[i] = lines[i];
   status = nline;
-  mapgetl(database, lengths, &status, &zero, 0, 0, range);
+  mapgetl(database, lengths, &status, &zero, 0, 0, range, &one);
 
   /* success? */
   if(status < 0)
@@ -465,7 +473,7 @@ getpoly(char **database, long poly, double **x, double **y, int *n)
 
   /* get the coordinate pairs */
   status = nline;
-  mapgetl(database, lines, &status, &one, X, Y, range);
+  mapgetl(database, lines, &status, &one, X, Y, range, &one);
 
   /* success? */
   if(status < 0)

@@ -11,7 +11,7 @@
 \usage{
 makepoly(xy, gonsize, keep)
 mapgetg(database, gons, fill, xlim, ylim)
-mapgetl(database, lines, xlim, ylim)
+mapgetl(database, lines, xlim, ylim, fill)
 mapname(database, patterns, exact)
 mapthin(xy, delta, symmetric)
 maptype(database)

@@ -30,8 +30,8 @@ sub.polygon <- function(p, i) {
 # regions is a vector of regular expressions to match to the names in the map
 # regions outside of xlim, ylim may be omitted
 map.poly <- function(database, regions = ".", exact = FALSE,
-                     xlim = NULL, ylim = NULL,
-                     boundary = TRUE, interior = TRUE, as.polygon = FALSE) {
+                     xlim = NULL, ylim = NULL, boundary = TRUE,
+		     interior = TRUE, fill = FALSE, as.polygon = FALSE) {
   if(!is.character(database)) {
     if(!as.polygon) stop("map objects require as.polygon=TRUE")
     the.map <- database
@@ -66,7 +66,7 @@ map.poly <- function(database, regions = ".", exact = FALSE,
             stop("nothing to draw: all regions out of bounds")
     # turn the polyline numbers into x and y coordinates
     if(as.polygon) {
-      coord <- mapgetl(database, line$number, xlim, ylim) 
+      coord <- mapgetl(database, line$number, xlim, ylim, fill) 
       # assemble lines into polygons
       gonsize <- line$size
       keep <- rep(TRUE, length(gonsize))
@@ -77,7 +77,7 @@ map.poly <- function(database, regions = ".", exact = FALSE,
       if(boundary && interior) l <- unique(l)
       else if(boundary) l <- l[!match(l, l[duplicated(l)], FALSE)]
       else l <- l[duplicated(l)]
-      coord <- mapgetl(database, l, xlim, ylim)
+      coord <- mapgetl(database, l, xlim, ylim, fill)
       if(length(coord) == 0)
               stop("all data out of bounds")
     }
@@ -89,7 +89,7 @@ map.poly <- function(database, regions = ".", exact = FALSE,
 map <-
 function(database = "world", regions = ".", exact = FALSE, boundary = TRUE, 
          interior = TRUE, projection = "", parameters = NULL, 
-         orientation = NULL, fill = FALSE, color = 1,
+         orientation = NULL, fill = FALSE, col = 1,
          plot = TRUE, add = FALSE, namesonly = FALSE, 
          xlim = NULL, ylim = NULL, wrap = FALSE,
          resolution = if(plot) 1 else 0, type = "l",
@@ -111,7 +111,7 @@ function(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   if(is.character(database)) as.polygon = fill
   else as.polygon = TRUE
   coord <- map.poly(database, regions, exact, xlim, ylim, 
-                    boundary, interior, as.polygon)
+                    boundary, interior, fill, as.polygon)
   if(is.na(coord$x[1])) stop("first coordinate is NA.  bad map data?")
   if(plot) {
     assign(".map.range", coord$range, envir = globalenv())
@@ -147,37 +147,29 @@ function(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
       if(is.null(ylim) || doproj) yrange <- range(coord$y, na.rm = TRUE)
       else yrange <- ylim
       border <- c(0.01, 0.01)
-      if(coordtype != "spherical" || doproj) aspect <- c(1, 1) 
-      else aspect <- c(cos((mean(yrange) * pi)/180), 1)
+      if(coordtype != "spherical" || doproj) {
+	aspect <- c(1, 1) 
+      } else
+        aspect <- c(cos((mean(yrange) * pi)/180), 1)
       d <- c(diff(xrange), diff(yrange)) * aspect
-      if(TRUE) {
+      if(coordtype != "spherical" || doproj) {
         plot.window(xrange, yrange, asp = aspect[2]/aspect[1])
         #set.aspect(aspect[2]/aspect[1])
         #layout(1, width = aspect[1], height = aspect[2], respect = TRUE)
         #on.exit(layout(1), add = TRUE)
-      } else if(TRUE) {
-        # must have par(xpd = FALSE) for limits to have an effect
-        par(pin = par("fin"))
-        p <- par("pin")
-        p <- d*min(p/d)
-        par(pin = p)
-        d <- d*border + ((p/min(p/d) - d)/2)/aspect
-        usr <- c(xrange, yrange) + rep(c(-1, 1), 2) * rep(d, c(2, 2))
-        par(usr = usr)
       } else {
-        par(pin = par("fin"))
-        aspect <- d[2]/d[1]
-        fin <- par("fin")
-        a <- aspect*fin[1]/fin[2]
-        if(a > 1) plt <- c(0.5 - 1/a/2, 0.5 + 1/a/2, 0, 1)
-        else plt <- c(0, 1, 0.5 - a/2, 0.5 + a/2)
-        d <- c(diff(xrange), diff(yrange))*0.02
+        # must have par(xpd = FALSE) for limits to have an effect ??!
+	p <- par("fin") -
+	  as.vector(matrix(c(0,1,1,0,0,1,1,0), nrow=2) %*% par("mai"))
+	par(pin = p)
+        p <- par("pin")
+        p <- d * min(p/d)
+        par(pin = p)
+        d <- d * border + ((p/min(p/d) - d)/2)/aspect
         usr <- c(xrange, yrange) + rep(c(-1, 1), 2) * rep(d, c(2, 2))
         par(usr = usr)
-        opar <- c(opar, par(plt = plt))
       }
       on.exit(par(opar))
-      #par(usr = usr)
     }
     # thinning only works if you have polylines from a database
     if(is.character(database) && resolution != 0 && type != "n") {
@@ -187,14 +179,9 @@ function(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
       coord[c("x", "y")] <- mapthin(coord, resolution)
     }
     if(type != "n") {
-      # suppress warnings about clipping
-      #oerr <- par(err = -1)
-      #on.exit(par(oerr))
       if(wrap) coord = map.wrap(coord)
-      if (fill) polygon(coord, col = color, ...)
-      else lines(coord, col = color, type = type, ...)
-      #if(fill) polygon(coord, col = color, border = NA, ...)
-      #else polygon(coord, col = NA, border = color, ...)
+      if (fill) polygon(coord, col = col, ...)
+      else lines(coord, col = col, type = type, ...)
     }
   }
   # return value is names or coords, but not both

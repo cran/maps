@@ -36,7 +36,7 @@ function(database = "world", gons, fill = FALSE, xlim = c(-1e30, 1e30),
 
 "mapgetl" <-
 function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
-	1e30))
+	1e30), fill = FALSE)
 {
 	nline <- as.integer(length(lines))
 	if(nline == 0)
@@ -51,7 +51,8 @@ function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
 		as.integer(0),
 		as.double(0),
 		as.double(0),
-		as.double(c(xlim, ylim)))[c("linesize", "error")]
+		as.double(c(xlim, ylim)),
+		as.integer(fill))[c("linesize", "error")]
 	if(z$error < 0)
 		return(integer(0))
 	ok <- z$linesize != 0
@@ -68,7 +69,8 @@ function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
 		as.integer(1),
 		x = double(N),
 		y = double(N),
-		range = double(4))[c("x", "y", "range")]
+		range = double(4),
+		as.integer(fill))[c("x", "y", "range")]
 	flip <- c(1, -1, 1, -1)
 	box <- flip * pmax(flip * c(xlim, ylim), flip * xy$range)
 	if(any(diff(box)[-2] <= 0)) {
