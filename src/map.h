@@ -3,8 +3,9 @@
 #endif
 #define PI2		(2*PI)
 
+#define SPHERE0         0       /* backwards compatibility */
 #define SPHERE		2	/* line data is on the sphere */
-#define PLANE		3	/* line data is on the plane */
+#define PLANE		1	/* line data is on the plane */
 #define EOR		"EOR"	/* end of record indicator */
 #define MIN(a,b)	(a)<(b)?(a):(b)
 #define MAX(a,b)	(a)>(b)?(a):(b)

@@ -108,10 +108,10 @@ function(database = "world")
 	dbname <- paste(database, "MapEnv", sep = "")
 	data(list = dbname)
 	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "/")
-        # minka: maptypes are now 2,3 instead of 0,1
+        # minka: maptypes are now 1,2 instead of 0,1
 	switch(.C("maptype", PACKAGE="maps",
 		as.character(mapbase),
-		integer(1))[[2]] + 2, "unknown", "spherical", "planar", "spherical", "planar")
+		integer(1))[[2]] + 2, "unknown", "spherical", "planar", "spherical")
 }
 
 char.to.ascii <- function(s) {

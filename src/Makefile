@@ -41,4 +41,4 @@ world2.n: world.n
 	$(CP) world.n world2.n
 
 clean:
-	$(RM) $(PKGNAME).so $(OBJS) Gmake Lmake ../inst/mapdata/* world2.*
+	$(RM) -f $(PKGNAME).so $(OBJS) Gmake Lmake ../inst/mapdata/* world2.*
