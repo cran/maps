@@ -28,9 +28,8 @@ map.old(database = "state", regions = ".", exact = F, boundary = T,
     orientation = rep(NA, 3), color = 1, add = F, plot = T, namesonly = F, 
     xlim = c(-1e+30, 1e+30), ylim = c(-1e+30, 1e+30), resolution = 1, 
     type = "l", ...) 
-map.poly(database, regions = ".", exact = FALSE,
-         xlim = NULL, ylim = NULL,
-         boundary = TRUE, interior = TRUE, as.polygon = FALSE)
+map.poly(database, regions = ".", exact = FALSE, xlim = NULL, ylim = NULL,
+         boundary = TRUE, interior = TRUE, fill = FALSE, as.polygon = FALSE)
 map.wrap(p)
 subgroup(x, i)
 gp.smooth(x, z, xo, lambda, r)

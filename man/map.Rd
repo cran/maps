@@ -7,7 +7,7 @@
 \synopsis{
 map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
-  fill = FALSE, color = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
+  fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE,
   resolution = if(plot) 1 else 0, type = "l", bg, mar, ...)
 }
@@ -15,7 +15,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
 map(database, regions)  # simple form
 map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
-  fill = FALSE, color = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
+  fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE, resolution = 1, type = "l",
   bg, mar, ...)
 }
@@ -80,19 +80,18 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     must be given in the \code{parameters} argument.
   }
   \item{orientation}{
-    up to three numbers specifying the orientation of
-    non-standard projections.
-    Default is \code{c(90, 0, m)}, 
-    where \code{m} is the middle of the longitude range.
+    a vector \code{c(latitude, longitude, rotation)} describing where
+    the map should be centered and a clockwise rotation (in degrees)
+    about this center.
   }
   \item{fill}{
     logical flag that says whether to draw lines or fill areas.
     If \code{FALSE}, the lines bounding each region will be drawn (but
     only once, for interior lines).
     If \code{TRUE}, each region will be filled using colors from the
-    \code{color =} argument, and bounding lines will not be drawn.
+    \code{col =} argument, and bounding lines will not be drawn.
   }
-  \item{color}{
+  \item{col}{
     vector of colors.
     If \code{fill} is \code{FALSE}, the first color is used for plotting
     all lines, and any other colors are ignored.
@@ -176,7 +175,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   the polygons selected from \code{database}, through the
   \code{regions}, \code{xlim}, and \code{ylim} arguments, are outlined
   (\code{fill} is \code{FALSE}) or filled (\code{fill} is \code{TRUE})
-  with the colors in \code{color}.  
+  with the colors in \code{col}.  
 
 
   The return value is a list with
@@ -212,7 +211,7 @@ if(require(mapproj))
 # names of the San Juan islands in Washington state
 map('county', 'washington,san', names = TRUE, plot = FALSE)
 
-# national boundaries in one color, states in another
+# national boundaries in one linetype, states in another
 # (figure 5 in the reference)
 map("state", interior = FALSE)
 map("state", boundary = FALSE, lty = 2, add = TRUE)
