@@ -5,15 +5,12 @@ Add Cities to Existing Map
 }
 \usage{
 map.cities(x = world.cities, country = "", label = NULL, minpop = 0,
-maxpop = Inf, capitals = 0, cex = par("cex"), \dots)
+maxpop = Inf, capitals = 0, cex = par("cex"), projection = FALSE,
+parameters = NULL, orientation = NULL, \dots)
 }
 \description{
   Adds city locations and (optionally) names to an existing map using a
   specified database.
-}
-\section{NOTE}{
-  This function is available only if no projection= has been
-  specified in the map() call.
 }
 \arguments{
 \item{x}{
@@ -45,6 +42,24 @@ Selection of capitals-only display. Capitals may be 1 (country capital),
 The value of cex acts to override the current value of character size
 expansion.
 }
+\item{projection}{
+Boolean or character value.  If \code{FALSE} (the default), no
+projection is assumed, if \code{TRUE}, the previous projection is used,
+otherwise a character string that names a map projection to use.
+See \code{\link[mapproj]{mapproject}} (in the \code{mapproj} library).
+}
+\item{parameters}{
+numeric vector of parameters for use with the \code{projection}
+argument.  This argument is optional only in the sense that certain
+projections do not require additional parameters.  If a projection
+does require additional parameters, these must be given in the
+\code{parameters} argument.
+}
+\item{orientation}{
+a vector \code{c(latitude, longitude, rotation)} describing where
+the map should be centered and a clockwise rotation (in degrees)
+about this center.
+}
 \item{...}{
 Further plotting parameters may be specified as for the commands
 \code{\link{points}} and \code{\link{text}}.
@@ -64,6 +79,10 @@ and fitting within the limits of the plot currently displayed.  The
 default database is of all cities that have a population greater than
 100,000 or which are capital cities of a country or island territory.
 The data are from around 1980-1990.
+
+Note that if the underlying map is "Pacific-centric", i.e. longitudes
+exceed 180 degrees, and a projection is used, then the map.cities data
+must be transformed appropriately.
 }
 \seealso{
 \code{\link{world.cities}}
