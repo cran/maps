@@ -17,6 +17,7 @@ map.where <- function(database = "world", x, y)
        integer(length(x)))[[5]]
     # this must be database, not mapbase
     nam <- mapname(database, ".")
+    gon[gon == 0] = NA
     names(nam)[gon]
   }
   else {

@@ -92,7 +92,7 @@ Monaco	91
 Norway	92
 Finland	93
 Sweden	94
-Norway:North	95
+Norway:Tana	95
 Egypt	96
 Libya	97
 Sudan	98

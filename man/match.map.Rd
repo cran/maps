@@ -8,7 +8,7 @@ Index map regions
 Assigns an index to each map region, useful for map coloring.
 }
 \usage{
-match.map(database, regions, exact = F, warn = T)
+match.map(database, regions, exact = FALSE, warn = TRUE)
 }
 \arguments{
   \item{database}{
@@ -42,7 +42,7 @@ match.map(database, regions, exact = F, warn = T)
 \examples{
 # filled map showing Republican vote in 1900
 # (figure 6 in the reference)
-data(state, package = base)
+data(state, package = "base")
 data(votes.repub)
 state.to.map <- match.map("state", state.name)
 x <- votes.repub[state.to.map, "1900"]
