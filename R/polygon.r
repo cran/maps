@@ -113,9 +113,9 @@ num.polygons <- function(p) {
   else 1 + sum(is.na(p[, 1]))
 }
 
-range.polygon <- function(p) {
-  p <- as.list.polygon(p)
-  lapply(p[c("x", "y")], range)
+range.polygon <- function(..., na.rm = FALSE) {
+  p <- as.list.polygon(...)
+  lapply(p[c("x", "y")], range, na.rm = na.rm)
 }
 
 map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,

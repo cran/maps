@@ -4,7 +4,7 @@ identify.map            Identify regions on a map
 map                     Draw Geographical Maps
 map.axes                Draw Axes on Geographical Maps
 map.cities              Add Cities to Existing Map
-map.scale               Add Scale to Existing Map
+map.scale               Add Scale to Existing Unprojected Map
 map.text                Draw a map with labeled regions
 map.where               Locate points on a map
 match.map               Index map regions
