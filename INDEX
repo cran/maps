@@ -1,6 +1,8 @@
 area.map                Area of projected map regions
 county                  United States County Map
+france                  France Map
 identify.map            Identify regions on a map
+italy                   Italy Map
 map                     Draw Geographical Maps
 map.axes                Draw Axes on Geographical Maps
 map.cities              Add Cities to Existing Map
