@@ -4,6 +4,7 @@
 PKGNAME = maps
 CP = cp
 RM = rm
+ECHO = echo
 
 OBJS = mapget.o		\
 	smooth.o	\
@@ -27,5 +28,17 @@ all: $(PKGNAME).so Gmake Lmake $(LDATA) $(GDATA) $(NDATA)
 $(PKGNAME).so: $(OBJS)
 	$(R_HOME)/bin/R CMD SHLIB -o $(PKGNAME).so $(OBJS)
 
+world2.line: world.line
+	@$(ECHO) "Converting world to world2"
+	$(AWK) -f convert.awk < world.line > world2.line
+	$(CP) world.linestats world2.linestats
+
+world2.gon: world.gon
+	$(CP) world.gon world2.gon
+	$(CP) world.gonstats world2.gonstats
+
+world2.n: world.n
+	$(CP) world.n world2.n
+
 clean:
-	$(RM) $(PKGNAME).so $(OBJS) Gmake Lmake ../inst/mapdata/*
+	$(RM) $(PKGNAME).so $(OBJS) Gmake Lmake ../inst/mapdata/* world2.*
