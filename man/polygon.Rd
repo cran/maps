@@ -18,7 +18,7 @@ closed.polygon(p)
 in.one.polygon(p, x)
 in.polygon(p, x)
 num.polygons(p)
-range.polygon(p)
+range.polygon(..., na.rm = FALSE)
 sub.polygon(p, i)
 }
 \description{
