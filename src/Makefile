@@ -48,4 +48,4 @@ world2.line: world.line
 	@$(CP) world.name world2.name
 
 clean:
-	$(RM) -f $(PKGNAME).so $(OBJS) Gmake Lmake ../inst/mapdata/* world2.*
+	$(RM) -f $(OBJS) Gmake Lmake ../inst/mapdata/* world2.* $(PKGNAME).s[lo] $(PKGNAME).dylib
