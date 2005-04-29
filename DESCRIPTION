@@ -1,7 +1,7 @@
 Package: maps
 Title: Draw Geographical Maps
-Version: 2.0-26
-Date: 2005-01-17
+Version: 2.0-27
+Date: 2005-04-29
 Author: Original S code by Richard A. Becker and Allan R. Wilks.
 	R version by Ray Brownrigg <Ray.Brownrigg@mcs.vuw.ac.nz>
         Enhancements by Thomas P Minka <surname@stat.cmu.edu>
@@ -10,4 +10,4 @@ Description: Display of maps.  Projection code and larger maps are in
 Depends: R (>= 1.7.0)
 License: GPL2
 Maintainer: Ray Brownrigg <Ray.Brownrigg@mcs.vuw.ac.nz>
-Packaged: Mon Jan 17 15:34:54 2005; ray
+Packaged: Fri Apr 29 08:17:50 2005; ray

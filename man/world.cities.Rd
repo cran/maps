@@ -4,7 +4,7 @@
 \title{
 Database of world cities
 }
-\usage{data{world.cities}}
+\usage{data(world.cities)}
 
 \description{
 This database is primarily of world cities of population greater than
