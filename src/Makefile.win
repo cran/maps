@@ -5,11 +5,11 @@ include $(RHOME)/src/gnuwin32/MkRules
 
 DLLNAME = maps
 
-CFLAGS = -I$(RHOME)/src/include -Wall -pedantic -O2 -DWin32
+CFLAGS = -I$(RHOME)/include -Wall -pedantic -O2 -DWin32
 
-DLLLIBS = -L$(RHOME)/src/gnuwin32 -lR 
+DLLLIBS = -L$(RHOME)/bin -L$(RHOME)/src/gnuwin32 -lR 
 
-RESFLAGS = --include-dir $(RHOME)/src/include
+RESFLAGS = --include-dir $(RHOME)/include
 
 OBJS = mapget.o		\
 	smooth.o	\
@@ -76,3 +76,4 @@ world2.line: world.line
 
 clean:
 	$(RM) $(DLLNAME).dll *.a $(OBJS) $(DLLNAME).def *.rc Gmake.exe Lmake.exe ../inst/mapdata/* ../libs/$(DLLNAME).dll world2.*
+	$(RM) -r ../libs
