@@ -25,6 +25,7 @@ isspace(int c);
 int
 fatal(s, a, b)
 char *s;
+int a, b;
 {
 	fprintf(stderr, s, a, b);
 	fprintf(stderr, "\n");
@@ -209,6 +210,7 @@ FILE *in, *out;
 
 int
 main(ac, av)
+int ac;
 char *av[];
 {
 

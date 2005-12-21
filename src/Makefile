@@ -23,9 +23,9 @@ NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 .name.N:
 	@$(CP) ${*}.name ../inst/mapdata/${*}.N
 
-.PHONY: all gdata ldata
+.PHONY: all gdata ldata ndata
 
-all: $(PKGNAME).so gdata ndata
+all: gdata ndata $(PKGNAME)$(SHLIB_EXT)
 
 gdata: Gmake ldata
 	$(MAKE) $(GDATA)
@@ -33,11 +33,11 @@ gdata: Gmake ldata
 ldata: Lmake world2.line
 	$(MAKE) $(LDATA)
 
-ndata:
+ndata: world2.line
 	$(MAKE) $(NDATA)
 
-$(PKGNAME).so: $(OBJS)
-	$(R_HOME)/bin/R CMD SHLIB -o $(PKGNAME).so $(OBJS)
+$(PKGNAME)$(SHLIB_EXT): $(OBJS)
+	$(R_HOME)/bin/R CMD SHLIB -o $(PKGNAME)$(SHLIB_EXT) $(OBJS)
 
 world2.line: world.line
 	@$(ECHO) "Converting world to world2"

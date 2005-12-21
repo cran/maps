@@ -46,7 +46,7 @@ gdata: Gmake ldata
 ldata: Lmake world2.line
 	$(MAKE) $(LDATA)
 
-ndata:
+ndata: world2.line
 	$(MAKE) $(NDATA)
 
 instdata: gdata ndata
