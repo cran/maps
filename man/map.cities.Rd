@@ -76,9 +76,12 @@ than were expected might be shown.
 \details{
 The database is searched for all cities matching the specified criteria
 and fitting within the limits of the plot currently displayed.  The
-default database is of all cities that have a population greater than
-100,000 or which are capital cities of a country or island territory.
-The data are from around 1980-1990.
+default database is of all cities that have a population greater than a
+certain threshold or which are capital cities of a country or island
+territory.  The threshold varies from country to country, but in
+general is no higher than about 40,000.  The data are copyright Stefan
+Helders but freely available from his website
+\url{http://www.world-gazetteer.com}.
 
 Note that if the underlying map is "Pacific-centric", i.e. longitudes
 exceed 180 degrees, and a projection is used, then the map.cities data

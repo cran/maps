@@ -45,7 +45,7 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
 	x$long <- projx$x
 	x$lat <- projx$y
     } else {
-	if (usr[2] > 180) 
+	if (usr[2] > (180 + 0.04*(usr[2] - usr[1]))) 
 	    x$long[x$long < 0] <- 360 + x$long[x$long < 0]
     }
     selection <- x$long >= usr[1] & x$long <= usr[2] & x$lat >= 
