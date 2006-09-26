@@ -19,7 +19,8 @@ the database.
 }
 \item{country}{
 If the string country is specified, limit the displayed cities to be
-from within the specified country.
+from within the specified country, province or state (depending on how
+the database has been constructed).
 }
 \item{label}{
 If \code{TRUE}, label all cities.  If \code{NULL},
@@ -83,15 +84,26 @@ general is no higher than about 40,000.  The data are copyright Stefan
 Helders but freely available from his website
 \url{http://www.world-gazetteer.com}.
 
+There are three supplied databases, world.cities (the default),
+us.cities and canada.cities.  The latter two (which need to be made
+available by using a \code{data()} call, include the state or
+province name with the city name (thanks to  John Woodruff
+\email{jpwoodruff@irisinternet.net} for the state and province
+information).
+
 Note that if the underlying map is "Pacific-centric", i.e. longitudes
 exceed 180 degrees, and a projection is used, then the map.cities data
 must be transformed appropriately.
 }
 \seealso{
-\code{\link{world.cities}}
+\code{\link{world.cities}}, \code{\link{canada.cities}},
+\code{\link{us.cities}}
 }
 \examples{
 map("world", "China")
 map.cities(country = "China", capitals = 2)
+map("state", "New Jersey")
+data(us.cities)
+map.cities(us.cities, country="NJ")
 }
 \keyword{hplot}

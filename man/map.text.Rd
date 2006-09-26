@@ -22,7 +22,8 @@ move = FALSE, ...)
   \item{add}{If \code{FALSE}, a map is drawn, then labels placed on top.  If
     \code{TRUE}, labels are added to the existing map.}
   \item{move}{If \code{TRUE}, labels are moved so that they don't
-    overlap.  Requires the \code{mining} library.}
+    overlap.  Requires the \code{mining} library (not in CRAN, contact
+    tpminka@media.mit.edu).}
   \item{...}{Other arguments are the same as in \code{\link{map}}.}
 }
 \value{
