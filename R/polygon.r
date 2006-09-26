@@ -140,7 +140,7 @@ map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
   # convert m into a matrix
   x <- t(array(unlist(x), c(2, length(x))))
   if(move) {
-    library(mining)
+    # require(mining)
     w = strwidth(labels, units = "inches", cex = cex)
     h = strheight(labels, units = "inches", cex = cex)
     x = move.collisions2(x[, 1], x[, 2], w, h)
