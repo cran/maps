@@ -131,7 +131,7 @@ char.to.ascii <- function(s) {
 }
 is.regexp <- function(s) {
   # test: is.regexp(c("too", ".*dak", "kj[t]"))
-  pattern = ".*[\.\?\*\[].*"
+  pattern = ".*[.?*[].*"
   result = logical(length(s))
   result[grep(pattern, s)] = TRUE
   result
