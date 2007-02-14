@@ -42,7 +42,7 @@ match.map(database, regions, exact = FALSE, warn = TRUE)
 \examples{
 # filled map showing Republican vote in 1900
 # (figure 6 in the reference)
-data(state, package = "base")
+data(state, package = "datasets")
 data(votes.repub)
 state.to.map <- match.map("state", state.name)
 x <- votes.repub[state.to.map, "1900"]
