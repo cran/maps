@@ -8,7 +8,7 @@
   Identifies the map regions clicked by the user.
 }
 \usage{
-identify.map(x, n = 1, index = FALSE, ...)
+\method{identify}{map}(x, n = 1, index = FALSE, ...)
 }
 \arguments{
   \item{x}{a map object containing named polygons.}

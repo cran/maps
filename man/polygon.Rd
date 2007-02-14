@@ -13,12 +13,12 @@
 \usage{
 area.polygon(p)
 centroid.polygon(p)
-as.matrix.polygon(x)
+\method{as.matrix}{polygon}(x, ...)
 closed.polygon(p)
 in.one.polygon(p, x)
 in.polygon(p, x)
 num.polygons(p)
-range.polygon(..., na.rm = FALSE)
+\method{range}{polygon}(..., na.rm = FALSE)
 sub.polygon(p, i)
 }
 \description{

@@ -32,7 +32,7 @@ map.where <- function(database = "world", x, y)
     database$names[result]
   }
 }
-as.matrix.polygon <- function(x) {
+as.matrix.polygon <- function(x, ...) {
   p = x
   if(is.null(p)) return(p)
   if(is.list(p) && !is.data.frame(p)) p <- cbind(p$x, p$y)
