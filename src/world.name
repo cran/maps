@@ -188,7 +188,7 @@ Norway:Stjernoya	187
 Venezuela:Isla de Margarita	188
 Canada:Coats Island	189
 Hawaii:Lisianski Island	190
-Newfoundland	191
+Canada:Newfoundland	191
 Australia:Vanderlin Island	192
 French Polynesia:Eiao	193
 Australia	194
@@ -308,7 +308,7 @@ Greece:Milos	307
 Canada:Opposite Island	308
 Montserrat	309
 Dominican Republic:Isla Saona	310
-USSR:Ostrov Ol'khon	311
+USSR:Lake Baikal	311
 Greenland	312
 Antarctica:?	313
 Indonesia:Atauro	314
@@ -337,7 +337,7 @@ Tanzania:Zanzibar	336
 Ethiopia:Dehalak Deset	337
 Canada:Porcher Island	338
 Canada:Pitt Island	339
-Svalbard:Edgeoya	340
+Norway:Svalbard:Edgeoya	340
 Indonesia:Tarakan	341
 Indonesia:Tioor	342
 Indonesia:Waar	343
@@ -404,7 +404,7 @@ Norway:Hareidlandet	403
 Antarctica:Rothschild Island	404
 Maldives:?	405
 Canada:Lougheed Island	406
-Svalbard:Nordaustlandet	407
+Norway:Svalbard:Nordaustlandet	407
 Marshall Islands:Utirik Atoll	408
 Philippines:Panaon	409
 Japan:Shikoku	410
@@ -883,7 +883,7 @@ Maldives:?	882
 Indonesia:Sawu	883
 Solomon Islands:Steward	884
 California:San Clemente Island	885
-Svalbard:Spitsbergen	886
+Norway:Svalbard:Spitsbergen	886
 Guinea-Bissau:?	887
 Indonesia:Tahulandang	888
 Myanmar:Bilugyun Island	889
@@ -1188,7 +1188,7 @@ USA:Alaska:Chuginadak Island	1187
 USSR:Ostrov Shmidta	1188
 Denmark:Laeso	1189
 Indonesia:Mendanau	1190
-Svalbard:Jan Mayen	1191
+Norway:Svalbard:Jan Mayen	1191
 Azores:Flores	1192
 Canada:Manitoulin Island	1193
 Indonesia:Serasan	1194
@@ -1235,8 +1235,8 @@ Indonesia:Maratua	1234
 Canada:?	1235
 USSR:Ostrov Shokal'skogo	1236
 New Zealand:Rangitoto Island	1237
-Svalbard:Kvitoya	1238
-Svalbard:Byornoya	1239
+Norway:Svalbard:Kvitoya	1238
+Norway:Svalbard:Byornoya	1239
 Papua New Guinea:Liot	1240
 Iraq:Lake ?	1241
 Philippines:?	1242
@@ -1530,7 +1530,7 @@ Mexico:Isla Maria Magdalena	1529
 Solomon Islands:Vanikoro	1530
 Micronesia:?	1531
 Maldives:?	1532
-Svalbard:Svenskoya	1533
+Norway:Svalbard:Svenskoya	1533
 Iraq:?	1534
 Japan:Tanega Shima	1535
 Greenland:?	1536
@@ -1831,7 +1831,7 @@ Maldives:?	1830
 Equatorial Guinea:Annobon	1831
 Kiribati:Tarawa	1832
 Canada:Jameson Island:West	1833
-Svalbard:Kongsoya	1834
+Norway:Svalbard:Kongsoya	1834
 Fiji:Kadavu	1835
 Bangladesh:?	1836
 USA:Alaska:Mitkof Island	1837
@@ -1970,7 +1970,7 @@ USSR:Ostrov Rasshua	1969
 USSR:Lena Delta:6	1970
 Antarctica:Snow Island	1971
 Canada:Galiano Island	1972
-Svalbard:Barentsoya	1973
+Norway:Svalbard:Barentsoya	1973
 Greece:Kithira	1974
 USSR:Zemlya Alexsandry	1975
 Canada:Meighen Island	1976
@@ -2026,7 +2026,7 @@ USSR:Ostrov Mak-Klintoka	2025
 Turks and Caicos:Providenciales Island	2026
 India:Nancowry Island	2027
 Tuvalu:Nanumanga	2028
-Svalbard:Hopen	2029
+Norway:Svalbard:Hopen	2029
 Myanmar:Saurin Island	2030
 Vietnam:?	2031
 Tonga:Tofua	2032
