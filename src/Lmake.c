@@ -218,19 +218,19 @@ char *av[];
 
 	Me = av[0];
 	if(ac != 7)
-		fatal(Usage, Me);
+		fatal(Usage, (int)Me);
 	Precision = atoi(av[1]);
 	Coordtype = av[2][0] == 's' ? SPHERE : PLANE;
 	Infile = av[4];
 	if((in = fopen(av[4], "rb")) == NULL)
-                fatal("Cannot open %s for reading", av[4]);
+                fatal("Cannot open %s for reading", (int)av[4]);
 	if((in2 = fopen(av[5], "rb")) == NULL)
-                fatal("Cannot open %s for reading", av[5]);
+                fatal("Cannot open %s for reading", (int)av[5]);
 	if(fscanf(in2, "%d%d", &nl, &maxp) != 2)
-		fatal("Cannot read stats data file %s", av[3]);
+		fatal("Cannot read stats data file %s", (int)av[3]);
 	n = nl;
         if((out = fopen(av[6], "wb")) == NULL)
-                fatal("Cannot open %s for writing", av[6]);
+                fatal("Cannot open %s for writing", (int)av[6]);
         av[3][0] == 'a' ? (void) to_ascii(in, out) : (void) to_binary(in, out);
 	exit(0);
 }
