@@ -108,9 +108,9 @@ Polyline r;
 
 	seek = sizeof(int) + sizeof(Polyline) + (r-1)*sizeof(struct line_h);
 	if(Seek(Lin, seek) == -1)
-		fatal("Cannot seek to header in %s", Linefile);
+		fatal("Cannot seek to header in %s", (int)Linefile);
 	if(Read(Lin, &lh, 1) != 1)
-		fatal("Cannot read header in %s", Linefile);
+		fatal("Cannot read header in %s", (int)Linefile);
 	return(&lh);
 }
 
@@ -207,23 +207,23 @@ char *av[];
 
 	Me = av[0];
 	if(ac < 5)
-		fatal(Usage, Me);
+		fatal(Usage, (int)Me);
 	ascii = *av[1] == 'a';
 	if(ac != (ascii ? 5 : 6))
-		fatal(Usage, Me);
+		fatal(Usage, (int)Me);
 	Infile = av[2];
 	if((in = fopen(av[2], "rb")) == NULL)
-		fatal("Cannot open %s for reading", av[2]);
+		fatal("Cannot open %s for reading", (int)av[2]);
 	if((in2 = fopen(av[3], "rb")) == NULL)
-                fatal("Cannot open %s for reading", av[3]);
+                fatal("Cannot open %s for reading", (int)av[3]);
 	if(fscanf(in2, "%d%d", &np, &maxl) != 2)
-		fatal("Cannot read stats data file %s", av[3]);
+		fatal("Cannot read stats data file %s", (int)av[3]);
 	n = np;	/* won't read directly */
 	if((out = fopen(av[4], "wb")) == NULL)
-		fatal("Cannot open %s for writing", av[4]);
+		fatal("Cannot open %s for writing", (int)av[4]);
 	Linefile = av[5];
 	if(!ascii && (Lin = fopen(av[5], "rb")) == NULL)
-		fatal("Cannot open %s for reading", av[5]);
+		fatal("Cannot open %s for reading", (int)av[5]);
 	ascii ? to_ascii(in, out) : to_binary(in, out);
 	exit(0);
 }
