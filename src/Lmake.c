@@ -117,30 +117,31 @@ FILE *in, *out;
 	int column, k;
 
 	if(Seek(in, sizeof(Coordtype)))
-		fatal("Cannot seek past coordtype");
+		fatal("Cannot seek past coordtype", 0, 0);
 	if(Read(in, &n, 1) != 1)
-		fatal("Cannot read size");
+		fatal("Cannot read size", 0, 0);
 	Alloc(lh, n, struct line_h);
 	if(lh == NULL)
-		fatal("No memory for headers");
+		fatal("No memory for headers", 0, 0);
 	if(Read(in, lh, n) != n)
-		fatal("Cannot read headers");
+		fatal("Cannot read headers", 0, 0);
 	for(i = 0; i < n; i++)
 		N = Max(N, lh[i].npair);
 	Alloc(xy, N, struct pair);
 	if(xy == NULL)
-		fatal("No memory for data");
+		fatal("No memory for data", 0, 0);
 	for(i = 0; i < n; i++) {
 		if((m = lh[i].npair) <= 0)
-			fatal("Negative pair count at header %d", (int)i);
+			fatal("Negative pair count at header %d", (int)i,
+			0);
 		if(Seek(in, lh[i].offset) < 0)
-			fatal("Cannot seek to record %d", (int)i);
+			fatal("Cannot seek to record %d", (int)i, 0);
 		/*
 		 * Simple read; change this to use other means of
 		 * storing the polyline data.
 		 */
 		if(Read(in, xy, m) != m)
-			fatal("Cannot read record %d", (int)i);
+			fatal("Cannot read record %d", (int)i, 0);
 		fprintf(out, "%d %d\n", (int)lh[i].left, (int)lh[i].right);
 		column = 0;
 		for(j = 0; j < m; j++) {
@@ -169,14 +170,15 @@ FILE *in, *out;
 	struct pair *xy;
 
 	if(Seek(out, sizeof(Coordtype) + sizeof(Polyline) + nl*sizeof(struct line_h)) < 0)
-		fatal("Cannot seek in input file");
+		fatal("Cannot seek in input file", 0, 0);
 	Alloc(lh, nl, struct line_h);
 	Alloc(xy, maxp+1, struct pair);
 	if(lh == NULL || xy == NULL)
-		fatal("No memory");
+		fatal("No memory", 0, 0);
 	for(i = 0; i < nl; i++) {
 		if(fscanf(in, "%d%d", &l, &r) != 2)
-			fatal("Cannot read left and right at line %d", (int)i+1);
+			fatal("Cannot read left and right at line %d", (int)i+1,
+			0);
 		lh[i].left = l;
 		lh[i].right = r;
 		m = 0;
@@ -196,16 +198,16 @@ FILE *in, *out;
 		 * storing the polyline data.
 		 */
 		if(Write(out, xy, m) != m)
-			fatal("Cannot write record %d", (int)i);
+			fatal("Cannot write record %d", (int)i, 0);
 	}
 	if(Seek(out, 0) < 0)
-		fatal("Cannot seek to beginning of output file");
+		fatal("Cannot seek to beginning of output file", 0, 0);
 	if(Write(out, &Coordtype, 1) != 1)
-		fatal("Cannot write coordtype to output file");
+		fatal("Cannot write coordtype to output file", 0, 0);
 	if(Write(out, &n, 1) != 1)
-		fatal("Cannot write size to output file");
+		fatal("Cannot write size to output file", 0, 0);
 	if(Write(out, lh, nl) != nl)
-		fatal("Cannot write headers to output file");
+		fatal("Cannot write headers to output file", 0, 0);
 }
 
 int
@@ -218,19 +220,19 @@ char *av[];
 
 	Me = av[0];
 	if(ac != 7)
-		fatal(Usage, (int)Me);
+		fatal(Usage, (int)Me, 0);
 	Precision = atoi(av[1]);
 	Coordtype = av[2][0] == 's' ? SPHERE : PLANE;
 	Infile = av[4];
 	if((in = fopen(av[4], "rb")) == NULL)
-                fatal("Cannot open %s for reading", (int)av[4]);
+                fatal("Cannot open %s for reading", (int)av[4], 0);
 	if((in2 = fopen(av[5], "rb")) == NULL)
-                fatal("Cannot open %s for reading", (int)av[5]);
+                fatal("Cannot open %s for reading", (int)av[5], 0);
 	if(fscanf(in2, "%d%d", &nl, &maxp) != 2)
-		fatal("Cannot read stats data file %s", (int)av[3]);
+		fatal("Cannot read stats data file %s", (int)av[3], 0);
 	n = nl;
         if((out = fopen(av[6], "wb")) == NULL)
-                fatal("Cannot open %s for writing", (int)av[6]);
+                fatal("Cannot open %s for writing", (int)av[6], 0);
         av[3][0] == 'a' ? (void) to_ascii(in, out) : (void) to_binary(in, out);
 	exit(0);
 }
