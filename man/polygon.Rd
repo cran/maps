@@ -6,7 +6,6 @@
 \alias{closed.polygon}
 \alias{in.polygon}
 \alias{in.one.polygon}
-\alias{range.polygon}
 \alias{num.polygons}
 \alias{sub.polygon}
 \title{Polygon functions}
@@ -18,7 +17,6 @@ closed.polygon(p)
 in.one.polygon(p, x)
 in.polygon(p, x)
 num.polygons(p)
-\method{range}{polygon}(..., na.rm = FALSE)
 sub.polygon(p, i)
 }
 \description{
