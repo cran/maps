@@ -6,7 +6,6 @@
 \alias{insert}
 \alias{match.map.slow}
 \alias{match.map.grep}
-\alias{map.old}
 \alias{map.poly}
 \alias{map.wrap}
 \alias{subgroup}
@@ -23,11 +22,6 @@ indicators.factor(y)
 insert(x, i, v)
 match.map.slow(nam, regions, warn = FALSE)
 match.map.grep(nam, regions, warn = FALSE)
-map.old(database = "state", regions = ".", exact = F, boundary = T, 
-    interior = T, fill = F, projection = "", parameters = NULL, 
-    orientation = rep(NA, 3), color = 1, add = F, plot = T, namesonly = F, 
-    xlim = c(-1e+30, 1e+30), ylim = c(-1e+30, 1e+30), resolution = 1, 
-    type = "l", ...) 
 map.poly(database, regions = ".", exact = FALSE, xlim = NULL, ylim = NULL,
          boundary = TRUE, interior = TRUE, fill = FALSE, as.polygon = FALSE)
 map.wrap(p)

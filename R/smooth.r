@@ -82,12 +82,11 @@ smooth.map <- function(m, z, res = 50, span = 1/10, averages = FALSE,
   if(FALSE) {
     # code for these is in 315/util.r
     # most time is spent here
-    w <- switch(type,
-                mass = gp.smoother(x, x, r, lambda),
-                smooth = kr.smoother(x, x, r, lambda))
-    #list(x = x, r = r, w = w)
-    z = drop(z %*% w)
-    cbind(x, z = z)
+    # w <- switch(type,
+    #             mass = gp.smoother(x, x, r, lambda),
+    #             smooth = kr.smoother(x, x, r, lambda))
+    # z = drop(z %*% w)
+    # cbind(x, z = z)
   } else {
     if(type == "smooth") {
       z = kernel.smooth(x, z, xo, lambda, r)

@@ -30,8 +30,9 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
     maxpop = Inf, capitals = 0, cex = par("cex"), projection = FALSE,
     parameters = NULL, orientation = NULL, ...) 
 {
-    if (missing(x)) 
-        data(world.cities)	# uses lazy evaluation
+    if (missing(x)) {
+        data(world.cities, package = "maps")	# uses lazy evaluation
+    }
     usr <- par("usr")
     if (!missing(projection) && projection != FALSE) {
         if (is.character(projection)) {
@@ -98,9 +99,9 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
 function (x, y, relwidth = 0.15, metric = TRUE, ratio = TRUE, ...) 
 {
   # old version
-  format.pretty <- function(x) {
-    as.character(pretty(x * c(0.99, 1.01), n = 2)[2])
-  }
+  # format.pretty <- function(x) {
+  #   as.character(pretty(x * c(0.99, 1.01), n = 2)[2])
+  # }
   # minka: new version
   format.pretty <- function(x, digits = 2) {
     x = signif(x, 2)

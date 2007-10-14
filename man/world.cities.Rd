@@ -10,6 +10,7 @@ This database is primarily of world cities of population greater than
 about 40,000.  Also included are capital cities of any population size, and
 many smaller towns.
 }
+\usage{data(world.cities)}
 \format{
 A list with 6 components, namely "name", "country.etc", "pop", "lat",
 "long", and "capital", containing the city name, the country name,

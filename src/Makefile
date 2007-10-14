@@ -6,8 +6,6 @@ CP = cp
 ECHO = echo
 RM = rm
 
-CFLAGS = -g -Wall -pedantic -O6
-
 OBJS = mapget.o		\
 	smooth.o	\
 	thin.o
