@@ -31,7 +31,8 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
     parameters = NULL, orientation = NULL, ...) 
 {
     if (missing(x)) {
-        data(world.cities, package = "maps")	# uses lazy evaluation
+        data("world.cities", package = "maps")	# uses lazy evaluation
+	world.cities <- get("world.cities")
     }
     usr <- par("usr")
     if (!missing(projection) && projection != FALSE) {

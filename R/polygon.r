@@ -141,6 +141,7 @@ map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
   x <- t(array(unlist(x), c(2, length(x))))
   if(move) {
     # require(mining)
+    move.collisions2 <- get("move.collisions2")	# to prevent check NOTE
     w = strwidth(labels, units = "inches", cex = cex)
     h = strheight(labels, units = "inches", cex = cex)
     x = move.collisions2(x[, 1], x[, 2], w, h)
