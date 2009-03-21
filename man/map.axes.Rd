@@ -12,8 +12,6 @@ x- and y-axes are drawn for the currently displayed map.  These will
 display in longitude and latitude (if no projection= has been
 specified in the map() call).
 }
-\details{
-}
 \examples{
 map("state")
 map.axes()
