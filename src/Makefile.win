@@ -1,4 +1,7 @@
 #-*- Makefile -*-
+
+## this needs a *source* build of R
+## RHOME is obsolete, but still set
 include $(RHOME)/src/gnuwin32/MkRules
 
 .SUFFIXES: .G .L .N .gon .line .name
@@ -7,9 +10,7 @@ DLLNAME = maps
 
 CFLAGS = -I$(RHOME)/include -Wall -pedantic -O2 -DWin32
 
-DLLLIBS = -L$(RHOME)/bin -L$(RHOME)/src/gnuwin32 -lR 
-
-RESFLAGS = --include-dir $(RHOME)/include
+DLLLIBS = -L$(RHOME)/bin -lR 
 
 OBJS = mapget.o		\
 	smooth.o	\
@@ -36,29 +37,20 @@ Lmake:
 	$(MAKE) CC=gcc Lmake
 endif
 
-.PHONY: all gdata instdata ldata ndata
+.PHONY: all gdata ldata ndata
 
-all: ../libs/$(DLLNAME).dll instdata
+all: ../libs/$(DLLNAME).dll ldata gdata ndata
 
 gdata: Gmake ldata
-	$(MAKE) $(GDATA)
+	$(MAKE) -f Makefile.win $(GDATA)
 
 ldata: Lmake world2.line
-	$(MAKE) $(LDATA)
+	$(MAKE) -f Makefile.win $(LDATA)
 
 ndata: world2.line
-	$(MAKE) $(NDATA)
+	$(MAKE) -f Makefile.win $(NDATA)
 
-instdata: gdata ndata
-	@$(ECHO) "copying new inst files"
-	$(CP) -r ../inst/* $(RLIB)/$(PKG)
-
-$(DLLNAME).a: $(OBJS)
-	$(RM) -f $@
-	$(AR) cr $@ *.o
-	$(RANLIB) $@
-
-$(DLLNAME).dll: $(DLLNAME).a 
+$(DLLNAME).dll: $(OBJS) 
 
 ../libs/$(DLLNAME).dll: ../libs $(DLLNAME).dll
 	$(CP) $(DLLNAME).dll $@
@@ -75,5 +67,5 @@ world2.line: world.line
 	@$(CP) world.name world2.name
 
 clean:
-	$(RM) $(DLLNAME).dll *.a $(OBJS) $(DLLNAME).def *.rc Gmake.exe Lmake.exe ../inst/mapdata/* ../libs/$(DLLNAME).dll world2.*
+	$(RM) -f $(DLLNAME).dll *.a $(OBJS) *.rc Gmake.exe Lmake.exe ../inst/mapdata/* ../libs/$(DLLNAME).dll world2.*
 	$(RM) -r ../libs
