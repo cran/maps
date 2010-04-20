@@ -128,6 +128,7 @@ map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
   cc[[1]] = as.name("map")
   cc$fill = TRUE
   cc$plot = FALSE
+  cc$regions = regions
   cc$move = cc$add = cc$cex = cc$labels = NULL
   cc$resolution = 0
   m = eval(cc)
