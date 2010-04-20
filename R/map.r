@@ -227,13 +227,13 @@ closed.polygon <- function(p) {
   ends <- c(breaks - 1, n)
   x[ends + 1] = x[starts]
   y[ends + 1] = y[starts]
-  x = insert(x, breaks + 1)
-  y = insert(y, breaks + 1)
+  x = maps::insert(x, breaks + 1)
+  y = maps::insert(y, breaks + 1)
   list(x = x, y = y)
 }
 insert <- function(x, i, v = NA) {
   # insert v into an array x, at positions i
-  # e.g. insert(1:7, c(2, 5, 8))
+  # e.g. maps::insert(1:7, c(2, 5, 8))
   n = length(x)
   new.n = n + length(i)
   m = logical(new.n)
