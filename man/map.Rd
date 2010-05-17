@@ -9,7 +9,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
-  type = "l", bg = par("bg"), mar = c(0, 0, par("mar")[3], 0.1),
+  type = "l", bg = par("bg"), mar = c(4.1, 4.1, par("mar")[3], 0.1),
   border = 0.01, ...)
 }
 \usage{
@@ -18,7 +18,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
-  type = "l", bg = par("bg"), mar = c(0, 0, par("mar")[3], 0.1),
+  type = "l", bg = par("bg"), mar = c(4.1, 4.1, par("mar")[3], 0.1),
   border = 0.01, ...)
 }
 \arguments{
@@ -123,7 +123,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   \item{xlim}{
     two element numeric
     vector giving a range of longitudes, expressed
-    in degreees, to which drawing
+    in degrees, to which drawing
     should be restricted.
     Longitude is measured in degrees east of Greenwich, so that, in particular,
     locations in the USA have negative longitude.
@@ -167,7 +167,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     background color.
   }
   \item{mar}{
-    margins, as in \code{\link{par}}.
+    margins, as in \code{\link{par}}.  Defaults allow for map.axes().
   }
   \item{border}{
     scalar or vector of length 2 specifying the porportion of the plot
@@ -233,12 +233,12 @@ box()
 \references{
   Richard A. Becker, and Allan R. Wilks,
   "Maps in S",
-  \emph{AT\&T Bell Laboratories Statistics Research Report [93.2], 1993.}
+  \emph{AT&T Bell Laboratories Statistics Research Report [93.2], 1993.}
   \url{http://public.research.att.com/areas/stat/doc/93.2.ps}
 
   Richard A. Becker, and Allan R. Wilks,
   "Constructing a Geographical Database",
-  \emph{AT\&T Bell Laboratories Statistics Research Report [95.2], 1995.}
+  \emph{AT&T Bell Laboratories Statistics Research Report [95.2], 1995.}
   \url{http://public.research.att.com/areas/stat/doc/95.2.ps}
 }
 \keyword{hplot}

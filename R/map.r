@@ -93,7 +93,7 @@ function(database = "world", regions = ".", exact = FALSE,
 	 col = 1, plot = TRUE, add = FALSE, namesonly = FALSE, 
          xlim = NULL, ylim = NULL, wrap = FALSE,
          resolution = if (plot) 1 else 0, type = "l", bg = par("bg"),
-         mar = c(0, 0, par("mar")[3], 0.1), border = 0.01, ...)
+         mar = c(4.1, 4.1, par("mar")[3], 0.1), border = 0.01, ...)
 {
   # parameter checks
   if (resolution>0 && !plot) 
@@ -153,6 +153,7 @@ function(database = "world", regions = ".", exact = FALSE,
         plot.window(xrange, yrange, asp = 1/aspect[1])
       } else {
         # must have par(xpd = FALSE) for limits to have an effect ??!
+	par(mar = mar)	# set mai if user-defined mar
 	p <- par("fin") -
 	  as.vector(matrix(c(0, 1, 1, 0, 0, 1, 1, 0), nrow = 2) %*% par("mai"))
 	par(pin = p)
