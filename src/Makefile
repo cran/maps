@@ -4,7 +4,8 @@
 PKGNAME = maps
 CP = cp
 ECHO = echo
-RM = rm
+RM = rm -f
+MKDIR = mkdir
 
 OBJS = mapget.o		\
 	smooth.o	\
@@ -15,12 +16,14 @@ LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L
 NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 
 .line.L:
+	@$(MKDIR) -p ../inst/mapdata
 	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
 
 .name.N:
+	@$(MKDIR) -p ../inst/mapdata
 	@$(CP) ${*}.name ../inst/mapdata/${*}.N
 
 .PHONY: all gdata ldata ndata
@@ -48,4 +51,5 @@ world2.line: world.line
 	@$(CP) world.name world2.name
 
 clean:
-	$(RM) -f $(OBJS) Gmake Lmake ../inst/mapdata/* world2.* $(PKGNAME).s[lo] $(PKGNAME).dylib
+	$(RM) $(OBJS) Gmake Lmake world2.* $(PKGNAME).s[lo] $(PKGNAME).dylib
+	$(RM) -r ../inst

@@ -1,16 +1,14 @@
 #-*- Makefile -*-
 
-## this needs a *source* build of R
-## RHOME is obsolete, but still set
-include $(RHOME)/src/gnuwin32/MkRules
+include $(R_HOME)/etc$(R_ARCH)/Makeconf
 
 .SUFFIXES: .G .L .N .gon .line .name
 
 DLLNAME = maps
 
-CFLAGS = -I$(RHOME)/include -Wall -pedantic -O2 -DWin32
+CFLAGS = -I$(R_HOME)/include -Wall -pedantic -O2 -DWin32
 
-DLLLIBS = -L$(RHOME)/bin -lR 
+DLLLIBS = -L$(IMPDIR) -lR
 
 OBJS = mapget.o		\
 	smooth.o	\
@@ -21,25 +19,19 @@ LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L
 NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 
 .line.L:
+	@$(MKDIR) -p ../inst/mapdata
 	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
 
 .name.N:
+	@$(MKDIR) -p ../inst/mapdata
 	@$(CP) ${*}.name ../inst/mapdata/${*}.N
-
-ifeq ($(strip $(BUILD)),CROSS)
-Gmake:
-	$(MAKE) CC=gcc Gmake
-
-Lmake:
-	$(MAKE) CC=gcc Lmake
-endif
 
 .PHONY: all gdata ldata ndata
 
-all: ../libs/$(DLLNAME).dll ldata gdata ndata
+all: ../libs$(R_ARCH)/$(DLLNAME).dll ldata gdata ndata
 
 gdata: Gmake ldata
 	$(MAKE) -f Makefile.win $(GDATA)
@@ -52,11 +44,11 @@ ndata: world2.line
 
 $(DLLNAME).dll: $(OBJS) 
 
-../libs/$(DLLNAME).dll: ../libs $(DLLNAME).dll
+../libs$(R_ARCH)/$(DLLNAME).dll: ../libs$(R_ARCH) $(DLLNAME).dll
 	$(CP) $(DLLNAME).dll $@
 
-../libs:
-	$(MKDIR) $@
+../libs$(R_ARCH):
+	$(MKDIR) -p $@
 
 world2.line: world.line
 	@$(ECHO) "Converting world to world2"
@@ -67,5 +59,5 @@ world2.line: world.line
 	@$(CP) world.name world2.name
 
 clean:
-	$(RM) -f $(DLLNAME).dll *.a $(OBJS) *.rc Gmake.exe Lmake.exe ../inst/mapdata/* ../libs/$(DLLNAME).dll world2.*
-	$(RM) -r ../libs
+	$(RM) $(DLLNAME).dll *.a $(OBJS) *.rc Gmake.exe Lmake.exe ../libs$(R_ARCH)/$(DLLNAME).dll world2.*
+	$(RM) -r ../libs$(R_ARCH) ../inst
