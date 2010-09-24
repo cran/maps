@@ -28,7 +28,7 @@ function()
 "map.cities" <-
 function (x = world.cities, country = "", label = NULL, minpop = 0, 
     maxpop = Inf, capitals = 0, cex = par("cex"), projection = FALSE,
-    parameters = NULL, orientation = NULL, ...) 
+    parameters = NULL, orientation = NULL, pch = 1, ...) 
 {
     if (missing(x)) {
         data("world.cities", package = "maps")	# uses lazy evaluation
@@ -64,7 +64,7 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
         label <- sum(selection) < 20
     cxy <- par("cxy")
     if (sum(selection01) > 0) 
-        points(x$long[selection01], x$lat[selection01], pch = 1, 
+        points(x$long[selection01], x$lat[selection01], pch = pch, 
             cex = cex * 0.6, ...)
     if (sum(selection0) > 0) 
         if (label) 
@@ -72,21 +72,21 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
                 cex * 0.7, paste(" ", x$name[selection0], sep = ""), 
                 cex = cex * 0.7, ...)
     if (sum(selection1) > 0) {
-        points(x$long[selection1], x$lat[selection1], pch = 1, 
+        points(x$long[selection1], x$lat[selection1], pch = pch, 
             cex = cex, ...)
         text(x$long[selection1], x$lat[selection1] + cxy[2] * 
             cex, paste(" ", x$name[selection1], sep = ""), cex = cex * 
             1.2, ...)
     }
     if (sum(selection2) > 0) {
-        points(x$long[selection2], x$lat[selection2], pch = 1, 
+        points(x$long[selection2], x$lat[selection2], pch = pch, 
             cex = cex, ...)
         text(x$long[selection2], x$lat[selection2] + cxy[2] * 
             cex * 1.1, paste(" ", x$name[selection2], sep = ""), 
             cex = cex * 1.1, ...)
     }
     if (sum(selection3) > 0) {
-        points(x$long[selection3], x$lat[selection3], pch = 1, 
+        points(x$long[selection3], x$lat[selection3], pch = pch, 
             cex = cex, ...)
         text(x$long[selection3], x$lat[selection3] + cxy[2] * 
             cex * 0.9, paste(" ", x$name[selection3], sep = ""), 
