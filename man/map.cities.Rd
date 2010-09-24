@@ -6,7 +6,7 @@ Add Cities to Existing Map
 \usage{
 map.cities(x = world.cities, country = "", label = NULL, minpop = 0,
 maxpop = Inf, capitals = 0, cex = par("cex"), projection = FALSE,
-parameters = NULL, orientation = NULL, \dots)
+parameters = NULL, orientation = NULL, pch = 1, \dots)
 }
 \description{
   Adds city locations and (optionally) names to an existing map using a
@@ -60,6 +60,10 @@ does require additional parameters, these must be given in the
 a vector \code{c(latitude, longitude, rotation)} describing where
 the map should be centered and a clockwise rotation (in degrees)
 about this center.
+}
+\item{pch}{
+plotting character to use for marking city location. See
+\code{\link{points}} for options.
 }
 \item{...}{
 Further plotting parameters may be specified as for the commands
