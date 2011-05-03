@@ -6,7 +6,7 @@ include $(R_HOME)/etc$(R_ARCH)/Makeconf
 
 DLLNAME = maps
 
-CFLAGS = -I$(R_HOME)/include -Wall -pedantic -O2 -DWin32
+CFLAGS = -I$(R_HOME)/include -Wall -pedantic -DWin32
 
 DLLLIBS = -L$(IMPDIR) -lR
 

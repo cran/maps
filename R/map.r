@@ -119,8 +119,8 @@ function(database = "world", regions = ".", exact = FALSE,
   if (doproj) {
     nam <- coord$names
     library(mapproj)
-    coord <- mapproject(coord, pr = projection, pa = parameters,
-                        or = orientation)
+    coord <- mapproject(coord, projection = projection,
+			parameters = parameters, orientation = orientation)
     coord$projection = projection
     coord$parameters = parameters
     coord$orientation = orientation

@@ -1,6 +1,12 @@
 #include "R.h"
 #include "map.h"
 
+#define INIT(a)		a.begin = -PI; a.end = PI
+#define INSTALL_UP(j)	x[upfence]=x[j]; y[upfence++]=y[j]; INIT(wedge)
+#define INSTALL_DOWN(j)	x[--downfence]=x[j]; y[downfence]=y[j]; INIT(wedge)
+#define Max(a,b)	((a)>(b)?(a):(b))
+#define Min(a,b)	((a)<(b)?(a):(b))
+
 /*
  * An arc structure has a beginning angle and
  * an ending angle.  It should be in a canonical
@@ -57,8 +63,8 @@ static void intersect(a, begin, end)
 
 	/* do the intersection ... */
   else {
-    a->begin = MAX(begin, a->begin);
-    a->end = MIN(end, a->end);
+    a->begin = Max(begin, a->begin);
+    a->end = Min(end, a->end);
   }
 
   /* canonicalize the intersection if necessary */
@@ -90,10 +96,7 @@ int thin(x, y, n, delta, symmetric)
 	/* non-symmetric thin goes from one end to the other */
 	if(!symmetric) {
 		upfence = 0;
-		x[upfence]=x[0];
-		y[upfence++]=y[0];
-		wedge.begin = -PI;
-		wedge.end = PI;
+		INSTALL_UP(0);
 		for(cur = 0, next = 1; next < n; next++) {
 			dx = x[next] - x[cur];
 			dy = y[next] - y[cur];
@@ -102,10 +105,7 @@ int thin(x, y, n, delta, symmetric)
 			theta = atan2(dy, dx);
 			if(!inarc(wedge, theta)) {
 				cur = --next;
-				x[upfence]=x[cur];
-				y[upfence++]=y[cur];
-				wedge.begin = -PI;
-				wedge.end = PI;
+				INSTALL_UP(cur);
 				continue;
 			}
 			dist = hypot(dx, dy);
@@ -114,19 +114,13 @@ int thin(x, y, n, delta, symmetric)
 				intersect(&wedge, theta - alpha, theta + alpha);
 			}
 		}
-		x[upfence]=x[n-1];
-		y[upfence++]=y[n-1];
-		wedge.begin = -PI;
-		wedge.end = PI;
+		INSTALL_UP(n-1);
 		return(upfence);
 	}
 
 	/* symmetric version: first thin from the beginning to the middle */
 	upfence = 0; mid = (n + 1) / 2;
-	x[upfence]=x[0];
-	y[upfence++]=y[0];
-	wedge.begin = -PI;
-	wedge.end = PI;
+	INSTALL_UP(0);
 	for(cur = 0, next = 1; next < mid; next++) {
 		dx = x[next] - x[cur];
 		dy = y[next] - y[cur];
@@ -135,10 +129,7 @@ int thin(x, y, n, delta, symmetric)
 		theta = atan2(dy, dx);
 		if(!inarc(wedge, theta)) {
 			cur = --next;
-			x[upfence]=x[cur];
-			y[upfence++]=y[cur];
-			wedge.begin = -PI;
-			wedge.end = PI;
+			INSTALL_UP(cur);
 			continue;
 		}
 		dist = hypot(dx, dy);
@@ -147,18 +138,12 @@ int thin(x, y, n, delta, symmetric)
 			intersect(&wedge, theta - alpha, theta + alpha);
 		}
 	}
-	x[upfence]=x[mid-1];
-	y[upfence++]=y[mid-1];
-	wedge.begin = -PI;
-	wedge.end = PI;
+	INSTALL_UP(mid-1);
 	uptotal = upfence;
 
 	/* now work from the end to the middle */
 	downfence = n; mid = n - mid;
-	x[--downfence]=x[n-1];
-	y[downfence]=y[n-1];
-	wedge.begin = -PI;
-	wedge.end = PI;
+	INSTALL_DOWN(n-1);
 	for(cur = n-1, next = n-2; next >= mid; next--) {
 		dx = x[next] - x[cur];
 		dy = y[next] - y[cur];
@@ -167,10 +152,7 @@ int thin(x, y, n, delta, symmetric)
 		theta = atan2(dy, dx);
 		if(!inarc(wedge, theta)) {
 			cur = ++next;
-			x[--downfence]=x[cur];
-			y[downfence]=y[cur];
-			wedge.begin = -PI;
-			wedge.end = PI;
+			INSTALL_DOWN(cur);
 			continue;
 		}
 		dist = hypot(dx, dy);
@@ -179,10 +161,7 @@ int thin(x, y, n, delta, symmetric)
 			intersect(&wedge, theta - alpha, theta + alpha);
 		}
 	}
-	x[--downfence]=x[mid];
-	y[downfence]=y[mid];
-	wedge.begin = -PI;
-	wedge.end = PI;
+	INSTALL_DOWN(mid);
 	downtotal = n - downfence;
 
 	/* for n odd, middle point is recorded twice, so fix that */
