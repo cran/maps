@@ -118,7 +118,7 @@ function(database = "world", regions = ".", exact = FALSE,
   }
   if (doproj) {
     nam <- coord$names
-    library(mapproj)
+    require(mapproj)
     coord <- mapproject(coord, projection = projection,
 			parameters = parameters, orientation = orientation)
     coord$projection = projection
@@ -129,7 +129,7 @@ function(database = "world", regions = ".", exact = FALSE,
         stop("projection failed for all data")
       else warning("projection failed for some data")
     coord$names <- nam
-  }
+  } else mapproject <- function() {}	# Keep R CMD check quiet
   # do the plotting, if requested
   if (plot) {
     # for new plots, set up the coordinate system;

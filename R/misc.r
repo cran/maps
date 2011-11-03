@@ -36,6 +36,7 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
     }
     usr <- par("usr")
     if (!missing(projection) && projection != FALSE) {
+	require(mapproj)
         if (is.character(projection)) {
 	    projx <- mapproject(x$long, x$lat, projection = projection,
 	        parameters = parameters, orientation = orientation)
@@ -47,6 +48,7 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
 	x$long <- projx$x
 	x$lat <- projx$y
     } else {
+	mapproject <- function() {}	# Keep R CMD check quiet
 	if (usr[2] > (180 + 0.04*(usr[2] - usr[1]))) 
 	    x$long[x$long < 0] <- 360 + x$long[x$long < 0]
     }

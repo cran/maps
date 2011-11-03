@@ -51,5 +51,5 @@ world2.line: world.line
 	@$(CP) world.name world2.name
 
 clean:
-	$(RM) $(OBJS) Gmake Lmake world2.* $(PKGNAME).s[lo] $(PKGNAME).dylib
-	$(RM) -r ../inst
+	$(RM) $(OBJS) Gmake Lmake world2.* $(PKGNAME).s[lo] $(PKGNAME).dylib *.exe maps.dll
+	$(RM) -r ../inst ../libs
