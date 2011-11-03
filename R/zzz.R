@@ -1,4 +1,4 @@
-.First.lib <- function(lib, pkg) {
+.onLoad <- function(lib, pkg) {
   if(!exists("Sys.setenv", envir = baseenv()))
     Sys.setenv <- Sys.putenv
   if (Sys.getenv("R_MAP_DATA_DIR") == "")
