@@ -10,9 +10,9 @@ A database matching FIPS codes to maps package state names.
 \usage{data(state.fips)}
 \format{
 A list with 6 components, namely "fips", "ssa", "region", division",
-"abb" and "polyname", containing the FIPS, SSA, REGION and DIVISION
-numbers, the standard state abbreviation and the the respective state
-polygon name.
+"abb" and "polyname", containing the US Census Bureau FIPS, SSA, REGION
+and DIVISION numbers, the standard state abbreviation and the respective
+state polygon name.
 }
 \seealso{
 \code{\link{county.fips}}
