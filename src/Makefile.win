@@ -14,9 +14,9 @@ OBJS = mapget.o		\
 	smooth.o	\
 	thin.o
 
-GDATA = county.G state.G usa.G nz.G world.G world2.G italy.G france.G
-LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L
-NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
+GDATA = county.G state.G usa.G nz.G world.G world2.G italy.G france.G state.vbm.G state.carto.G
+LDATA = county.L state.L usa.L nz.L world.L world2.L italy.L france.L state.vbm.L state.carto.L
+NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N state.vbm.N state.carto.N
 
 .line.L:
 	@$(MKDIR) -p ../inst/mapdata
@@ -32,6 +32,14 @@ NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N
 .PHONY: all gdata ldata ndata
 
 all: ../libs$(R_ARCH)/$(DLLNAME).dll ldata gdata ndata
+
+state.carto.L: state.carto.line state.carto.linestats Lmake
+	@$(MKDIR) -p ../inst/mapdata
+	./Lmake 0 p b state.carto.line state.carto.linestats ../inst/mapdata/state.carto.L
+
+state.vbm.L: state.vbm.line state.vbm.linestats Lmake
+	@$(MKDIR) -p ../inst/mapdata
+	./Lmake 0 p b state.vbm.line state.vbm.linestats ../inst/mapdata/state.vbm.L
 
 gdata: Gmake ldata
 	$(MAKE) -f Makefile.win $(GDATA)
