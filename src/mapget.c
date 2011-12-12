@@ -153,7 +153,7 @@ void maptype(database, type)
 char **database;
 int *type;
 {
-  char Lname[100];
+  char Lname[512];
   int Coordtype;
   FILE *lf;
 
@@ -203,7 +203,7 @@ int *which, *nwhich, *sl, *retlines, *fill;
 double *range;
 {
 	Region region, total;
-	char Gname[100];
+	char Gname[512];
 	int i, maxsize = 0, k;
 	int type;
 	double factor, xmin, xmax, ymin, ymax;
@@ -306,7 +306,7 @@ int *which, *nwhich, *getcoords, *fill;
 double *x, *y, *range;
 {
   Polyline line, total;
-	char Lname[100];
+	char Lname[512];
 	int i, Coordtype, k, maxsize = 0, start, end, incr;
 	int type;
 	double factor, xmin, xmax, ymin, ymax, ox, dx, wind;
@@ -549,7 +549,7 @@ void
 map_where(char **database, double *x, double *y, int *n, int *poly)
 {
   Region npoly;
-  char Gname[100];
+  char Gname[512];
   int i, j;
   int nv;
   struct region_h *rh;

@@ -1,4 +1,4 @@
-f4282e8a52723b917f0368dbf73601ab *DESCRIPTION
+a276aae733b63ad03a832b7ac3ee3117 *DESCRIPTION
 012592abf4b40a8d741b299df2ded05a *NAMESPACE
 80aa05ca421f4b4aafd2aa1c62e5bf2d *R/db.r
 4a62baaaeb68b971eba22eb579f4e414 *R/map.r
@@ -78,7 +78,7 @@ f7c622f74f28e328d3d65f265f0a26c3 *src/italy.gonstats
 1495aafdb361a79248ca9c2950c57d90 *src/italy.linestats
 1ddcc46403193ad474b3934d046f10bf *src/italy.name
 28f0356bc9bb3e0b479b9cc916930730 *src/map.h
-11fb4709e58d7a684b9c48dbe54fd8b5 *src/mapget.c
+c618f6bb1a25250d0132a989894906b8 *src/mapget.c
 8cee9d537960596124350a5aad35f91a *src/maps.def
 5e9c4adf4fc41a391e3539fa708961b0 *src/nz.gon
 1baecc758797af3a5db79c56f81b16be *src/nz.gonstats
