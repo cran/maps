@@ -1,4 +1,4 @@
-a276aae733b63ad03a832b7ac3ee3117 *DESCRIPTION
+c241d27b5034b600801605f6cf461864 *DESCRIPTION
 012592abf4b40a8d741b299df2ded05a *NAMESPACE
 80aa05ca421f4b4aafd2aa1c62e5bf2d *R/db.r
 4a62baaaeb68b971eba22eb579f4e414 *R/map.r
@@ -61,11 +61,11 @@ f684d16afeece0ab0ecdaddd67397466 *src/Gmake.c
 d1ebffb0e35151ea78870f20b78320d5 *src/Makefile.win
 ee000c17ddd154301f679ce267ed4918 *src/README
 885521324ea75cdfcea9d91a5afb0ec5 *src/convert.awk
-7e6373f288c239e3c4a81dd10347d2c9 *src/county.gon
-42d31544ad47078bf51d2d43cd125658 *src/county.gonstats
-d12c98250b5ebfb76d373848f2dfe17c *src/county.line
-013879757feaded46183178af9dbf262 *src/county.linestats
-8a1b5889411471d7694d97ebdf783356 *src/county.name
+61d9d1f3d8f62afe0a7ed4022174dc8a *src/county.gon
+38ce6dae990d17ef1f7025cc01a48f20 *src/county.gonstats
+83e6208927194a37954576191c968ba9 *src/county.line
+3840bd593493aff0a8a09564772ca1ce *src/county.linestats
+013536d7e03fa19af1c13dbd821a352e *src/county.name
 39cb343519f464aa76c254763e420890 *src/france.gon
 0ea34241398d4f8b1512e52d9039917e *src/france.gonstats
 fc3a0c540e31cc2d6c92579fd0ee9bd1 *src/france.line
