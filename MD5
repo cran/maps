@@ -1,7 +1,7 @@
-c241d27b5034b600801605f6cf461864 *DESCRIPTION
+3964d2eac0d6883c86b109d3a9570a0a *DESCRIPTION
 012592abf4b40a8d741b299df2ded05a *NAMESPACE
 80aa05ca421f4b4aafd2aa1c62e5bf2d *R/db.r
-4a62baaaeb68b971eba22eb579f4e414 *R/map.r
+3300f5294c8c0e572b76ec9125441284 *R/map.r
 5f0c0ab48d2ce320c4ba0d0018a57d99 *R/misc.r
 89ba2eda91abd2d6fdaebfde9da3f4e9 *R/polygon.r
 45bb5cad9ffc203d8e62dae784725f37 *R/smooth.r
@@ -35,7 +35,7 @@ f6c4336f6614dabf3573895a38ea1099 *man/identify.map.Rd
 b39d593d4b02815c823f555cf8599ee5 *man/internal.Rd
 56766404494d261648f09393180151dc *man/internal2.Rd
 b80ddc48b7415d5f4122b9ef598279b0 *man/italy.Rd
-fb972de4b0386b6cdcc42aae735212ea *man/map.Rd
+338087ffbea9f06c8249b4c2db629688 *man/map.Rd
 f590ca3d82f3a60d0714c70bf6bdffb6 *man/map.axes.Rd
 5a6345e78e10197ba4db0ffa550670cf *man/map.cities.Rd
 7154c4758c1f712f926af93e5fce1c60 *man/map.scale.Rd
@@ -61,7 +61,7 @@ f684d16afeece0ab0ecdaddd67397466 *src/Gmake.c
 d1ebffb0e35151ea78870f20b78320d5 *src/Makefile.win
 ee000c17ddd154301f679ce267ed4918 *src/README
 885521324ea75cdfcea9d91a5afb0ec5 *src/convert.awk
-61d9d1f3d8f62afe0a7ed4022174dc8a *src/county.gon
+34229207131e202f22a184d96291370b *src/county.gon
 38ce6dae990d17ef1f7025cc01a48f20 *src/county.gonstats
 83e6208927194a37954576191c968ba9 *src/county.line
 3840bd593493aff0a8a09564772ca1ce *src/county.linestats
