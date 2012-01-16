@@ -93,7 +93,7 @@ function(database = "world", regions = ".", exact = FALSE,
 	 col = 1, plot = TRUE, add = FALSE, namesonly = FALSE, 
          xlim = NULL, ylim = NULL, wrap = FALSE,
          resolution = if (plot) 1 else 0, type = "l", bg = par("bg"),
-         mar = c(4.1, 4.1, par("mar")[3], 0.1), border = 0.01, ...)
+         mar = c(4.1, 4.1, par("mar")[3], 0.1), myborder = 0.01, ...)
 {
   # parameter checks
   if (resolution>0 && !plot) 
@@ -148,7 +148,7 @@ function(database = "world", regions = ".", exact = FALSE,
 	aspect <- c(1, 1) 
       } else
         aspect <- c(cos((mean(yrange) * pi)/180), 1)
-      d <- c(diff(xrange), diff(yrange)) * (1 + 2 * border) * aspect
+      d <- c(diff(xrange), diff(yrange)) * (1 + 2 * myborder) * aspect
       if (coordtype != "spherical" || doproj) {
         plot.window(xrange, yrange, asp = 1/aspect[1])
       } else {
@@ -160,7 +160,7 @@ function(database = "world", regions = ".", exact = FALSE,
         p <- par("pin")
         p <- d * min(p/d)
         par(pin = p)
-        d <- d * border + ((p/min(p/d) - d)/2)/aspect
+        d <- d * myborder + ((p/min(p/d) - d)/2)/aspect
         usr <- c(xrange, yrange) + rep(c(-1, 1), 2) * rep(d, c(2, 2))
         par(usr = usr)
       }

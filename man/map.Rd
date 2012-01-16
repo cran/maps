@@ -10,7 +10,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
   type = "l", bg = par("bg"), mar = c(4.1, 4.1, par("mar")[3], 0.1),
-  border = 0.01, ...)
+  myborder = 0.01, ...)
 }
 \usage{
 map(database, regions)  # simple form
@@ -19,7 +19,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
   type = "l", bg = par("bg"), mar = c(4.1, 4.1, par("mar")[3], 0.1),
-  border = 0.01, ...)
+  myborder = 0.01, ...)
 }
 \arguments{
   \item{database}{
@@ -169,7 +169,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   \item{mar}{
     margins, as in \code{\link{par}}.  Defaults allow for map.axes().
   }
-  \item{border}{
+  \item{myborder}{
     scalar or vector of length 2 specifying the porportion of the plot
     to add to the defined or computed limits as borders.
   }
@@ -206,8 +206,8 @@ map()	# low resolution map of the world
 map('usa')	# national boundaries
 map('county', 'new jersey')	# county map of New Jersey
 map('state', region = c('new york', 'new jersey', 'penn'))	# map of three states
-map("state", ".*dakota", border = 0)	# map of the dakotas
-map.axes()				# show the effect of border = 0
+map("state", ".*dakota", myborder = 0)	# map of the dakotas
+map.axes()				# show the effect of myborder = 0
 if(require(mapproj))
   map('state', proj = 'bonne', param = 45)	# Bonne equal-area projection of states
 
