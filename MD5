@@ -1,4 +1,4 @@
-3964d2eac0d6883c86b109d3a9570a0a *DESCRIPTION
+5c83ff504642df84cf5fb7af1d5e2484 *DESCRIPTION
 012592abf4b40a8d741b299df2ded05a *NAMESPACE
 80aa05ca421f4b4aafd2aa1c62e5bf2d *R/db.r
 3300f5294c8c0e572b76ec9125441284 *R/map.r
@@ -23,7 +23,7 @@ b69d31b3798c90f8daf7739755de1a93 *data/state.vbmMapEnv.r
 47260e722f73cdedba76a2cc1e6a3205 *data/us.cities.rda
 c65f0fd76cf1705827c27ef6d6bf646a *data/usaMapEnv.r
 0f1a65d78161fb00e86d5386a2f883cd *data/votes.repub.rda
-bc55cff7e2a132d415275bade4846303 *data/world.cities.rda
+0b7f7d6b698d6ad3bb20a15083765313 *data/world.cities.rda
 d92fb72bdbea7946860c1a851e230b23 *data/world2MapEnv.r
 af1a98ea280598ed1cd85d00551cba98 *data/worldMapEnv.r
 5f9fab4844ba7d6a1ad6f65e8f684355 *man/area.map.Rd
@@ -37,7 +37,7 @@ b39d593d4b02815c823f555cf8599ee5 *man/internal.Rd
 b80ddc48b7415d5f4122b9ef598279b0 *man/italy.Rd
 338087ffbea9f06c8249b4c2db629688 *man/map.Rd
 f590ca3d82f3a60d0714c70bf6bdffb6 *man/map.axes.Rd
-5a6345e78e10197ba4db0ffa550670cf *man/map.cities.Rd
+075d0bdab24034a7afc7cbabda65f70a *man/map.cities.Rd
 7154c4758c1f712f926af93e5fce1c60 *man/map.scale.Rd
 9e3bf07d05f43ff69672df274da89943 *man/map.text.Rd
 631a40fee9c727336502266f76e644a1 *man/map.where.Rd
@@ -61,11 +61,11 @@ f684d16afeece0ab0ecdaddd67397466 *src/Gmake.c
 d1ebffb0e35151ea78870f20b78320d5 *src/Makefile.win
 ee000c17ddd154301f679ce267ed4918 *src/README
 885521324ea75cdfcea9d91a5afb0ec5 *src/convert.awk
-34229207131e202f22a184d96291370b *src/county.gon
-38ce6dae990d17ef1f7025cc01a48f20 *src/county.gonstats
+5046e7c59a58b0cad2b45cceb029a0ab *src/county.gon
+42d31544ad47078bf51d2d43cd125658 *src/county.gonstats
 83e6208927194a37954576191c968ba9 *src/county.line
 3840bd593493aff0a8a09564772ca1ce *src/county.linestats
-013536d7e03fa19af1c13dbd821a352e *src/county.name
+71b3af1d063b50d18d5cc3325f312537 *src/county.name
 39cb343519f464aa76c254763e420890 *src/france.gon
 0ea34241398d4f8b1512e52d9039917e *src/france.gonstats
 fc3a0c540e31cc2d6c92579fd0ee9bd1 *src/france.line
