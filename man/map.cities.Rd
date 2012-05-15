@@ -88,12 +88,11 @@ general is no higher than about 40,000.  The data are copyright Stefan
 Helders but freely available from his website
 \url{http://www.world-gazetteer.com}.
 
-There are three supplied databases, world.cities (the default),
-us.cities and canada.cities.  The latter two (which need to be made
-available by using a \code{data()} call, include the state or
-province name with the city name (thanks to  John Woodruff
-\email{jpwoodruff@irisinternet.net} for the state and province
-information).
+There are three supplied databases, world.cities (the default), us.cities
+and canada.cities.  The latter two, which need to be made available by
+using a \code{'data()'} call, include the state or province name with the
+city name (thanks to John Woodruff \email{jpwoodruff@irisinternet.net}
+for the state and province information).
 
 Note that if the underlying map is "Pacific-centric", i.e. longitudes
 exceed 180 degrees, and a projection is used, then the map.cities data

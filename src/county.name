@@ -286,7 +286,7 @@ connecticut,windham	  285
 delaware,kent	  286
 delaware,new castle	  287
 delaware,sussex	  288
-district of columbia,washington	289
+district of columbia,washington	  289
 florida,alachua	  290
 florida,baker	  291
 florida,bay	  292
@@ -2392,692 +2392,691 @@ south dakota,tripp	 2391
 south dakota,turner	 2392
 south dakota,union	 2393
 south dakota,walworth	 2394
-south dakota	 2395
-south dakota,yankton	 2396
-south dakota,ziebach	 2397
-tennessee,anderson	 2398
-tennessee,bedford	 2399
-tennessee,benton	 2400
-tennessee,bledsoe	 2401
-tennessee,blount	 2402
-tennessee,bradley	 2403
-tennessee,campbell	 2404
-tennessee,cannon	 2405
-tennessee,carroll	 2406
-tennessee,carter	 2407
-tennessee,cheatham	 2408
-tennessee,chester	 2409
-tennessee,claiborne	 2410
-tennessee,clay	 2411
-tennessee,cocke	 2412
-tennessee,coffee	 2413
-tennessee,crockett	 2414
-tennessee,cumberland	 2415
-tennessee,davidson	 2416
-tennessee,decatur	 2417
-tennessee,de kalb	 2418
-tennessee,dickson	 2419
-tennessee,dyer	 2420
-tennessee,fayette	 2421
-tennessee,fentress	 2422
-tennessee,franklin	 2423
-tennessee,gibson	 2424
-tennessee,giles	 2425
-tennessee,grainger	 2426
-tennessee,greene	 2427
-tennessee,grundy	 2428
-tennessee,hamblen	 2429
-tennessee,hamilton	 2430
-tennessee,hancock	 2431
-tennessee,hardeman	 2432
-tennessee,hardin	 2433
-tennessee,hawkins	 2434
-tennessee,haywood	 2435
-tennessee,henderson	 2436
-tennessee,henry	 2437
-tennessee,hickman	 2438
-tennessee,houston	 2439
-tennessee,humphreys	 2440
-tennessee,jackson	 2441
-tennessee,jefferson	 2442
-tennessee,johnson	 2443
-tennessee,knox	 2444
-tennessee,lake	 2445
-tennessee,lauderdale	 2446
-tennessee,lawrence	 2447
-tennessee,lewis	 2448
-tennessee,lincoln	 2449
-tennessee,loudon	 2450
-tennessee,mcminn	 2451
-tennessee,mcnairy	 2452
-tennessee,macon	 2453
-tennessee,madison	 2454
-tennessee,marion	 2455
-tennessee,marshall	 2456
-tennessee,maury	 2457
-tennessee,meigs	 2458
-tennessee,monroe	 2459
-tennessee,montgomery	 2460
-tennessee,moore	 2461
-tennessee,morgan	 2462
-tennessee,obion	 2463
-tennessee,overton	 2464
-tennessee,perry	 2465
-tennessee,pickett	 2466
-tennessee,polk	 2467
-tennessee,putnam	 2468
-tennessee,rhea	 2469
-tennessee,roane	 2470
-tennessee,robertson	 2471
-tennessee,rutherford	 2472
-tennessee,scott	 2473
-tennessee,sequatchie	 2474
-tennessee,sevier	 2475
-tennessee,shelby	 2476
-tennessee,smith	 2477
-tennessee,stewart	 2478
-tennessee,sullivan	 2479
-tennessee,sumner	 2480
-tennessee,tipton	 2481
-tennessee,trousdale	 2482
-tennessee,unicoi	 2483
-tennessee,union	 2484
-tennessee,van buren	 2485
-tennessee,warren	 2486
-tennessee,washington	 2487
-tennessee,wayne	 2488
-tennessee,weakley	 2489
-tennessee,white	 2490
-tennessee,williamson	 2491
-tennessee,wilson	 2492
-texas,anderson	 2493
-texas,andrews	 2494
-texas,angelina	 2495
-texas,aransas	 2496
-texas,archer	 2497
-texas,armstrong	 2498
-texas,atascosa	 2499
-texas,austin	 2500
-texas,bailey	 2501
-texas,bandera	 2502
-texas,bastrop	 2503
-texas,baylor	 2504
-texas,bee	 2505
-texas,bell	 2506
-texas,bexar	 2507
-texas,blanco	 2508
-texas,borden	 2509
-texas,bosque	 2510
-texas,bowie	 2511
-texas,brazoria	 2512
-texas,brazos	 2513
-texas,brewster	 2514
-texas,briscoe	 2515
-texas,brooks	 2516
-texas,brown	 2517
-texas,burleson	 2518
-texas,burnet	 2519
-texas,caldwell	 2520
-texas,calhoun	 2521
-texas,callahan	 2522
-texas,cameron	 2523
-texas,camp	 2524
-texas,carson	 2525
-texas,cass	 2526
-texas,castro	 2527
-texas,chambers	 2528
-texas,cherokee	 2529
-texas,childress	 2530
-texas,clay	 2531
-texas,cochran	 2532
-texas,coke	 2533
-texas,coleman	 2534
-texas,collin	 2535
-texas,collingsworth	 2536
-texas,colorado	 2537
-texas,comal	 2538
-texas,comanche	 2539
-texas,concho	 2540
-texas,cooke	 2541
-texas,coryell	 2542
-texas,cottle	 2543
-texas,crane	 2544
-texas,crockett	 2545
-texas,crosby	 2546
-texas,culberson	 2547
-texas,dallam	 2548
-texas,dallas	 2549
-texas,dawson	 2550
-texas,deaf smith	 2551
-texas,delta	 2552
-texas,denton	 2553
-texas,de witt	 2554
-texas,dickens	 2555
-texas,dimmit	 2556
-texas,donley	 2557
-texas,duval	 2558
-texas,eastland	 2559
-texas,ector	 2560
-texas,edwards	 2561
-texas,ellis	 2562
-texas,el paso	 2563
-texas,erath	 2564
-texas,falls	 2565
-texas,fannin	 2566
-texas,fayette	 2567
-texas,fisher	 2568
-texas,floyd	 2569
-texas,foard	 2570
-texas,fort bend	 2571
-texas,franklin	 2572
-texas,freestone	 2573
-texas,frio	 2574
-texas,gaines	 2575
-texas,galveston:main	 2576
-texas,galveston:spit	 2577
-texas,garza	 2578
-texas,gillespie	 2579
-texas,glasscock	 2580
-texas,goliad	 2581
-texas,gonzales	 2582
-texas,gray	 2583
-texas,grayson	 2584
-texas,gregg	 2585
-texas,grimes	 2586
-texas,guadalupe	 2587
-texas,hale	 2588
-texas,hall	 2589
-texas,hamilton	 2590
-texas,hansford	 2591
-texas,hardeman	 2592
-texas,hardin	 2593
-texas,harris	 2594
-texas,harrison	 2595
-texas,hartley	 2596
-texas,haskell	 2597
-texas,hays	 2598
-texas,hemphill	 2599
-texas,henderson	 2600
-texas,hidalgo	 2601
-texas,hill	 2602
-texas,hockley	 2603
-texas,hood	 2604
-texas,hopkins	 2605
-texas,houston	 2606
-texas,howard	 2607
-texas,hudspeth	 2608
-texas,hunt	 2609
-texas,hutchinson	 2610
-texas,irion	 2611
-texas,jack	 2612
-texas,jackson	 2613
-texas,jasper	 2614
-texas,jeff davis	 2615
-texas,jefferson	 2616
-texas,jim hogg	 2617
-texas,jim wells	 2618
-texas,johnson	 2619
-texas,jones	 2620
-texas,karnes	 2621
-texas,kaufman	 2622
-texas,kendall	 2623
-texas,kenedy	 2624
-texas,kent	 2625
-texas,kerr	 2626
-texas,kimble	 2627
-texas,king	 2628
-texas,kinney	 2629
-texas,kleberg	 2630
-texas,knox	 2631
-texas,lamar	 2632
-texas,lamb	 2633
-texas,lampasas	 2634
-texas,la salle	 2635
-texas,lavaca	 2636
-texas,lee	 2637
-texas,leon	 2638
-texas,liberty	 2639
-texas,limestone	 2640
-texas,lipscomb	 2641
-texas,live oak	 2642
-texas,llano	 2643
-texas,loving	 2644
-texas,lubbock	 2645
-texas,lynn	 2646
-texas,mcculloch	 2647
-texas,mclennan	 2648
-texas,mcmullen	 2649
-texas,madison	 2650
-texas,marion	 2651
-texas,martin	 2652
-texas,mason	 2653
-texas,matagorda	 2654
-texas,maverick	 2655
-texas,medina	 2656
-texas,menard	 2657
-texas,midland	 2658
-texas,milam	 2659
-texas,mills	 2660
-texas,mitchell	 2661
-texas,montague	 2662
-texas,montgomery	 2663
-texas,moore	 2664
-texas,morris	 2665
-texas,motley	 2666
-texas,nacogdoches	 2667
-texas,navarro	 2668
-texas,newton	 2669
-texas,nolan	 2670
-texas,nueces	 2671
-texas,ochiltree	 2672
-texas,oldham	 2673
-texas,orange	 2674
-texas,palo pinto	 2675
-texas,panola	 2676
-texas,parker	 2677
-texas,parmer	 2678
-texas,pecos	 2679
-texas,polk	 2680
-texas,potter	 2681
-texas,presidio	 2682
-texas,rains	 2683
-texas,randall	 2684
-texas,reagan	 2685
-texas,real	 2686
-texas,red river	 2687
-texas,reeves	 2688
-texas,refugio	 2689
-texas,roberts	 2690
-texas,robertson	 2691
-texas,rockwall	 2692
-texas,runnels	 2693
-texas,rusk	 2694
-texas,sabine	 2695
-texas,san augustine	 2696
-texas,san jacinto	 2697
-texas,san patricio	 2698
-texas,san saba	 2699
-texas,schleicher	 2700
-texas,scurry	 2701
-texas,shackelford	 2702
-texas,shelby	 2703
-texas,sherman	 2704
-texas,smith	 2705
-texas,somervell	 2706
-texas,starr	 2707
-texas,stephens	 2708
-texas,sterling	 2709
-texas,stonewall	 2710
-texas,sutton	 2711
-texas,swisher	 2712
-texas,tarrant	 2713
-texas,taylor	 2714
-texas,terrell	 2715
-texas,terry	 2716
-texas,throckmorton	 2717
-texas,titus	 2718
-texas,tom green	 2719
-texas,travis	 2720
-texas,trinity	 2721
-texas,tyler	 2722
-texas,upshur	 2723
-texas,upton	 2724
-texas,uvalde	 2725
-texas,val verde	 2726
-texas,van zandt	 2727
-texas,victoria	 2728
-texas,walker	 2729
-texas,waller	 2730
-texas,ward	 2731
-texas,washington	 2732
-texas,webb	 2733
-texas,wharton	 2734
-texas,wheeler	 2735
-texas,wichita	 2736
-texas,wilbarger	 2737
-texas,willacy	 2738
-texas,williamson	 2739
-texas,wilson	 2740
-texas,winkler	 2741
-texas,wise	 2742
-texas,wood	 2743
-texas,yoakum	 2744
-texas,young	 2745
-texas,zapata	 2746
-texas,zavala	 2747
-utah,beaver	 2748
-utah,box elder	 2749
-utah,cache	 2750
-utah,carbon	 2751
-utah,daggett	 2752
-utah,davis	 2753
-utah,duchesne	 2754
-utah,emery	 2755
-utah,garfield	 2756
-utah,grand	 2757
-utah,iron	 2758
-utah,juab	 2759
-utah,kane	 2760
-utah,millard	 2761
-utah,morgan	 2762
-utah,piute	 2763
-utah,rich	 2764
-utah,salt lake	 2765
-utah,san juan	 2766
-utah,sanpete	 2767
-utah,sevier	 2768
-utah,summit	 2769
-utah,tooele	 2770
-utah,uintah	 2771
-utah,utah	 2772
-utah,wasatch	 2773
-utah,washington	 2774
-utah,wayne	 2775
-utah,weber	 2776
-vermont,addison	 2777
-vermont,bennington	 2778
-vermont,caledonia	 2779
-vermont,chittenden	 2780
-vermont,essex	 2781
-vermont,franklin	 2782
-vermont,grand isle	 2783
-vermont,lamoille	 2784
-vermont,orange	 2785
-vermont,orleans	 2786
-vermont,rutland	 2787
-vermont,washington	 2788
-vermont,windham	 2789
-vermont,windsor	 2790
-virginia,accomack:main	 2791
-virginia,accomack:chincoteague	 2792
-virginia,albemarle	 2793
-virginia,alleghany	 2794
-virginia,amelia	 2795
-virginia,amherst	 2796
-virginia,appomattox	 2797
-virginia,arlington	 2798
-virginia,augusta	 2799
-virginia,bath	 2800
-virginia,bedford	 2801
-virginia,bland	 2802
-virginia,botetourt	 2803
-virginia,brunswick	 2804
-virginia,buchanan	 2805
-virginia,buckingham	 2806
-virginia,campbell	 2807
-virginia,caroline	 2808
-virginia,carroll	 2809
-virginia,charles city	 2810
-virginia,charlotte	 2811
-virginia,chesterfield	 2812
-virginia,clarke	 2813
-virginia,craig	 2814
-virginia,culpeper	 2815
-virginia,cumberland	 2816
-virginia,dickenson	 2817
-virginia,dinwiddie	 2818
-virginia,essex	 2819
-virginia,fairfax	 2820
-virginia,fauquier	 2821
-virginia,floyd	 2822
-virginia,fluvanna	 2823
-virginia,franklin	 2824
-virginia,frederick	 2825
-virginia,giles	 2826
-virginia,gloucester	 2827
-virginia,goochland	 2828
-virginia,grayson	 2829
-virginia,greene	 2830
-virginia,greensville	 2831
-virginia,halifax	 2832
-virginia,hanover	 2833
-virginia,henrico	 2834
-virginia,henry	 2835
-virginia,highland	 2836
-virginia,isle of wight	 2837
-virginia,james city	 2838
-virginia,king and queen	 2839
-virginia,king george	 2840
-virginia,king william	 2841
-virginia,lancaster	 2842
-virginia,lee	 2843
-virginia,loudoun	 2844
-virginia,louisa	 2845
-virginia,lunenburg	 2846
-virginia,madison	 2847
-virginia,mathews	 2848
-virginia,mecklenburg	 2849
-virginia,middlesex	 2850
-virginia,montgomery	 2851
-virginia,suffolk	 2852
-virginia,nelson	 2853
-virginia,new kent	 2854
-virginia,northampton	 2855
-virginia,northumberland	 2856
-virginia,nottoway	 2857
-virginia,orange	 2858
-virginia,page	 2859
-virginia,patrick	 2860
-virginia,pittsylvania	 2861
-virginia,powhatan	 2862
-virginia,prince edward	 2863
-virginia,prince george	 2864
-virginia,prince william	 2865
-virginia,pulaski	 2866
-virginia,rappahannock	 2867
-virginia,richmond	 2868
-virginia,roanoke	 2869
-virginia,rockbridge	 2870
-virginia,rockingham	 2871
-virginia,russell	 2872
-virginia,scott	 2873
-virginia,shenandoah	 2874
-virginia,smyth	 2875
-virginia,southampton	 2876
-virginia,spotsylvania	 2877
-virginia,stafford	 2878
-virginia,surry	 2879
-virginia,sussex	 2880
-virginia,tazewell	 2881
-virginia,warren	 2882
-virginia,washington	 2883
-virginia,westmoreland	 2884
-virginia,wise	 2885
-virginia,wythe	 2886
-virginia,york	 2887
-virginia,hampton	 2888
-virginia,newport news	 2889
-virginia,norfolk	 2890
-virginia,virginia beach	 2891
-washington,adams	 2892
-washington,asotin	 2893
-washington,benton	 2894
-washington,chelan	 2895
-washington,clallam	 2896
-washington,clark	 2897
-washington,columbia	 2898
-washington,cowlitz	 2899
-washington,douglas	 2900
-washington,ferry	 2901
-washington,franklin	 2902
-washington,garfield	 2903
-washington,grant	 2904
-washington,grays harbor	 2905
-washington,island	 2906
-washington,jefferson	 2907
-washington,king	 2908
-washington,kitsap	 2909
-washington,kittitas	 2910
-washington,klickitat	 2911
-washington,lewis	 2912
-washington,lincoln	 2913
-washington,mason	 2914
-washington,okanogan	 2915
-washington,pacific	 2916
-washington,pend oreille	 2917
-washington,pierce:main	 2918
-washington,pierce:penrose	 2919
-washington,san juan:lopez island	 2920
-washington,san juan:orcas island	 2921
-washington,san juan:san juan island	 2922
-washington,skagit	 2923
-washington,skamania	 2924
-washington,snohomish	 2925
-washington,spokane	 2926
-washington,stevens	 2927
-washington,thurston	 2928
-washington,wahkiakum	 2929
-washington,walla walla	 2930
-washington,whatcom	 2931
-washington,whitman	 2932
-washington,yakima	 2933
-west virginia,barbour	 2934
-west virginia,berkeley	 2935
-west virginia,boone	 2936
-west virginia,braxton	 2937
-west virginia,brooke	 2938
-west virginia,cabell	 2939
-west virginia,calhoun	 2940
-west virginia,clay	 2941
-west virginia,doddridge	 2942
-west virginia,fayette	 2943
-west virginia,gilmer	 2944
-west virginia,grant	 2945
-west virginia,greenbrier	 2946
-west virginia,hampshire	 2947
-west virginia,hancock	 2948
-west virginia,hardy	 2949
-west virginia,harrison	 2950
-west virginia,jackson	 2951
-west virginia,jefferson	 2952
-west virginia,kanawha	 2953
-west virginia,lewis	 2954
-west virginia,lincoln	 2955
-west virginia,logan	 2956
-west virginia,mcdowell	 2957
-west virginia,marion	 2958
-west virginia,marshall	 2959
-west virginia,mason	 2960
-west virginia,mercer	 2961
-west virginia,mineral	 2962
-west virginia,mingo	 2963
-west virginia,monongalia	 2964
-west virginia,monroe	 2965
-west virginia,morgan	 2966
-west virginia,nicholas	 2967
-west virginia,ohio	 2968
-west virginia,pendleton	 2969
-west virginia,pleasants	 2970
-west virginia,pocahontas	 2971
-west virginia,preston	 2972
-west virginia,putnam	 2973
-west virginia,raleigh	 2974
-west virginia,randolph	 2975
-west virginia,ritchie	 2976
-west virginia,roane	 2977
-west virginia,summers	 2978
-west virginia,taylor	 2979
-west virginia,tucker	 2980
-west virginia,tyler	 2981
-west virginia,upshur	 2982
-west virginia,wayne	 2983
-west virginia,webster	 2984
-west virginia,wetzel	 2985
-west virginia,wirt	 2986
-west virginia,wood	 2987
-west virginia,wyoming	 2988
-wisconsin,adams	 2989
-wisconsin,ashland	 2990
-wisconsin,barron	 2991
-wisconsin,bayfield	 2992
-wisconsin,brown	 2993
-wisconsin,buffalo	 2994
-wisconsin,burnett	 2995
-wisconsin,calumet	 2996
-wisconsin,chippewa	 2997
-wisconsin,clark	 2998
-wisconsin,columbia	 2999
-wisconsin,crawford	 3000
-wisconsin,dane	 3001
-wisconsin,dodge	 3002
-wisconsin,door	 3003
-wisconsin,douglas	 3004
-wisconsin,dunn	 3005
-wisconsin,eau claire	 3006
-wisconsin,florence	 3007
-wisconsin,fond du lac	 3008
-wisconsin,forest	 3009
-wisconsin,grant	 3010
-wisconsin,green	 3011
-wisconsin,green lake	 3012
-wisconsin,iowa	 3013
-wisconsin,iron	 3014
-wisconsin,jackson	 3015
-wisconsin,jefferson	 3016
-wisconsin,juneau	 3017
-wisconsin,kenosha	 3018
-wisconsin,kewaunee	 3019
-wisconsin,la crosse	 3020
-wisconsin,lafayette	 3021
-wisconsin,langlade	 3022
-wisconsin,lincoln	 3023
-wisconsin,manitowoc	 3024
-wisconsin,marathon	 3025
-wisconsin,marinette	 3026
-wisconsin,marquette	 3027
-wisconsin,milwaukee	 3028
-wisconsin,monroe	 3029
-wisconsin,oconto	 3030
-wisconsin,oneida	 3031
-wisconsin,outagamie	 3032
-wisconsin,ozaukee	 3033
-wisconsin,pepin	 3034
-wisconsin,pierce	 3035
-wisconsin,polk	 3036
-wisconsin,portage	 3037
-wisconsin,price	 3038
-wisconsin,racine	 3039
-wisconsin,richland	 3040
-wisconsin,rock	 3041
-wisconsin,rusk	 3042
-wisconsin,st croix	 3043
-wisconsin,sauk	 3044
-wisconsin,sawyer	 3045
-wisconsin,shawano	 3046
-wisconsin,sheboygan	 3047
-wisconsin,taylor	 3048
-wisconsin,trempealeau	 3049
-wisconsin,vernon	 3050
-wisconsin,vilas	 3051
-wisconsin,walworth	 3052
-wisconsin,washburn	 3053
-wisconsin,washington	 3054
-wisconsin,waukesha	 3055
-wisconsin,waupaca	 3056
-wisconsin,waushara	 3057
-wisconsin,winnebago	 3058
-wisconsin,wood	 3059
-wyoming,albany	 3060
-wyoming,big horn	 3061
-wyoming,campbell	 3062
-wyoming,carbon	 3063
-wyoming,converse	 3064
-wyoming,crook	 3065
-wyoming,fremont	 3066
-wyoming,goshen	 3067
-wyoming,hot springs	 3068
-wyoming,johnson	 3069
-wyoming,laramie	 3070
-wyoming,lincoln	 3071
-wyoming,natrona	 3072
-wyoming,niobrara	 3073
-wyoming,park	 3074
-wyoming,platte	 3075
-wyoming,sheridan	 3076
-wyoming,sublette	 3077
-wyoming,sweetwater	 3078
-wyoming,teton	 3079
-wyoming,uinta	 3080
-wyoming,washakie	 3081
-wyoming,weston	 3082
-new mexico,valencia	 3083
+south dakota,yankton	 2395
+south dakota,ziebach	 2396
+tennessee,anderson	 2397
+tennessee,bedford	 2398
+tennessee,benton	 2399
+tennessee,bledsoe	 2400
+tennessee,blount	 2401
+tennessee,bradley	 2402
+tennessee,campbell	 2403
+tennessee,cannon	 2404
+tennessee,carroll	 2405
+tennessee,carter	 2406
+tennessee,cheatham	 2407
+tennessee,chester	 2408
+tennessee,claiborne	 2409
+tennessee,clay	 2410
+tennessee,cocke	 2411
+tennessee,coffee	 2412
+tennessee,crockett	 2413
+tennessee,cumberland	 2414
+tennessee,davidson	 2415
+tennessee,decatur	 2416
+tennessee,de kalb	 2417
+tennessee,dickson	 2418
+tennessee,dyer	 2419
+tennessee,fayette	 2420
+tennessee,fentress	 2421
+tennessee,franklin	 2422
+tennessee,gibson	 2423
+tennessee,giles	 2424
+tennessee,grainger	 2425
+tennessee,greene	 2426
+tennessee,grundy	 2427
+tennessee,hamblen	 2428
+tennessee,hamilton	 2429
+tennessee,hancock	 2430
+tennessee,hardeman	 2431
+tennessee,hardin	 2432
+tennessee,hawkins	 2433
+tennessee,haywood	 2434
+tennessee,henderson	 2435
+tennessee,henry	 2436
+tennessee,hickman	 2437
+tennessee,houston	 2438
+tennessee,humphreys	 2439
+tennessee,jackson	 2440
+tennessee,jefferson	 2441
+tennessee,johnson	 2442
+tennessee,knox	 2443
+tennessee,lake	 2444
+tennessee,lauderdale	 2445
+tennessee,lawrence	 2446
+tennessee,lewis	 2447
+tennessee,lincoln	 2448
+tennessee,loudon	 2449
+tennessee,mcminn	 2450
+tennessee,mcnairy	 2451
+tennessee,macon	 2452
+tennessee,madison	 2453
+tennessee,marion	 2454
+tennessee,marshall	 2455
+tennessee,maury	 2456
+tennessee,meigs	 2457
+tennessee,monroe	 2458
+tennessee,montgomery	 2459
+tennessee,moore	 2460
+tennessee,morgan	 2461
+tennessee,obion	 2462
+tennessee,overton	 2463
+tennessee,perry	 2464
+tennessee,pickett	 2465
+tennessee,polk	 2466
+tennessee,putnam	 2467
+tennessee,rhea	 2468
+tennessee,roane	 2469
+tennessee,robertson	 2470
+tennessee,rutherford	 2471
+tennessee,scott	 2472
+tennessee,sequatchie	 2473
+tennessee,sevier	 2474
+tennessee,shelby	 2475
+tennessee,smith	 2476
+tennessee,stewart	 2477
+tennessee,sullivan	 2478
+tennessee,sumner	 2479
+tennessee,tipton	 2480
+tennessee,trousdale	 2481
+tennessee,unicoi	 2482
+tennessee,union	 2483
+tennessee,van buren	 2484
+tennessee,warren	 2485
+tennessee,washington	 2486
+tennessee,wayne	 2487
+tennessee,weakley	 2488
+tennessee,white	 2489
+tennessee,williamson	 2490
+tennessee,wilson	 2491
+texas,anderson	 2492
+texas,andrews	 2493
+texas,angelina	 2494
+texas,aransas	 2495
+texas,archer	 2496
+texas,armstrong	 2497
+texas,atascosa	 2498
+texas,austin	 2499
+texas,bailey	 2500
+texas,bandera	 2501
+texas,bastrop	 2502
+texas,baylor	 2503
+texas,bee	 2504
+texas,bell	 2505
+texas,bexar	 2506
+texas,blanco	 2507
+texas,borden	 2508
+texas,bosque	 2509
+texas,bowie	 2510
+texas,brazoria	 2511
+texas,brazos	 2512
+texas,brewster	 2513
+texas,briscoe	 2514
+texas,brooks	 2515
+texas,brown	 2516
+texas,burleson	 2517
+texas,burnet	 2518
+texas,caldwell	 2519
+texas,calhoun	 2520
+texas,callahan	 2521
+texas,cameron	 2522
+texas,camp	 2523
+texas,carson	 2524
+texas,cass	 2525
+texas,castro	 2526
+texas,chambers	 2527
+texas,cherokee	 2528
+texas,childress	 2529
+texas,clay	 2530
+texas,cochran	 2531
+texas,coke	 2532
+texas,coleman	 2533
+texas,collin	 2534
+texas,collingsworth	 2535
+texas,colorado	 2536
+texas,comal	 2537
+texas,comanche	 2538
+texas,concho	 2539
+texas,cooke	 2540
+texas,coryell	 2541
+texas,cottle	 2542
+texas,crane	 2543
+texas,crockett	 2544
+texas,crosby	 2545
+texas,culberson	 2546
+texas,dallam	 2547
+texas,dallas	 2548
+texas,dawson	 2549
+texas,deaf smith	 2550
+texas,delta	 2551
+texas,denton	 2552
+texas,de witt	 2553
+texas,dickens	 2554
+texas,dimmit	 2555
+texas,donley	 2556
+texas,duval	 2557
+texas,eastland	 2558
+texas,ector	 2559
+texas,edwards	 2560
+texas,ellis	 2561
+texas,el paso	 2562
+texas,erath	 2563
+texas,falls	 2564
+texas,fannin	 2565
+texas,fayette	 2566
+texas,fisher	 2567
+texas,floyd	 2568
+texas,foard	 2569
+texas,fort bend	 2570
+texas,franklin	 2571
+texas,freestone	 2572
+texas,frio	 2573
+texas,gaines	 2574
+texas,galveston:main	 2575
+texas,galveston:spit	 2576
+texas,garza	 2577
+texas,gillespie	 2578
+texas,glasscock	 2579
+texas,goliad	 2580
+texas,gonzales	 2581
+texas,gray	 2582
+texas,grayson	 2583
+texas,gregg	 2584
+texas,grimes	 2585
+texas,guadalupe	 2586
+texas,hale	 2587
+texas,hall	 2588
+texas,hamilton	 2589
+texas,hansford	 2590
+texas,hardeman	 2591
+texas,hardin	 2592
+texas,harris	 2593
+texas,harrison	 2594
+texas,hartley	 2595
+texas,haskell	 2596
+texas,hays	 2597
+texas,hemphill	 2598
+texas,henderson	 2599
+texas,hidalgo	 2600
+texas,hill	 2601
+texas,hockley	 2602
+texas,hood	 2603
+texas,hopkins	 2604
+texas,houston	 2605
+texas,howard	 2606
+texas,hudspeth	 2607
+texas,hunt	 2608
+texas,hutchinson	 2609
+texas,irion	 2610
+texas,jack	 2611
+texas,jackson	 2612
+texas,jasper	 2613
+texas,jeff davis	 2614
+texas,jefferson	 2615
+texas,jim hogg	 2616
+texas,jim wells	 2617
+texas,johnson	 2618
+texas,jones	 2619
+texas,karnes	 2620
+texas,kaufman	 2621
+texas,kendall	 2622
+texas,kenedy	 2623
+texas,kent	 2624
+texas,kerr	 2625
+texas,kimble	 2626
+texas,king	 2627
+texas,kinney	 2628
+texas,kleberg	 2629
+texas,knox	 2630
+texas,lamar	 2631
+texas,lamb	 2632
+texas,lampasas	 2633
+texas,la salle	 2634
+texas,lavaca	 2635
+texas,lee	 2636
+texas,leon	 2637
+texas,liberty	 2638
+texas,limestone	 2639
+texas,lipscomb	 2640
+texas,live oak	 2641
+texas,llano	 2642
+texas,loving	 2643
+texas,lubbock	 2644
+texas,lynn	 2645
+texas,mcculloch	 2646
+texas,mclennan	 2647
+texas,mcmullen	 2648
+texas,madison	 2649
+texas,marion	 2650
+texas,martin	 2651
+texas,mason	 2652
+texas,matagorda	 2653
+texas,maverick	 2654
+texas,medina	 2655
+texas,menard	 2656
+texas,midland	 2657
+texas,milam	 2658
+texas,mills	 2659
+texas,mitchell	 2660
+texas,montague	 2661
+texas,montgomery	 2662
+texas,moore	 2663
+texas,morris	 2664
+texas,motley	 2665
+texas,nacogdoches	 2666
+texas,navarro	 2667
+texas,newton	 2668
+texas,nolan	 2669
+texas,nueces	 2670
+texas,ochiltree	 2671
+texas,oldham	 2672
+texas,orange	 2673
+texas,palo pinto	 2674
+texas,panola	 2675
+texas,parker	 2676
+texas,parmer	 2677
+texas,pecos	 2678
+texas,polk	 2679
+texas,potter	 2680
+texas,presidio	 2681
+texas,rains	 2682
+texas,randall	 2683
+texas,reagan	 2684
+texas,real	 2685
+texas,red river	 2686
+texas,reeves	 2687
+texas,refugio	 2688
+texas,roberts	 2689
+texas,robertson	 2690
+texas,rockwall	 2691
+texas,runnels	 2692
+texas,rusk	 2693
+texas,sabine	 2694
+texas,san augustine	 2695
+texas,san jacinto	 2696
+texas,san patricio	 2697
+texas,san saba	 2698
+texas,schleicher	 2699
+texas,scurry	 2700
+texas,shackelford	 2701
+texas,shelby	 2702
+texas,sherman	 2703
+texas,smith	 2704
+texas,somervell	 2705
+texas,starr	 2706
+texas,stephens	 2707
+texas,sterling	 2708
+texas,stonewall	 2709
+texas,sutton	 2710
+texas,swisher	 2711
+texas,tarrant	 2712
+texas,taylor	 2713
+texas,terrell	 2714
+texas,terry	 2715
+texas,throckmorton	 2716
+texas,titus	 2717
+texas,tom green	 2718
+texas,travis	 2719
+texas,trinity	 2720
+texas,tyler	 2721
+texas,upshur	 2722
+texas,upton	 2723
+texas,uvalde	 2724
+texas,val verde	 2725
+texas,van zandt	 2726
+texas,victoria	 2727
+texas,walker	 2728
+texas,waller	 2729
+texas,ward	 2730
+texas,washington	 2731
+texas,webb	 2732
+texas,wharton	 2733
+texas,wheeler	 2734
+texas,wichita	 2735
+texas,wilbarger	 2736
+texas,willacy	 2737
+texas,williamson	 2738
+texas,wilson	 2739
+texas,winkler	 2740
+texas,wise	 2741
+texas,wood	 2742
+texas,yoakum	 2743
+texas,young	 2744
+texas,zapata	 2745
+texas,zavala	 2746
+utah,beaver	 2747
+utah,box elder	 2748
+utah,cache	 2749
+utah,carbon	 2750
+utah,daggett	 2751
+utah,davis	 2752
+utah,duchesne	 2753
+utah,emery	 2754
+utah,garfield	 2755
+utah,grand	 2756
+utah,iron	 2757
+utah,juab	 2758
+utah,kane	 2759
+utah,millard	 2760
+utah,morgan	 2761
+utah,piute	 2762
+utah,rich	 2763
+utah,salt lake	 2764
+utah,san juan	 2765
+utah,sanpete	 2766
+utah,sevier	 2767
+utah,summit	 2768
+utah,tooele	 2769
+utah,uintah	 2770
+utah,utah	 2771
+utah,wasatch	 2772
+utah,washington	 2773
+utah,wayne	 2774
+utah,weber	 2775
+vermont,addison	 2776
+vermont,bennington	 2777
+vermont,caledonia	 2778
+vermont,chittenden	 2779
+vermont,essex	 2780
+vermont,franklin	 2781
+vermont,grand isle	 2782
+vermont,lamoille	 2783
+vermont,orange	 2784
+vermont,orleans	 2785
+vermont,rutland	 2786
+vermont,washington	 2787
+vermont,windham	 2788
+vermont,windsor	 2789
+virginia,accomack:main	 2790
+virginia,accomack:chincoteague	 2791
+virginia,albemarle	 2792
+virginia,alleghany	 2793
+virginia,amelia	 2794
+virginia,amherst	 2795
+virginia,appomattox	 2796
+virginia,arlington	 2797
+virginia,augusta	 2798
+virginia,bath	 2799
+virginia,bedford	 2800
+virginia,bland	 2801
+virginia,botetourt	 2802
+virginia,brunswick	 2803
+virginia,buchanan	 2804
+virginia,buckingham	 2805
+virginia,campbell	 2806
+virginia,caroline	 2807
+virginia,carroll	 2808
+virginia,charles city	 2809
+virginia,charlotte	 2810
+virginia,chesterfield	 2811
+virginia,clarke	 2812
+virginia,craig	 2813
+virginia,culpeper	 2814
+virginia,cumberland	 2815
+virginia,dickenson	 2816
+virginia,dinwiddie	 2817
+virginia,essex	 2818
+virginia,fairfax	 2819
+virginia,fauquier	 2820
+virginia,floyd	 2821
+virginia,fluvanna	 2822
+virginia,franklin	 2823
+virginia,frederick	 2824
+virginia,giles	 2825
+virginia,gloucester	 2826
+virginia,goochland	 2827
+virginia,grayson	 2828
+virginia,greene	 2829
+virginia,greensville	 2830
+virginia,halifax	 2831
+virginia,hanover	 2832
+virginia,henrico	 2833
+virginia,henry	 2834
+virginia,highland	 2835
+virginia,isle of wight	 2836
+virginia,james city	 2837
+virginia,king and queen	 2838
+virginia,king george	 2839
+virginia,king william	 2840
+virginia,lancaster	 2841
+virginia,lee	 2842
+virginia,loudoun	 2843
+virginia,louisa	 2844
+virginia,lunenburg	 2845
+virginia,madison	 2846
+virginia,mathews	 2847
+virginia,mecklenburg	 2848
+virginia,middlesex	 2849
+virginia,montgomery	 2850
+virginia,suffolk	 2851
+virginia,nelson	 2852
+virginia,new kent	 2853
+virginia,northampton	 2854
+virginia,northumberland	 2855
+virginia,nottoway	 2856
+virginia,orange	 2857
+virginia,page	 2858
+virginia,patrick	 2859
+virginia,pittsylvania	 2860
+virginia,powhatan	 2861
+virginia,prince edward	 2862
+virginia,prince george	 2863
+virginia,prince william	 2864
+virginia,pulaski	 2865
+virginia,rappahannock	 2866
+virginia,richmond	 2867
+virginia,roanoke	 2868
+virginia,rockbridge	 2869
+virginia,rockingham	 2870
+virginia,russell	 2871
+virginia,scott	 2872
+virginia,shenandoah	 2873
+virginia,smyth	 2874
+virginia,southampton	 2875
+virginia,spotsylvania	 2876
+virginia,stafford	 2877
+virginia,surry	 2878
+virginia,sussex	 2879
+virginia,tazewell	 2880
+virginia,warren	 2881
+virginia,washington	 2882
+virginia,westmoreland	 2883
+virginia,wise	 2884
+virginia,wythe	 2885
+virginia,york	 2886
+virginia,hampton	 2887
+virginia,newport news	 2888
+virginia,norfolk	 2889
+virginia,virginia beach	 2890
+washington,adams	 2891
+washington,asotin	 2892
+washington,benton	 2893
+washington,chelan	 2894
+washington,clallam	 2895
+washington,clark	 2896
+washington,columbia	 2897
+washington,cowlitz	 2898
+washington,douglas	 2899
+washington,ferry	 2900
+washington,franklin	 2901
+washington,garfield	 2902
+washington,grant	 2903
+washington,grays harbor	 2904
+washington,island	 2905
+washington,jefferson	 2906
+washington,king	 2907
+washington,kitsap	 2908
+washington,kittitas	 2909
+washington,klickitat	 2910
+washington,lewis	 2911
+washington,lincoln	 2912
+washington,mason	 2913
+washington,okanogan	 2914
+washington,pacific	 2915
+washington,pend oreille	 2916
+washington,pierce:main	 2917
+washington,pierce:penrose	 2918
+washington,san juan:lopez island	 2919
+washington,san juan:orcas island	 2920
+washington,san juan:san juan island	 2921
+washington,skagit	 2922
+washington,skamania	 2923
+washington,snohomish	 2924
+washington,spokane	 2925
+washington,stevens	 2926
+washington,thurston	 2927
+washington,wahkiakum	 2928
+washington,walla walla	 2929
+washington,whatcom	 2930
+washington,whitman	 2931
+washington,yakima	 2932
+west virginia,barbour	 2933
+west virginia,berkeley	 2934
+west virginia,boone	 2935
+west virginia,braxton	 2936
+west virginia,brooke	 2937
+west virginia,cabell	 2938
+west virginia,calhoun	 2939
+west virginia,clay	 2940
+west virginia,doddridge	 2941
+west virginia,fayette	 2942
+west virginia,gilmer	 2943
+west virginia,grant	 2944
+west virginia,greenbrier	 2945
+west virginia,hampshire	 2946
+west virginia,hancock	 2947
+west virginia,hardy	 2948
+west virginia,harrison	 2949
+west virginia,jackson	 2950
+west virginia,jefferson	 2951
+west virginia,kanawha	 2952
+west virginia,lewis	 2953
+west virginia,lincoln	 2954
+west virginia,logan	 2955
+west virginia,mcdowell	 2956
+west virginia,marion	 2957
+west virginia,marshall	 2958
+west virginia,mason	 2959
+west virginia,mercer	 2960
+west virginia,mineral	 2961
+west virginia,mingo	 2962
+west virginia,monongalia	 2963
+west virginia,monroe	 2964
+west virginia,morgan	 2965
+west virginia,nicholas	 2966
+west virginia,ohio	 2967
+west virginia,pendleton	 2968
+west virginia,pleasants	 2969
+west virginia,pocahontas	 2970
+west virginia,preston	 2971
+west virginia,putnam	 2972
+west virginia,raleigh	 2973
+west virginia,randolph	 2974
+west virginia,ritchie	 2975
+west virginia,roane	 2976
+west virginia,summers	 2977
+west virginia,taylor	 2978
+west virginia,tucker	 2979
+west virginia,tyler	 2980
+west virginia,upshur	 2981
+west virginia,wayne	 2982
+west virginia,webster	 2983
+west virginia,wetzel	 2984
+west virginia,wirt	 2985
+west virginia,wood	 2986
+west virginia,wyoming	 2987
+wisconsin,adams	 2988
+wisconsin,ashland	 2989
+wisconsin,barron	 2990
+wisconsin,bayfield	 2991
+wisconsin,brown	 2992
+wisconsin,buffalo	 2993
+wisconsin,burnett	 2994
+wisconsin,calumet	 2995
+wisconsin,chippewa	 2996
+wisconsin,clark	 2997
+wisconsin,columbia	 2998
+wisconsin,crawford	 2999
+wisconsin,dane	 3000
+wisconsin,dodge	 3001
+wisconsin,door	 3002
+wisconsin,douglas	 3003
+wisconsin,dunn	 3004
+wisconsin,eau claire	 3005
+wisconsin,florence	 3006
+wisconsin,fond du lac	 3007
+wisconsin,forest	 3008
+wisconsin,grant	 3009
+wisconsin,green	 3010
+wisconsin,green lake	 3011
+wisconsin,iowa	 3012
+wisconsin,iron	 3013
+wisconsin,jackson	 3014
+wisconsin,jefferson	 3015
+wisconsin,juneau	 3016
+wisconsin,kenosha	 3017
+wisconsin,kewaunee	 3018
+wisconsin,la crosse	 3019
+wisconsin,lafayette	 3020
+wisconsin,langlade	 3021
+wisconsin,lincoln	 3022
+wisconsin,manitowoc	 3023
+wisconsin,marathon	 3024
+wisconsin,marinette	 3025
+wisconsin,marquette	 3026
+wisconsin,milwaukee	 3027
+wisconsin,monroe	 3028
+wisconsin,oconto	 3029
+wisconsin,oneida	 3030
+wisconsin,outagamie	 3031
+wisconsin,ozaukee	 3032
+wisconsin,pepin	 3033
+wisconsin,pierce	 3034
+wisconsin,polk	 3035
+wisconsin,portage	 3036
+wisconsin,price	 3037
+wisconsin,racine	 3038
+wisconsin,richland	 3039
+wisconsin,rock	 3040
+wisconsin,rusk	 3041
+wisconsin,st croix	 3042
+wisconsin,sauk	 3043
+wisconsin,sawyer	 3044
+wisconsin,shawano	 3045
+wisconsin,sheboygan	 3046
+wisconsin,taylor	 3047
+wisconsin,trempealeau	 3048
+wisconsin,vernon	 3049
+wisconsin,vilas	 3050
+wisconsin,walworth	 3051
+wisconsin,washburn	 3052
+wisconsin,washington	 3053
+wisconsin,waukesha	 3054
+wisconsin,waupaca	 3055
+wisconsin,waushara	 3056
+wisconsin,winnebago	 3057
+wisconsin,wood	 3058
+wyoming,albany	 3059
+wyoming,big horn	 3060
+wyoming,campbell	 3061
+wyoming,carbon	 3062
+wyoming,converse	 3063
+wyoming,crook	 3064
+wyoming,fremont	 3065
+wyoming,goshen	 3066
+wyoming,hot springs	 3067
+wyoming,johnson	 3068
+wyoming,laramie	 3069
+wyoming,lincoln	 3070
+wyoming,natrona	 3071
+wyoming,niobrara	 3072
+wyoming,park	 3073
+wyoming,platte	 3074
+wyoming,sheridan	 3075
+wyoming,sublette	 3076
+wyoming,sweetwater	 3077
+wyoming,teton	 3078
+wyoming,uinta	 3079
+wyoming,washakie	 3080
+wyoming,weston	 3081
+new mexico,valencia	 3082
