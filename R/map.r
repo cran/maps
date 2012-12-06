@@ -86,6 +86,11 @@ map.poly <- function(database, regions = ".", exact = FALSE,
   list(x = coord$x, y = coord$y, range = coord$range, names = nam)
 }
 
+.map.range <- local( {
+   val <- NULL
+   function(new) if(!missing(new)) val <<- new else val
+})
+
 map <-
 function(database = "world", regions = ".", exact = FALSE,
 	 boundary = TRUE, interior = TRUE, projection = "",
@@ -114,7 +119,7 @@ function(database = "world", regions = ".", exact = FALSE,
                     boundary, interior, fill, as.polygon)
   if (is.na(coord$x[1])) stop("first coordinate is NA.  bad map data?")
   if (plot) {
-    assign(".map.range", coord$range, envir = globalenv())
+    .map.range(coord$range)
   }
   if (doproj) {
     nam <- coord$names
@@ -228,8 +233,8 @@ closed.polygon <- function(p) {
   ends <- c(breaks - 1, n)
   x[ends + 1] = x[starts]
   y[ends + 1] = y[starts]
-  x = maps::insert(x, breaks + 1)
-  y = maps::insert(y, breaks + 1)
+  x = maps:::insert(x, breaks + 1)
+  y = maps:::insert(y, breaks + 1)
   list(x = x, y = y)
 }
 insert <- function(x, i, v = NA) {
