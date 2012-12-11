@@ -86,7 +86,8 @@ map.poly <- function(database, regions = ".", exact = FALSE,
   list(x = coord$x, y = coord$y, range = coord$range, names = nam)
 }
 
-.map.range <- local( {
+.map.range <-
+local({
    val <- NULL
    function(new) if(!missing(new)) val <<- new else val
 })

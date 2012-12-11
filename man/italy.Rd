@@ -19,7 +19,7 @@ UNEP/GRID. Appropriate wording may be "UNESCO (1987) through
 UNEP/GRID-Geneva". 
 }
 \format{
-The data file is merely an assignment to a character string which
+The data file is merely a character string which
 specifies the name of an environment variable which contains the
 base location of the binary files used by the map drawing functions.
 This environment variable (\code{R_MAP_DATA_DIR} for the datasets in the
