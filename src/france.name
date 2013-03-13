@@ -1,7 +1,7 @@
 Nord	1
 Pas-de-Calais	2
 Somme	3
-Nord	4
+Nord:1	4
 Ardennes	5
 Seine-Maritime	6
 Aisne	7
@@ -34,7 +34,7 @@ Haute-Marne	33
 Mayenne	34
 Vosges	35
 Sarthe	36
-Finistere	37
+Finistere:I. d'Ouessant	37
 Yonne	38
 Loiret	39
 Haut-Rhin	40
@@ -90,7 +90,7 @@ Lot-et-Garonne	89
 Alpes-de-Haute-Provence	90
 Landes	91
 Gard	92
-Vaucluse	93
+Vaucluse:Enclave des Papes	93
 Tarn-et-Garonne	94
 Alpes-Maritimes	95
 Vaucluse	96
@@ -103,9 +103,9 @@ Var	102
 Hautes-Pyrenees	103
 Pyrenees-Atlantiques	104
 Aude	105
-Hautes-Pyrenees	106
+Hautes-Pyrenees:1	106
 Ariege	107
-Hautes-Pyrenees	108
+Hautes-Pyrenees:2	108
 Var:Iles d'Hyeres:I. du Levant	109
 Var:Iles d'Hyeres:I. de Porquerolles	110
 Var:Iles d'Hyeres:I. de Port Cros	111

@@ -4,16 +4,7 @@
   Draw Geographical Maps
 }
 \description{Draw lines and polygons as specified by a map database.}
-\synopsis{
-map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
-  interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
-  fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
-  xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if(plot) 1 else 0,
-  type = "l", bg = par("bg"), mar = c(4.1, 4.1, par("mar")[3], 0.1),
-  myborder = 0.01, ...)
-}
 \usage{
-map(database, regions)  # simple form
 map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   interior = TRUE, projection = "", parameters = NULL, orientation = NULL,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
@@ -174,6 +165,12 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     to add to the defined or computed limits as borders.
   }
   \item{...}{Extra arguments passed to \code{polygon} or \code{lines}.}
+}
+\details{
+The simplest form of use of this function is:
+\preformatted{map(mymap)}
+where \code{mymap} is the returned value from a previous call to
+\code{map()}.
 }
 \value{
   If \code{plot = TRUE}, a plot is made where 

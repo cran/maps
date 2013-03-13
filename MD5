@@ -1,9 +1,9 @@
-32d17b4f3ae2a9f781290d5e4af51829 *DESCRIPTION
+6c4d65684cae1c2cd102da68ac6cf4ea *DESCRIPTION
 a7f0b8524eb866e5c1637c2bb26a6e6d *NAMESPACE
-80aa05ca421f4b4aafd2aa1c62e5bf2d *R/db.r
+541be685a010ed74e9f33aeaf491abad *R/db.r
 8c730804e871f486c499b98b0a6dba32 *R/map.r
-ced96db84ec5a25ba683dacec7cb0d49 *R/misc.r
-89ba2eda91abd2d6fdaebfde9da3f4e9 *R/polygon.r
+87ee42928e3da1330378b83a4f90b61e *R/misc.r
+5ed05e6301c8134792b4913684dd6756 *R/polygon.r
 45bb5cad9ffc203d8e62dae784725f37 *R/smooth.r
 d761cb0e87098ffd6c692723e9bba355 *R/zzz.R
 6d3acd6bf8fe0501140653a66952a160 *data/canada.cities.rda
@@ -35,7 +35,7 @@ f6c4336f6614dabf3573895a38ea1099 *man/identify.map.Rd
 b39d593d4b02815c823f555cf8599ee5 *man/internal.Rd
 56766404494d261648f09393180151dc *man/internal2.Rd
 b26a115b2797ec918ad277ce680dcd8a *man/italy.Rd
-338087ffbea9f06c8249b4c2db629688 *man/map.Rd
+90c6f61c1ae32563fe8969bd5a2f003d *man/map.Rd
 f590ca3d82f3a60d0714c70bf6bdffb6 *man/map.axes.Rd
 075d0bdab24034a7afc7cbabda65f70a *man/map.cities.Rd
 7154c4758c1f712f926af93e5fce1c60 *man/map.scale.Rd
@@ -70,7 +70,7 @@ ee000c17ddd154301f679ce267ed4918 *src/README
 0ea34241398d4f8b1512e52d9039917e *src/france.gonstats
 fc3a0c540e31cc2d6c92579fd0ee9bd1 *src/france.line
 23035dcc6ed0cf83bb7b50bbb650f0b8 *src/france.linestats
-b60fcb42009e8dff53911077e8b96107 *src/france.name
+c519dfb2145d59b4115d713399761a2a *src/france.name
 98edece48bd5a0d8669d54dbbbfdf5d8 *src/getstats.sh
 a804b957f9000f0e9ca74483fbb66df6 *src/italy.gon
 f7c622f74f28e328d3d65f265f0a26c3 *src/italy.gonstats
