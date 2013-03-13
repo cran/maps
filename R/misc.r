@@ -31,7 +31,7 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
     parameters = NULL, orientation = NULL, pch = 1, ...) 
 {
     if (missing(x)) {
-        data("world.cities", package = "maps")	# uses lazy evaluation
+        data("world.cities", package = "maps", envir = environment())	# uses lazy evaluation
 	world.cities <- get("world.cities")
     }
     usr <- par("usr")

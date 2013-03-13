@@ -7,7 +7,7 @@ map.where <- function(database = "world", x, y)
   }
   if(is.character(database)) {
     dbname <- paste(database, "MapEnv", sep = "")
-    data(list = dbname)
+    data(list = dbname, envir = environment())
     mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
     gon <- .C("map_where", PACKAGE="maps",
        as.character(mapbase),
