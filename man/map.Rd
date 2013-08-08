@@ -240,10 +240,11 @@ if(require(mapproj)) {	# mapproj is used for  projection="polyconic"
   unemp$colorBuckets <- as.numeric(cut(unemp$unemp, c(0, 2, 4, 6, 8, 10, 100)))
   leg.txt <- c("<2\%", "2-4\%", "4-6\%", "6-8\%", "8-10\%", ">10\%")
 
-  # align data with map definitions by matching FIPS codes
-  # works much better than trying to match the state, county names
-  # which also include multiple polygons for some counties
-  colorsmatched <- unemp$colorBuckets [match(county.fips$fips, unemp$fips)]
+  # align data with map definitions by (partial) matching state,county
+  # names, which include multiple polygons for some counties
+  cnty.fips <- county.fips$fips[match(map("county", plot=FALSE)$names,
+    county.fips$polyname)]
+  colorsmatched <- unemp$colorBuckets [match(cnty.fips, unemp$fips)]
 
   # draw map
   map("county", col = colors[colorsmatched], fill = TRUE, resolution = 0,
