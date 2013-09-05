@@ -299,7 +299,7 @@ florida,citrus	  298
 florida,clay	  299
 florida,collier	  300
 florida,columbia	  301
-florida,dade	  302
+florida,miami-dade	  302
 florida,de soto	  303
 florida,dixie	  304
 florida,duval	  305
@@ -1712,7 +1712,6 @@ nebraska,wayne	 1711
 nebraska,webster	 1712
 nebraska,wheeler	 1713
 nebraska,york	 1714
-nevada,carson city	 1731
 nevada,churchill	 1715
 nevada,clark	 1716
 nevada,douglas	 1717
@@ -1729,6 +1728,7 @@ nevada,pershing	 1727
 nevada,storey	 1728
 nevada,washoe	 1729
 nevada,white pine	 1730
+nevada,carson city	 1731
 new hampshire,belknap	 1732
 new hampshire,carroll	 1733
 new hampshire,cheshire	 1734
@@ -2194,8 +2194,8 @@ oregon,josephine	 2193
 oregon,klamath	 2194
 oregon,lake	 2195
 oregon,lane	 2196
-oregon,lincoln	 2198
 oregon,linn	 2197
+oregon,lincoln	 2198
 oregon,malheur	 2199
 oregon,marion	 2200
 oregon,morrow	 2201
@@ -3080,3 +3080,6 @@ wyoming,uinta	 3079
 wyoming,washakie	 3080
 wyoming,weston	 3081
 new mexico,valencia	 3082
+arizona,la paz	 3083
+wisconsin,menominee	 3084
+colorado,broomfield	 3085

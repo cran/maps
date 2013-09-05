@@ -120,8 +120,8 @@ num.polygons <- function(p) {
 #   lapply(p[c("x", "y")], range, na.rm = na.rm)
 # }
 
-map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
-                     move = FALSE, ...) {
+map.text <- function(database, regions = ".", exact = FALSE, labels,
+    cex = 0.75, add = FALSE, move = FALSE, ...) {
   if(!add) map(database, regions, ...)
   # get polygons
   cc = match.call(expand.dots=TRUE)
@@ -129,6 +129,7 @@ map.text <- function(database, regions = ".", labels, cex = 0.75, add = FALSE,
   cc$fill = TRUE
   cc$plot = FALSE
   cc$regions = regions
+  cc$exact = exact
   cc$move = cc$add = cc$cex = cc$labels = NULL
   cc$resolution = 0
   m = eval(cc)

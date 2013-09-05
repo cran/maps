@@ -8,16 +8,18 @@
   Like \code{\link{map}}, but labels the regions.
 }
 \usage{
-map.text(database, regions = ".", labels, cex = 0.75, add = FALSE,
-move = FALSE, ...)
+map.text(database, regions = ".", exact = FALSE, labels, cex = 0.75,
+add = FALSE, move = FALSE, ...)
 }
 \arguments{
   \item{database}{character string naming a geographical database, or a list of
     \code{x}, \code{y}, and \code{names} obtained from a previous call to
     \code{map}.}
   \item{regions}{character vector that names the polygons to draw.}
-  \item{labels}{character vector of labels, one for each region.
-    Defaults to the names in the database.}
+  \item{exact}{If 'TRUE', only exact matches with 'regions' are selected
+    for drawing.}
+  \item{labels}{character vector of labels, one for each region
+    selected.  Defaults to the names in the database.}
   \item{cex}{character expansion factor.}
   \item{add}{If \code{FALSE}, a map is drawn, then labels placed on top.  If
     \code{TRUE}, labels are added to the existing map.}
