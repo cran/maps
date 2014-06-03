@@ -24,10 +24,20 @@ isspace(int c);
 
 int
 fatal(s, a, b)
+char *s, *a;
+int b;
+{
+	fprintf(stderr, s, a, b);
+	fprintf(stderr, "\n");
+	exit(1);
+}
+
+int
+fatal2(s, a, b)
 char *s;
 int a, b;
 {
-	fprintf(stderr, s, a, a, b);
+	fprintf(stderr, s, a, b);
 	fprintf(stderr, "\n");
 	exit(1);
 }
@@ -108,9 +118,9 @@ Polyline r;
 
 	seek = sizeof(int) + sizeof(Polyline) + (r-1)*sizeof(struct line_h);
 	if(Seek(Lin, seek) == -1)
-		fatal("Cannot seek to header in %s", (int)Linefile, 0);
+		fatal("Cannot seek to header in %s", Linefile, 0);
 	if(Read(Lin, &lh, 1) != 1)
-		fatal("Cannot read header in %s", (int)Linefile, 0);
+		fatal("Cannot read header in %s", Linefile, 0);
 	return(&lh);
 }
 
@@ -126,25 +136,25 @@ FILE *in, *out;
 	int column, k;
 
 	if(Read(in, &n, 1) != 1)
-		fatal("Cannot read size", 0, 0);
+		fatal2("Cannot read size", 0, 0);
 	Alloc(rh, n, struct region_h);
 	if(rh == NULL)
-		fatal("No memory for headers", 0, 0);
+		fatal2("No memory for headers", 0, 0);
 	if(Read(in, rh, n) != n)
-		fatal("Cannot read headers", 0, 0);
+		fatal2("Cannot read headers", 0, 0);
 	for(i = 0; i < n; i++)
 		N = Max(N, rh[i].nline);
 	Alloc(r, N, Polyline);
 	if(r == NULL)
-		fatal("No memory for data", 0, 0);
+		fatal2("No memory for data", 0, 0);
 	for(i = 0; i < n; i++) {
 		if((m = rh[i].nline) <= 0)
-			fatal("Negative line count at header %d", (int)i,
+			fatal2("Negative line count at header %d", (int)i,
 			0);
 		if(Seek(in, rh[i].offset) < 0)
-			fatal("Cannot seek to record %d", (int)i, 0);
+			fatal2("Cannot seek to record %d", (int)i, 0);
 		if(Read(in, r, m) != m)
-			fatal("Cannot read record %d", (int)i, 0);
+			fatal2("Cannot read record %d", (int)i, 0);
 		column = 0;
 		for(j = 0; j < m; j++) {
 			sprintf(buf, " %d", (int)r[j]);
@@ -171,30 +181,30 @@ FILE *in, *out;
 	Polyline *r;
 
 	if(Seek(out, sizeof(Region) + np*sizeof(struct region_h)) < 0)
-		fatal("Cannot seek in input file", 0, 0);
+		fatal2("Cannot seek in input file", 0, 0);
 	Alloc(rh, np, struct region_h);
 	Alloc(r, maxl+1, Polyline);
 	if(rh == NULL || r == NULL)
-		fatal("No memory", 0, 0);
+		fatal2("No memory", 0, 0);
 	for(i = 0; i < np; i++) {
 		m = 0;
 		while((t = getpoly(in, &r[m++])) > 0)
 			;
 		if(t < 0)
-			fatal("Read, line=%d word=%d", (int)i, (int)m);
+			fatal2("Read, line=%d word=%d", (int)i, (int)m);
 		--m;
 		rh[i].offset = ftell(out);
 		rh[i].nline = m;
 		set_range(rh+i, r);
 		if(Write(out, r, m) != m)
-			fatal("Cannot write record %d", (int)i, 0);
+			fatal2("Cannot write record %d", (int)i, 0);
 	}
 	if(Seek(out, 0) < 0)
-		fatal("Cannot seek to beginning of output file", 0, 0);
+		fatal2("Cannot seek to beginning of output file", 0, 0);
 	if(Write(out, &n, 1) != 1)
-		fatal("Cannot write size to output file", 0, 0);
+		fatal2("Cannot write size to output file", 0, 0);
 	if(Write(out, rh, np) != np)
-		fatal("Cannot write headers to output file", 0, 0);
+		fatal2("Cannot write headers to output file", 0, 0);
 }
 
 int
@@ -208,23 +218,23 @@ char *av[];
 
 	Me = av[0];
 	if(ac < 5)
-		fatal(Usage, (int)Me, 0);
+		fatal(Usage, Me, 0);
 	ascii = *av[1] == 'a';
 	if(ac != (ascii ? 5 : 6))
-		fatal(Usage, (int)Me, 0);
+		fatal(Usage, Me, 0);
 	Infile = av[2];
 	if((in = fopen(av[2], "rb")) == NULL)
-		fatal("Cannot open %s for reading", (int)av[2], 0);
+		fatal("Cannot open %s for reading", av[2], 0);
 	if((in2 = fopen(av[3], "rb")) == NULL)
-                fatal("Cannot open %s for reading", (int)av[3], 0);
+                fatal("Cannot open %s for reading", av[3], 0);
 	if(fscanf(in2, "%d%d", &np, &maxl) != 2)
-		fatal("Cannot read stats data file %s", (int)av[3], 0);
+		fatal("Cannot read stats data file %s", av[3], 0);
 	n = np;	/* won't read directly */
 	if((out = fopen(av[4], "wb")) == NULL)
-		fatal("Cannot open %s for writing", (int)av[4], 0);
+		fatal("Cannot open %s for writing", av[4], 0);
 	Linefile = av[5];
 	if(!ascii && (Lin = fopen(av[5], "rb")) == NULL)
-		fatal("Cannot open %s for reading", (int)av[5], 0);
+		fatal("Cannot open %s for reading", av[5], 0);
 	ascii ? to_ascii(in, out) : to_binary(in, out);
 	exit(0);
 }

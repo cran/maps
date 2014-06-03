@@ -24,6 +24,16 @@ isspace(int c);
 
 int
 fatal(s, a, b)
+char *s, *a;
+int b;
+{
+	fprintf(stderr, s, a, b);
+	fprintf(stderr, "\n");
+	exit(1);
+}
+
+int
+fatal2(s, a, b)
 char *s;
 int a, b;
 {
@@ -117,31 +127,31 @@ FILE *in, *out;
 	int column, k;
 
 	if(Seek(in, sizeof(Coordtype)))
-		fatal("Cannot seek past coordtype", 0, 0);
+		fatal2("Cannot seek past coordtype", 0, 0);
 	if(Read(in, &n, 1) != 1)
-		fatal("Cannot read size", 0, 0);
+		fatal2("Cannot read size", 0, 0);
 	Alloc(lh, n, struct line_h);
 	if(lh == NULL)
-		fatal("No memory for headers", 0, 0);
+		fatal2("No memory for headers", 0, 0);
 	if(Read(in, lh, n) != n)
-		fatal("Cannot read headers", 0, 0);
+		fatal2("Cannot read headers", 0, 0);
 	for(i = 0; i < n; i++)
 		N = Max(N, lh[i].npair);
 	Alloc(xy, N, struct pair);
 	if(xy == NULL)
-		fatal("No memory for data", 0, 0);
+		fatal2("No memory for data", 0, 0);
 	for(i = 0; i < n; i++) {
 		if((m = lh[i].npair) <= 0)
-			fatal("Negative pair count at header %d", (int)i,
+			fatal2("Negative pair count at header %d", (int)i,
 			0);
 		if(Seek(in, lh[i].offset) < 0)
-			fatal("Cannot seek to record %d", (int)i, 0);
+			fatal2("Cannot seek to record %d", (int)i, 0);
 		/*
 		 * Simple read; change this to use other means of
 		 * storing the polyline data.
 		 */
 		if(Read(in, xy, m) != m)
-			fatal("Cannot read record %d", (int)i, 0);
+			fatal2("Cannot read record %d", (int)i, 0);
 		fprintf(out, "%d %d\n", (int)lh[i].left, (int)lh[i].right);
 		column = 0;
 		for(j = 0; j < m; j++) {
@@ -170,14 +180,14 @@ FILE *in, *out;
 	struct pair *xy;
 
 	if(Seek(out, sizeof(Coordtype) + sizeof(Polyline) + nl*sizeof(struct line_h)) < 0)
-		fatal("Cannot seek in input file", 0, 0);
+		fatal2("Cannot seek in input file", 0, 0);
 	Alloc(lh, nl, struct line_h);
 	Alloc(xy, maxp+1, struct pair);
 	if(lh == NULL || xy == NULL)
-		fatal("No memory", 0, 0);
+		fatal2("No memory", 0, 0);
 	for(i = 0; i < nl; i++) {
 		if(fscanf(in, "%d%d", &l, &r) != 2)
-			fatal("Cannot read left and right at line %d", (int)i+1,
+			fatal2("Cannot read left and right at line %d", (int)i+1,
 			0);
 		lh[i].left = l;
 		lh[i].right = r;
@@ -189,7 +199,7 @@ FILE *in, *out;
 				m++;
 		}
 		if(t < 0)
-			fatal("Read, line=%d word=%d", (int)i+1, (int)2+m*2);
+			fatal2("Read, line=%d word=%d", (int)i+1, (int)2+m*2);
 		lh[i].offset = ftell(out);
 		lh[i].npair = m;
 		set_range(lh+i, xy);
@@ -198,16 +208,16 @@ FILE *in, *out;
 		 * storing the polyline data.
 		 */
 		if(Write(out, xy, m) != m)
-			fatal("Cannot write record %d", (int)i, 0);
+			fatal2("Cannot write record %d", (int)i, 0);
 	}
 	if(Seek(out, 0) < 0)
-		fatal("Cannot seek to beginning of output file", 0, 0);
+		fatal2("Cannot seek to beginning of output file", 0, 0);
 	if(Write(out, &Coordtype, 1) != 1)
-		fatal("Cannot write coordtype to output file", 0, 0);
+		fatal2("Cannot write coordtype to output file", 0, 0);
 	if(Write(out, &n, 1) != 1)
-		fatal("Cannot write size to output file", 0, 0);
+		fatal2("Cannot write size to output file", 0, 0);
 	if(Write(out, lh, nl) != nl)
-		fatal("Cannot write headers to output file", 0, 0);
+		fatal2("Cannot write headers to output file", 0, 0);
 }
 
 int
@@ -220,19 +230,19 @@ char *av[];
 
 	Me = av[0];
 	if(ac != 7)
-		fatal(Usage, (int)Me, 0);
+		fatal(Usage, Me, 0);
 	Precision = atoi(av[1]);
 	Coordtype = av[2][0] == 's' ? SPHERE : PLANE;
 	Infile = av[4];
 	if((in = fopen(av[4], "rb")) == NULL)
-                fatal("Cannot open %s for reading", (int)av[4], 0);
+                fatal("Cannot open %s for reading", av[4], 0);
 	if((in2 = fopen(av[5], "rb")) == NULL)
-                fatal("Cannot open %s for reading", (int)av[5], 0);
+                fatal("Cannot open %s for reading", av[5], 0);
 	if(fscanf(in2, "%d%d", &nl, &maxp) != 2)
-		fatal("Cannot read stats data file %s", (int)av[3], 0);
+		fatal("Cannot read stats data file %s", av[3], 0);
 	n = nl;
         if((out = fopen(av[6], "wb")) == NULL)
-                fatal("Cannot open %s for writing", (int)av[6], 0);
+                fatal("Cannot open %s for writing", av[6], 0);
         av[3][0] == 'a' ? (void) to_ascii(in, out) : (void) to_binary(in, out);
 	exit(0);
 }

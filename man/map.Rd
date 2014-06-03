@@ -21,8 +21,12 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     three USA databases (\code{\link{usa}}, \code{\link{state}},
     \code{\link{county}}), and more (see the package index).  The
     location of the map databases may be overridden by setting the
-    \code{R_MAP_DATA_DIR} environment variable.  See \code{\link{world}}
-    for further details.
+    \code{R_MAP_DATA_DIR} environment variable. Note that the
+    \code{\link{world}} (and \code{\link[mapdata]{worldHires}}) databases
+    are derived from a very old 1908's CIA database for which updates
+    have not been made freely available.  In particular the individual
+    Russian states are still defined collectively as "USSR".
+    See \code{\link{world}} for further details.
   }
   \item{regions}{
     character vector that names the polygons to draw.

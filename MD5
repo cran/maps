@@ -1,11 +1,11 @@
-40b981d8eff994934bab1be17289c7d8 *DESCRIPTION
+d7a5ae3ed874f0bd68501ffe28146510 *DESCRIPTION
 a7f0b8524eb866e5c1637c2bb26a6e6d *NAMESPACE
 541be685a010ed74e9f33aeaf491abad *R/db.r
 e7b747bc196353936d98e95797a2dfc1 *R/map.r
-87ee42928e3da1330378b83a4f90b61e *R/misc.r
+e3c0a0e61f5804c6847cc1023979dba0 *R/misc.r
 fde3fa1c0a45d395b1ef633701becaef *R/polygon.r
 45bb5cad9ffc203d8e62dae784725f37 *R/smooth.r
-d761cb0e87098ffd6c692723e9bba355 *R/zzz.R
+e0c9fa51a95a955a46f92e6ee2f0e1bc *R/zzz.R
 6d3acd6bf8fe0501140653a66952a160 *data/canada.cities.rda
 f7bd11430306cc100dd4d259291733ce *data/county.fips.rda
 44b4c90c5a48be9b0df22f8672ba1ae6 *data/countyMapEnv.rda
@@ -35,7 +35,7 @@ f6c4336f6614dabf3573895a38ea1099 *man/identify.map.Rd
 b39d593d4b02815c823f555cf8599ee5 *man/internal.Rd
 56766404494d261648f09393180151dc *man/internal2.Rd
 b26a115b2797ec918ad277ce680dcd8a *man/italy.Rd
-897c3359d4a599874f33d5e93a50592c *man/map.Rd
+c1937dd13e8a86bf0e503f6dd1b48977 *man/map.Rd
 f590ca3d82f3a60d0714c70bf6bdffb6 *man/map.axes.Rd
 075d0bdab24034a7afc7cbabda65f70a *man/map.cities.Rd
 7154c4758c1f712f926af93e5fce1c60 *man/map.scale.Rd
@@ -55,9 +55,9 @@ ba6071e86450424b7b2ef124f177e447 *man/usa.Rd
 faa77f6cbf5f22717cce65cf9067a97b *man/world.Rd
 dc4668c3b67ae20d466fdb60c07be88c *man/world.cities.Rd
 f8d6628f3fd04780afafbd5143d39b6b *man/world2.Rd
-f684d16afeece0ab0ecdaddd67397466 *src/Gmake.c
-9d0c7fa4265c2622840a930b7fa8f67a *src/Lmake.c
-7088312f20b1d127d59081a8ea4ce10c *src/Makefile
+eccd234607d07a4bb8470fb29acdac41 *src/Gmake.c
+4e6736aa698e81a165bbe6052ae3bf8e *src/Lmake.c
+0c93a8514ba96b4593e933eafc88e53f *src/Makefile
 d1ebffb0e35151ea78870f20b78320d5 *src/Makefile.win
 ee000c17ddd154301f679ce267ed4918 *src/README
 885521324ea75cdfcea9d91a5afb0ec5 *src/convert.awk
@@ -101,7 +101,6 @@ db440c97b18a6344052b56e25b841f4f *src/state.vbm.gonstats
 85b0e36ec94dcf8b1b5b39ae324106b1 *src/state.vbm.line
 69fd7440de022ae8ff0874b0aa441de7 *src/state.vbm.linestats
 55f43c464d795dfd9f5c30bd1326a431 *src/state.vbm.name
-1bfd33c4dac0fcabfbcf1c3ffd063e25 *src/symbols.rds
 7565197b7181346e1632535bfc36650a *src/thin.c
 f298493e3329a78ce0931272d511b60f *src/usa.gon
 1c1041f7228b105eaaa93d8b3a9bf8d1 *src/usa.gonstats
