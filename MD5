@@ -1,8 +1,8 @@
-d7a5ae3ed874f0bd68501ffe28146510 *DESCRIPTION
+e8cfae7ed39383c1030b8394cbb51e03 *DESCRIPTION
 a7f0b8524eb866e5c1637c2bb26a6e6d *NAMESPACE
 541be685a010ed74e9f33aeaf491abad *R/db.r
 e7b747bc196353936d98e95797a2dfc1 *R/map.r
-e3c0a0e61f5804c6847cc1023979dba0 *R/misc.r
+719aa5696d879a83cb1896deaaf3d65f *R/misc.r
 fde3fa1c0a45d395b1ef633701becaef *R/polygon.r
 45bb5cad9ffc203d8e62dae784725f37 *R/smooth.r
 e0c9fa51a95a955a46f92e6ee2f0e1bc *R/zzz.R
@@ -23,7 +23,7 @@ e5e971cef422bb733644791ebdc05547 *data/state.fips.rda
 47260e722f73cdedba76a2cc1e6a3205 *data/us.cities.rda
 39f427ea30add5d209453cc4482cd3bf *data/usaMapEnv.rda
 0f1a65d78161fb00e86d5386a2f883cd *data/votes.repub.rda
-fb505a42d9e27ca368e51ff909948214 *data/world.cities.rda
+5c911aec44edd98c83aca470f8fbfa77 *data/world.cities.rda
 da4b00d5bd1ea2f96e2dbcc3483d856f *data/world2MapEnv.rda
 b185cd4a3e87254f46636e75d986c7a9 *data/worldMapEnv.rda
 5f9fab4844ba7d6a1ad6f65e8f684355 *man/area.map.Rd

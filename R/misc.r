@@ -36,13 +36,13 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
   }
   usr <- par("usr")
   if (!missing(projection) && projection != FALSE) {
-    if (require(mapproj)) {
+    if (requireNamespace("mapproj", quietly = TRUE)) {
       if (is.character(projection)) {
-        projx <- mapproject(x$long, x$lat, projection = projection,
+        projx <- mapproj::mapproject(x$long, x$lat, projection = projection,
           parameters = parameters, orientation = orientation)
       } else {
-        if (nchar(.Last.projection()$projection) > 0) {
-          projx <- mapproject(x$long, x$lat)
+        if (nchar(mapproj::.Last.projection()$projection) > 0) {
+          projx <- mapproj::mapproject(x$long, x$lat)
         } else stop("No projection defined\n")
       }
       x$long <- projx$x
@@ -73,22 +73,22 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
       text(x$long[selection0], x$lat[selection0] + cxy[2] * cex * 0.7,
         paste(" ", x$name[selection0], sep = ""), cex = cex * 0.7, ...)
   if (sum(selection1) > 0) {
+    points(x$long[selection1], x$lat[selection1], pch = pch, cex = cex, ...)
     if (label) {
-      points(x$long[selection1], x$lat[selection1], pch = pch, cex = cex, ...)
       text(x$long[selection1], x$lat[selection1] + cxy[2] * cex,
         paste(" ", x$name[selection1], sep = ""), cex = cex * 1.2, ...)
     }
   }
   if (sum(selection2) > 0) {
+    points(x$long[selection2], x$lat[selection2], pch = pch, cex = cex, ...)
     if (label) {
-      points(x$long[selection2], x$lat[selection2], pch = pch, cex = cex, ...)
       text(x$long[selection2], x$lat[selection2] + cxy[2] * cex * 1.1,
         paste(" ", x$name[selection2], sep = ""), cex = cex * 1.1, ...)
     }
   }
   if (sum(selection3) > 0) {
+    points(x$long[selection3], x$lat[selection3], pch = pch, cex = cex, ...)
     if (label) {
-      points(x$long[selection3], x$lat[selection3], pch = pch, cex = cex, ...)
       text(x$long[selection3], x$lat[selection3] + cxy[2] * cex * 0.9,
         paste(" ", x$name[selection3], sep = ""), cex = cex * 0.9, ...)
     }
