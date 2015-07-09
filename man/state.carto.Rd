@@ -44,6 +44,6 @@ Richard A. Becker, and Allan R. Wilks,
 \emph{AT\&T Bell Laboratories Statistics Research Report [95.2], 1995.}
 
 CartoDraw,
-\url{http://infovis.uni-konstanz.de/~panse/CartoDraw/CartoDrawIndex.php}
+\url{http://www.computer.org/csdl/trans/tg/2004/01/v0095-abs.html}
 }
 \keyword{datasets}
