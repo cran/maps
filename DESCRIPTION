@@ -1,7 +1,7 @@
 Package: maps
 Title: Draw Geographical Maps
-Version: 2.3-10
-Date: 2015-07-08
+Version: 2.3-11
+Date: 2015-08-02
 Author: Original S code by Richard A. Becker and Allan R. Wilks.
 	R version by Ray Brownrigg <Ray.Brownrigg@ecs.vuw.ac.nz>.
         Enhancements by Thomas P Minka <tpminka@media.mit.edu>
@@ -12,8 +12,8 @@ Imports: graphics, utils
 LazyData: yes
 Suggests: mapproj (>= 1.2-0), mapdata (>= 2.2-4)
 License: GPL-2
-Maintainer: Ray Brownrigg <Ray.Brownrigg@ecs.vuw.ac.nz>
+Maintainer: Alex Deckmyn <alex.deckmyn@meteo.be>
 NeedsCompilation: yes
-Packaged: 2015-07-09 00:40:38 UTC; ray
 Repository: CRAN
-Date/Publication: 2015-07-09 14:47:52
+Packaged: 2015-08-03 08:41:09 UTC; alex
+Date/Publication: 2015-08-03 11:44:37
