@@ -122,7 +122,7 @@ num.polygons <- function(p) {
 
 map.text <- function(database, regions = ".", exact = FALSE, labels,
     cex = 0.75, add = FALSE, move = FALSE, ...) {
-  if(!add) map(database, regions, ...)
+  if(!add) map(database=database, regions=regions, exact=exact, ...)
   # get polygons
   cc = match.call(expand.dots=TRUE)
   cc[[1]] = as.name("map")
@@ -137,7 +137,7 @@ map.text <- function(database, regions = ".", exact = FALSE, labels,
     labels = gsub(".*,", "", m$names)
   }
   if(num.polygons(m) != length(labels))
-    stop("map object must have polygons (fill=TRUE)")
+    stop("map object must have polygons (fill=TRUE) and equal number of labels")
   x = apply.polygon(m, centroid.polygon)
   # convert m into a matrix
   x <- t(array(unlist(x), c(2, length(x))))

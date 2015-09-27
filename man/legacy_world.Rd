@@ -1,20 +1,20 @@
-\name{world}
+\name{legacy_world}
 \docType{data}
-\alias{world}
-\alias{worldMapEnv}
-\title{
-Low (mid) resolution World Map
-}
+\alias{legacy_world}
+\alias{legacy_worldMapEnv}
+\alias{legacy_world2}
+\alias{legacy_world2MapEnv}
+\title{ Legacy low resolution World Map.}
 \usage{data(worldMapEnv)}
 \description{
-This updated world map is imported from the Natural Earth project (the 1:50m resolution version). It is up to date (2013) and replaces a much older version based on the CIA World Data Bank II data.
-That older version is still included in the package and can reached as \code{legacy_world}.
+ This world database comes from a thinned cleaned-up version of the CIA World Data Bank II data and contains approximately 30,000 points representing the world coastlines and national boundaries approximatly around 1990.
 }
 \format{
 The data file is merely a character string which
 specifies the name of an environment variable which contains the
 base location of the binary files used by the map drawing functions.
-This environment variable (\code{R_MAP_DATA_DIR_WORLD}) is set at package load time \emph{if it does not
+This environment variable (\code{R_MAP_DATA_DIR} for the datasets in the
+maps package) is set at package load time \emph{if it does not
 already exist}.  Hence setting the environment variable before loading
 the package can override the default location of the binary datasets.
 
@@ -22,16 +22,14 @@ During a transition period (\code{maps} version 3.0) it is possible to switch to
 
 }
 \source{
-The Natural Earth data set is available from \url{http://www.naturalearthdata.com}.
-
-The legacy CIA World Data Bank II is currently (mid-2003) available from 
+The CIA World Data Bank II is currently (2015) still available from 
 \url{http://www.evl.uic.edu/pape/data/WDB/}.
 }
 \seealso{
-\code{\link{map}},\code{\link{world.legacy}},\code{\link{legacy_world}}
+\code{\link{map}},\code{\link{world.legacy}},\code{\link{world}}
 }
 \examples{
-map('world', fill = TRUE, col = 1:10)
+map('legacy_world', fill = TRUE, col = 1:10)
 }
 \references{
 Richard A. Becker, and Allan R. Wilks,

@@ -28,7 +28,7 @@ NDATA = county.N state.N usa.N nz.N world.N world2.N italy.N france.N state.vbm.
 
 .PHONY: all gdata ldata ndata
 
-all: gdata ndata $(PKGNAME)$(SHLIB_EXT)
+all: gdata ndata $(PKGNAME)$(SHLIB_EXT) legacy
 
 state.carto.L: state.carto.line state.carto.linestats Lmake
 	@$(MKDIR) -p ../inst/mapdata
@@ -58,6 +58,19 @@ world2.line: world.line
 	@$(CP) world.gonstats world2.gonstats
 	@$(CP) world.name world2.name
 
+# temporarily, we include the old (1990) world map 
+legacy: legacy_world.line Lmake Gmake
+	@$(ECHO) "Creating legacy world databases"
+	$(AWK) -f convert.awk < legacy_world.line > legacy_world2.line
+	./Lmake 0 s b legacy_world.line legacy_world.linestats ../inst/mapdata/legacy_world.L
+	./Lmake 0 s b legacy_world2.line legacy_world.linestats ../inst/mapdata/legacy_world2.L
+	./Gmake b legacy_world.gon legacy_world.gonstats ../inst/mapdata/legacy_world.G ../inst/mapdata/legacy_world.L
+	./Gmake b legacy_world.gon legacy_world.gonstats ../inst/mapdata/legacy_world2.G ../inst/mapdata/legacy_world2.L
+	@$(CP) legacy_world.name ../inst/mapdata/legacy_world.N
+	@$(CP) legacy_world.name ../inst/mapdata/legacy_world2.N
+	$(RM)  legacy_world2.line 
+
+
 clean:
 	$(RM) $(OBJS) Gmake Lmake world2.* $(PKGNAME).s[lo] $(PKGNAME).dylib *.exe maps.dll symbols.rds
-	$(RM) -r ../inst ../libs
+	$(RM) -r ../inst/mapdata ../libs

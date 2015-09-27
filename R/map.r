@@ -45,8 +45,12 @@ map.poly <- function(database, regions = ".", exact = FALSE,
         i = match(regions, the.map$names)
         if (any(is.na(i))) i = NULL
       } else {
+## AD TODO: solve the problem for UK vs Ukrain...
+## But here you have a simple set of named polygons, not a map database.
+## If it comes from anything but "world", we could break something else.
+## We just leave it for now.
       regexp <- paste("(^", regions, ")", sep = "", collapse = "|")
-        i <- grep(regexp, the.map$names, ignore.case = TRUE)
+        i <- grep(regexp, the.map$names, ignore.case = TRUE, perl=TRUE)
       }
       if (length(i) == 0) stop("no recognized region names")
       nam <- the.map$names[i]
@@ -101,6 +105,10 @@ function(database = "world", regions = ".", exact = FALSE,
          resolution = if (plot) 1 else 0, type = "l", bg = par("bg"),
          mar = c(4.1, 4.1, par("mar")[3], 0.1), myborder = 0.01, ...)
 {
+  # AD: resolution is should be 0 by default if fill==TRUE
+  # so you get less artefacts in polygons because of the thinning
+  # BUT: that's rather extreme with worldHires, so we leave it to the user
+
   # parameter checks
   if (resolution>0 && !plot) 
     stop("must have plot=TRUE if resolution is given")

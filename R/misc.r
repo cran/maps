@@ -174,5 +174,7 @@ map.wrap <- function(p) {
   y = c(y, p$y[start:i])
   start = i + 1
   }
+## AD: this appears to be BUG. Why take out the first point?
+## It is not NA. Maybe the length(x)>0 check came later...
   list(x = x[2:length(x)], y = y[2:length(y)])
 }

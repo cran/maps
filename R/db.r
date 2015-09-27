@@ -1,3 +1,8 @@
+# some obsolete names that may trigger a warning that the world database has changed:
+world.obsoletes <- c("USSR","Yugoslavia","Zaire","Czechoslovakia")  # any more?
+# in grep we must distinguish uk from Ukrain...
+world.exceptions <- c("uk")
+
 "mapgetg" <-
 function(database = "world", gons, fill = FALSE, xlim = c(-1e30, 1e30),
 	ylim = c(-1e30, 1e30))
@@ -93,12 +98,34 @@ function(database = "world", patterns, exact = FALSE)
   fname <- paste(sep = "", mapbase, ".N")
   cnames <- read.delim(fname, as.is = TRUE, header = FALSE)
   nam <- as.character(cnames[[1]])
+### AD: exact=TRUE fails if there is any non-fitting name
+###     is that optimal behaviour? Maybe it's 1 typo in 20 names.
   if(exact) {
-    i = match(patterns, nam)
-    if(any(is.na(i))) i = NULL
+    i <- match(patterns, nam)
+    if (any(is.na(i))) {
+      if (!missing(patterns)) {
+        pmiss <- patterns[is.na(i)]
+        if (length(i)>0) warning(paste("Some patterns could not be exactly matched:\n   ",paste(pmiss,collapse=", "),"\n"))
+      }
+      i <- NULL
+    }
   } else {
+## QUICK FIX: there is a problem now for UK vs Ukrain...
+## we fix it ad hoc for now by (^uk) => (^uk$) | (^uk:)
+## uk(?!r) would be simpler, but this can be extended should there ever be another case.
+## for UK, there is in fact no exact fit to "^uk$", but this is nice & general
+    if (database=="world") {
+      if (any(world.obsoletes %in% patterns)) warning(
+                        "Regions appear to be for legacy data base.\n
+                         Consider updating country list or use legacy_world as database.")
+      iexp <- which(tolower(patterns) %in% world.exceptions)
+      if (length(iexp)>0) {
+        ibase <- patterns[iexp]
+        patterns[iexp] <- paste(ibase,"$)|(^",ibase,":",sep="")
+      }
+    }
     regexp <- paste("(^", patterns, ")", sep = "", collapse = "|")
-    i <- grep(regexp, nam, ignore.case = TRUE)
+    i <- grep(regexp, nam, ignore.case = TRUE, perl=TRUE)
   }
   if(length(i) == 0) return(NULL)
   r <- cnames[i, 2]
@@ -131,7 +158,7 @@ char.to.ascii <- function(s) {
 }
 is.regexp <- function(s) {
   # test: is.regexp(c("too", ".*dak", "kj[t]"))
-  pattern = ".*[.?*[].*"
+  pattern = ".*[.?*^[].*"
   result = logical(length(s))
   result[grep(pattern, s)] = TRUE
   result
@@ -156,14 +183,31 @@ match.map <- function(database, regions, exact = FALSE, warn = TRUE) {
   }
   nam = tolower(nam)
   regions = tolower(regions)
+# this is the quick-and-dirty fix:
+# it must also trigger the use of match.map.grep
+#  nam[nam=="uk"] <- "uk[^r]"
+  if (database=="world") {
+      iexp <- which(tolower(patterns) %in% world.exceptions)
+      if (length(iexp)>0) {
+        ibase <- patterns[iexp]
+        patterns[iexp] <- paste(ibase,"(?![:alpha:])",sep="")
+      }
+  }
+
   if(!exact && any(is.regexp(regions))) {
     match.map.grep(nam, regions, warn)
   } else {
     # sort regions and table
+    #AD: "order" may give unexpected results depending on locale!!!
+    #so we temporarily move to ASCII style ordering
+    lcc <- Sys.getlocale("LC_COLLATE")
+    Sys.setlocale(category = "LC_COLLATE", locale = "C")
     ord.nam = order(nam)
     nam = nam[ord.nam]
     ord.regions = order(regions)
     regions = regions[ord.regions]
+    Sys.setlocale(category = "LC_COLLATE", locale = lcc)
+
     result = .C("map_match", PACKAGE="maps",
       as.integer(length(nam)), as.character(nam),
       as.integer(length(regions)), as.character(regions),
@@ -189,12 +233,12 @@ match.map.slow <- function(nam, regions, warn = FALSE) {
     regexp <- paste("(^", pattern, ")", sep = "", collapse = "|")
     #r <- grep(regexp, nam)
     region.hash = as.character(char.to.ascii(substr(pattern, let, let)))
-    r <- grep(regexp, nam.bin[[region.hash]])
+    r <- grep(regexp, nam.bin[[region.hash]], perl=TRUE)
     if(length(r) > 0) {
       r = index.bin[[region.hash]][r]
       result[r] <- i
     } else if(warn) warning(paste(pattern, "is not in the map"))
-  }  
+  }
   result
 }
 match.map.grep <- function(nam, regions, warn = FALSE) {
@@ -202,10 +246,10 @@ match.map.grep <- function(nam, regions, warn = FALSE) {
   for(i in 1:length(regions)) {
     pattern = regions[i]
     regexp <- paste("(^", pattern, ")", sep = "", collapse = "|")
-    r <- grep(regexp, nam)
+    r <- grep(regexp, nam, perl=TRUE)
     if(length(r) > 0) {
       result[r] <- i
     } else if(warn) warning(paste(pattern, "is not in the map"))
-  }  
+  }
   result
 }

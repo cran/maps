@@ -1,2284 +1,1661 @@
-Canada	1
-South Africa	2
-Denmark	3
-Great Lakes:Superior, Huron, Michigan	4
-USSR	5
-Pakistan	6
-Aral Sea	7
-Italy	8
-Nicaragua	9
-Netherlands	10
-Caspian Sea	11
-Mexico	12
-Iraq:Hawr al Hammar	13
-Iraq	14
-Nicaragua:Lago de Nicaragua	15
-Lake Malawi	16
-Ethiopia	17
-Netherlands:IJsselmeer	18
-USA	19
-Mongolia	20
-Switzerland	21
-Cambodia	22
-France	23
-Papua New Guinea:Wuvulu	24
-USA:Alaska	25
-Guatemala	26
-Belize	27
-Honduras	28
-El Salvador	29
-Costa Rica	30
-Panama	31
-Colombia	32
-Ecuador	33
-Peru	34
-Brazil	35
-Bolivia	36
-Chile	37
-Argentina	38
-Paraguay	39
-Uruguay	40
-Guyana	41
-Suriname	42
-French Guiana	43
-Venezuela	44
-Great Lakes:Ontario	45
-Great Lakes:Erie	46
-Lake Titicaca	47
-USA:Point Roberts	48
-Bolivia:Titicaca Penninsula	49
-Guinea-Bissau:?	50
-USSR:Ostrov Jackson	51
-Indonesia:?	52
-Romania	53
-Iran	54
-Turkey	55
-Afghanistan	56
-China	57
-India	58
-Myanmar	59
-Nepal	60
-Bhutan	61
-Bangladesh	62
-Thailand	63
-Malaysia:Malay Penninsula	64
-Laos	65
-Vietnam	66
-China:Macau	67
-China:Hong Kong	68
-North Korea	69
-Hungary	70
-Czechoslovakia	71
-Poland	72
-South Korea	73
-Black Sea:Ozeros	74
-Lake Pasvikelv	75
-Turkey:North	76
-Bulgaria	77
-Yugoslavia	78
-Greece	79
-Albania	80
-Austria	81
-Lacul Greaca	82
-Germany	83
-Luxembourg	84
-Belgium	85
-Liechtenstein	86
-Portugal	87
-Spain	88
-UK:Gibralter	89
-Andorra	90
-Monaco	91
-Norway	92
-Finland	93
-Sweden	94
-Norway:Tana	95
-Egypt	96
-Libya	97
-Sudan	98
-Chad	99
-Tunisia	100
-Algeria	101
-Mali	102
-Mauritania	103
-Morocco	104
-Spain:Melilla	105
-Spain:Ceuta	106
-Western Sahara	107
-Senegal	108
-Gambia	109
-Guinea-Bissau	110
-Guinea	111
-Ivory Coast	112
-Liberia	113
-Sierra Leone	114
-Ivory Coast:Aby Penninsula	115
-Ghana	116
-Burkina Faso	117
-Niger	118
-Benin	119
-Togo	120
-Nigeria	121
-Cameroon	122
-Central African Republic	123
-Zaire	124
-Congo	125
-Gabon	126
-Equatorial Guinea:Rio Muni	127
-Angola:Cabinda	128
-Uganda	129
-Rwanda	130
-Zambia	131
-Angola	132
-Burundi	133
-Namibia	134
-South Africa:Walvis Bay	135
-Botswana	136
-Mozambique	137
-Swaziland	138
-Zimbabwe	139
-Malawi	140
-Tanzania	141
-Kenya	142
-Somalia	143
-Djibouti	144
-Syria	145
-Lebanon	146
-Jordan	147
-Israel	148
-Egypt:Sinai	149
-Gaza Strip	150
-Saudi Arabia	151
-Yemen	152
-Qatar	153
-Kuwait	154
-Neutral Zone	155
-Germany:Usedom	156
-Vislinskiy Zaliv	157
-Lake Albert	158
-Lake Tanganyika	159
-Lake Kariba	160
-Lake Victoria	161
-Oman	162
-Oman:Ra's Musandam	163
-United Arab Emirates	164
-Egypt:Buheirat el Timsah	165
-Great Bitter Lake	166
-China:Kashmir	167
-West Bank	168
-Netherlands:South	169
-Uganda:Rubafu	170
-New Zealand:?	171
-Thailand:?	172
-Maldives:?	173
-Canada:Baffin Island	174
-Cape Verde:Sao Vicente	175
-Indonesia:Romang	176
-Marshall Islands:Leuen	177
-Greece:Aiyina	178
-Micronesia:Moen	179
-Antarctica:?	180
-USSR:Ostrov Bol'shoy Begichev	181
-Australia:Prince of Wales Island	182
-Australia:Clarke Island	183
-Solomon Islands:Rennel	184
-Bangladesh:?	185
-Indonesia:Penida	186
-Norway:Stjernoya	187
-Venezuela:Isla de Margarita	188
-Canada:Coats Island	189
-Hawaii:Lisianski Island	190
-Canada:Newfoundland	191
-Australia:Vanderlin Island	192
-French Polynesia:Eiao	193
-Australia	194
-Germany:Langeoog	195
-Cook Islands:Rarotonga	196
-Canada:Chapman Lewes Island:South	197
-Nicaragua:Isla del Maiz Grande	198
-Indonesia:Rangsang	199
-Canada:Nootka Island	200
-Papua New Guinea	201
-Indonesia:Irian Jaya	202
-Australia:Thistle Island	203
-Indonesia:Kofiau	204
-USSR:Ostrov Peschanyy	205
-Canada:Tennent Island	206
-Fiji:Nayau	207
-USA:?	208
-Canada:Rowley Island	209
-Indonesia:Enggano	210
-Saint-Barthelemy	211
-Hawaii:Kure Atoll	212
-Canada:Sonora Island	213
-Cuba	214
-USA:Guantanamo:West	215
-USA:Guantanamo:East	216
-Malaysia:Pinang	217
-Malaysia:Sabatik	218
-Indonesia:Sabatik	219
-Philippines:Luzon	220
-Norway:Karlsoy	221
-Canada:Prince Edward Island	222
-UK:Scotland:Isle of Lewis	223
-Tunisia:Jalitah Island	224
-Indonesia:Sipura	225
-USSR:Ostrov Shiashkotan	226
-Thailand:Ko Phai	227
-Denmark:Mors	228
-Denmark:Mon	229
-France:Reunion Island	230
-Maldives:?	231
-Philippines:Mindanao	232
-Philippines:Tawitawi	233
-Canada:Victoria Island	234
-Canada:Resolution Island	235
-Greenland:Clavering O	236
-South Sandwich Islands:Bristol Island	237
-Bangladesh:?	238
-Canada:Princess Royal Island	239
-USSR:?	240
-Antarctica	241
-Norway:Seiland	242
-Canada:Great Bear Lake	243
-Guadeloupe:Grande-Terre	244
-Japan:Haha Jima	245
-USA:Alaska:Deer Island	246
-Indonesia:Larat	247
-Maldives:?	248
-Mexico:Bahia de Navachiste Island	249
-USA:New York:Long Island	250
-Greenland:Jens Munk O	251
-Marshall Islands:Wotja	252
-Mexico:Isla de Santa Margarita	253
-Indonesia:Sumatra	254
-Yemen:Suqutra	255
-Canada:Pearse Island	256
-French Polynesia:Nuku Hiva	257
-Micronesia:Ulul	258
-Chile:Isla Luz	259
-Panama:Isla del Rey	260
-USSR:Zemlya Vilcheka	261
-Indonesia:Matasiri	262
-Canada:Moresby Island	263
-Chile:Easter Island	264
-Greenland:Geographical Society O	265
-Marshall Islands:Ailuk Atoll	266
-Lesotho	267
-Lake Fjerritslev	268
-Cape Verde:Santo Antao	269
-Indonesia:Sulawesi	270
-Greece:Zakinthos	271
-Greenland:Ile de France	272
-USSR:?	273
-Anguilla	274
-Philippines:Palawan	275
-Norway:Soroya	276
-USA:Alaska:Kagalaska Island	277
-Nauru	278
-Australia:Bentinck Island	279
-USA:Drummond Island	280
-Saint Kitts	281
-Canada:White Island	282
-Chile:Isla Hoste	283
-Cape Verde:Fogo	284
-Indonesia:Mapur	285
-USA:Door Penninsula	286
-Antarctica:Pourquoi Pas Island	287
-Cape Verde:Brava	288
-Philippines:Tablas	289
-USA:Alaska:Akun Island	290
-Sweden:Gotland	291
-Philippines:Catanduanes Island	292
-Maldives:?	293
-Tonga:Tongatapu	294
-Greece:Simi	295
-USSR:Ostrov Morzhovets	296
-Canada:Adlavik Island	297
-Canada:Alexander Island	298
-Denmark:Sandoy	299
-Australia:Dirk Hartog Island	300
-USA:Bogue Banks	301
-Kiribati:Nikunau	302
-Greenland:Norske Oer	303
-Australia:Cocos Islands:South Island	304
-Vanuatu:Vanua Lava	305
-Chile:Isla Stosch	306
-Greece:Milos	307
-Canada:Opposite Island	308
-Montserrat	309
-Dominican Republic:Isla Saona	310
-USSR:Lake Baikal	311
-Greenland	312
-Antarctica:?	313
-Indonesia:Atauro	314
-Myanmar:Pulo Buda	315
-Antarctica:?	316
-USA:Alaska:?	317
-Indonesia:Waleabahi	318
-New Zealand:South Island	319
-Pakistan:Lake ?	320
-Sardinia	321
-Chile:Isla Humos	322
-Japan:Sado	323
-USSR:Ostrov Dzharylgach	324
-Micronesia:Magur	325
-Canada:Calvert Island	326
-USA:Stockton Island	327
-Canada:Mackenzie King Island	328
-Myanmar:Saganthit Kyun	329
-Maldives:?	330
-USA:Alaska:Great Sitkan Island	331
-Iceland	332
-Greenland:?	333
-UK:Pitcairn Island	334
-Maldives:?	335
-Tanzania:Zanzibar	336
-Ethiopia:Dehalak Deset	337
-Canada:Porcher Island	338
-Canada:Pitt Island	339
-Norway:Svalbard:Edgeoya	340
-Indonesia:Tarakan	341
-Indonesia:Tioor	342
-Indonesia:Waar	343
-Antarctica:Mill Island	344
-French Polynesia:Raivavae	345
-Sicily	346
-Canada:Quadra Island	347
-USA:Florida:Key Largo	348
-Vanuatu:Aoba	349
-Malta:Malta	350
-India:Little Andaman Island	351
-Fiji:Kambara Island	352
-USA:Florida:Sanibel Island	353
-USA:Palau:Babelthuap	354
-Guadeloupe:Basse-Terre	355
-Myanmar:Mali Kyun	356
-Thailand:Ko Phangan	357
-France:Ile de Re	358
-Australia:Maria Island	359
-Thailand:Ko Chang	360
-USSR:Ostrov Neupokoyeva	361
-Indonesia:Trangan	362
-Indonesia:Wokam	363
-UK:Guernsey	364
-UK:Great Britain	365
-Philippines:Balabac Island	366
-USSR:Saaremaa	367
-USSR:Aral Penninsula	368
-Haiti:Ile de la Gonave	369
-Ecuador:Isla Fernandina	370
-Chile:Isla Rivero	371
-Hawaii:Nihoa	372
-France:Kerguelen Island	373
-Argentina:Tierra del Fuego	374
-Chile:Tierra del Fuego	375
-Argentina:Tierra del Fuego:South	376
-Madagascar:Ile Sainte-Marie	377
-Brazil:Ilha Mututi	378
-Chile:?	379
-USSR:Ostrov Bennetta	380
-Indonesia:Waigeo	381
-Indonesia:Lepar	382
-Papua New Guinea:Sidea	383
-Marshall Islands:Jih	384
-Solomon Islands:Santa Isabel	385
-Norway:Vega	386
-USSR:Ostrov Kotel'nyy	387
-USA:Florida:Lower Matecumbe Key	388
-Antarctica:Adelaide Island	389
-Antarctica:Young Island	390
-Chile:Isla Sala y Gomez	391
-Indonesia:Pantar	392
-Antarctica:Wiencke Island	393
-Maldives:?	394
-Tonga:Late Island	395
-Chile:Isla Victoria	396
-Fiji:Ovalau	397
-Denmark:Bordoy	398
-Chile:Isla Grande de Chiloe	399
-Australia:Dorre Island	400
-Sri Lanka:Delft Island	401
-Malaysia:Bum Bum	402
-Norway:Hareidlandet	403
-Antarctica:Rothschild Island	404
-Maldives:?	405
-Canada:Lougheed Island	406
-Norway:Svalbard:Nordaustlandet	407
-Marshall Islands:Utirik Atoll	408
-Philippines:Panaon	409
-Japan:Shikoku	410
-Fiji:Vatoa	411
-Japan:Kakeroma Jima	412
-Sonsorol Island	413
-Norway:Froya	414
-Japan:Okino Daito	415
-Greece:Kerkira	416
-Canada:Vancouver Island	417
-Myanmar:Owen Island	418
-Philippines:Cebu	419
-Greece:Kos	420
-USA:Louisiana:Marsh Island	421
-Australia:West Island	422
-Maldives:?	423
-Norway:Andoya	424
-Maldives:?	425
-Antarctica:Livingston Island	426
-Indonesia:Subi	427
-Chile:Isla James	428
-India:Tillanchang Dwip	429
-Indonesia:Tidore	430
-Kiribati:Starbuck Island	431
-Kiribati:Kuma	432
-Japan:Okushiri To	433
-USSR:Hiiumaa	434
-Australia:Kent Group Island	435
-Antarctica:Nelson Island	436
-Indonesia:Pagai Utara	437
-New Caledonia:Ile Chesterfield	438
-Cape Verde:Sal	439
-Turks and Caicos:Grand Caicos Island	440
-Antarctica:Siple Island	441
-French Polynesia:Tahaa	442
-USSR:Ostrov Vil'kitskogo	443
-Denmark:Samso	444
-Bahamas:Abaco Island	445
-USSR:Ostrov Urup	446
-USA:Alaska:Chichagof Island	447
-Tokelau:Nukunono	448
-Maug Island	449
-Vietnam:Dao Vinh Thuc	450
-Comoros:Grande Comore	451
-Mexico:Isla Montague	452
-Chile:Isla Nueva	453
-Thailand:Ko Samui	454
-Solomon Islands:Tetepare	455
-USSR:Ostrov Ushakova	456
-USSR:Ostrov Leont'yeva	457
-Micronesia:Kosrae	458
-Solomon Islands:Ke Ila	459
-Australia:Long Island	460
-Micronesia:Woleai	461
-USA:Alaska:Little Tanaga Island	462
-Maldives:?	463
-Australia:Tasmania:Flinders Island	464
-Fiji:Lakeba	465
-Antarctica:Robert Island	466
-Fiji:Yasawa	467
-Vietnam:?	468
-USA:Alaska:Dall Island	469
-Norway:Hitra	470
-Maldives:?	471
-Antarctica:Wright Island	472
-Turks and Caicos:North Caicos Island	473
-Venezuela:Cayo Grande	474
-Canada:Winter Island	475
-Maldives:?	476
-Pitcairn Islands:Ducie Atoll	477
-UK:Scotland:Shetland Islands:Unst	478
-USSR:Ostrov Sibiryakova	479
-USSR:Ostrov Pioner	480
-Myanmar:Clara Island	481
-USA:Alaska:Kupreanof Island	482
-Maldives:?	483
-South Sandwich Islands:Thule Island	484
-French Polynesia:Rapa	485
-Norway:Gurskoya	486
-USA:Alaska:Kosciusko Island	487
-Indonesia:Siantan	488
-Isle of Man	489
-Kiribati:Washington Island	490
-Canada:Redonda Island	491
-Canada:Cornwallis Island	492
-Vanuatu:Hiu	493
-Canada:Richards Island	494
-India:Bingaram Island	495
-USA:Alabama:Dauphin Island	496
-India:Barren Island	497
-Papua New Guinea:New Britain	498
-Australia:Moreton Island	499
-Australia:Fraser Island	500
-Mozambique:Ilha do Bazaruto	501
-USA:Alaska:Hagemeister Island	502
-Antarctica:Alexander Island	503
-Saint Eustatius	504
-India:Kadmat Island	505
-Australia:Flinders Island	506
-Sweden:Oland	507
-California:Santa Catalina Island	508
-Finland:?	509
-Bahamas:Acklins Island	510
-Fiji:Koro	511
-UK:Saint Mary's	512
-Maldives:?	513
-UK:Scotland:Shetland Islands:Yell	514
-French Polynesia:Ua Pu	515
-Malaysia:Sarawak	516
-Indonesia:Borneo	517
-Brunei	518
-Brunei:East	519
-Indonesia:Laut-Natuna	520
-Antarctica:Dean Island	521
-New Zealand:Waiheke Island	522
-Hawaii:Gardner Pinnacles	523
-Vietnam:?	524
-Australia:Saint Peter Island	525
-Maldives:?	526
-Solomon Islands:Kukolu	527
-Nicaragua:Cayos Miskitos	528
-Canada:Great Slave Lake	529
-USSR:Lena Delta:5	530
-Cuba:Cayo Sabinal	531
-Andaman Islands:North Andaman	532
-Andaman Islands:Middle Andaman	533
-Andaman Islands:Baratang Island	534
-Andaman Islands:South Andaman	535
-China:Haitan Dao	536
-USA:Washington:Orcas Island	537
-Chile:Isle Ipun	538
-USSR:Ostrov Bol'shevik	539
-Maldives:?	540
-New Caledonia:Ile Lifou	541
-USA:Alaska:Nagai Island	542
-Chile:Isla Gordon	543
-Canada:Devon Island	544
-Maldives:?	545
-Japan:Amakusa Shoto	546
-Venezuela:Isla La Tortuga	547
-Maldives:?	548
-Indonesia:Kasiui	549
-Tonga:Niuafo'ou	550
-Maldives:?	551
-Australia:Three Hummock Island	552
-Indonesia:Kai Kecil	553
-USSR:?	554
-USA:Madeline Island	555
-Panama:Isla de Cebaco	556
-Solomon Islands:Vangunu	557
-Philippines:Suluan Island	558
-Northern Mariana Islands:Agrihan	559
-USSR:Amur Lake	560
-USA:Alaska:Semisopochnoi Island	561
-Antarctica:Newman Island	562
-Indonesia:Bacan	563
-Dominican Republic	564
-Haiti	565
-Maldives:?	566
-UK:Northern Ireland	567
-Ireland	568
-Maldives:?	569
-Canada:King William Island	570
-USA:Alaska:Chirikof Island	571
-Norway:Langoya	572
-Mexico:Cayo Norte	573
-USA:Alaska:Umak Island	574
-USSR:Vormsi	575
-Maldives:?	576
-Denmark:Eysturoy	577
-Antarctica:Snow Hill Island	578
-Bahamas:Cat Island	579
-Chile:Cabo Taitao	580
-Chile:Isla Madre de Dios	581
-Cuba:Cayo Caballones	582
-Cook Islands:Ngake	583
-Australia:Robbins Island	584
-Solomon Islands:Ngella Sule	585
-Spain:Isla de Alboran	586
-UK:Bermuda	587
-Nevis	588
-Sri Lanka:Jaffna	589
-Myanmar:Kunthi Kyun	590
-Fiji:Yadua	591
-Chile:Isla Melchor	592
-Japan:Honshu	593
-Norway:Arnoy	594
-Indonesia:Mubur	595
-Indonesia:Adonara	596
-Kiribati:Butaritari	597
-Madagascar	598
-Canada:Prince Charles Island	599
-USSR:?	600
-India:Amini Island	601
-Seychelles:Praslin	602
-Chile:?	603
-Greece:Evvoia	604
-USA:Alaska:Igitkin Island	605
-Australia:Lord Howe Island	606
-Kiribati:Temotu	607
-Indonesia:Bunyu	608
-Greece:Ikaria	609
-Tunisia:Jerba	610
-Indonesia:Biak	611
-Vanuatu:Maewo	612
-USSR:Ostrov Atlasova	613
-Papua New Guinea:Basilaki	614
-Netherlands:Ameland	615
-Haiti:Grande Cayemite Island	616
-Brazil:Ilha de Sao Francisco	617
-Solomon Islands:Luaniua	618
-Madeira Islands:Porto Santo	619
-USA:Alaska:Seguam Island	620
-Cuba:Cayo Grande	621
-Chile:Isla Clarence	622
-Philippines:Biliran	623
-French Polynesia:Tubuai	624
-Chile:Isla Magdalena	625
-Thailand:Ko Phaluai	626
-Kiribati:Fanning Island	627
-Ecuador:Isla Santa Maria	628
-Solomon Islands:Barora Ite	629
-Chile:Isla Hermite	630
-Indonesia:Java	631
-Kiribati:Malden Island	632
-USSR:?	633
-Chile:Isla San Ambrosio	634
-USSR:Big Diomede Island	635
-Australia:Curtis Island	636
-Hawaii:Oahu	637
-India:Interview Island	638
-Greenland:?	639
-Ecuador:Isla Isabela	640
-Fiji:Ngau	641
-Philippines:Bohol	642
-Solomon Islands:Nggela Pile	643
-Myanmar:?	644
-Micronesia:Pulusuk	645
-Greece:Thira	646
-Mexico:San Lorezno Island	647
-Solomon Islands:San Jorge Island	648
-Chile:Isla Vidal Gormaz	649
-Canada:Akpatok Island	650
-Maldives:?	651
-Solomon Islands:Barora Fa	652
-Canada:King Christian Island	653
-Indonesia:Num	654
-New Zealand:?	655
-French Polynesia:Raitea	656
-Micronesia:Elato	657
-USA:Alaska:Amchitka Island	658
-Antarctica:Vega	659
-San Marino	660
-Canada:Ellesmere Island	661
-Kiribati:Taboiaki	662
-USSR:Ostrov Stolbovoy	663
-Myanmar:Boronga Island	664
-Micronesia:Oroluk Atoll	665
-Finland:Halluoto	666
-Fiji:Qamea	667
-Cook Islands:Takutea	668
-Myanmar:Kalegauk Island	669
-Maldives:?	670
-Cook Islands:Aitutaki Atoll	671
-Greenland:?	672
-Maldives:?	673
-Honduras:Isla El Tigre	674
-Chile:Isla Clemente	675
-Chile:Isla Lennox	676
-Philippines:?	677
-Cuba:Cayo Largo	678
-Philippines:Siquijor	679
-Japan:Kyushu	680
-USA:Florida:Vaca Key	681
-USSR:Ostrov Komsomol'skoy Pravdy	682
-Italy:Isola d'Elba	683
-Fiji:Naviti	684
-Canada:King Island	685
-Antarctica:Berkner Island	686
-New Caledonia:Ile Art	687
-Papua New Guinea:Kiriwina	688
-Greenland:?	689
-Indonesia:Batudaka	690
-Greece:Kefallinia	691
-Antarctica:James Ross Island	692
-Cuba:Isla de la Juventura	693
-USSR:Ostrov Sakhalin	694
-Sin Cowe Island	695
-France:Ile aux Cochons	696
-Brazil:Ilha Queimada	697
-Vanuatu:Toga	698
-Papua New Guinea:Nuguria Island	699
-Kiribati:Sydney Island	700
-Malaysia:Borneo	701
-France:Ile d'Oleron	702
-Japan:Yome Jima	703
-French Polynesia:Fatu Hiva	704
-USA:Alaska:Atka Island	705
-Canada:Amund Ringnes Island	706
-Canada:Royal Geographical Society Island:East	707
-Antarctica:Elephant Island	708
-Japan:Muko Jima	709
-New Zealand:Auckland Island	710
-USSR:Ostrov Izvestiy Tslk:West	711
-Australia:Hunter Island	712
-Bahamas:Crooked Island	713
-Canada:Bray Island	714
-Netherlands:Terschelling	715
-USA:Alaska:Herbert Island	716
-French Polynesia:Bora-Bora	717
-Bahamas:Little Inagua Island	718
-New Zealand:Bounty Island	719
-Indonesia:Peleng	720
-Indonesia:Nunukan Timur	721
-Myanmar:?	722
-Australia:North Stradbroke Island	723
-Greece:Rodhos	724
-Indonesia:Lombok	725
-Papua New Guinea:Karkar	726
-Bangladesh:?	727
-USA:Florida:Long Key	728
-Japan:Kume Shima	729
-Antarctica:King George Island	730
-Antarctica:Roosevelt Island	731
-Indonesia:Belitung	732
-South Sandwich Islands:Candlemas Island	733
-USSR:Ostrov Chetyrekhstolbovoy	734
-Philippines:Batan	735
-UK:Tristan da Cunha Island	736
-Tuvalu:Niutao	737
-India:Minicoy Island	738
-Canada:Wales Island	739
-Northern Mariana Islands:Asuncion	740
-Greenland:?	741
-Canada:Prince Patrick Island	742
-Maldives:?	743
-Indonesia:Gam	744
-Solomon Islands:New Georgia	745
-Chile:Isla Duque de York	746
-Thailand:Ko Talibong	747
-USSR:Ostrov Zav'yalova	748
-Thailand:Ko Ang Thong	749
-Finland:Vallgrund	750
-Canada:Koch Island	751
-Antarctica:?	752
-Chile:?	753
-Canada:Loks Land Island	754
-Mexico:Isla Clarion	755
-Bangladesh:?	756
-Paracel Islands:Passau Keah	757
-Thailand:Ko Phuket	758
-Micronesia:Eauripik	759
-France:Saint-Pierre and Miquelon	760
-Sao Tome and Principe:Ilha da Sao Tome	761
-Canada:Saint Joseph Island	762
-Japan:Nishino Shima	763
-New Zealand:North Island	764
-USA:Florida:Saint George Island	765
-USSR:Ostrova Arkticheskogo Instituta	766
-Australia:Mornington Island	767
-Maldives:?	768
-Papua New Guinea:Dyaul	769
-Tobago	770
-Antarctica:Anvers Island	771
-Azores:Sao Miguel	772
-Sao Tome and Principe:Ilha do Principe	773
-New Caledonia:Ile Mare	774
-Indonesia:Bangkulu	775
-Canada:Gateshead Island	776
-Honduras:Islas Santanilla:East	777
-Angola:Ilha da Baia dos Tigres	778
-Mexico:Cayo Lobos	779
-Indonesia:Lomblen	780
-Chile:Isla Contreras	781
-Maldives:?	782
-Canada:Cornwall Island	783
-USSR:Ostrov Izvestiy Tslk:East	784
-French Polynesia:Maiao	785
-Myanmar:Great Western Torres	786
-Barbados	787
-Greece:Ios	788
-Denmark:Streymoy	789
-Australia:Isle Woodah	790
-Mexico:Angeleda la Guarda Island	791
-French Polynesia:Rimatara	792
-Indonesia:Siau	793
-Maldives:?	794
-USA:Washington:San Juan Island	795
-Bahamas:Great Inagua Island	796
-USSR:?	797
-USA:Alaska:Afognak Island	798
-China:?	799
-Honduras:Islas Santailla:West	800
-Philippines:Mindoro	801
-Greece:Thasos	802
-Papua New Guinea:Nukumanu Island	803
-USA:Alaska:Senak Island	804
-Northern Mariana Islands:Anatahan	805
-Indonesia:Bintan	806
-Japan:Ishigaki Shima	807
-Philippines:Badian Island	808
-USSR:Ostrov Malyy Taymyr	809
-Antarctica:Dendtler	810
-Indonesia:Rempang	811
-Cook Islands:Tauhunu	812
-Canada:Axel Heiberg Island	813
-USA:Alaska:Tanaga Island	814
-Saudi Arabia:Jazair Farasan:North	815
-Brazil:Ilha Caviana	816
-USA:Pea Island	817
-French Polynesia:Ua Huka	818
-Antarctica:White Island	819
-USSR:Ostrov Sal'm	820
-USA:Maine:Mount Desert Island	821
-Maldives:?	822
-Indonesia:Padang:Sumatra	823
-Indonesia:Halmahera	824
-USA:Ocracoke Island	825
-Finland:?	826
-Maldives:?	827
-Chile:Isla Navarino	828
-Falkland Islands:Annenkov Island	829
-Maldives:?	830
-Papua New Guinea:Buka	831
-Chile:Isla Reina Adelaida	832
-USA:Alaska:Yunaska Island	833
-Micronesia:Yap	834
-Samoa:Upolu	835
-Marshall Islands:Ebadon	836
-Maldives:?	837
-Japan:Okinawa	838
-USSR:Ostrov Yarok	839
-Vietnam:?	840
-Canada:Cockburn Island	841
-Japan:Miyake Jima	842
-Maldives:?	843
-Bahamas:Rum Cay	844
-Finland:?	845
-USA:Alaska:Kagamil Island	846
-Antarctica:Charcot Island	847
-Indonesia:Natuna Besar	848
-Guinea-Bissau:?	849
-Chile:Isla Pacheco	850
-Paracel Islands:Tree Island	851
-USSR:?	852
-China:Donghai Dao	853
-Panama:Isla Jicaron	854
-Pakistan:Tsho Marari Lake	855
-USSR:Ostrov Karaginskiy	856
-USA:Alaska:?	857
-Greenland:?	858
-Indonesia:Moa	859
-USSR:Ostrov Belyy	860
-USSR:Ostrov Ogurchinskiy	861
-Indonesia:?	862
-Chile:Isla Capitan Aracena	863
-Japan:Tokuno Shima	864
-UK:Scotland:Saint Kilda	865
-Greenland:Kuhn O	866
-Denmark:Als	867
-Mexico:Laguna Madre	868
-Greenland:?	869
-USA:Massachusettes:Martha's Vineyard	870
-Indonesia:Togin	871
-Chile:?	872
-Bahamas:Long Cay	873
-Antarctica:?	874
-Mexico:Carmen Island	875
-France:Ile Saint-Paul	876
-American Samoa:Tutuila	877
-Indonesia:Buton	878
-Mexico:San Jose Island	879
-Canada:New World Island	880
-USA:Outer Island	881
-Maldives:?	882
-Indonesia:Sawu	883
-Solomon Islands:Steward	884
-California:San Clemente Island	885
-Norway:Svalbard:Spitsbergen	886
-Guinea-Bissau:?	887
-Indonesia:Tahulandang	888
-Myanmar:Bilugyun Island	889
-USA:Alaska:Sitkalidak Island	890
-Canada:Borden Island	891
-Turks and Caicos:East Caicos Island	892
-Bahrain	893
-Solomon Islands:Arundel	894
-Antarctica:Ross Island	895
-Bahamas:Andros Island:Northern Bight	896
-Denmark:Sjaelland	897
-India:North Sentinal Island	898
-Philippines:Magalawa Island	899
-Indonesia:Damar	900
-Indonesia:Rupat	901
-Indonesia:Kasiruta	902
-Brazil:?	903
-India:Kavaratti Island	904
-Indonesia:Bangka	905
-Indonesia:Tobingtinggi	906
-Cuba:Cayos de las Doce Leguas	907
-Paracel Islands:Cresent Group:3	908
-Solomon Islands:Maramasike	909
-Grenada	910
-Spain:Minorca	911
-Bahamas:Eleuthera Island	912
-Mexico:Guadalupe Island	913
-Greece:Crete	914
-Japan:Hokkaido	915
-Brazil:Ihla Mexiana	916
-Solomon Islands:Parara	917
-South Korea:Ullung Do	918
-Antarctica:Korff Ice Rise	919
-Maldives:?	920
-Chile:Isla San Felix	921
-Chile:Isla Mornington	922
-New Zealand:Pukapuka	923
-USA:Florida:Hutchinson Island	924
-Cayman Islands:Grand Cayman	925
-Northern Mariana Islands:Sarigan	926
-USA:Texas:San Jose Island	927
-Philippines:Guimaras	928
-Marshall Islands:Sibylla	929
-Fiji:Vanua Masi	930
-Antarctica:Pullen Island	931
-Fiji:Nairai	932
-Virgin Islands:Saint Thomas	933
-Indonesia:Babar	934
-Fiji:Ongea Levu	935
-USA:Florida:Elliott Island	936
-Maldives:?	937
-Antarctica:Drygalski Island	938
-USA:Alaska:Kodiak Island	939
-Antarctica:Steventon Island	940
-Antarctica:Sherman Island	941
-Paracel Islands:Triton Island	942
-Myanmar:Cheduba Island	943
-USSR:Novaya Zemlya:North	944
-Antarctica:Robertson Island	945
-Indonesia:Melilis	946
-Saudi Arabia:Jazair Farasan:South	947
-Kiribati:Onotoa	948
-Paracel Islands:Woody Island	949
-South Korea:?	950
-China:Liuheng Dao	951
-USSR:Ostrov Malyy Lyakhovskiy	952
-USA:Core Banks	953
-Tuvalu:Nukufetau	954
-USSR:Ostrov Kolguyev	955
-Fiji:Waya	956
-USA:Alaska:Akutan Island	957
-UK:Scotland:Ruhm	958
-Solomon Islands:Rendova	959
-France:Belle-Ile	960
-Canary Islands:Gomera	961
-Brazil:Martin Vaz Island	962
-USSR:Ostrov Vozrozhdeniya	963
-India:Kiltan Island	964
-Azores:Terceira	965
-Thailand:Ko Yao Yai	966
-Canada:Swindle Island	967
-USSR:Muhu	968
-Philippines:Basilan	969
-USA:Florida:Marathon Key	970
-Canada:Foley Island	971
-Japan:Iwo Jima	972
-Canada:Harrison Island	973
-Indonesia:Muna	974
-Papua New Guinea:Manam	975
-Denmark:Fyn	976
-Greece:Paros	977
-Canada:Tukarak Island	978
-Maldives:?	979
-Venezuela:Isla Orchila	980
-Chile:?	981
-Madagascar:Nosy Be	982
-India:Havelock Island	983
-Virgin Islands:Tortola	984
-New Caledonia:Ile Koutoumo	985
-Mexico:Isla Magdelena	986
-Cuba:Cayo Romano	987
-Canary Islands:Fuerteventura	988
-Chile:?	989
-Indonesia:Bengkalis	990
-Venezuela:La Blanquilla	991
-Greenland:?	992
-USSR:Ozero Balkhash	993
-Philippines:Ticao	994
-Antarctica:?	995
-Canada:Roderick Island	996
-Vanuatu:Pentecost	997
-Fiji:Matuku	998
-Australia:Bigge Island	999
-Canada:Mill Island	1000
-Kiribati:Makin	1001
-South Korea:Namhae Do	1002
-Canada:Texada Island	1003
-Maldives:?	1004
-Chile:Isla Alejandra Selkirk	1005
-Canary Islands:Gran Canaria	1006
-Maldives:?	1007
-Kiribati:?	1008
-Canada:Charlton Island	1009
-Vietnam:Dao Bach Long Vi	1010
-USSR:?	1011
-Mauritius:Rodrigues	1012
-Panama:Isla de Coiba	1013
-Northern Mariana Islands:Rota	1014
-Japan:Nakadori Jima	1015
-Philippines:Burias	1016
-Jamaica	1017
-India:Landfall Island	1018
-Thailand:Ko Phra Thong	1019
-Marshall Islands:Enewetok	1020
-California:Santa Cruz Island	1021
-Chile:?	1022
-Indonesia:Bawean	1023
-Vanuatu:Tanna	1024
-Paracel Islands:West Sand Island	1025
-Greece:Mikonos	1026
-Antarctica:Lavoisier Island	1027
-USA:Mississippi:Horn Island	1028
-Canada:Melville Island	1029
-Mauritania:Ile Tidra	1030
-Australia:Macquarie Island	1031
-USSR:Ostrov Nordenshelda	1032
-Tuvalu:Nanumea	1033
-Greece:Skopelos	1034
-Norway:Vannoy	1035
-Spain:Cabo de Palos	1036
-Paracel Islands:Amphitrite Group:4	1037
-Antarctica:Smyley Island	1038
-USA:Texas:Peninsula Island	1039
-French Polynesia:Niau	1040
-Solomon Islands:Utupua	1041
-Fiji:Fulanga	1042
-USA:Alaska:Uganik Island	1043
-United Arab Emirates:Marawwah	1044
-Papua New Guinea:Long Island	1045
-USSR:?	1046
-Canada:Graham Island-Cold	1047
-Chile:Isla Guaitecas	1048
-Greenland:Shannon	1049
-Canada:Big Island	1050
-India:Pitti Island	1051
-USA:Alaska:Shuyak Island	1052
-France:Kerguelen Island:?	1053
-Canada:Prescott Island	1054
-Greenland:Milneland	1055
-China:Zhoushan Dao	1056
-India:Sand Cay	1057
-Chile:Isle Guafo	1058
-India:Rutland Island	1059
-American Samoa:Tau	1060
-Canada:Prince of Wales Island	1061
-Chile:?	1062
-Vietnam:Dao Ching Lan Yan	1063
-Thailand:Ko Yao Noi	1064
-Canada:Fogo Island	1065
-Antarctica:Brabant Island	1066
-USA:Johnston Island	1067
-Maldives:?	1068
-Virgin Islands:Anegada	1069
-Indonesia:Padang:Borneo	1070
-USSR:?	1071
-India:Tarasa Dwip	1072
-Australia:Tasmania	1073
-Netherlands:Schiermonnikoog	1074
-Portugal:Cabo de Santo Maria	1075
-New Zealand:Great Barrier Island	1076
-Vietnam:Cu Lao Thu	1077
-USA:Long Beach Island	1078
-Mexico:Espiritu Santo Island	1079
-Cuba:Cayos Cinco Balas	1080
-Indonesia:Ceram	1081
-France:Ile de Noirmoutier	1082
-Indonesia:Bali	1083
-South Korea:Paengnyong Do	1084
-Chile:Isla Juan Fernandez	1085
-Greenland:?	1086
-Sri Lanka	1087
-USSR:Ostrova Belayazemiya	1088
-Canada:Lake Winnipeg	1089
-Canada:Jens Munk Island	1090
-Canada:Graham Island	1091
-Spain:Ibiza	1092
-China:Makung	1093
-Cape Verde:Boa Vista	1094
-Chile:Isla Piazzi	1095
-Maldives:?	1096
-Norway:Mageroya	1097
-Maldives:?	1098
-Vietnam:Dao Car Bau	1099
-India:East Island	1100
-Hawaii:Kaula	1101
-Fiji:Totoya	1102
-Ecuador:Isla Santa Cruz	1103
-Canada:Taylor Island	1104
-USA:Alaska:Sitkinak Island	1105
-Guinea-Bissau:Formosa	1106
-Finland:Kimito	1107
-Canary Islands:Hierro	1108
-Vietnam:Dao Cu Xu	1109
-New Zealand:Antipodes Island	1110
-Papua New Guinea:Malendok	1111
-Australia:Barrow Island	1112
-Marshall Islands:Mili	1113
-USSR:Ostrov Makanrushi	1114
-Indonesia:Batam	1115
-USSR:?	1116
-USA:Alaska:Adak Island	1117
-Maldives:?	1118
-New Caledonia:Grand Recif de Oatope	1119
-Guinea-Bissau:?	1120
-Barbuda	1121
-Indonesia:Mangole	1122
-Indonesia:Unauna	1123
-USSR:Ostrov Russkiy	1124
-USA:Florida:Stock Island	1125
-Solomon Islands:Ranongga	1126
-China:Chongming Dao	1127
-Marshall Islands:Wake Island	1128
-Australia:Magnetic Island	1129
-Norway:Hinnoya	1130
-Australia:Melville Island	1131
-Greece:Naxos	1132
-Indonesia:Breueh	1133
-Papua New Guinea:Bougainville	1134
-USSR:Novaya Zemlya:South	1135
-Solomon Islands:Kolombangara	1136
-Australia:Snake Island	1137
-Canada:Salisbury Island	1138
-USA:Portsmouth Island	1139
-USSR:?	1140
-Brazil:Ilha Curua	1141
-Myanmar:Narcondam Island	1142
-Brazil:Ilha de Maraca	1143
-Indonesia:Morotai	1144
-Australia:Coronation Island	1145
-Chile:?	1146
-Oman:Al Hallaniyah	1147
-Puerto Rico	1148
-Solomon Islands:Bellona Island	1149
-Kiribati:Arorae	1150
-Denmark:Vagar	1151
-Philippines:Sulu	1152
-USA:Washington:Whidbey Island	1153
-Hawaii:Sand Island	1154
-Vanuatu:Efate	1155
-Thailand:Ko Lanta Yai	1156
-Japan:Hirado Jima	1157
-Canada:Killiniq Island	1158
-Paracel Islands:Pattle Island	1159
-USA:Florida:Key West	1160
-Indonesia:Saparua	1161
-Falkland Islands:South Georgia	1162
-Cuba:Cayo Coco	1163
-Brazil:?	1164
-USSR:Lena Delta:4	1165
-USA:Angaur	1166
-Antarctica:Laurie Island	1167
-Antarctica:Spaatz Island	1168
-Maldives:?	1169
-Hawaii:Hawaii	1170
-Spain:Formentera	1171
-USA:Chincoteague Island	1172
-Solomon Islands:Ke Loma	1173
-Marshall Islands:Namu	1174
-USSR:Ostrov Ayon	1175
-Chile:?	1176
-Antarctica:?	1177
-Sierra Leone:Sherbro Island	1178
-Cuba:Cayo Anclitas	1179
-Maldives:?	1180
-Virgin Islands:Saint John	1181
-Greenland:?	1182
-Ecuador:Isla Marchena	1183
-Malaysia:Tioman	1184
-Greece:Kea	1185
-Australia:French Island	1186
-USA:Alaska:Chuginadak Island	1187
-USSR:Ostrov Shmidta	1188
-Denmark:Laeso	1189
-Indonesia:Mendanau	1190
-Norway:Svalbard:Jan Mayen	1191
-Azores:Flores	1192
-Canada:Manitoulin Island	1193
-Indonesia:Serasan	1194
-USSR:Ostrov Pushkareva	1195
-Chile:?	1196
-California:Santa Rosa Island	1197
-Greenland:?	1198
-Philippines:Saboon Island	1199
-USSR:Ostrov Starokadomskogo	1200
-Indonesia:Komodo	1201
-UK:Scotland:Benbecula	1202
-USSR:?	1203
-Indonesia:?	1204
-Hawaii:Lanai	1205
-Kiribati:Abemama	1206
-Papua New Guinea:Tagula	1207
-Brazil:Ilha de Marajo	1208
-USA:Howland Island	1209
-Indonesia:Rumberpon	1210
-Maldives:?	1211
-Tuvalu:Nui	1212
-Mexico:San Esteban Island	1213
-USA:Alaska:Saint Paul Island	1214
-Solomon Islands:Vaghena	1215
-USSR:?	1216
-Indonesia:Sangeang	1217
-Fiji:Conway Reef	1218
-Cayman Islands:Little Cayman	1219
-Indonesia:Kangean	1220
-Australia:Endyalgout Island	1221
-Indonesia:Pisang	1222
-Kiribati:Beru	1223
-Greenland:Nansen Land	1224
-Indonesia:Tuangku	1225
-Hawaii:Kahoolawe	1226
-USSR:Rybinskoye Vodokhranilishche	1227
-Greenland:?	1228
-Vietnam:Ile De Quan Lan	1229
-Solomon Islands:Ovau	1230
-Greenland:?	1231
-Bahamas:Samana Cay	1232
-Iraq:?	1233
-Indonesia:Maratua	1234
-Canada:?	1235
-USSR:Ostrov Shokal'skogo	1236
-New Zealand:Rangitoto Island	1237
-Norway:Svalbard:Kvitoya	1238
-Norway:Svalbard:Byornoya	1239
-Papua New Guinea:Liot	1240
-Iraq:Lake ?	1241
-Philippines:?	1242
-Australia:Augustus Island	1243
-Maldives:?	1244
-Bahamas:San Salvador	1245
-Canada:Ile Lameque	1246
-Antarctica:Thurston Island	1247
-Chile:?	1248
-Tuvalu:Vaitupu	1249
-France:Ile d'Yeu	1250
-Antarctica:Latady Island	1251
-Hawaii:Eastern Island	1252
-Canada:Southampton Island	1253
-UK:Scotland:North Uist	1254
-Vietnam:Bai Nha Mac	1255
-Maldives:?	1256
-Sweden:Orust	1257
-Chile:Isla Wellington	1258
-India:Agatti Island	1259
-Thailand:?	1260
-Marshall Islands:Rakaru	1261
-Kiribati:Ocean Island	1262
-USA:Florida:Big Pine Key	1263
-Nicaragua:Isla de Ometepe	1264
-Bangladesh:?	1265
-Maldives:?	1266
-Greece:Samos	1267
-French Polynesia:Magareva	1268
-Maldives:?	1269
-Papua New Guinea:Misima	1270
-Papua New Guinea:Tatau	1271
-Indonesia:Sumba	1272
-Maldives:?	1273
-Indonesia:Lingga	1274
-Cyprus	1275
-USA:Florida:Summerland Key	1276
-Antarctica:Bowman Island	1277
-Italy:Isola di Pantelleria	1278
-Indonesia:Mansaleang	1279
-Canada:?	1280
-Yugoslavia:Otok Brac	1281
-Greece:Karpathos	1282
-Fiji:Oneata	1283
-Maldives:?	1284
-Greenland:?	1285
-Trinidad	1286
-Falkland Islands:East Falkland	1287
-Vanuatu:Ambrym	1288
-Maldives:?	1289
-South Sandwich Islands:Saunders Island	1290
-Maldives:?	1291
-Cuba:Cayo Guajaba	1292
-Argentina:Isla de los Estados	1293
-USA:Alaska:Saint Matthew Island	1294
-Cape Verde:Sao Tiago	1295
-Kenya:Mombasa Island	1296
-UK:Saint Helena Island	1297
-Malaysia:Jambongan	1298
-Indonesia:Karakelong	1299
-Maldives:?	1300
-USSR:Ostrov Kunashir	1301
-Antarctica:Joinville Island	1302
-Canada:Chapman Lewes Island:North	1303
-Australia:Phillip Island	1304
-France:Uvea	1305
-USA:Alaska:Wrangell Island	1306
-Philippines:Culion	1307
-Argentina:Isla Trinidad	1308
-USA:Texas:Matagorda Island	1309
-Canada:Bell Island	1310
-Philippines:Marinduque	1311
-Canada:Somerset Island	1312
-Chile:Isla Chaffers	1313
-Indonesia:Gebe	1314
-Solomon Islands:Vella Lavella	1315
-Brazil:Trindade	1316
-Tanzania:Pemba Island	1317
-Chile:Isla Guamblin	1318
-USA:Florida:Sugarloaf Key	1319
-USSR:Ostrov Plavnikovyye	1320
-Yugoslavia:Otok Mljet	1321
-Honduras:Isla de Guanaja	1322
-Iraq:?	1323
-UK:Scotland:Island of Skye	1324
-Indonesia:?	1325
-Australia:Groote Eylandt	1326
-Greenland:?	1327
-Maldives:?	1328
-Bahamas:Long Island	1329
-Iraq:?	1330
-Bangladesh:?	1331
-Bahamas:New Providence Island	1332
-Indonesia:Roon	1333
-Indonesia:Tanahbala	1334
-Maldives:?	1335
-Greenland:?	1336
-Greenland:?	1337
-Antarctica:Renaud Island	1338
-Egypt:Ras Burun:East	1339
-Northern Mariana Islands:Guguan	1340
-Chile:Isla Jorge Montt	1341
-Indonesia:Simeule	1342
-Seychelles:Coetivy Island	1343
-Indonesia:Timor	1344
-Bangladesh:?	1345
-Australia:Bickerton Island	1346
-Australia:?	1347
-Cook Islands:Rakahanga	1348
-Maldives:?	1349
-Antarctica:Burke Island	1350
-Cook Islands:Manuaue	1351
-USSR:Ostrov Isachenko	1352
-Australia:Horn Island	1353
-Greece:Tinos	1354
-USSR:Ostrov Shumshu	1355
-France:Clipperton	1356
-Bahamas:Grand Bahama Island	1357
-Chile:?	1358
-Mexico:Isla Maria Cleofas	1359
-Indonesia:Selayar	1360
-Papua New Guinea:Simberi	1361
-USA:Alaska:?	1362
-Bangladesh:?	1363
-USSR:Ostrov Kolosovykh	1364
-Cook Islands:Nassau Island	1365
-Maldives:?	1366
-Greece:Andros	1367
-USSR:Kihnu	1368
-Mexico:Isla del Carmen	1369
-Indonesia:?	1370
-Seychelles:Mahe Island	1371
-Canada:Kanuyak Island	1372
-Philippines:Camiguin	1373
-Indonesia:Wetar	1374
-Indonesia:Banda Besar	1375
-Canada:?	1376
-Indonesia:Nias	1377
-USA:Alaska:Etolin Island	1378
-Greenland:?	1379
-Canada:Ekalulia Island	1380
-Germany:Borkum	1381
-Chile:Isla Londonderry	1382
-USA:Alaska:Amukta Island	1383
-USA:Alaska:Unga Island	1384
-USSR:Ostrova Petra	1385
-South Sandwich Islands:Visokoi Island	1386
-Indonesia:Adi	1387
-Indonesia:Mandioli	1388
-Japan:Hachijo Jima	1389
-Maldives:?	1390
-Vietnam:Bac Nha Mac	1391
-USSR:Ostrov Ketoy	1392
-Maldives:?	1393
-Cuba:Cayo Media Luna	1394
-Denmark:Lolland	1395
-Greece:Khios	1396
-Greenland:?	1397
-Vanuatu:Ureparapara	1398
-Marshall Islands:Bikini	1399
-New Caledonia:Ile Ouvea	1400
-Canada:Merasheen Island	1401
-Indonesia:Wowoni	1402
-Solomon Islands:Nggatokae	1403
-Indonesia:Ternate	1404
-Canada:Russell Island	1405
-Fiji:Baqa	1406
-Chile:Isla Javier	1407
-Japan:Kita Iwo Jima	1408
-Tunisia:Shergui Island	1409
-New Caledonia:Mouly	1410
-Indonesia:Sebangka	1411
-Fiji:Vanua Levu	1412
-India:?	1413
-USA:Massachusettes:Nantucket Island	1414
-California:San Nicolas Island	1415
-Malawi:Likoma Island	1416
-Australia:Bruny Island	1417
-Greenland:Nuugaatsiaq	1418
-Canary Islands:Tenerife	1419
-Thailand:Ko Surin Tai	1420
-Micronesia:Puluwat	1421
-Antarctica:Steele Island	1422
-Kiribati:Nuotea	1423
-Maldives:Midu	1424
-Maldives:?	1425
-UK:Scotland:Barra	1426
-Bahamas:Hog Cay	1427
-Netherlands:Texel	1428
-USA:Beaver Island	1429
-Ethiopia:T'ana Hayk	1430
-USSR:Zaliv	1431
-Australia:Norfolk Island	1432
-Indonesia:Selaru	1433
-UK:Scotland:Island of Mull	1434
-Kiribati:Maiana	1435
-California:San Miguel Island	1436
-Indonesia:?	1437
-Japan:Rebun To	1438
-Greenland:Quqertarsuaq	1439
-Maldives:?	1440
-Egypt:Ras Burun:West	1441
-Kiribati:Caroline Island	1442
-Micronesia:Pamuk Imwintiati	1443
-USA:Alaska:Admiralty Island	1444
-Indonesia:We	1445
-Mexico:Isla de Cozumel	1446
-Chile:?	1447
-Maldives:?	1448
-Canada:?	1449
-Cuba:Caya Fragosa	1450
-Canada:Byam Martin Island	1451
-Australia:Elcho Island	1452
-USA:Smith Island	1453
-Indonesia:Maya	1454
-Japan:Suwanose Jima	1455
-Maldives:?	1456
-Vietnam:Vung Ganh Rai	1457
-Australia:Marchinbar Island	1458
-Cook Islands:Ataiu	1459
-Philippines:Camiguin-Babuyan	1460
-Malawi:Chisamula Island	1461
-USSR:Shikotan To	1462
-Micronesia:Pulusuk Atoll	1463
-Hawaii:Maui	1464
-USA:Alaska:Unimak Island	1465
-Indonesia:Tanahmasa	1466
-India:Sagar Island	1467
-Mexico:Tiburon Island	1468
-Australia:Bernier Island	1469
-Maldives:?	1470
-USSR:Ladozhskoye Ozero	1471
-Indonesia:?	1472
-Solomon Islands:San Cristobal	1473
-Maldives:?	1474
-Indonesia:Kabaena	1475
-Kiribati:Caroline Atoll	1476
-India:Cheriyam Island	1477
-Antarctica:?	1478
-Canada:Belcher Island	1479
-Canada:Jameson Island:East	1480
-Maldives:?	1481
-Canada:Smith Island	1482
-Saint Lucia	1483
-Greenland:?	1484
-Maldives:?	1485
-Chile:Isla Diego de Almagro	1486
-Chile:Isla Byron	1487
-Maldives:Gan	1488
-Maldives:?	1489
-China:Hainan	1490
-USSR:Ostrov Bering	1491
-Panama:Isla Parida	1492
-Maldives:?	1493
-Chile:Isla Juan Stuven	1494
-USA:Texas:Galveston Island	1495
-Greenland:?	1496
-Sweden:Gotska Sandon	1497
-Indonesia:Bakung	1498
-Mexico:Isla Cedros	1499
-UK:Henderson Island	1500
-Canada:Crown Prince Frederik Island	1501
-Canada:Cape Breton Island	1502
-Solomon Islands:Shortland	1503
-Norway:Senja	1504
-Indonesia:?	1505
-Micronesia:Ngatik	1506
-Solomon Islands:Nendo	1507
-Australia:Mulgrave Island	1508
-French Polynesia:Moorea	1509
-Antarctica:Henry Ice Rise	1510
-Indonesia:Panaitan	1511
-Cook Islands:Palmerston Island	1512
-Canada:Flores Island	1513
-USSR:Ostrov Feklistova	1514
-Canada:Ellef Ringnes Island	1515
-Thailand:Ko Surin Nua	1516
-Canada:Bylot Island	1517
-Chile:Isla Wager	1518
-Marshall Islands:Rongelap Atoll	1519
-Antarctica:Coulman Island	1520
-Canada:Ile du Cap aux Meule	1521
-Greenland:Northumberland O	1522
-Indonesia:Tjombol	1523
-Panama:Isla Boca Brava	1524
-Australia:South Bruny Island	1525
-Indonesia:Klabat	1526
-Greece:Klimnos	1527
-Tanzania:Mafia Island	1528
-Mexico:Isla Maria Magdalena	1529
-Solomon Islands:Vanikoro	1530
-Micronesia:?	1531
-Maldives:?	1532
-Norway:Svalbard:Svenskoya	1533
-Iraq:?	1534
-Japan:Tanega Shima	1535
-Greenland:?	1536
-New Caledonia:Matthew Island	1537
-Indonesia:Cut	1538
-Vietnam:Dao Cat Ba	1539
-Micronesia:Fefan	1540
-Kenya:Patta Island	1541
-Netherlands:Flevoland	1542
-France:Corsica	1543
-Greenland:?	1544
-Fiji:Ndoi Island	1545
-Chile:Isla Santa Ines	1546
-Myanmar:Maungmagan Island	1547
-Indonesia:?	1548
-Chagos Archipelago:?	1549
-Greenland:Trail O	1550
-Solomon Islands:Malaita	1551
-India:Kalpeni Island	1552
-Brazil:Ilha Grande de Gurupa	1553
-Philippines:Calayan	1554
-USA:Alaska:Saint George Island	1555
-Indonesia:Tambelan	1556
-Philippines:Panay	1557
-Fiji:Viti Levu	1558
-USSR:Ostrov Sverdrup	1559
-USSR:Ostrov Raykoke	1560
-Maldives:?	1561
-USSR:?	1562
-Hawaii:Laysan Island	1563
-Maldives:Wilingili	1564
-Kiribati:Bonriki	1565
-Chile:Isla Hanover	1566
-Greenland:?	1567
-USSR:Ostrova Dunay	1568
-Chile:Isla Farrell	1569
-Australia:Moa Island	1570
-Maldives:?	1571
-India:South Island	1572
-Chagos Archipelago:Ile du Coin	1573
-USA:Alaska:Tugidak Island	1574
-Mauritius	1575
-Maldives:?	1576
-USA:Baker Island	1577
-USA:Louisiana:Chandeleur Island	1578
-Saint Vincent	1579
-USSR:Ostrov Greem-Bell	1580
-France:Ile Amsterdam	1581
-Indonesia:Manui	1582
-USA:Alaska:Kanaga Island	1583
-Chagos Archipelago:Ile Yeye	1584
-Norway:Sunnhordland	1585
-Northern Mariana Islands:Alamagan	1586
-USA:Alaska:Nunivak Island	1587
-Greenland:Eggers O	1588
-Indonesia:Singkep	1589
-Mexico:Isla San Benedicto	1590
-Norway:Bouvet Island	1591
-Greenland:Hovgaard O	1592
-Paracel Islands:Money Island	1593
-USSR:Solovetskiye Ostrova	1594
-Canada:Hawkesbury Island	1595
-Canada:Sable Island	1596
-Chagos Archipelago:Salomon Island	1597
-Papua New Guinea:Umboi	1598
-Chagos Archipelago:?	1599
-Samoa:Savai'i	1600
-USSR:Ostrov Cheleken	1601
-Canary Islands:Lanzarote	1602
-Kuwait:Bubiyan	1603
-Maldives:Hitaddu	1604
-Canada:Saint Ignace Island	1605
-Indonesia:Alor	1606
-Australia:Howard Island	1607
-Papua New Guinea:Fergusson Island	1608
-Indonesia:Bangkaru	1609
-UK:Isle of Sheppey	1610
-Guadeloupe:Marie-Galante	1611
-Philippines:Negros	1612
-Maldives:?	1613
-Marshall Islands:Wotje Atoll	1614
-USA:Alaska:Unalaska Island	1615
-Myanmar:?	1616
-Maldives:Mulaku	1617
-Malaysia:Balembangan Island	1618
-Ecuador:Isla Pinta	1619
-Japan:Miyako Jima	1620
-Malaysia:Dayang Bunting	1621
-India:Car Nicobar Island	1622
-French Polynesia:Huahine Iti	1623
-Iraq:?	1624
-South Korea:Cheju Do	1625
-Indonesia:Yapen	1626
-Maldives:?	1627
-Japan:Kikaiga Shima	1628
-China:Weizhou Dao	1629
-Chile:Isla Angamos	1630
-New Zealand:Niue	1631
-Canada:Duke of York Archipeligo	1632
-Marshall Islands:?	1633
-Indonesia:Kalimantan	1634
-Myanmar:Great Coco Island	1635
-Chile:?	1636
-Yugoslavia:Otok Cres	1637
-USA:Alaska:Agattu Island	1638
-Greece:Levkas	1639
-Maldives:?	1640
-Canada:Brock Island	1641
-South Korea:Koje Do	1642
-Hawaii:Nihau	1643
-Bangladesh:?	1644
-Papua New Guinea:Manus Island	1645
-Norway:Ringvassoy	1646
-USSR:Ostrov Barsakel'mes	1647
-Vietnam:Dao Phu Quoc	1648
-Maldives:?	1649
-Denmark:Langeland	1650
-USSR:Ostrov Simushir	1651
-Canada:Anticosti Island	1652
-USSR:Ostrov Novaya Sibr'	1653
-USA:Florida:Santa Rosa Island	1654
-Solomon Islands:Mono	1655
-Indonesia:Tabuan	1656
-France:Iles Glorieuses:South	1657
-Fiji:Vatulele	1658
-Spratly Island	1659
-Indonesia:Haruku	1660
-French Polynesia:Huahine Nui	1661
-Norway:Vestvagoy	1662
-Antarctica:Gillock Island	1663
-Greenland:Maniitsoq	1664
-Chagos Archipelago:Ile Baddan	1665
-French Polynesia:Tahiti	1666
-Myanmar:Bentinck Island	1667
-Indonesia:Siberut	1668
-Kiribati:Buariki	1669
-Chile:Isla Ramirez	1670
-Colombia:Isla de San Andres	1671
-USSR:Ostrov Onekotan	1672
-Chagos Archipelago:Eagle Island	1673
-Kiribati:Nonouti	1674
-USA:Alaska:Suemez Island	1675
-Chile:Isla Rennell	1676
-Papua New Guinea:Witu Island	1677
-Haiti:Ile de la Tortue	1678
-Greenland:?	1679
-USSR:?	1680
-Chagos Archipelago:Three Brothers North	1681
-Wales:Anglesey	1682
-Philippines:Itbayat	1683
-Canada:Banks Island	1684
-USSR:Ostrov Oktyabr'skoy Revolyutsii	1685
-USA:Jarvis Island	1686
-Antarctica:Grant Island	1687
-Indonesia:Sanana	1688
-Japan:Rishiri To	1689
-Greenland:?	1690
-USSR:Sea of Azov:West	1691
-Dominica	1692
-Ecuador:Isla Espanola	1693
-Indonesia:Misool	1694
-Canada:Air Force Island	1695
-Japan:Dogo	1696
-Indonesia:Numfoor	1697
-UK:Jersey	1698
-Chagos Archipelago:?	1699
-USA:Alaska:Duke Island	1700
-Indonesia:Sumbawa	1701
-Japan:Minami Daito Jima	1702
-UK:Scotland:Coll	1703
-French Polynesia:Rurutu	1704
-Antarctica:Ewing Island	1705
-Bangladesh:?	1706
-India:North Island	1707
-Chile:?	1708
-Indonesia:Makian	1709
-Papua New Guinea:Rambutyo	1710
-Madeira Islands:Madeira	1711
-Antigua	1712
-USA:Alaska:Montague Island	1713
-Kiribati:Tamana	1714
-USA:Alaska:Saint Lawrence Island	1715
-Canada:Charles Island	1716
-Hawaii:Molokai	1717
-Micronesia:Pohnpei	1718
-India:Great Nicobar	1719
-Ecuador:Isla San Salvador	1720
-Bangladesh:?	1721
-Yugoslavia:Otok Lastovo	1722
-Maldives:?	1723
-Bangladesh:?	1724
-Marshall Islands:?	1725
-New Zealand:Stewart Island	1726
-New Zealand:Snare Island	1727
-Chile:?	1728
-UK:Scotland:Jura	1729
-Indonesia:Jemaja	1730
-Japan:Chichi Jima:South	1731
-Brazil:Ilha Grande	1732
-UK:Scotland:Island of Arran	1733
-Antarctica:Coronation Island	1734
-Bonaire	1735
-France:Ile Juan de Nova	1736
-Denmark:Bornholm	1737
-India:?	1738
-South Africa:Marion Island	1739
-USA:Alaska:Annette Island	1740
-Maldives:?	1741
-Antarctica:Buckle Island	1742
-Japan:Iki	1743
-Chagos Archipelago:Ile Pierre	1744
-Myanmar:Parker Island	1745
-Bangladesh:Sandwip	1746
-Kiribati:Flint Island	1747
-Maldives:?	1748
-Japan:Kamino Shima	1749
-New Zealand:Muttonbird Island	1750
-Indonesia:Midai	1751
-USA:Louisiana:Isle au Pitre	1752
-Bangladesh:?	1753
-USSR:Zemlya Georga	1754
-India:Little Nicobar	1755
-Solomon Islands:Choiseul	1756
-USA:Alaska:Kuiu Island	1757
-Puerto Rico:Isla Mona	1758
-Japan:Nakano Shima	1759
-Fiji:Ono	1760
-Brazil:Arquipelago de Fernando de Noronha	1761
-USSR:Ostrova Tyulen'i	1762
-Greece:Samothraki	1763
-Germany:Fehmarn	1764
-UK:Scotland:Tiree	1765
-Indonesia:Flores	1766
-Haiti:Ile a Vache	1767
-Philippines:Sibutu Island	1768
-Malaysia:Langkawi	1769
-New Zealand:Chatham Island	1770
-Japan:Shimono Shima	1771
-France:Dzaoudzi	1772
-Japan:Kuchino Shima	1773
-Papua New Guinea:Unea	1774
-Marshall Islands:Kaven	1775
-Solomon Islands:Pavuvu	1776
-Canada:Melbourne Island	1777
-Greece:Siros	1778
-Micronesia:Shichiyo	1779
-Greenland:?	1780
-Myanmar:Sabik Island	1781
-Myanmar:Zadetkyi Kyun	1782
-China:Pratas Island	1783
-USA:Isle Royale	1784
-USSR:?	1785
-Cook Islands:Farallon de Pagaros	1786
-Chile:Isla Dawson	1787
-New Zealand:Campbell Island	1788
-UK:Scotland:Islay	1789
-Philippines:Siargao	1790
-Norway:Austvagoy	1791
-Greece:Serifos	1792
-Antarctica:Clarence Island	1793
-Chile:Isla Desolacion	1794
-Canada:Hunter Island	1795
-Antarctica:Shepard Island	1796
-Papua New Guinea:Laualau Island	1797
-Australia:?	1798
-Vanuatu:Malakula	1799
-Cape Verde:Sao Nicolau	1800
-Chile:Nunes	1801
-Belize:Ambergris Cay	1802
-USA:Guam	1803
-American Samoa:Ofu	1804
-Antarctica:Masson Island	1805
-Canada:Vansittart Island	1806
-Japan:Yaku Shima	1807
-Antarctica:Hearst Island	1808
-Japan:Yonaguni Jima	1809
-UK:Ascension Island	1810
-Chagos Archipelago:Diego Garcia	1811
-Thailand:Ko Tarutao 	1812
-USSR:Ostrov Vize	1813
-Bangladesh:Maiskhal	1814
-Indonesia:Salawati	1815
-Myanmar:Than Kyun	1816
-Vanuatu:Espiritu Santo	1817
-Panama:Archipelielago de Bocas del Toro	1818
-Vanuatu:Santa Maria	1819
-USSR:Ostrov Vrangelya	1820
-Antarctica:Case Island	1821
-Sri Lanka:?	1822
-Panama:Isla Pedro Gonzalez	1823
-Canada:Akimiski Island	1824
-USSR:?	1825
-Fiji:Cicia	1826
-Myanmar:Zadetkale Kyun	1827
-New Zealand:Resolution Island	1828
-Bahamas:Mayaguana Island	1829
-Maldives:?	1830
-Equatorial Guinea:Annobon	1831
-Kiribati:Tarawa	1832
-Canada:Jameson Island:West	1833
-Norway:Svalbard:Kongsoya	1834
-Fiji:Kadavu	1835
-Bangladesh:?	1836
-USA:Alaska:Mitkof Island	1837
-USSR:Ostrov Bol'shoy Shantar	1838
-Greenland:?	1839
-Chile:?	1840
-Papua New Guinea:Rossel	1841
-Maldives:?	1842
-New Zealand:Fakaofu	1843
-Chile:Isla Carlos	1844
-Chile:?	1845
-UK:Scotland:Colonsay	1846
-Canada:Jenny Lind Island	1847
-Cuba:Cayo Santa Maria	1848
-Maldives:?	1849
-Indonesia:Buru	1850
-Myanmar:Kanmaw Kyun	1851
-Yugoslavia:Otok Krk	1852
-Portugal:Ilheus Selvagens	1853
-USSR:Ostrov Bel'kovskiy	1854
-New Zealand:Ruapuke Island	1855
-Australia:Lindeman Island	1856
-Chagos Archipelago:Ile Diamont	1857
-Panama:Isla Sevilla	1858
-Chile:Isla Recalada	1859
-Myanmar:?	1860
-Marshall Islands:Ujae Atoll	1861
-Norway:Nordhordland	1862
-Canada:Elvira Island	1863
-Philippines:Polillo Island	1864
-Maldives:?	1865
-Indonesia:Obi	1866
-Philippines:Masbate	1867
-Marshall Islands:Marcus	1868
-French Polynesia:Tematangi	1869
-Azores:Santa Maria	1870
-UK:Scotland:Shetland Islands:Mainland	1871
-United Arab Emirates:Abu al Abyad	1872
-USA:Florida:Marquesas Key	1873
-Maldives:?	1874
-Virgin Islands:Saint Croix	1875
-Kiribati:Vostok Island	1876
-Maldives:?	1877
-Maldives:?	1878
-American Samoa:Aunuu	1879
-USSR:Ostrov Dzhangylakh	1880
-Yugoslavia:Otok Korcula	1881
-Australia:Heard Island	1882
-Myanmar:Tenasserim Island	1883
-Canada:Eglinton Island	1884
-Cook Islands:Penrhyn	1885
-Bangladesh:?	1886
-Chagos Archipelago:Three Brothers South	1887
-Micronesia:Langar	1888
-Antarctica:Lydden Island	1889
-Maldives:?	1890
-USSR:Ostrov Kharimkotan	1891
-Myanmar:Letsok-Aw Kyun	1892
-Australia:Kangaroo Island	1893
-Norway:Bremangerland	1894
-Kiribati:Kanton Island	1895
-India:Trinkat Island	1896
-French Polynesia:Makatea	1897
-Taiwan:Lan yu	1898
-Antarctica:Dundee Island	1899
-Norway:Moskenesoya	1900
-Indonesia:Batanta	1901
-Australia:Croker Island	1902
-Maldives:?	1903
-Panama:Isla San Jose	1904
-Canada:Matty Island	1905
-Australia:Hook Island	1906
-New Zealand:?	1907
-Antarctica:Dolleman Island	1908
-USSR:Ostrov Oleniy	1909
-France:Iles Glorieuses:North	1910
-Indonesia:Roti	1911
-USA:Alaska:Zarembo Island	1912
-USA:Alaska:Tigalda Island	1913
-USSR:Ostrov Taymyr	1914
-Kiribati:Abaiang Atoll	1915
-Northern Mariana Islands:Tinian	1916
-India:?	1917
-Brazil:Ilha de Sao Sebastiao	1918
-USA:Surf City Banks	1919
-Brazil:?	1920
-USSR:Ostrov Gallya	1921
-Papua New Guinea:Goodenough Island	1922
-Fiji:Mago	1923
-Chile:?	1924
-Chile:Isla Benjamin	1925
-Northern Mariana Islands:Saipan	1926
-Indonesia:Ambon	1927
-Papua New Guinea:Ninigo Island	1928
-France:Ile de la Posession	1929
-Brazil:Ilha de Santa Catarina	1930
-Chile:Isla Simpson	1931
-Myanmar:?	1932
-Chagos Archipelago:Ile Lubine	1933
-Papua New Guinea:Mussau	1934
-Dominican Republic:Isla Beata	1935
-Aruba	1936
-Maldives:?	1937
-Greenland:?	1938
-Papua New Guinea:Normanby Island	1939
-Norway:Kvaloy	1940
-USA:Alaska:Gareloi Island	1941
-Greece:Skiros	1942
-Philippines:Busuanga	1943
-Cook Islands:Mitiaro	1944
-Bangladesh:Kutubdia	1945
-USA:Alaska:Kiska Island	1946
-Malaysia:Banggi	1947
-Canada:?	1948
-Greenland:Store Koldewey	1949
-Yugoslavia:Otok Hvar	1950
-Chile:?	1951
-Canada:Saltspring Island	1952
-Japan:Iriomote Jima	1953
-Philippines:Samar	1954
-Tonga:Foa	1955
-Papua New Guinea:Green Island	1956
-Japan:Chichi Jima:North	1957
-Greenland:Angmagssalik	1958
-Indonesia:Sangihe	1959
-Marshall Islands:Ailinglaplap	1960
-Maldives:?	1961
-Norway:Kvaloya	1962
-Bangladesh:?	1963
-Chile:Isla Chatham	1964
-Mexico:Isla San Juanito 	1965
-Solomon Islands:Mbanika	1966
-India:Katchall Island	1967
-Tonga:Haano	1968
-USSR:Ostrov Rasshua	1969
-USSR:Lena Delta:6	1970
-Antarctica:Snow Island	1971
-Canada:Galiano Island	1972
-Norway:Svalbard:Barentsoya	1973
-Greece:Kithira	1974
-USSR:Zemlya Alexsandry	1975
-Canada:Meighen Island	1976
-Maldives:?	1977
-India:Bitra Island	1978
-USA:Alaska:Kruzof Island	1979
-Cook Islands:Mauke	1980
-Germany:Rugen	1981
-Bangladesh:?	1982
-Chile:?	1983
-Maldives:?	1984
-Mexico:Isla Socorro	1985
-Canada:Rockhouse Island	1986
-Vanuatu:Epi	1987
-Canada:Emerald Isle	1988
-Australia:?	1989
-Australia:North Island	1990
-Canada:Aristazabal Island	1991
-Thailand:Ko Chang-Malay	1992
-Vietnam:Con Son	1993
-Kiribati:Hull Island	1994
-Canary Islands:La Palma	1995
-Australia:Cape Barren Island	1996
-Canada:Edgell Island	1997
-UK:Scotland:South Uist	1998
-USA:Alaska:Attu Island	1999
-Puerto Rico:Viaques Island	2000
-Norway:Smola	2001
-Antarctica:D'Urville Island	2002
-Indonesia:Bisa	2003
-Indonesia:Karimun-Besar	2004
-Philippines:Samal Island	2005
-Canada:Nottingham Island	2006
-Indonesia:Yos Sudarso	2007
-Chile:Isla Stewart	2008
-Indonesia:Taliabu	2009
-Myanmar:Daung Kyun	2010
-Indonesia:Basu	2011
-Canada:BC:Banks Island	2012
-Falkland Islands:West Falkland	2013
-Indonesia:Yamdena	2014
-Chile:Isla Patricio Lynch	2015
-Denmark:Suduroy	2016
-Brazil:Saint Peter Rock	2017
-Cook Islands:Mangaia	2018
-Mexico:Cerralvo Island	2019
-Fiji:Taveuni	2020
-Canada:Hanbury Island	2021
-Chile:?	2022
-Hawaii:Kauai	2023
-Canada:?	2024
-USSR:Ostrov Mak-Klintoka	2025
-Turks and Caicos:Providenciales Island	2026
-India:Nancowry Island	2027
-Tuvalu:Nanumanga	2028
-Norway:Svalbard:Hopen	2029
-Myanmar:Saurin Island	2030
-Vietnam:?	2031
-Tonga:Tofua	2032
-USA:Alaska:Hinchinbrook Island	2033
-Chile:Isla Wollaston	2034
-Cape Verde:Maio	2035
-USA:Great Salt Lake	2036
-Philippines:Sibuyan	2037
-Malta:Gozo	2038
-Indonesia:Laut	2039
-Maldives:?	2040
-Greece:Limnos	2041
-Canada:Campbell Island	2042
-Comoros:Moheli	2043
-Australia:Inglis Island	2044
-Vanuatu:Anatom	2045
-Oman:Jazirat Masirah	2046
-Maldives:?	2047
-Fiji:Moala	2048
-Northern Mariana Islands:Shomushon	2049
-Antarctica:Carney Island	2050
-Spain:Majorca	2051
-South Sandwich Islands:Zavodovski Island	2052
-USA:Alaska:Chugul Island	2053
-Ireland:Achill Island	2054
-Maldives:?	2055
-Falkland Islands:Weddell Island	2056
-Malaysia:Tanjong Sirik	2057
-USA:Alaska:Big Koniuji Island	2058
-Equatorial Guinea:Fernando Po	2059
-China:Chinmen Tao	2060
-Indonesia:Tebingtinggi	2061
-New Zealand:?	2062
-Micronesia:Mortlock	2063
-French Polynesia:Tahuata	2064
-Antarctica:Sturge Island	2065
-Fiji:Vanua Balavu	2066
-Tonga:Hunga	2067
-Marshall Islands:Namoril	2068
-Japan:Fukue Jima	2069
-Germany:Norderney	2070
-Antarctica:Farwell Island	2071
-USA:Keweenaw Penninsula	2072
-Bahamas:Great Exuma Island	2073
-Iran:Jazireh-ye Qeshm	2074
-Australia:Whitsunday Island	2075
-UK:Scotland:Orkney Islands:Hoy	2076
-Greece:Methanon	2077
-Chagos Archipelago:Danger Island	2078
-Azores:Pico	2079
-Indonesia:Pagai Selatan	2080
-Chile:?	2081
-Greenland:Illorsuit	2082
-Indonesia:Gorong	2083
-Paracel Islands:Lincoln Island	2084
-USSR:Ostrov Iturup	2085
-Mongolia:Hovsgol Nuur	2086
-Finland:Aland	2087
-Fiji:Kanacea	2088
-Yugoslavia:Otok Pag	2089
-USSR:Lena Delta:1	2090
-Myanmar:Lanbi Kyun	2091
-Papua New Guinea:Lihir	2092
-Brazil:Ilha Janaucu	2093
-USSR:Onezhskoy Ozero	2094
-Martinique	2095
-New Zealand:Codfish Island	2096
-Irian Jaya:Komoran	2097
-Yugoslavia:Otok Dugi	2098
-Australia:Hinchinbrook Island	2099
-Norway:Karmoy	2100
-Canada:South Aulatsivik Island	2101
-Papua New Guinea:Ambitle	2102
-Bahamas:Andros Island:Middle Bight	2103
-Solomon Islands:Guadalcanal	2104
-Brazil:Saint Paul Rock	2105
-Vanuatu:Mota Lava	2106
-Myanmar:Atet Bok Island	2107
-Yugoslavia:Otok Vis	2108
-Maldives:?	2109
-Tonga:Vava'u	2110
-USA:Texas:Matagorda	2111
-Micronesia:Pisaras	2112
-USSR:Ostrov Bol'shoy Lyakhovskiy	2113
-USSR:?	2114
-Hawaii:Necker Island	2115
-Myanmar:Sir Robert Campbell Island	2116
-Maldives:?	2117
-Thailand:Ko Kut	2118
-Mauritius:Agalega Island	2119
-Canada:Richardson Island	2120
-Maldives:?	2121
-France:Ile d'Ouessant	2122
-USSR:Ostrov Salisbury	2123
-French Polynesia:?	2124
-Philippines:Lusong	2125
-France:Ile de Mayotte	2126
-UK:Gough Island	2127
-Solomon Islands:Savo	2128
-Turkey:Gokceada	2129
-Greenland:Disko Island	2130
-Belize:Turneffe Island	2131
-Myanmar:Maingy Island	2132
-USA:Peleliu	2133
-Indonesia:Musala	2134
-USA:Alaska:Prince of Wales Island	2135
-Panama:Isla Bastimentos	2136
-Greece:Kithnos	2137
-Marshall Islands:Kwajalein	2138
-Vanuatu:Aore	2139
-Myanmar:Auk Bok Island	2140
-UK:Scotland:Orkney Islands:Mainland	2141
-Tonga:'Eua	2142
-Japan:Okino Erabu Shima	2143
-USA:Alaska:Revillagigedo Island	2144
-Canada:Bathurst Island	2145
-South Sandwich Islands:Montagu Island	2146
-Colombia:Isla de Providencia	2147
-Panama:Isla Colon	2148
-Kiribati:Enderbury Island	2149
-China:Niutou Shan	2150
-Australia:Southwest Island	2151
-Maldives:?	2152
-Isle of Wight	2153
-Guinea-Bissau:?	2154
-USSR:Ostrov Mezhdusharskiy	2155
-Myanmar:Kau-Ye Kyun	2156
-French Polynesia:Hiva Oa	2157
-USA:Texas:Padre Island	2158
-Myanmar:Collies Island	2159
-Guinea-Bissau:?	2160
-Guinea-Bissau:?	2161
-Mexico:Isla Maria Madre	2162
-USSR:Ostrov Paramushir	2163
-Greenland:?	2164
-Fiji:Rotuma	2165
-Canada:Grand Manan Island	2166
-Chile:Isla Little Wellington	2167
-Canada:Herschel Island	2168
-Germany:Busingen	2169
-Greenland:?	2170
-China:Xiamen	2171
-Papua New Guinea:Purutu	2172
-USA:Alaska:Yakobi Island	2173
-Myanmar:Kadan Kyun	2174
-Malaysia:Labuan	2175
-Papua New Guinea:Woodlark	2176
-Canada:?	2177
-Honduras:Isle de Roatan	2178
-Chile:Isla Campana	2179
-Japan:Amami O Shima	2180
-France:Futuna	2181
-Ecuador:Isla San Cristobal	2182
-Sweden:Faro	2183
-USA:Urukthapel	2184
-Guinea-Bissau:Orango	2185
-Japan:Tori Shima	2186
-Thailand:Ko Rawi	2187
-Japan:Awaji Shima	2188
-Canada:Cameron Island	2189
-Antarctica:Greenwich Island	2190
-Philippines:Dinagat	2191
-Greenland:Ymer O	2192
-USA:Alaska:Amlia Island	2193
-New Zealand:Great Island	2194
-Chile:Isla Pratt	2195
-Greenland:?	2196
-Australia:Townshend Island	2197
-Indonesia:Mendol	2198
-Bahamas:Andros Island:Southern Bight	2199
-Solomon Islands:Ulawa	2200
-Greece:Lesvos	2201
-Australia:Bathurst Island	2202
-Chile:Isla Traiguen	2203
-Comoros:Anjouan	2204
-Indonesia:Bela	2205
-French Polynesia:Tetiaroa	2206
-Nicaragua:Lago de Managua	2207
-Sri Lanka:Manar	2208
-USSR:Ostrov Komsomolets	2209
-Chile:Isla Isquiliac	2210
-Cambodia:Koh Kong	2211
-USSR:Ostrov Rudolfa	2212
-Papua New Guinea:New Ireland	2213
-Cambodia:Tonle Sap	2214
-Spain:Llivia	2215
-Greenland:Taasiilaq	2216
-Tokelau:Atafu	2217
-Canada:Hepburn Island	2218
-Ecuador:Isla Puna	2219
-Malaysia:Singapore	2220
-South Korea:?	2221
-Antarctica:?	2222
-India:Chetlat Island	2223
-Japan:O Shima	2224
-Indonesia:Airabu	2225
-Greenland:?	2226
-New Caledonia:Ile Balabio	2227
-Saint-Martin	2228
-Myanmar:Lord Loughborough Island	2229
-Antarctica:?	2230
-USSR:Lena Delta:3	2231
-Maldives:?	2232
-Canada:Stefansson Island	2233
-Indonesia:Semau	2234
-Vanuatu:Erromango	2235
-Canada:Helena Island	2236
-Kiribati:Christmas Island	2237
-Venezuela:Isla Coche	2238
-Antarctica:Lazarev	2239
-Curacao	2240
-USSR:Lena Delta:2	2241
-Greenland:?	2242
-Yemen:Abd al Kurl	2243
-Canada:North Kent Island	2244
-Greenland:Herbert O	2245
-Taiwan	2246
-New Zealand:Pitt Island	2247
-Canada:Random Island	2248
-Canada:Gilford Island	2249
-Papua New Guinea:New Hanover	2250
-Australia:Cocos Islands:West Island	2251
-Brazil:?	2252
-French Polynesia:Taiaro	2253
-Solomon Islands:Taumako Island	2254
-USSR:?	2255
-French Polynesia:Marotiri	2256
-India:Androth Island	2257
-Mozambique:Ilha da Inhaca	2258
-Myanmar:Thayawthadangyi Kyun	2259
-Canada:McCauley Island	2260
-Indonesia:Kundur	2261
-Solomon Islands:Treasures Island	2262
-USSR:Ostrov Vaygach	2263
-Canada:Nordenskiold Island	2264
-Maldives:?	2265
-Chile:Isla Esmeralda	2266
-Bangladesh:?	2267
-Vanuatu:Malo	2268
-Honduras:Isla de Utila	2269
-USA:Alaska:Umnak Island	2270
-Norway:Vikna	2271
-Canada:Mansel Island	2272
-Australia:King Island	2273
-USSR:Ostrov Hooker	2274
-Chile:Isla Kent	2275
-Papua New Guinea:Kiwai	2276
-Canada:Royal Geographical Society Island:West	2277
-Thailand:Ko Si Chang	2278
-Chile:Isla Merino Jarpa	2279
-Canada:Coburg Island	2280
-USA:Alaska:Baranof Island	2281
-Greenland:?	2282
-Myanmar:Preparis Island	2283
-Philippines:Leyte	2284
+Aruba	1
+Afghanistan	2
+Angola	3
+Angola:Cabinda	4
+Anguilla	5
+Albania	6
+Finland:Aland Islands:Foglo	7
+Finland:Aland Islands:Eckero	8
+Finland:Aland Islands:Fasta Aland	9
+Andorra	10
+United Arab Emirates:Abu al Abyad	11
+United Arab Emirates:Sir Baniyas	12
+United Arab Emirates:Marawwah	13
+United Arab Emirates:Al Aryan	14
+United Arab Emirates	15
+United Arab Emirates:6	16
+Argentina:Isla de los Estados	17
+Argentina:Tierra del Fuego	18
+Argentina:Isla Trinidad	19
+Argentina	20
+Armenia:Artsvashen	21
+Armenia	22
+Armenia:Enclave border	23
+American Samoa:Tutuila	24
+Antarctica:1	25
+Antarctica:2	26
+Antarctica:3	27
+Antarctica:4	28
+Antarctica:Henry Ice Rise	29
+Antarctica:6	30
+Antarctica:7	31
+Antarctica:8	32
+Antarctica:9	33
+Antarctica:10	34
+Antarctica:Roosevelt Island	35
+Antarctica:Korff Ice Rise	36
+Antarctica:13	37
+Antarctica:Berkner Island	38
+Antarctica:15	39
+Antarctica:16	40
+Antarctica:Ross Island	41
+Antarctica:18	42
+Antarctica:19	43
+Antarctica:20	44
+Antarctica:21	45
+Antarctica:22	46
+Antarctica:23	47
+Antarctica:24	48
+Antarctica:25	49
+Antarctica:26	50
+Antarctica:Newman Island	51
+Antarctica:28	52
+Antarctica:29	53
+Antarctica:Grant Island	54
+Antarctica:Dean Island	55
+Antarctica:Wright Island	56
+Antarctica:33	57
+Antarctica:Carney Island	58
+Antarctica:Lydden Island	59
+Antarctica:Coulman Island	60
+Antarctica:Siple Island	61
+Antarctica:38	62
+Antarctica:Burke Island	63
+Antarctica:Spaatz Island	64
+Antarctica:41	65
+Antarctica:Farwell Island	66
+Antarctica:43	67
+Antarctica:44	68
+Antarctica:45	69
+Antarctica:46	70
+Antarctica:47	71
+Antarctica:Thurston Island	72
+Antarctica:49	73
+Antarctica:Steele Island	74
+Antarctica:51	75
+Antarctica:Latady Island	76
+Antarctica:53	77
+Antarctica:54	78
+Antarctica:55	79
+Antarctica:56	80
+Antarctica:57	81
+Antarctica:Gillock Island	82
+Antarctica:59	83
+Antarctica:60	84
+Antarctica:61	85
+Antarctica:62	86
+Antarctica:Charcot Island	87
+Antarctica:64	88
+Antarctica:Rothschild Island	89
+Antarctica:Hearst Island	90
+Antarctica:Alexander Island	91
+Antarctica:68	92
+Antarctica:69	93
+Antarctica:Pourquoi Pas Island	94
+Antarctica:Sturge Island	95
+Antarctica:72	96
+Antarctica:73	97
+Antarctica:White Island	98
+Antarctica:75	99
+Antarctica:76	100
+Antarctica:Adelaide Island	101
+Antarctica:78	102
+Antarctica:79	103
+Antarctica:Young Island	104
+Antarctica:81	105
+Antarctica:Lavoisier Island	106
+Antarctica:83	107
+Antarctica:Drygalski Island	108
+Antarctica:Renaud Island	109
+Antarctica:Mill Island	110
+Antarctica:Bowman Island	111
+Antarctica:Wiencke Island	112
+Antarctica:Snow Hill Island	113
+Antarctica:Anvers Island	114
+Antarctica:Brabant Island	115
+Antarctica:92	116
+Antarctica:James Ross Island	117
+Antarctica:Vega	118
+Antarctica:95	119
+Antarctica:Dundee Island	120
+Antarctica	121
+Antarctica:Joinville Island	122
+Antarctica:D'Urville Island	123
+Antarctica:Snow Island	124
+Antarctica:101	125
+Antarctica:Livingston Island	126
+Antarctica:Robert Island	127
+Antarctica:Nelson Island	128
+Antarctica:King George Island	129
+Antarctica:Clarence Island	130
+Antarctica:Elephant Island	131
+Antarctica:Coronation Island	132
+Australia:Ashmore and Cartier Islands	133
+French Southern and Antarctic Lands:Kerguelen Islands:Ile Foche	134
+French Southern and Antarctic Lands:Kerguelen Island	135
+French Southern and Antarctic Lands:Ile de la Posession	136
+Antigua	137
+Barbuda	138
+Australia:Macquarie Island	139
+Australia:South Bruny Island	140
+Australia:Bruny Island	141
+Australia:4	142
+Australia:Tasmania	143
+Australia:Clarke Island	144
+Australia:Hunter Island	145
+Australia:Cape Barren Island	146
+Australia:Tasmania:Flinders Island	147
+Australia:King Island	148
+Australia:Phillip Island	149
+Australia:French Island	150
+Australia:Kangaroo Island	151
+Australia:North Stradbroke Island	152
+Australia:Moreton Island	153
+Australia:Dirk Hartog Island	154
+Australia:Fraser Island	155
+Australia:Curtis Island	156
+Australia:Townshend Island	157
+Australia:Long Island	158
+Australia:Barrow Island	159
+Australia:Whitsunday Island	160
+Australia:Hook Island	161
+Australia:Hinchinbrook Island	162
+Australia:Bentinck Island	163
+Australia:Mornington Island	164
+Australia:Vanderlin Island	165
+Australia:West Island	166
+Australia:North Island	167
+Australia:Augustus Island	168
+Australia:Bigge Island	169
+Australia:Groote Eylandt	170
+Australia:Bickerton Island	171
+Australia:Elcho Island	172
+Australia:Bathurst Island	173
+Australia:Melville Island	174
+Australia:Marchinbar Island	175
+Australia:Croker Island	176
+Australia	177
+Australia:Prince of Wales Island	178
+Australia:Moa Island	179
+Australia:Mulgrave Island	180
+Austria	181
+Azerbaijan:Nakhchivan	182
+Azerbaijan:Yukhari Askipari	183
+Azerbaijan	184
+Azerbaijan:Enclave border	185
+Burundi	186
+Belgium	187
+Benin	188
+Burkina Faso	189
+Bangladesh:Maiskhal	190
+Bangladesh:Kutubdia	191
+Bangladesh:3	192
+Bangladesh:Sandwip	193
+Bangladesh:5	194
+Bangladesh:6	195
+Bangladesh	196
+Bulgaria	197
+Bahrain	198
+Bahamas:Great Inagua Island	199
+Bahamas:Little Inagua Island	200
+Bahamas:Mayaguana Island	201
+Bahamas:Acklins Island	202
+Bahamas:Crooked Island	203
+Bahamas:Long Island	204
+Bahamas:Great Exuma Island	205
+Bahamas:San Salvador	206
+Bahamas:Andros Island:Southern Bight	207
+Bahamas:Cat Island	208
+Bahamas:New Providence Island	209
+Bahamas:Andros Island:Northern Bight	210
+Bahamas:Eleuthera Island	211
+Bahamas:Grand Bahama Island	212
+Bahamas:Abaco Island	213
+Bosnia and Herzegovina	214
+Saint Barthelemy	215
+Belarus	216
+Belize:Turneffe Island	217
+Belize:Ambergris Cay	218
+Belize	219
+Bermuda	220
+Bolivia:Titicaca Penninsula	221
+Bolivia	222
+Brazil:Ilha de Santa Catarina	223
+Brazil:Ilha de Sao Francisco	224
+Brazil:Ilha de Sao Sebastiao	225
+Brazil:Ilha Grande	226
+Brazil:5	227
+Brazil:6	228
+Brazil:7	229
+Brazil:8	230
+Brazil:Ilha Grande de Gurupa	231
+Brazil:Ilha de Marajo	232
+Brazil:Ilha Queimada	233
+Brazil:Ihla Mexiana	234
+Brazil:Ilha Caviana	235
+Brazil:14	236
+Brazil:Ilha Janaucu	237
+Brazil:Ilha de Maraca	238
+Brazil	239
+Barbados	240
+Brunei:East	241
+Brunei	242
+Bhutan	243
+Botswana	244
+Central African Republic	245
+Canada:1	246
+Canada:Sable Island	247
+Canada:3	248
+Canada:4	249
+Canada:5	250
+Canada:Grand Manan Island	251
+Canada:7	252
+Canada:8	253
+Canada:9	254
+Canada:10	255
+Canada:11	256
+Canada:12	257
+Canada:13	258
+Canada:14	259
+Canada:15	260
+Canada:Cape Breton Island	261
+Canada:Prince Edward Island	262
+Canada:Ile du Cap aux Meule	263
+Canada:Merasheen Island	264
+Canada:20	265
+Canada:Ile Lameque	266
+Canada:22	267
+Canada:23	268
+Canada:24	269
+Canada:Saltspring Island	270
+Canada:Galiano Island	271
+Canada:27	272
+Canada:Flores Island	273
+Canada:New World Island	274
+Canada:Fogo Island	275
+Canada:Texada Island	276
+Canada:Nootka Island	277
+Canada:Anticosti Island	278
+Canada:Redonda Island	279
+Canada:Quadra Island	280
+Canada:Bell Island	281
+Canada:Vancouver Island	282
+Canada:Newfoundland	283
+Canada:Calvert Island	284
+Canada:40	285
+Canada:Charlton Island	286
+Canada:42	287
+Canada:43	288
+Canada:Aristazabal Island	289
+Canada:45	290
+Canada:46	291
+Canada:Moresby Island	292
+Canada:Princess Royal Island	293
+Canada:49	294
+Canada:50	295
+Canada:BC:Banks Island	296
+Canada:Porcher Island	297
+Canada:Graham Island	298
+Canada:54	299
+Canada:55	300
+Canada:56	301
+Canada:Tukarak Island	302
+Canada:58	303
+Canada:Belcher Island	304
+Canada:60	305
+Canada:61	306
+Canada:62	307
+Canada:63	308
+Canada:64	309
+Canada:65	310
+Canada:66	311
+Canada:67	312
+Canada:Akpatok Island	313
+Canada:Smith Island	314
+Canada:Resolution Island	315
+Canada:71	316
+Canada:Edgell Island	317
+Canada:Mansel Island	318
+Canada:Loks Land Island	319
+Canada:Charles Island	320
+Canada:Big Island	321
+Canada:Coats Island	322
+Canada:Nottingham Island	323
+Canada:Salisbury Island	324
+Canada:Mill Island	325
+Canada:Southampton Island	326
+Canada:White Island	327
+Canada:Vansittart Island	328
+Canada:Winter Island	329
+Canada:85	330
+Canada:86	331
+Canada:87	332
+Canada:Chapman Lewes Island:South	333
+Canada:Air Force Island	334
+Canada:90	335
+Canada:Wales Island	336
+Canada:Prince Charles Island	337
+Canada:93	338
+Canada:Melbourne Island	339
+Canada:Foley Island	340
+Canada:Jenny Lind Island	341
+Canada:Royal Geographical Society Island:West	342
+Canada:Royal Geographical Society Island:East	343
+Canada:99	344
+Canada:100	345
+Canada:Harrison Island	346
+Canada:Bray Island	347
+Canada:103	348
+Canada:Matty Island	349
+Canada:Herschel Island	350
+Canada:106	351
+Canada:Koch Island	352
+Canada:Jens Munk Island	353
+Canada:King William Island	354
+Canada:110	355
+Canada:Gateshead Island	356
+Canada	357
+Canada:Prescott Island	358
+Canada:Victoria Island	359
+Canada:Stefansson Island	360
+Canada:Bylot Island	361
+Canada:Baffin Island	362
+Canada:Prince of Wales Island	363
+Canada:Russell Island	364
+Canada:Somerset Island	365
+Canada:Banks Island	366
+Canada:122	367
+Canada:123	368
+Canada:Byam Martin Island	369
+Canada:Cornwallis Island	370
+Canada:126	371
+Canada:127	372
+Canada:128	373
+Canada:Eglinton Island	374
+Canada:Coburg Island	375
+Canada:131	376
+Canada:Cameron Island	377
+Canada:Bathurst Island	378
+Canada:Helena Island	379
+Canada:Melville Island	380
+Canada:North Kent Island	381
+Canada:Emerald Isle	382
+Canada:Devon Island	383
+Canada:Prince Patrick Island	384
+Canada:140	385
+Canada:Lougheed Island	386
+Canada:Cornwall Island	387
+Canada:King Christian Island	388
+Canada:Brock Island	389
+Canada:Mackenzie King Island	390
+Canada:146	391
+Canada:Borden Island	392
+Canada:Amund Ringnes Island	393
+Canada:Ellef Ringnes Island	394
+Canada:Meighen Island	395
+Canada:Axel Heiberg Island	396
+Canada:Ellesmere Island	397
+Switzerland	398
+Chile:Isla Hermite	399
+Chile:Isla Wollaston	400
+Chile:Isla Nueva	401
+Chile:Isla Navarino	402
+Chile:Isla Hoste	403
+Chile:Isla Londonderry	404
+Chile:7	405
+Chile:Isla Santa Ines	406
+Chile:Isla Desolacion	407
+Chile:10	408
+Chile:11	409
+Chile:12	410
+Chile:13	411
+Chile:Isla Duque de York	412
+Chile:Isla Madre de Dios	413
+Chile:16	414
+Chile:Isla Wellington	415
+Chile:Isla Campana	416
+Chile:Isla Pratt	417
+Chile:20	418
+Chile:21	419
+Chile:22	420
+Chile:23	421
+Chile:Isla Magdalena	422
+Chile:25	423
+Chile:Isla Guaitecas	424
+Chile:Isle Guafo	425
+Chile:Isla Grande de Chiloe	426
+Chile:Isla Juan Fernandez	427
+Chile:Easter Island	428
+Chile	429
+China:1	430
+China:Donghai Dao	431
+China:3	432
+China:4	433
+China:5	434
+China:Xiamen	435
+China:Haitan Dao	436
+China:8	437
+China:Liuheng Dao	438
+China:10	439
+China:Zhoushan Dao	440
+China:Chongming Dao	441
+China	442
+Ivory Coast:Aby Penninsula	443
+Ivory Coast	444
+Cameroon	445
+Democratic Republic of the Congo	446
+Republic of Congo	447
+Cook Islands:Rarotonga	448
+Colombia:1	449
+Colombia	450
+Comoros:Moheli	451
+Comoros:Anjouan	452
+Comoros:Grande Comore	453
+Cape Verde:Fogo	454
+Cape Verde:Maio	455
+Cape Verde:Sao Tiago	456
+Cape Verde:Boa Vista	457
+Cape Verde:Sao Nicolau	458
+Cape Verde:Sal	459
+Cape Verde:Sao Vincente	460
+Cape Verde:Santo Antao	461
+Costa Rica	462
+Cuba:Isla de la Juventura	463
+Cuba:Cayo Sabinal	464
+Cuba:Cayo Guajaba	465
+Cuba:Cayo Romano	466
+Cuba:Cayo Coco	467
+Cuba:Caya Fragosa	468
+Cuba	469
+Curacao	470
+Cayman Islands:Grand Cayman	471
+Cayman Islands:Little Cayman	472
+Cayman Islands:Cayman Brac	473
+Cyprus:Northern Cyprus	474
+Cyprus	475
+Czech Republic	476
+Germany:Usedom	477
+Germany:Fehmarn	478
+Germany:Rugen	479
+Germany:4	480
+Germany	481
+Germany:6	482
+Djibouti	483
+Dominica	484
+Denmark:Lolland	485
+Denmark:2	486
+Denmark:Mon	487
+Denmark:Als	488
+Denmark:Langeland	489
+Denmark:Bornholm	490
+Denmark:Fyn	491
+Denmark:8	492
+Denmark:Samso	493
+Denmark:Sjaelland	494
+Denmark:Laeso	495
+Denmark	496
+Dominican Republic	497
+Algeria	498
+Ecuador:Isla Puna	499
+Ecuador:Isla Santa Maria	500
+Ecuador:Isla San Cristobal	501
+Ecuador:Isla Santa Cruz	502
+Ecuador:Isla Fernandina	503
+Ecuador:Isla San Salvador	504
+Ecuador:Isla Isabela	505
+Ecuador:Pampanal	506
+Ecuador	507
+Egypt	508
+Eritrea:Dehalak Deset	509
+Eritrea:2	510
+Eritrea	511
+Canary Islands:Hierro	512
+Canary Islands:Gran Canaria	513
+Canary Islands:Gomera	514
+Canary Islands:Tenerife	515
+Canary Islands:Fuerteventura	516
+Canary Islands:La Palma	517
+Canary Islands:Lanzarote	518
+Spain:Formentera	519
+Spain:Ibiza	520
+Spain:Majorca	521
+Spain:Minorca	522
+Spain	523
+Estonia:Saaremaa	524
+Estonia:Muhu	525
+Estonia:Hiiumaa	526
+Estonia	527
+Ethiopia	528
+Finland:1	529
+Finland:2	530
+Finland:3	531
+Finland:4	532
+Finland:5	533
+Finland:Vallgrund	534
+Finland:Halluoto	535
+Finland	536
+Fiji:Conway Reef	537
+Fiji:Ndoi Island	538
+Fiji:Fulanga	539
+Fiji:Kadavu	540
+Fiji:Totoya	541
+Fiji:Lakeba	542
+Fiji:Ngau	543
+Fiji:8	544
+Fiji:Vanua Masi	545
+Fiji:Ovalau	546
+Fiji:Viti Levu	547
+Fiji:Koro	548
+Fiji:Vanua Balavu	549
+Fiji:Naviti	550
+Fiji:16	551
+Fiji:17	552
+Fiji:Vanua Levu	553
+Fiji:Rotuma	554
+Falkland Islands:1	555
+Falkland Islands:2	556
+Falkland Islands:Weddell Island	557
+Falkland Islands:West Falkland	558
+Falkland Islands:5	559
+Falkland Islands:East Falkland	560
+Reunion	561
+Mayotte	562
+French Guiana	563
+Martinique	564
+Guadeloupe:Marie-Galante	565
+Guadeloupe:Basse-Terre	566
+Guadeloupe:Grande-Terre	567
+France:Corsica	568
+France:Ile d'Oleron	569
+France	570
+Faroe Islands:Suduroy	571
+Faroe Islands:Sandoy	572
+Faroe Islands:Vagar	573
+Faroe Islands:Eysturoy	574
+Faroe Islands:Bordoy	575
+Micronesia:Kosrae	576
+Micronesia:Pohnpei	577
+Micronesia:Shichiyo	578
+Micronesia:Moen	579
+Micronesia:Yap	580
+Gabon	581
+UK:Isle of Wight	582
+UK:Wales:Anglesey	583
+UK:Northern Ireland	584
+UK:Scotland:Island of Arran	585
+UK:Scotland:Islay	586
+UK:Scotland:Jura	587
+UK:7	588
+UK:Scotland:Coll	589
+UK:Scotland:Barra	590
+UK:Scotland:Ruhm	591
+UK:Scotland:South Uist	592
+UK:Scotland:Island of Skye	593
+UK:Scotland:North Uist	594
+UK:Scotland:Isle of Lewis	595
+UK:Great Britain	596
+UK:16	597
+UK:Scotland:Orkney Islands:Hoy	598
+UK:Scotland:Orkney Islands:Mainland	599
+UK:19	600
+UK:20	601
+UK:Scotland:Shetland Islands:Mainland	602
+UK:Scotland:Shetland Islands:Yell	603
+UK:Scotland:Shetland Islands:Unst	604
+Georgia	605
+Guernsey	606
+Ghana	607
+Guinea	608
+Gambia	609
+Guinea-Bissau:1	610
+Guinea-Bissau:Orango	611
+Guinea-Bissau:3	612
+Guinea-Bissau:Formosa	613
+Guinea-Bissau:5	614
+Guinea-Bissau:6	615
+Guinea-Bissau	616
+Equatorial Guinea:Rio Muni	617
+Equatorial Guinea:Fernando Po	618
+Greece:Crete	619
+Greece:Karpathos	620
+Greece:Kithira	621
+Greece:Rodhos	622
+Greece:Thira	623
+Greece:6	624
+Greece:Simi	625
+Greece:Milos	626
+Greece:Ios	627
+Greece:Kos	628
+Greece:11	629
+Greece:Serifos	630
+Greece:Klimnos	631
+Greece:Paros	632
+Greece:Naxos	633
+Greece:16	634
+Greece:Kithnos	635
+Greece:Siros	636
+Greece:Mikonos	637
+Greece:Ikaria	638
+Greece:Tinos	639
+Greece:Kea	640
+Greece:Samos	641
+Greece:Zakinthos	642
+Greece:Andros	643
+Greece:Aiyina	644
+Greece:Kefallinia	645
+Greece:28	646
+Greece:Khios	647
+Greece:Levkas	648
+Greece:Skiros	649
+Greece:Evvoia	650
+Greece:Skopelos	651
+Greece:34	652
+Greece:Lesvos	653
+Greece:Kerkira	654
+Greece:Limnos	655
+Greece:Samothraki	656
+Greece:Thasos	657
+Greece	658
+Grenada	659
+Greenland:1	660
+Greenland:Angmagssalik	661
+Greenland:Disko Island	662
+Greenland:Quqertarsuaq	663
+Greenland:5	664
+Greenland:Milneland	665
+Greenland:Illorsuit	666
+Greenland:8	667
+Greenland:Shannon	668
+Greenland:Store Koldewey	669
+Greenland:Northumberland O	670
+Greenland:Ile de France	671
+Greenland:13	672
+Greenland:14	673
+Greenland:15	674
+Greenland:Nansen Land	675
+Greenland	676
+Guatemala	677
+Guam	678
+Guyana	679
+China:Hong Kong:1	680
+China:Hong Kong:2	681
+China:Hong Kong	682
+Heard Island	683
+Honduras	684
+Honduras:Isle de Roatan	685
+Honduras:Isla de Guanaja	686
+Croatia:Otok Mljet	687
+Croatia:Otok Korcula	688
+Croatia:3	689
+Croatia:Otok Hvar	690
+Croatia:Otok Brac	691
+Croatia:6	692
+Croatia:7	693
+Croatia:Otok Dugi	694
+Croatia:Otok Pag	695
+Croatia:10	696
+Croatia:Otok Cres	697
+Croatia:Otok Krk	698
+Croatia	699
+Haiti:Ile de la Gonave	700
+Haiti	701
+Haiti:Ile de la Tortue	702
+Hungary	703
+Indonesia:Roti	704
+Indonesia:Sawu	705
+Indonesia:Semau	706
+Indonesia:Sumba	707
+Indonesia:5	708
+Indonesia:Penida	709
+Indonesia:7	710
+Indonesia:Komodo	711
+Indonesia:Adonara	712
+Indonesia:Lombok	713
+Indonesia:Pantar	714
+Indonesia:Lomblen	715
+Indonesia:Irian Jaya:Komoran	716
+Indonesia:14	717
+Indonesia:Sangeang	718
+Indonesia:Alor	719
+Indonesia:Moa	720
+Indonesia:Flores	721
+Indonesia:Selaru	722
+Indonesia:Sumbawa	723
+Indonesia:Bali	724
+Indonesia:Babar	725
+Indonesia:Wetar	726
+Indonesia:Romang	727
+Indonesia:Yos Sudarso	728
+Indonesia:Yamdena	729
+Indonesia:Larat	730
+Indonesia:28	731
+Indonesia:Damar	732
+Indonesia:30	733
+Indonesia:31	734
+Indonesia:Kangean	735
+Indonesia:33	736
+Indonesia:Panaitan	737
+Indonesia:35	738
+Indonesia:36	739
+Indonesia:Trangan	740
+Indonesia:Java	741
+Indonesia:39	742
+Indonesia:Selayar	743
+Indonesia:Bawean	744
+Indonesia:Kai Kecil	745
+Indonesia:Wokam	746
+Indonesia:Cut	747
+Indonesia:Enggano	748
+Indonesia:46	749
+Indonesia:Kabaena	750
+Indonesia:Muna	751
+Indonesia:Buton	752
+Indonesia:Adi	753
+Indonesia:Wowoni	754
+Indonesia:Haruku	755
+Indonesia:Ambon	756
+Indonesia:Saparua	757
+Indonesia:Kalimantan	758
+Indonesia:56	759
+Indonesia:Laut	760
+Indonesia:Buru	761
+Indonesia:59	762
+Indonesia:Lepar	763
+Indonesia:Mendanau	764
+Indonesia:Ceram	765
+Indonesia:Pagai Selatan	766
+Indonesia:Belitung	767
+Indonesia:Pagai Utara	768
+Indonesia:Waar	769
+Indonesia:Sipura	770
+Indonesia:Sanana	771
+Indonesia:Melilis	772
+Indonesia:Mangole	773
+Indonesia:Bangkulu	774
+Indonesia:Misool	775
+Indonesia:Taliabu	776
+Indonesia:Yapen	777
+Indonesia:Padang:Borneo	778
+Indonesia:Bangka	779
+Indonesia:77	780
+Indonesia:Obi	781
+Indonesia:Peleng	782
+Indonesia:Maya	783
+Indonesia:Numfoor	784
+Indonesia:Siberut	785
+Indonesia:Salawati	786
+Indonesia:Batanta	787
+Indonesia:Biak	788
+Indonesia:Mandioli	789
+Indonesia:Gam	790
+Indonesia:Batudaka	791
+Indonesia:Irian Jaya	792
+Indonesia:Singkep	793
+Indonesia:Bacan	794
+Indonesia:Kasiruta	795
+Indonesia:Basu	796
+Indonesia:Waigeo	797
+Indonesia:Tanahmasa	798
+Indonesia:Lingga	799
+Indonesia:Gebe	800
+Indonesia:98	801
+Indonesia:Sebangka	802
+Indonesia:Mendol	803
+Indonesia:Tidore	804
+Indonesia:Ternate	805
+Indonesia:Kundur	806
+Indonesia:104	807
+Indonesia:Rempang	808
+Indonesia:Tebingtinggi	809
+Indonesia:Karimun-Besar	810
+Indonesia:Rangsang	811
+Indonesia:Batam	812
+Indonesia:Bintan	813
+Indonesia:Padang:Sumatra	814
+Indonesia:Nias	815
+Indonesia:Bengkalis	816
+Indonesia:Sulawesi	817
+Indonesia:Rupat	818
+Indonesia:Halmahera	819
+Indonesia:Tuangku	820
+Indonesia:Morotai	821
+Indonesia:Siau	822
+Indonesia:Simeule	823
+Indonesia:Subi	824
+Indonesia:Jemaja	825
+Indonesia:Siantan	826
+Indonesia:Tarakan	827
+Indonesia:125	828
+Indonesia:126	829
+Indonesia:127	830
+Indonesia:Sabatik	831
+Indonesia:Natuna Besar	832
+Indonesia:Borneo	833
+Indonesia:Karakelong	834
+Indonesia:Sumatra	835
+Indonesia:We	836
+Isle of Man	837
+India:Great Nicobar	838
+India:Little Nicobar	839
+India:Katchall Island	840
+India:Trinkat Island	841
+India:Minicoy Island	842
+India:Tarasa Dwip	843
+India:Car Nicobar Island	844
+India:Little Andaman Island	845
+India:Kadmat Island	846
+India:Rutland Island	847
+India:Havelock Island	848
+India:Interview Island	849
+India:Andaman Islands:Smith Island	850
+India	851
+Cocos Islands:South Island	852
+Cocos Islands:West Island	853
+Christmas Island	854
+Chagos Archipelago:Diego Garcia	855
+Ireland:Achill Island	856
+Ireland	857
+Iran:Jazireh-ye Qeshm	858
+Iran	859
+Iraq	860
+Iceland	861
+Israel	862
+Italy:Isola di Pantelleria	863
+Italy:Sicily	864
+Italy:Sant'Antonio	865
+Italy:Forio	866
+Italy:Asinara	867
+Italy:Sardinia	868
+Italy:Isola d'Elba	869
+Italy	870
+San Marino	871
+Jamaica	872
+Jersey	873
+Jordan	874
+Japan:Iriomote Jima	875
+Japan:Ishigaki Shima	876
+Japan:Miyako Jima	877
+Japan:Haha Jima	878
+Japan:Okinawa	879
+Japan:Tokuno Shima	880
+Japan:Kakeroma Jima	881
+Japan:Amami O Shima	882
+Japan:Yaku Shima	883
+Japan:Tanega Shima	884
+Japan:11	885
+Japan:12	886
+Japan:Amakusa Shoto	887
+Japan:Fukue Jima	888
+Japan:Hachijo Jima	889
+Japan:Nakadori Jima	890
+Japan:Hirado Jima	891
+Japan:Iki	892
+Japan:Kyushu	893
+Japan:20	894
+Japan:21	895
+Japan:Shimono Shima	896
+Japan:Shikoku	897
+Japan:24	898
+Japan:Awaji Shima	899
+Japan:Kamino Shima	900
+Japan:O Shima	901
+Japan:Dogo	902
+Japan:Sado	903
+Japan:Honshu	904
+Japan:Okushiri To	905
+Japan:Rebun To	906
+Japan:Rishiri To	907
+Japan:Hokkaido	908
+Siachen Glacier	909
+Kazakhstan:Ostrova Tyulen'i	910
+Kazakhstan:2	911
+Kazakhstan:3	912
+Kazakhstan:4	913
+Kazakhstan	914
+Kenya:Patta Island	915
+Kenya	916
+Kyrgyzstan	917
+Kyrgyzstan:2	918
+Kyrgyzstan:3	919
+Kyrgyzstan:4	920
+Cambodia:1	921
+Cambodia:Koh Kong	922
+Cambodia	923
+Kiribati:Flint Island	924
+Kiribati:Starbuck Island	925
+Kiribati:3	926
+Kiribati:Hull Island	927
+Kiribati:Sydney Island	928
+Kiribati:Malden Island	929
+Kiribati:7	930
+Kiribati:Kanton Island	931
+Kiribati:Nonouti	932
+Kiribati:10	933
+Kiribati:Temotu	934
+Kiribati:Maiana	935
+Kiribati:13	936
+Kiribati:Abaiang Atoll	937
+Kiribati:15	938
+Kiribati:Christmas Island	939
+Kiribati:Butaritari	940
+Kiribati:Kuma	941
+Kiribati:Fanning Island	942
+Nevis	943
+Saint Kitts	944
+South Korea:Cheju Do	945
+South Korea:11	946
+South Korea:3	947
+South Korea:21	948
+South Korea:5	949
+South Korea:Namhae Do	950
+South Korea:Koje Do	951
+South Korea:8	952
+South Korea:Ullung Do	953
+South Korea:10	954
+South Korea	955
+Kosovo	956
+Kuwait:Bubiyan	957
+Kuwait	958
+Laos	959
+Lebanon	960
+Liberia	961
+Libya	962
+Saint Lucia	963
+Liechtenstein	964
+Sri Lanka:Manar	965
+Sri Lanka:Jaffna	966
+Sri Lanka	967
+Lesotho	968
+Lithuania:1	969
+Lithuania	970
+Luxembourg	971
+Latvia	972
+China:Macao	973
+Saint Martin	974
+Morocco	975
+Monaco	976
+Moldova	977
+Madagascar:Ile Sainte-Marie	978
+Madagascar:Nosy Be	979
+Madagascar	980
+Maldives:1	981
+Maldives:2	982
+Mexico:Isla del Carmen	983
+Mexico:Isla Socorro	984
+Mexico:Isla de Cozumel	985
+Mexico:4	986
+Mexico:Isla Maria Madre	987
+Mexico:Cerralvo Island	988
+Mexico:Isla de Santa Margarita	989
+Mexico:San Jose Island	990
+Mexico:Isla Magdelena	991
+Mexico:Carmen Island	992
+Mexico:Isla Cedros	993
+Mexico:Guadalupe Island	994
+Mexico:Tiburon Island	995
+Mexico:Angeleda la Guarda Island	996
+Mexico:Isla Montague	997
+Mexico	998
+Marshall Islands:1	999
+Marshall Islands:2	1000
+Marshall Islands:3	1001
+Marshall Islands:Ailinglaplap	1002
+Marshall Islands:Rongelap Atoll	1003
+Macedonia	1004
+Mali	1005
+Malta	1006
+Malta:Gozo	1007
+Myanmar:Zadetkyi Kyun	1008
+Myanmar:Lanbi Kyun	1009
+Myanmar:Kau-Ye Kyun	1010
+Myanmar:Letsok-Aw Kyun	1011
+Myanmar:Kanmaw Kyun	1012
+Myanmar:Bentinck Island	1013
+Myanmar:Saganthit Kyun	1014
+Myanmar:Daung Kyun	1015
+Myanmar:Thayawthadangyi Kyun	1016
+Myanmar:Kadan Kyun	1017
+Myanmar:Mali Kyun	1018
+Myanmar:12	1019
+Myanmar:13	1020
+Myanmar:Bilugyun Island	1021
+Myanmar:Cheduba Island	1022
+Myanmar:16	1023
+Myanmar:17	1024
+Myanmar:Boronga Island	1025
+Myanmar	1026
+Montenegro	1027
+Mongolia	1028
+Northern Mariana Islands:Rota	1029
+Northern Mariana Islands:Tinian	1030
+Northern Mariana Islands:Saipan	1031
+Northern Mariana Islands:Anatahan	1032
+Northern Mariana Islands:Shomushon	1033
+Northern Mariana Islands:Agrihan	1034
+Mozambique	1035
+Mauritania:Ile Tidra	1036
+Mauritania	1037
+Montserrat	1038
+Mauritius	1039
+Malawi:1	1040
+Malawi:2	1041
+Malawi:3	1042
+Malawi	1043
+Malaysia:Tanjong Sirik	1044
+Malaysia:Tioman	1045
+Malaysia:3	1046
+Malaysia:Sabatik	1047
+Malaysia:Pinang	1048
+Malaysia:Langkawi	1049
+Malaysia:Malay Penninsula	1050
+Malaysia:Sarawak	1051
+Malaysia:Banggi	1052
+Namibia	1053
+New Caledonia:Ile Koutoumo	1054
+New Caledonia:Ile Mare	1055
+New Caledonia:Ile Lifou	1056
+New Caledonia:Ile Ouvea	1057
+New Caledonia:Grand Recif de Oatope	1058
+New Caledonia:6	1059
+Niger	1060
+Norfolk Island	1061
+Nigeria:1	1062
+Nigeria	1063
+Nicaragua	1064
+Niue	1065
+Bonaire	1066
+Sint Eustatius	1067
+Saba	1068
+Netherlands:South	1069
+Netherlands:Schouwen-Duiveland	1070
+Netherlands:Zuid-Flevoland	1071
+Netherlands:Texel	1072
+Netherlands:Vlieland	1073
+Netherlands	1074
+Netherlands:IJsselmeer	1075
+Netherlands:Terschelling	1076
+Netherlands:Ameland	1077
+Netherlands:Schiermonnikoog	1078
+Germany:Borkum	1079
+Norway:1	1080
+Norway:2	1081
+Norway:Smola	1082
+Norway:Froya	1083
+Norway:5	1084
+Norway:6	1085
+Norway:7	1086
+Norway:8	1087
+Norway:Moskenesoya	1088
+Norway:Vestvagoy	1089
+Norway:Langoya	1090
+Norway:Hinnoya	1091
+Norway:Senja	1092
+Norway:14	1093
+Norway:Arnoy	1094
+Norway:16	1095
+Norway:Vannoy	1096
+Norway:Seiland	1097
+Norway:Kvaloya	1098
+Norway:Soroya	1099
+Norway	1100
+Norway:Mageroya	1101
+Norway:Jan Mayen	1102
+Norway:Svalbard:Byornoya	1103
+Norway:Svalbard:Edgeoya	1104
+Norway:Svalbard:Svenskoya	1105
+Norway:Svalbard:104	1106
+Norway:Svalbard:Kongsoya	1107
+Norway:Svalbard:Spitsbergen	1108
+Norway:Svalbard:Kvitoya	1109
+Norway:Svalbard:31	1110
+Norway:Svalbard:Nordaustlandet	1111
+Nepal	1112
+Nauru	1113
+New Zealand:1	1114
+New Zealand:Auckland Island	1115
+New Zealand:Stewart Island	1116
+New Zealand:Resolution Island	1117
+New Zealand:5	1118
+New Zealand:Pitt Island	1119
+New Zealand:Chatham Island	1120
+New Zealand:Rangitoto Island	1121
+New Zealand:South Island	1122
+New Zealand:Great Barrier Island	1123
+New Zealand:North Island	1124
+New Zealand:12	1125
+New Zealand:13	1126
+Oman:Jazirat Masirah	1127
+Oman	1128
+Oman:3	1129
+Oman:Ra's Musandam	1130
+Pakistan	1131
+Panama:Isla de Coiba	1132
+Panama:Isla San Jose	1133
+Panama:Isla del Rey	1134
+Panama:Isla Colon	1135
+Panama	1136
+Pitcairn Islands:Henderson	1137
+Peru	1138
+Philippines:Tawitawi	1139
+Philippines:Sulu	1140
+Philippines:Basilan	1141
+Philippines:Samal Island	1142
+Philippines:5	1143
+Philippines:Balabac Island	1144
+Philippines:7	1145
+Philippines:Camiguin	1146
+Philippines:Siquijor	1147
+Philippines:10	1148
+Philippines:Mindanao	1149
+Philippines:Siargao	1150
+Philippines:Panaon	1151
+Philippines:Bohol	1152
+Philippines:Dinagat	1153
+Philippines:16	1154
+Philippines:17	1155
+Philippines:Guimaras	1156
+Philippines:Negros	1157
+Philippines:Cebu	1158
+Philippines:21	1159
+Philippines:Palawan	1160
+Philippines:23	1161
+Philippines:Leyte	1162
+Philippines:Biliran	1163
+Philippines:26	1164
+Philippines:Panay	1165
+Philippines:Culion	1166
+Philippines:Busuanga	1167
+Philippines:Sibuyan	1168
+Philippines:Samar	1169
+Philippines:Masbate	1170
+Philippines:33	1171
+Philippines:Tablas	1172
+Philippines:Ticao	1173
+Philippines:Burias	1174
+Philippines:Mindoro	1175
+Philippines:Marinduque	1176
+Philippines:79	1177
+Philippines:Catanduanes Island	1178
+Philippines:81	1179
+Philippines:Polillo Island	1180
+Philippines:43	1181
+Philippines:Camiguin-Babuyan	1182
+Philippines:89	1183
+Philippines:Calayan	1184
+Philippines:Batan	1185
+Philippines:Itbayat	1186
+Palau:2	1187
+Palau:Babelthuap	1188
+Papua New Guinea:Tagula	1189
+Papua New Guinea:Rossel	1190
+Papua New Guinea:Sidea	1191
+Papua New Guinea:Normanby Island	1192
+Papua New Guinea:Fergusson Island	1193
+Papua New Guinea:Goodenough Island	1194
+Papua New Guinea:Woodlark	1195
+Papua New Guinea:Kiwai	1196
+Papua New Guinea:Kiriwina	1197
+Papua New Guinea:Purutu	1198
+Papua New Guinea:Umboi	1199
+Papua New Guinea:Bougainville	1200
+Papua New Guinea:Long Island	1201
+Papua New Guinea:Buka	1202
+Papua New Guinea:Karkar	1203
+Papua New Guinea:New Britain	1204
+Papua New Guinea:Ambitle	1205
+Papua New Guinea:Lihir	1206
+Papua New Guinea:48	1207
+Papua New Guinea:Tatau	1208
+Papua New Guinea	1209
+Papua New Guinea:New Ireland	1210
+Papua New Guinea:New Hanover	1211
+Papua New Guinea:Rambutyo	1212
+Papua New Guinea:Manus Island	1213
+Papua New Guinea:Mussau	1214
+Poland	1215
+Puerto Rico:Isla Mona	1216
+Puerto Rico:Viaques Island	1217
+Puerto Rico	1218
+North Korea:8	1219
+North Korea	1220
+Madeira Islands:Madeira	1221
+Azores:Santa Maria	1222
+Azores:Sao Miguel	1223
+Azores:Pico	1224
+Azores:10	1225
+Azores:11	1226
+Azores:Terceira	1227
+Azores:Flores	1228
+Portugal	1229
+Paraguay	1230
+Palestine:Gaza Strip	1231
+Palestine:2	1232
+French Polynesia:16	1233
+French Polynesia:23	1234
+French Polynesia:24	1235
+French Polynesia:25	1236
+French Polynesia:26	1237
+French Polynesia:28	1238
+French Polynesia:Tahiti	1239
+French Polynesia:Moorea	1240
+French Polynesia:Raitea	1241
+French Polynesia:46	1242
+French Polynesia:47	1243
+French Polynesia:Tahaa	1244
+French Polynesia:55	1245
+French Polynesia:57	1246
+French Polynesia:65	1247
+French Polynesia:Fatu Hiva	1248
+French Polynesia:Tahuata	1249
+French Polynesia:Hiva Oa	1250
+French Polynesia:Ua Pu	1251
+French Polynesia:Ua Huka	1252
+French Polynesia:Nuku Hiva	1253
+Qatar	1254
+Romania	1255
+Russia:1	1256
+Russia:2	1257
+Russia:3	1258
+Russia:Shikotan To	1259
+Russia:Ostrov Kunashir	1260
+Russia:Ostrov Iturup	1261
+Russia:8	1262
+Russia:Ostrov Urup	1263
+Russia:Ostrov Simushir	1264
+Russia:Ostrov Rasshua	1265
+Russia:Ostrov Shiashkotan	1266
+Russia:Ostrov Onekotan	1267
+Russia:Ostrov Paramushir	1268
+Russia:Ostrov Shumshu	1269
+Russia:Ostrov Atlasova	1270
+Russia:Ostrov Sakhalin	1271
+Russia:29	1272
+Russia:Ostrov Feklistova	1273
+Russia:Ostrov Bol'shoy Shantar	1274
+Russia:32	1275
+Russia:Ostrov Bering	1276
+Russia:Ostrov Zav'yalova	1277
+Russia:Ostrov Karaginskiy	1278
+Russia:Solovetskiye Ostrova	1279
+Russia:56	1280
+Russia:Ostrov Morzhovets	1281
+Russia:Ostrov Kolguyev	1282
+Russia:76	1283
+Russia:75	1284
+Russia:Ostrov Ayon	1285
+Russia:Ostrov Vaygach	1286
+Russia:85	1287
+Russia:88	1288
+Russia:Ostrov Mezhdusharskiy	1289
+Russia:Ostrov Vrangelya	1290
+Russia:Ostrov Yarok	1291
+Russia:Ostrov Oleniy	1292
+Russia:Ostrov Sibiryakova	1293
+Russia:Ostrov Shokal'skogo	1294
+Russia:Ostrov Dzhangylakh	1295
+Russia:Novaya Zemlya:South	1296
+Russia:Ostrov Belyy	1297
+Russia:107	1298
+Russia:Ostrov Vil'kitskogo	1299
+Russia:Ostrov Bol'shoy Lyakhovskiy	1300
+Russia:Ostrova Dunay	1301
+Russia:113	1302
+Russia:114	1303
+Russia:Ostrov Stolbovoy	1304
+Russia:Ostrov Malyy Lyakhovskiy	1305
+Russia:Ostrov Plavnikovyye	1306
+Russia:Ostrov Bol'shoy Begichev	1307
+Russia:Ostrov Kolosovykh	1308
+Russia:Ostrova Arkticheskogo Instituta	1309
+Russia:Ostrov Novaya Sibr'	1310
+Russia:Ostrov Bel'kovskiy	1311
+Russia:135	1312
+Russia:Ostrov Kotel'nyy	1313
+Russia:Ostrov Taymyr	1314
+Russia:141	1315
+Russia:Ostrova Petra	1316
+Russia:Ostrov Nordenshelda	1317
+Russia:Ostrov Bennetta	1318
+Russia:Novaya Zemlya:North	1319
+Russia:Ostrov Russkiy	1320
+Russia:156	1321
+Russia:Ostrov Komsomol'skoy Pravdy	1322
+Russia	1323
+Russia:Ostrov Malyy Taymyr	1324
+Russia:Ostrov Starokadomskogo	1325
+Russia:Ostrov Bol'shevik	1326
+Russia:Ostrov Vize	1327
+Russia:171	1328
+Russia:Ostrov Pioner	1329
+Russia:175	1330
+Russia:Ostrov Sal'm	1331
+Russia:Ostrov Oktyabr'skoy Revolyutsii	1332
+Russia:180	1333
+Russia:182	1334
+Russia:Ostrov Mak-Klintoka	1335
+Russia:Ostrov Hooker	1336
+Russia:Ostrov Gallya	1337
+Russia:189	1338
+Russia:Zemlya Alexsandry	1339
+Russia:Zemlya Vilcheka	1340
+Russia:Zemlya Georga	1341
+Russia:Ostrov Ushakova	1342
+Russia:198	1343
+Russia:Ostrov Salisbury	1344
+Russia:92	1345
+Russia:201	1346
+Russia:Ostrov Greem-Bell	1347
+Russia:Ostrov Shmidta	1348
+Russia:Ostrov Komsomolets	1349
+Russia:209	1350
+Russia:98	1351
+Russia:Ostrova Belayazemiya	1352
+Russia:Ostrov Rudolfa	1353
+Rwanda	1354
+Western Sahara	1355
+Saudi Arabia:Jazair Farasan:South	1356
+Saudi Arabia:2	1357
+Saudi Arabia:3	1358
+Saudi Arabia	1359
+Sudan	1360
+South Sudan	1361
+Senegal	1362
+Singapore	1363
+South Sandwich Islands:Montagu Island	1364
+South Georgia	1365
+Saint Helena	1366
+Ascension Island	1367
+Solomon Islands:Vanikoro	1368
+Solomon Islands:Rennel	1369
+Solomon Islands:Nendo	1370
+Solomon Islands:San Cristobal	1371
+Solomon Islands:Maramasike	1372
+Solomon Islands:Guadalcanal	1373
+Solomon Islands:Ngella Sule	1374
+Solomon Islands:Pavuvu	1375
+Solomon Islands:Tetepare	1376
+Solomon Islands:Nggatokae	1377
+Solomon Islands:Vangunu	1378
+Solomon Islands:Rendova	1379
+Solomon Islands:San Jorge Island	1380
+Solomon Islands:Malaita	1381
+Solomon Islands:New Georgia	1382
+Solomon Islands:Ranongga	1383
+Solomon Islands:Kolombangara	1384
+Solomon Islands:Vella Lavella	1385
+Solomon Islands:Santa Isabel	1386
+Solomon Islands:Shortland	1387
+Solomon Islands:Choiseul	1388
+Sierra Leone:Sherbro Island	1389
+Sierra Leone	1390
+El Salvador	1391
+San Marino	1392
+Somalia:Somaliland	1393
+Somalia	1394
+Saint Pierre and Miquelon:Saint Pierre	1395
+Saint Pierre and Miquelon:Miquelon	1396
+Serbia	1397
+Sao Tome and Principe:Ilha da Sao Tome	1398
+Sao Tome and Principe:Ilha do Principe	1399
+Suriname	1400
+Slovakia	1401
+Slovenia	1402
+Sweden:Oland	1403
+Sweden:Gotland	1404
+Sweden:Faro	1405
+Sweden:Orno	1406
+Sweden:Varmdo	1407
+Sweden	1408
+Swaziland	1409
+Sint Maarten	1410
+Seychelles:Mahe Island	1411
+Syria	1412
+Turks and Caicos Islands:Providenciales Island	1413
+Turks and Caicos Islands:Grand Caicos Island	1414
+Turks and Caicos Islands:North Caicos Island	1415
+Chad	1416
+Togo	1417
+Thailand:Ko Tarutao 	1418
+Thailand:Ko Lanta Yai	1419
+Thailand:Ko Yao Yai	1420
+Thailand:Ko Phuket	1421
+Thailand:Ko Phra Thong	1422
+Thailand:Ko Samui	1423
+Thailand:Ko Phangan	1424
+Thailand:Ko Kut	1425
+Thailand:Ko Chang	1426
+Thailand	1427
+Tajikistan:1	1428
+Tajikistan:2	1429
+Tajikistan:3	1430
+Turkmenistan:Ogurja Ada	1431
+Turkmenistan	1432
+Timor-Leste:1	1433
+Timor-Leste	1434
+Timor-Leste:3	1435
+Tonga:'Eua	1436
+Tonga:Tongatapu	1437
+Tonga:Vava'u	1438
+Trinidad	1439
+Tobago	1440
+Tunisia:Jerba	1441
+Tunisia:Shergui Island	1442
+Tunisia	1443
+Turkey:Gokceada	1444
+Turkey	1445
+Turkey:North	1446
+Taiwan:Chinmen Tao	1447
+Taiwan	1448
+Tanzania:Mafia Island	1449
+Tanzania:Zanzibar	1450
+Tanzania:Pemba Island	1451
+Tanzania:4	1452
+Tanzania:5	1453
+Tanzania	1454
+Uganda:1	1455
+Uganda:2	1456
+Uganda	1457
+Ukraine:Ostrov Dzharylgach	1458
+Ukraine	1459
+Uruguay	1460
+USA:Hawaii	1461
+USA:Hawaii:Lanai	1462
+USA:Hawaii:Maui	1463
+USA:Hawaii:Molokai	1464
+USA:Hawaii:Oahu	1465
+USA:Hawaii:Nihau	1466
+USA:Hawaii:Kauai	1467
+USA:Florida:Key West	1468
+USA:Florida:Sugarloaf Key	1469
+USA:Florida:Big Pine Key	1470
+USA:Florida:Marathon Key	1471
+USA:Florida:Long Key	1472
+USA:13	1473
+USA:Florida:Key Largo	1474
+USA:Florida:Sanibel Island	1475
+USA:16	1476
+USA:Texas:Padre Island	1477
+USA:Texas:Matagorda Island	1478
+USA:Florida:Hutchinson Island	1479
+USA:Texas:San Jose Island	1480
+USA:Texas:Matagorda	1481
+USA:Texas:Galveston Island	1482
+USA:Louisiana:Marsh Island	1483
+USA:Florida:Saint George Island	1484
+USA:25	1485
+USA:Louisiana:Chandeleur Island	1486
+USA:Louisiana:Isle au Pitre	1487
+USA:Mississippi:Horn Island	1488
+USA:Alabama:Dauphin Island	1489
+USA:30	1490
+USA:California:San Clemente Island	1491
+USA:California:San Nicolas Island	1492
+USA:California:Santa Catalina Island	1493
+USA:California:Santa Rosa Island	1494
+USA:California:San Miguel Island	1495
+USA:California:Santa Cruz Island	1496
+USA:37	1497
+USA:Core Banks	1498
+USA:Ocracoke Island	1499
+USA:Pea Island	1500
+USA:41	1501
+USA:Chincoteague Island	1502
+USA:Long Beach Island	1503
+USA:44	1504
+USA:New York:Long Island	1505
+USA:Massachusettes:Nantucket Island	1506
+USA:Massachusettes:Martha's Vineyard	1507
+USA:48	1508
+USA:49	1509
+USA:50	1510
+USA:51	1511
+USA:52	1512
+USA:53	1513
+USA:Maine:Mount Desert Island	1514
+USA:55	1515
+USA:Door Penninsula	1516
+USA:57	1517
+USA:58	1518
+USA:59	1519
+USA:Drummond Island	1520
+USA:61	1521
+USA:62	1522
+USA:Madeline Island	1523
+USA:Stockton Island	1524
+USA:65	1525
+USA:66	1526
+USA:67	1527
+USA:68	1528
+USA:69	1529
+USA:70	1530
+USA:71	1531
+USA:Washington:Whidbey Island	1532
+USA:73	1533
+USA:Washington:San Juan Island	1534
+USA:Washington:Orcas Island	1535
+USA	1536
+USA:Alaska:Amchitka Island	1537
+USA:Alaska:Kagalaska Island	1538
+USA:Alaska:Little Tanaga Island	1539
+USA:Alaska:Tanaga Island	1540
+USA:Alaska:Kanaga Island	1541
+USA:Alaska:Adak Island	1542
+USA:Alaska:203	1543
+USA:Alaska:Semisopochnoi Island	1544
+USA:Alaska:Great Sitkan Island	1545
+USA:Alaska:Kiska Island	1546
+USA:Alaska:Amlia Island	1547
+USA:Alaska:Seguam Island	1548
+USA:Alaska:Atka Island	1549
+USA:Alaska:Agattu Island	1550
+USA:Alaska:Yunaska Island	1551
+USA:Alaska:Chuginadak Island	1552
+USA:Alaska:Attu Island	1553
+USA:Alaska:Umnak Island	1554
+USA:Alaska:221	1555
+USA:Alaska:Unalaska Island	1556
+USA:Alaska:Akutan Island	1557
+USA:Alaska:Akun Island	1558
+USA:Alaska:Senak Island	1559
+USA:Alaska:Deer Island	1560
+USA:Alaska:Unimak Island	1561
+USA:Alaska:237	1562
+USA:Alaska:Big Koniuji Island	1563
+USA:Alaska:Annette Island	1564
+USA:Alaska:Nagai Island	1565
+USA:Alaska:Dall Island	1566
+USA:Alaska:107	1567
+USA:Alaska:Unga Island	1568
+USA:Alaska:109	1569
+USA:Alaska:Chirikof Island	1570
+USA:Alaska:Revillagigedo Island	1571
+USA:Alaska:Prince of Wales Island	1572
+USA:Alaska:Zarembo Island	1573
+USA:Alaska:Etolin Island	1574
+USA:Alaska:Tugidak Island	1575
+USA:Alaska:116	1576
+USA:Alaska:Saint George Island	1577
+USA:Alaska:Mitkof Island	1578
+USA:Alaska:Kuiu Island	1579
+USA:Alaska:Kupreanof Island	1580
+USA:Alaska:Sitkalidak Island	1581
+USA:Alaska:Saint Paul Island	1582
+USA:Alaska:Baranof Island	1583
+USA:Alaska:Uganik Island	1584
+USA:Alaska:Kodiak Island	1585
+USA:Alaska:Chichagof Island	1586
+USA:Alaska:299	1587
+USA:Alaska:Admiralty Island	1588
+USA:Alaska:Afognak Island	1589
+USA:Alaska:Shuyak Island	1590
+USA:Alaska:Hagemeister Island	1591
+USA:Alaska:316	1592
+USA:Alaska:133	1593
+USA:Alaska:Montague Island	1594
+USA:Alaska:Nunivak Island	1595
+USA:Alaska:136	1596
+USA:Alaska:Hinchinbrook Island	1597
+USA:Alaska:138	1598
+USA:Alaska:139	1599
+USA:Alaska:Saint Matthew Island	1600
+USA:Alaska:338	1601
+USA:Alaska:142	1602
+USA:Alaska:143	1603
+USA:Alaska	1604
+Uzbekistan:1	1605
+Uzbekistan:2	1606
+Uzbekistan	1607
+Uzbekistan:4	1608
+Vatican	1609
+Grenadines:Canouan	1610
+Grenadines:Bequia	1611
+Saint Vincent	1612
+Venezuela:1	1613
+Venezuela:2	1614
+Venezuela:Isla La Tortuga	1615
+Venezuela:Isla de Margarita	1616
+Venezuela	1617
+Virgin Islands, British:Tortola	1618
+Virgin Islands, British:2	1619
+Virgin Islands, British:Anegada	1620
+Virgin Islands, US:Saint Croix	1621
+Virgin Islands, US:Saint John	1622
+Virgin Islands, US:Saint Thomas	1623
+Vietnam:Con Son	1624
+Vietnam:Dao Phu Quoc	1625
+Vietnam:3	1626
+Vietnam:Dao Cat Ba	1627
+Vietnam:Bac Nha Mac	1628
+Vietnam:Bai Nha Mac	1629
+Vietnam:Dao Car Bau	1630
+Vietnam	1631
+Vanuatu:Anatom	1632
+Vanuatu:Tanna	1633
+Vanuatu:Erromango	1634
+Vanuatu:Efate	1635
+Vanuatu:Epi	1636
+Vanuatu:Ambrym	1637
+Vanuatu:Malakula	1638
+Vanuatu:Malo	1639
+Vanuatu:Pentecost	1640
+Vanuatu:Aoba	1641
+Vanuatu:Maewo	1642
+Vanuatu:Espiritu Santo	1643
+Vanuatu:Santa Maria	1644
+Vanuatu:Vanua Lava	1645
+Wallis and Futuna:Futuna	1646
+Wallis and Futuna:Uvea	1647
+Samoa:Upolu	1648
+Samoa:Savai'i	1649
+Yemen:Suqutra	1650
+Yemen:2	1651
+Yemen:3	1652
+Yemen:4	1653
+Yemen	1654
+South Africa:Marion Island	1655
+South Africa	1656
+Lesotho	1657
+Zambia:1	1658
+Zambia	1659
+Zimbabwe:1	1660
+Zimbabwe	1661
