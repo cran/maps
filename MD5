@@ -1,4 +1,4 @@
-0753ba76bcf9374f559f9610f3d54d79 *DESCRIPTION
+57144f77925973be438cf445b2a47822 *DESCRIPTION
 f0606d720da62d981c3fe5f3097cd888 *NAMESPACE
 c36bed0c32d29a8f4231fcee7215746b *R/db.r
 b47ae9aa3c8ee795873776c237cf8ee4 *R/iso.r
@@ -69,8 +69,8 @@ dc4668c3b67ae20d466fdb60c07be88c *man/world.cities.Rd
 561ad7b85c6694d0a45f98f7a2a78b62 *man/world2.Rd
 eccd234607d07a4bb8470fb29acdac41 *src/Gmake.c
 4e6736aa698e81a165bbe6052ae3bf8e *src/Lmake.c
-2caba7a52a2b6cda37d6357c7f41ba75 *src/Makefile
-d1ebffb0e35151ea78870f20b78320d5 *src/Makefile.win
+5971ab51893c0f7b1050b1dde17ea7e3 *src/Makefile
+e905f3bf5bc3b4f34a22305ba8eb381c *src/Makefile.win
 ee000c17ddd154301f679ce267ed4918 *src/README
 acc0367c59ce004af98b8640941ec7bd *src/convert.awk
 a977a965cbf8f703d68afaa451eb3a55 *src/county.gon
@@ -89,6 +89,7 @@ f7c622f74f28e328d3d65f265f0a26c3 *src/italy.gonstats
 0a2cf4ecf0a34ce28b2b1095cd193d22 *src/italy.line
 1495aafdb361a79248ca9c2950c57d90 *src/italy.linestats
 1ddcc46403193ad474b3934d046f10bf *src/italy.name
+885521324ea75cdfcea9d91a5afb0ec5 *src/legacy_convert.awk
 f1a1b6c9257c30aed9625a01dcec660b *src/legacy_world.gon
 0902fc2c7b181fbf40673b9d9748ad00 *src/legacy_world.gonstats
 76e802969266838ed27ee0a27f05ba80 *src/legacy_world.line
@@ -128,4 +129,4 @@ e00687fd8b955d445553fb401bf2bf3a *src/usa.linestats
 b7364358afb7427a4aa05d7c60b67fff *src/world.gonstats
 ed19bd00182b514c7a58bbc93d09d710 *src/world.line
 dcd3e4d2e362b988705782f84022ae45 *src/world.linestats
-df82ad37d84dae4c2ff01f92c846cffe *src/world.name
+842425bd803daeaffda959c0dea5c5c3 *src/world.name
