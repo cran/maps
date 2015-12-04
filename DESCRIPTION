@@ -1,7 +1,7 @@
 Package: maps
 Title: Draw Geographical Maps
-Version: 3.0.0-2
-Date: 2015-10-02
+Version: 3.0.1
+Date: 2015-11-30
 Author: Original S code by Richard A. Becker and Allan R. Wilks.
 	R version by Ray Brownrigg.
         Enhancements by Thomas P Minka and Alex Deckmyn.
@@ -15,5 +15,5 @@ License: GPL-2
 Maintainer: Alex Deckmyn <alex.deckmyn@meteo.be>
 NeedsCompilation: yes
 Repository: CRAN
-Packaged: 2015-10-02 08:29:37 UTC; dalex
-Date/Publication: 2015-10-02 22:01:25
+Packaged: 2015-12-03 20:17:30 UTC; dalex
+Date/Publication: 2015-12-04 08:40:37
