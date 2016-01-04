@@ -1,4 +1,4 @@
-4b84cf22ef9b518d9dce5fa7752d9039 *DESCRIPTION
+64eb23c0bc2dd991335ad60aa058cd12 *DESCRIPTION
 f0606d720da62d981c3fe5f3097cd888 *NAMESPACE
 024c9440c4f04266b91cdeb63a1af36f *R/db.r
 b47ae9aa3c8ee795873776c237cf8ee4 *R/iso.r
@@ -32,7 +32,7 @@ e5e971cef422bb733644791ebdc05547 *data/state.fips.rda
 5c911aec44edd98c83aca470f8fbfa77 *data/world.cities.rda
 e338da5c189460e1ec63cf396799830b *data/world2MapEnv.rda
 a46b3243710a9eb7369556ca8a9bb0cc *data/worldMapEnv.rda
-b818bd52922ec259d3d4a93d472eb401 *inst/NEWS.Rd
+7d3b05e0b77b3edf131871250b08e432 *inst/NEWS.Rd
 90e421f1285e36de5dfeb481bc611438 *inst/README_v3
 5f9fab4844ba7d6a1ad6f65e8f684355 *man/area.map.Rd
 bcd90a5871cfbca677d5e2590d308d87 *man/canada.cities.Rd
@@ -46,7 +46,7 @@ b39d593d4b02815c823f555cf8599ee5 *man/internal.Rd
 bd84406a4911f08ea727c1a0e86ea214 *man/iso3166.Rd
 b26a115b2797ec918ad277ce680dcd8a *man/italy.Rd
 14acb7101174d168d25a26f1a6932d64 *man/legacy_world.Rd
-1ffff556f8f8ef6448ad4e18cc87c5af *man/map.Rd
+5f74b7e289673b8e6a572c83bead5d2d *man/map.Rd
 f44d0c508a2f2b6cbaac31597eebb5a3 *man/map.axes.Rd
 908aea312e86dc8781af88eafcc4f966 *man/map.cities.Rd
 7154c4758c1f712f926af93e5fce1c60 *man/map.scale.Rd
@@ -125,8 +125,8 @@ f298493e3329a78ce0931272d511b60f *src/usa.gon
 64612e351ce91a03a2040b0edd64d295 *src/usa.line
 e00687fd8b955d445553fb401bf2bf3a *src/usa.linestats
 9d7b8808ac4036ebb98e4f94a5ec8281 *src/usa.name
-86af946c54076e9c35699ab9aed50c58 *src/world.gon
-b7364358afb7427a4aa05d7c60b67fff *src/world.gonstats
-ed19bd00182b514c7a58bbc93d09d710 *src/world.line
-dcd3e4d2e362b988705782f84022ae45 *src/world.linestats
-7d0a96c6dffb129a8b07b25778acc4f1 *src/world.name
+b439dddf2dfb76db75ceb6474ff2e96e *src/world.gon
+9db73bddc8b7fd128af262c729dc2c9b *src/world.gonstats
+6287341430c22c40d7fbb788209bf3aa *src/world.line
+a6800aa2d7768586bb37131a04c7a0e2 *src/world.linestats
+5eaea4b897d3e2943fade0e6ccbffb83 *src/world.name
