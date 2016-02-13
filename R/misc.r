@@ -154,27 +154,30 @@ function (x, y, relwidth = 0.15, metric = TRUE, ratio = TRUE, ...)
   invisible(scale)
 }
 
-map.wrap <- function(p) {
+map.wrap <- function(p, xlim=NULL) {
+  # new version Alex Deckmyn
+  # faster, a bit more robust (check data range), bugs fixed, xlim option added
   # insert NAs to break lines that wrap around the globe.
   # does not work properly with polygons.
   # p is list of x and y vectors
-  dx = abs(diff(p$x))
-  dax = abs(diff(abs(p$x)))
-  j = which(dx/dax > 50)
-  j = c(j, length(p$x))
-  start = 1
-  x = c()
-  y = c()
-  for(i in j) {
-  if(length(x) > 0) {
-    x = c(x, NA)
-    y = c(y, NA)
+  # xc is the central value of the longitude co-ordinate: usually 0, but world2 has [0,360], so 180
+  if (is.null(xlim)) {
+    xc <- 0
+    xr <- diff(range(p$x, na.rm=TRUE))
+  } else {
+    xc <- mean(xlim)
+    xr <- diff(xlim)
   }
-  x = c(x, p$x[start:i])
-  y = c(y, p$y[start:i])
-  start = i + 1
-  }
-## AD: this appears to be BUG. Why take out the first point?
-## It is not NA. Maybe the length(x)>0 check came later...
-  list(x = x[2:length(x)], y = y[2:length(y)])
+  dx <- abs(diff(p$x - xc))
+  dax <- abs(diff(abs(p$x - xc)))
+  j <- which(dx/dax > 50 & dx > (xr * 0.8) )
+  if (length(j)==0) return(p)
+  j <- c(j, length(p$x))
+  ind <- seq_along(p$x)
+
+  index <- c(ind[1:j[1]],  
+             unlist(lapply(1:(length(j)-1), function(k) c(NA, ind[(j[k]+1):j[(k + 1)]]) )) )
+
+  list(x = p$x[index], y = p$y[index])
 }
+

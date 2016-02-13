@@ -10,16 +10,16 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
   fill = FALSE, col = 1, plot = TRUE, add = FALSE, namesonly = FALSE,
   xlim = NULL, ylim = NULL, wrap = FALSE, resolution = if (plot) 1 else 0,
   type = "l", bg = par("bg"), mar = c(4.1, 4.1, par("mar")[3], 0.1),
-  myborder = 0.01, ...)
+  myborder = 0.01, namefield="name", ...)
 }
 \arguments{
   \item{database}{
-    character string naming a geographical database, or a list of
+    character string naming a geographical database, a list of
     \code{x}, \code{y}, and \code{names} obtained from a previous call to
-    \code{map}.
+    \code{map} or a spatial object of class \code{SpatialPolygons} or \code{SpatialLines}.
     The string choices include a \code{\link{world}} map,
     three USA databases (\code{\link{usa}}, \code{\link{state}},
-    \code{\link{county}}), and more (see the package index).  The
+    \code{\link{county}}), and more (type \code{help(package='maps')} to see the package index).  The
     location of the map databases may be overridden by setting the
     \code{R_MAP_DATA_DIR} environment variable.
   }
@@ -35,7 +35,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     \code{exact}, a subset is selected for drawing. The regions may also be 
     defined using (perl) regular expressions. This makes it possible to use 
     'negative' expressions like \code{"Norway(?!:Svalbard)"}, which means Norway
-    and all islands except Svalbard.
+    and all islands except Svalbard. All entries are case insensitive.
     The default selects all polygons in the database.
   }
   \item{exact}{
@@ -148,6 +148,7 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     roughly speaking, successive points on the polyline that are
     within \code{resolution} device pixels of one another are collapsed
     to a single point (see the Reference for further details).
+    Thinning is not performed if \code{plot = FALSE} or when polygons are drawn (\code{fill = TRUE} or \code{database} is a list of polygons).
   }
   \item{type}{
     character string that controls drawing of the map.
@@ -166,7 +167,10 @@ map(database = "world", regions = ".", exact = FALSE, boundary = TRUE,
     scalar or vector of length 2 specifying the porportion of the plot
     to add to the defined or computed limits as borders.
   }
-  \item{...}{Extra arguments passed to \code{polygon} or \code{lines}. Of particular interest may be the options \code{border, lty} that control the color and line type of the polygon borders.}
+  \item{namefield}{
+    A vector of column names to be used as region name if \code{database} is a \code{SpatialPolygonsDataFrame}. Ignored in all other cases.
+  }
+  \item{...}{Extra arguments passed to \code{polygon} or \code{lines}. Of particular interest may be the options \code{border} and\code{lty} that control the color and line type of the polygon borders.}
 }
 \details{
 The simplest form of use of this function is:
@@ -263,7 +267,8 @@ if(require(mapproj)) {	# mapproj is used for  projection="polyconic"
 }
 \seealso{
   \code{\link{map.text}}, \code{\link{map.axes}},
-  \code{\link{map.scale}}, \code{\link[mapproj]{map.grid}} (in the \code{mapproj} library)
+  \code{\link{map.scale}}, \code{\link[mapproj]{map.grid}} (in the \code{mapproj} library),
+  \code{\link{SpatialPolygons2map}}
 }
 \references{
   Richard A. Becker, and Allan R. Wilks,

@@ -7,7 +7,7 @@ Low (mid) resolution World Map
 }
 \usage{data(worldMapEnv)}
 \description{
-This updated world map is imported from the Natural Earth project (the 1:50m resolution version). It is up to date (2013) and replaces a much older version based on the CIA World Data Bank II data.
+This updated (2013) world map is imported from the Natural Earth project (the 1:50m resolution version). It replaces a much older version based on the CIA World Data Bank II data.
 That older version is still included in the package and can reached as \code{legacy_world}.
 }
 \format{
@@ -18,17 +18,17 @@ This environment variable (\code{R_MAP_DATA_DIR_WORLD}) is set at package load t
 already exist}.  Hence setting the environment variable before loading
 the package can override the default location of the binary datasets.
 
-During a transition period (\code{maps} version 3.0) it is possible to switch to the old legacy map using the function \code{world.legacy(TRUE)} or by setting the setting the environment variable R_MAP_DATA_LEGACY=TRUE prior to loading the package.
+During a transition period (\code{maps} version 3.0--1) it is possible to switch to the old legacy map using the function \code{world.legacy(TRUE)} or by setting the setting the environment variable R_MAP_DATA_LEGACY=TRUE prior to loading the package.
 
 }
 \source{
 The Natural Earth data set is available from \url{http://www.naturalearthdata.com}.
-
-The legacy CIA World Data Bank II is currently (mid-2003) available from 
-\url{https://www.evl.uic.edu/pape/data/WDB/}.
+}
+\details{
+As of version 3.1, the \code{world} database no longer contains any lakes. These have been moved to a separate database called \code{lakes}.
 }
 \seealso{
-\code{\link{map}},\code{\link{world.legacy}},\code{\link{legacy_world}}
+\code{\link{map}},\code{\link{world.legacy}},\code{\link{legacy_world}},\code{\link{lakes}}
 }
 \examples{
 map('world', fill = TRUE, col = 1:10)

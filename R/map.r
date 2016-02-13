@@ -6,35 +6,55 @@
 # should consecutive NA's count as one?
 subgroup <- function(x, i) {
   n <- length(x)
-  breaks <- (1:n)[is.na(x)]
+  breaks <- which(is.na(x))
   if (length(breaks) == 0) {
-    starts <- 1; ends <- n
+    starts <- 1
+    ends <- n
   } else {
     starts <- c(1, breaks + 1)
     ends <- c(breaks - 1, n)
   }
-  result <- numeric(0)
-  for(j in i) {
-    p <- x[starts[j]:ends[j]]
-    if (length(result) == 0) result <- p
-    else result <- c(result, NA, p)
-  }
-  result
+## AD: EXTRA: allow negative values in i reverse direction
+  pl <- function(j) if(j>0) x[starts[j]:ends[j]] else x[ends[abs(j)]:starts[abs(j)]]
+  as.numeric(unlist(lapply(i,function(j) c(NA,pl(j))))[-1])
 }
 
 sub.polygon <- function(p, i) {
   lapply(p[c("x", "y")], function(x) subgroup(x, i))
 }
 
+# FUTURE:
+#sub.gondata <- function(p, i) {
+#  x <- p$gondata
+#  n <- length(x)
+#  breaks <- which(is.na(x))
+#  if (length(breaks) == 0) {
+#    starts <- 1
+#    ends <- n
+#  } else {
+#    starts <- c(1, breaks + 1)
+#    ends <- c(breaks - 1, n)
+#  }
+#  lengths <- starts - ends + 1
+#  i2 <- unlist(lapply(i,function(j) c(NA,x[starts[j]:ends[j]])))[-1]
+#  xy <- sub.polygon(p, i2)
+#}
+
 # returns a sub-map of the named map corresponding to the given regions
 # regions is a vector of regular expressions to match to the names in the map
 # regions outside of xlim, ylim may be omitted
 map.poly <- function(database, regions = ".", exact = FALSE,
                      xlim = NULL, ylim = NULL, boundary = TRUE,
-		     interior = TRUE, fill = FALSE, as.polygon = FALSE) {
+		     interior = TRUE, fill = FALSE, as.polygon = FALSE, namefield="name") {
   if (!is.character(database)) {
     if (!as.polygon) stop("map objects require as.polygon=TRUE")
-    the.map <- database
+    if (inherits(database,"Spatial")){
+      if (inherits(database,"SpatialPolygons")) the.map <- SpatialPolygons2map(database, 
+                                                               namefield=namefield)
+      else if (inherits(database,"SpatialLines")) the.map <- SpatialLines2map(database, 
+                                                             namefield=namefield)
+      else stop("database not supported.")
+    } else the.map <- database
     if (identical(regions,".")) {
       # speed up the common case
       nam = the.map$names
@@ -103,12 +123,8 @@ function(database = "world", regions = ".", exact = FALSE,
 	 col = 1, plot = TRUE, add = FALSE, namesonly = FALSE, 
          xlim = NULL, ylim = NULL, wrap = FALSE,
          resolution = if (plot) 1 else 0, type = "l", bg = par("bg"),
-         mar = c(4.1, 4.1, par("mar")[3], 0.1), myborder = 0.01, ...)
+         mar = c(4.1, 4.1, par("mar")[3], 0.1), myborder = 0.01, namefield="name", ...)
 {
-  # AD: resolution is should be 0 by default if fill==TRUE
-  # so you get less artefacts in polygons because of the thinning
-  # BUT: that's rather extreme with worldHires, so we leave it to the user
-
   # parameter checks
   if (resolution>0 && !plot) 
     stop("must have plot=TRUE if resolution is given")
@@ -125,7 +141,7 @@ function(database = "world", regions = ".", exact = FALSE,
   if (is.character(database)) as.polygon = fill
   else as.polygon = TRUE
   coord <- map.poly(database, regions, exact, xlim, ylim, 
-                    boundary, interior, fill, as.polygon)
+                    boundary, interior, fill, as.polygon, namefield=namefield)
   if (is.na(coord$x[1])) stop("first coordinate is NA.  bad map data?")
   if (plot) {
     .map.range(coord$range)
@@ -143,6 +159,9 @@ function(database = "world", regions = ".", exact = FALSE,
       else warning("projection failed for some data")
     coord$names <- nam
   }
+  # AD: we do wrapping first: slightly better than when run after the thinning
+  #     also now the output data is also wrapped if plot=FALSE
+  if (wrap) coord <- map.wrap(coord)
   # do the plotting, if requested
   if (plot) {
     # for new plots, set up the coordinate system;
@@ -179,15 +198,14 @@ function(database = "world", regions = ".", exact = FALSE,
       }
       on.exit(par(opar))
     }
-    # thinning only works if you have polylines from a database
-    if (is.character(database) && resolution != 0 && type != "n") {
-      pin <- par("pin")
-      usr <- par("usr")
-      resolution <- resolution * min(diff(usr)[-2]/pin/100)
-      coord[c("x", "y")] <- mapthin(coord, resolution)
-    }
     if (type != "n") {
-      if (wrap) coord = map.wrap(coord)
+      # thinning only works correctly if you have polylines from a database
+      if (!as.polygon && resolution != 0) {
+        pin <- par("pin")
+        usr <- par("usr")
+        resolution <- resolution * min(diff(usr)[-2]/pin/100)
+        coord[c("x", "y")] <- mapthin(coord, resolution)
+      }
       if (fill) polygon(coord, col = col, ...)
       else lines(coord, col = col, type = type, ...)
     }

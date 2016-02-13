@@ -1,9 +1,8 @@
 .onAttach <- function(lib,pkg) {
   packageStartupMessage("\n",
 #      " ############################################################\n",
-      " # ATTENTION: maps v3.0 has an updated 'world' map.        #\n",
-      " # Many country borders and names have changed since 1990. #\n",
-      " # Type '?world' or 'news(package=\"maps\")'. See README_v3. #\n",
+      " # maps v3.1: updated 'world': all lakes moved to separate new #\n",
+      " # 'lakes' database. Type '?world' or 'news(package=\"maps\")'.  #\n",
 #      " ############################################################\n")
       "\n")
 }

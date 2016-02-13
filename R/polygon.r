@@ -1,4 +1,4 @@
-map.where <- function(database = "world", x, y)
+map.where <- function(database = "world", x, y, ...)
 {
   if(missing(y)) {
     if(is.matrix(x)) { y <- x[, 2]; x <- x[, 1] }
@@ -21,6 +21,9 @@ map.where <- function(database = "world", x, y)
     names(nam)[gon]
   }
   else {
+    if (inherits(database,"SpatialPolygons")) {
+      database <- SpatialPolygons2map(database, ...)
+    }
     if(num.polygons(database) != length(database$names))
       stop("map object must have polygons (fill=TRUE)")
     n = length(database$x)
@@ -142,6 +145,7 @@ map.text <- function(database, regions = ".", exact = FALSE, labels,
   # convert m into a matrix
   x <- t(array(unlist(x), c(2, length(x))))
   if(move) {
+# AD: this option should probably be removed, as the code is not available
     # require(mining)
     move.collisions2 <- get("move.collisions2")	# to prevent check NOTE
     w = strwidth(labels, units = "inches", cex = cex)

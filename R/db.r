@@ -1,5 +1,3 @@
-# some obsolete names that may trigger a warning that the world database has changed:
-world.obsoletes <- c("USSR","Yugoslavia","Zaire","Czechoslovakia")  # any more?
 # in grep we must distinguish uk from Ukrain...
 world.exceptions <- c("uk")
 
@@ -98,8 +96,6 @@ function(database = "world", patterns, exact = FALSE)
   fname <- paste(sep = "", mapbase, ".N")
   cnames <- read.delim(fname, as.is = TRUE, header = FALSE)
   nam <- as.character(cnames[[1]])
-### AD: exact=TRUE fails if there is any non-fitting name
-###     is that optimal behaviour? Maybe it's 1 typo in 20 names.
   if(exact) {
     i <- match(patterns, nam)
     if (any(is.na(i))) {
@@ -115,9 +111,6 @@ function(database = "world", patterns, exact = FALSE)
 ## uk(?!r) would be simpler, but this can be extended should there ever be another case.
 ## for UK, there is in fact no exact fit to "^uk$", but this is nice & general
     if (database=="world") {
-      if (any(world.obsoletes %in% patterns)) warning(
-                        "Regions appear to be for legacy data base.\n
-                         Consider updating country list or use legacy_world as database.")
       iexp <- which(tolower(patterns) %in% world.exceptions)
       if (length(iexp)>0) {
         ibase <- patterns[iexp]
