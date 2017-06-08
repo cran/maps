@@ -3,7 +3,7 @@ function(xy, delta, symmetric = TRUE)
 {
   x <- xy$x
   y <- xy$y
-  xy <- .C("mapthin", PACKAGE="maps",
+  xy <- .C(C_map_thin,
     x = as.double(x),
     y = as.double(y),
     n = as.integer(length(x)),
@@ -30,9 +30,8 @@ function (x = world.cities, country = "", label = NULL, minpop = 0,
   maxpop = Inf, capitals = 0, cex = par("cex"), projection = FALSE,
   parameters = NULL, orientation = NULL, pch = 1, ...) 
 {
-  if (missing(x)) {
-    # data("world.cities", package = "maps")	# uses lazy evaluation
-    world.cities <- get("world.cities")
+  if (missing(x) && !exists("world.cities")) {
+    world.cities <- maps::world.cities
   }
   usr <- par("usr")
   if (!missing(projection) && projection != FALSE) {
@@ -177,7 +176,9 @@ map.wrap <- function(p, xlim=NULL) {
 
   index <- c(ind[1:j[1]],  
              unlist(lapply(1:(length(j)-1), function(k) c(NA, ind[(j[k]+1):j[(k + 1)]]) )) )
-
+# notice that p$name is not returned!
+# so if wrapping is applied, you loose polygon names
+# but they would be wrong, anyway...
   list(x = p$x[index], y = p$y[index])
 }
 

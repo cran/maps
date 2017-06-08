@@ -1,5 +1,36 @@
-# in grep we must distinguish uk from Ukrain...
-world.exceptions <- c("uk")
+fix_exceptions <- function(patterns) {
+  # we must distinguish uk from Ukraine...
+  # very ad hoc, I know.
+  patterns <- gsub("^UK$", "UK:", patterns, ignore.case=TRUE)
+  patterns
+}
+
+fix_exceptions2 <- function(patterns=".") {
+  stop("This function should not be called... yet.")
+# FIX ME: will not work for exact=TRUE ("usa" should work)
+  world.exceptions <- c("uk"="United Kingdom","usa"="United States of America")
+  if (length(patterns)==1 && patterns==".") return(patterns)
+  p1 <- vapply(strsplit(tolower(patterns),":"), function(x) x[1], FUN.VALUE="a")
+  iexp <- which(p1 %in% names(world.exceptions))
+  if (length(iexp)>0) {
+    warning("The use of short names 'UK' and 'USA' is deprecated and will be removed in the future.")
+    ilist <- unique(p1[iexp])
+    for (ii in ilist) p2 <- gsub(ii, world.exceptions[ii], p2, ignore.case=TRUE)
+    if (is.factor(patterns)) patterns <- as.character(patterns)
+    patterns[iexp] <- p2
+  }
+  patterns
+}
+
+mapenvir <- function(database="world") {
+  dbname <- paste0(database, "MapEnv")
+  if (length(grep("::", database)) == 0) {
+    if (!exists(dbname)) dbname <- paste0("maps::",dbname)
+  } else {
+    database <- strsplit(database,"::")[[1]][2]
+  }
+  paste0(Sys.getenv(eval(parse(text=dbname))), database)
+}
 
 "mapgetg" <-
 function(database = "world", gons, fill = FALSE, xlim = c(-1e30, 1e30),
@@ -7,10 +38,8 @@ function(database = "world", gons, fill = FALSE, xlim = c(-1e30, 1e30),
 {
 	ngon <- length(gons)
 	gnames <- names(gons)
-	dbname <- paste(database, "MapEnv", sep = "")
-	# data(list = dbname)
-	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
-	z <- .C("mapgetg", PACKAGE="maps",
+	mapbase <- mapenvir(database)
+	z <- .C(C_map_getg,
 		as.character(mapbase),
 		gons = as.integer(gons),
 		as.integer(ngon),
@@ -22,7 +51,7 @@ function(database = "world", gons, fill = FALSE, xlim = c(-1e30, 1e30),
 	sizes <- z$sizes
 	if(z$error < 0)
 		stop("error in reading polygon headers")
-	z <- .C("mapgetg", PACKAGE="maps",
+	z <- .C(C_map_getg,
 		as.character(mapbase),
 		as.integer(gons),
 		as.integer(ngon),
@@ -44,10 +73,8 @@ function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
 	nline <- as.integer(length(lines))
 	if(nline == 0)
 		return(integer(0))
-	dbname <- paste(database, "MapEnv", sep = "")
-	# data(list = dbname)
-	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
-	z <- .C("mapgetl", PACKAGE="maps",
+	mapbase <- mapenvir(database)
+	z <- .C(C_map_getl,
 		as.character(mapbase),
 		linesize = as.integer(lines),
 		error = as.integer(nline),
@@ -65,7 +92,7 @@ function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
 		return(integer(0))
 	linesize <- z$linesize[ok]
 	N <- sum(linesize) + nline - 1
-	xy <- .C("mapgetl", PACKAGE="maps",
+	xy <- .C(C_map_getl,
 		as.character(mapbase),
 		as.integer(lines),
 		as.integer(nline),
@@ -89,9 +116,7 @@ function(database = "world", lines, xlim = c(-1e30, 1e30), ylim = c(-1e30,
 "mapname" <-
 function(database = "world", patterns, exact = FALSE)
 {
-  dbname <- paste(database, "MapEnv", sep = "")
-  # data(list = dbname)
-  mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
+  mapbase <- mapenvir(database)
   # rewritten by Tom Minka
   fname <- paste(sep = "", mapbase, ".N")
   cnames <- read.delim(fname, as.is = TRUE, header = FALSE)
@@ -101,22 +126,14 @@ function(database = "world", patterns, exact = FALSE)
     if (any(is.na(i))) {
       if (!missing(patterns)) {
         pmiss <- patterns[is.na(i)]
-        if (length(i)>0) warning(paste("Some patterns could not be exactly matched:\n   ",paste(pmiss,collapse=", "),"\n"))
+        if (length(i)>0) warning(paste("Some patterns could not be exactly matched:\n   ",
+                                       paste(pmiss,collapse=", "),"\n"))
       }
       i <- NULL
     }
   } else {
 ## QUICK FIX: there is a problem now for UK vs Ukrain...
-## we fix it ad hoc for now by (^uk) => (^uk$) | (^uk:)
-## uk(?!r) would be simpler, but this can be extended should there ever be another case.
-## for UK, there is in fact no exact fit to "^uk$", but this is nice & general
-    if (database=="world") {
-      iexp <- which(tolower(patterns) %in% world.exceptions)
-      if (length(iexp)>0) {
-        ibase <- patterns[iexp]
-        patterns[iexp] <- paste(ibase,"$)|(^",ibase,":",sep="")
-      }
-    }
+    if (database=="world") patterns <- fix_exceptions(patterns) 
     regexp <- paste("(^", patterns, ")", sep = "", collapse = "|")
 # BUGFIX: perl regex is limited to about 30000 characters
 # so this crashes if patterns includes the whole world map
@@ -133,23 +150,26 @@ function(database = "world", patterns, exact = FALSE)
 function(database = "world")
 {
   if(is.character(database)) {
-	dbname <- paste(database, "MapEnv", sep = "")
-	# data(list = dbname)
-	mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
+	mapbase <- mapenvir(database)
         # minka: maptypes are now 1,2 instead of 0,1
-	switch(.C("maptype", PACKAGE="maps",
+	switch(.C(C_map_type,
 		as.character(mapbase),
 		integer(1))[[2]] + 2, "unknown", "spherical", "planar", "spherical")
   } else {
     # map object
-    "spherical"
+    if (is.list(database)) {
+      if (!is.null(database$maptype)) return(database$maptype)
+#      if (!is.null(database$projection)) return("planar")
+      return("spherical")
+# you may also look at $projection ... 
+    } else "spherical"
   }
 }
 
 char.to.ascii <- function(s) {
   # returns the ascii code for a character (0 for an empty string)
   n = length(s)
-  .C("char_to_ascii", PACKAGE="maps",
+  .C(C_char_to_ascii,
     as.integer(n), as.character(s), integer(n))[[2]]
 }
 is.regexp <- function(s) {
@@ -169,24 +189,13 @@ match.map <- function(database, regions, exact = FALSE, warn = TRUE) {
   regions = tolower(regions)
 
   if(is.character(database)) {
-    dbname <- paste(database, "MapEnv", sep = "")
-    # data(list = dbname)
-    mapbase <- paste(Sys.getenv(get(dbname)), database, sep = "")
+    mapbase <- mapenvir(database)
     fname <- paste(sep = "", mapbase, ".N")
     x <- read.delim(fname, header = FALSE)
     nam <- as.character(x[[1]])
 
-# this is a quick-and-dirty fix for "uk" matching "ukrain"
-# it must also trigger the use of match.map.grep
-# We replace "uk" by "uk but not followed a letter"
-# So Ukrain doesn't fit "uk" anymore, but "uk:scotland" is OK
-    if (database=="world") {
-      iexp <- which(regions %in% world.exceptions)
-      if (length(iexp)>0) {
-        ibase <- regions[iexp]
-        regions[iexp] <- paste(ibase,"(?![[:alpha:]])",sep="")
-      }
-    }
+    # this is a quick-and-dirty fix for "uk" matching "ukrain"
+    if (database=="world") regions <- fix_exceptions(regions)
   }
   else {
     nam <- database$names
@@ -207,7 +216,7 @@ match.map <- function(database, regions, exact = FALSE, warn = TRUE) {
     regions <- regions[ord.regions]
     Sys.setlocale(category = "LC_COLLATE", locale = lcc)
 
-    result <- .C("map_match", PACKAGE="maps",
+    result <- .C(C_map_match,
       as.integer(length(nam)), as.character(nam),
       as.integer(length(regions)), as.character(regions),
       result = integer(length(nam)), as.integer(exact))[["result"]]

@@ -1,5 +1,28 @@
 \name{NEWS}
 \title{News for package 'maps'}
+\section{Changes in maps version 3.2.0 (2017-06-07)}{
+  \itemize{
+    \item New map wrapping code should eliminate border artefacts on world maps, even with \code{fill=TRUE}. It can be called via \code{map(..., wrap=c(0,360),...)}, i.e. by giving \code{wrap} a vector in stead of a boolean value. The wrapping code is also directly available as \code{map.wrap.poly(data, xlim, poly=FALSE, antarctica=TRUE)}
+    \item \code{map()} has a new argument \code{lforce} (force limits). Possible values are \code{"n"} (no, default), \code{"e"} (exact limits), \code{"s"} (small enclosed rectangle) and \code{"l"} (large, enclosing rectangle). Forcing the limits will limit your map more forcibly to the given limits. \code{"s","l"} only impact the plotting window, but with \code{"e"} the data itself is clipped exactly to the borders.
+The clipping code is also directly available as \code{map.clip.poly(data, xlim=NULL, ylim=NULL, poly=FALSE)}.
+    \item Bug fixes:
+      \itemize{
+        \item All functions should now work if the package is not attached. So you can do \code{maps::map()} and even \code{maps::map("mapdata::worldHires")}
+        \item A long standing bug in map.where() was fixed. It probably only showed up with the "county" database (and only for about 20 counties in Missouri). The C code has also been optimised.
+        \item map() could have problems if \code{regions} was a factor rather than a character vector.
+        \item Minor correction to \code{us.cities}.
+        \item Fixed some duplicated region names in \code{italy} map.
+        \item The return value of \code{SpatialPolygons2map()} now has class \code{map}.
+        \item \code{county.fips} and \code{county.state}: changed from factors to character vectors.
+      }
+    \item Minor changes:
+      \itemize{
+        \item The C functions are now registered.
+        \item \code{maptype()} always returned \code{"spherical"} for external databases. Now it is possible to add a \code{maptype} manually, e.g. \code{mymap$maptype <- "planar"}.
+        \item When using projections, \code{map()} now checks for the availability of \code{mapproj} and gives a nicer message if it isn't available.
+      }
+  }
+}
 \section{Changes in maps version 3.1.1 (2016-07-19)}{
   \itemize{
     \item perl style regex caused problems for very long lists of regions. Fixed by setting perl=FALSE if the list of regions contains more than 1000 entries or the resulting regex is more than 30000 characters long.
