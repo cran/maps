@@ -4,7 +4,7 @@
 \alias{legacy_worldMapEnv}
 \alias{legacy_world2}
 \alias{legacy_world2MapEnv}
-\title{ Legacy low resolution World Map.}
+\title{ Legacy low resolution World Map. DEPRECATED!}
 \usage{data(worldMapEnv)}
 \description{
  This world database comes from a thinned cleaned-up version of the CIA World Data Bank II data and contains approximately 30,000 points representing the world coastlines and national boundaries approximatly around 1990.
@@ -20,6 +20,8 @@ the package can override the default location of the binary datasets.
 
 During a transition period (\code{maps} version 3.0) it is possible to switch to the old legacy map using the function \code{world.legacy(TRUE)} or by setting the setting the environment variable R_MAP_DATA_LEGACY=TRUE prior to loading the package.
 
+In future releases, this dataset will be removed completely. It will however remain accessible via the \code{mapdata} package (as of version 2.3.0), where it is called \code{worldLores}
+
 }
 \source{
 The CIA World Data Bank II is currently (2015) still available from 
@@ -29,7 +31,12 @@ The CIA World Data Bank II is currently (2015) still available from
 \code{\link{map}},\code{\link{world.legacy}},\code{\link{world}}
 }
 \examples{
-map('legacy_world', fill = TRUE, col = 1:10)
+## DEPRECATED:
+# map('legacy_world', fill = TRUE, col = 1:10)
+## Use mapdata::worldLores instead:
+if (requireNamespace("mapdata", quietly=TRUE) && packageVersion("mapdata") >= "2.3") {
+  map("mapdata::worldLores", fill = TRUE, col = 1:10)
+}
 }
 \references{
 Richard A. Becker, and Allan R. Wilks,
