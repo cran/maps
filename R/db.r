@@ -24,17 +24,14 @@ fix_exceptions2 <- function(patterns=".") {
 
 mapenvir <- function(database="world", warn.dep=FALSE) {
   dbname <- paste0(database, "MapEnv")
+  # the following will allow us to find e.g. "world" even if
+  # the maps package is not attached.
   if (length(grep("::", database)) == 0) {
     if (!exists(dbname)) dbname <- paste0("maps::",dbname)
   } else {
     database <- strsplit(database,"::")[[1]][2]
   }
   fbase <- paste0(Sys.getenv(eval(parse(text=dbname))), database)
-  if (basename(fbase)=="legacy_world" && warn.dep) {
-    .Deprecated(new="mapdata::worldLores", old="legacy_world",
-                package="maps")
-#                msg="The old world database will only be available as worldLores from the mapdata package.")
-  }
   fbase
 }
 

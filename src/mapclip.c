@@ -51,6 +51,7 @@ void map_clip_poly (double* xin, double *yin, int *nin,
 
   count_segments=0;  /* count how many internal line segments we get for a polyline */
   count_line=0;  /* keep track of which polyline we're treating */
+  position=2; /* an "impossible" value, just to keep the compiler happy */
   i = j = 0;
   while (i < *nin) {
     if (!ISNA(xin[i])) {
@@ -100,6 +101,7 @@ void map_clip_poly (double* xin, double *yin, int *nin,
         if (position < 0 && ppos > 0) {
           ymid = yin[i] + (yin[i-1]-yin[i]) / (xin[i-1] - xin[i]) * (*xlim - xin[i]);
           xout[j] = *xlim; yout[j] = ymid; j++;
+          if (j >= *nout) error("Output vector too short!\n");
         }
         if (*poly) segment_finish_list[count_segments-1] = j - 1;
       }
@@ -172,6 +174,7 @@ void construct_poly(double *xout, double *yout,
   ybuf = (double*) R_alloc( buflen , sizeof(double));
 
   line_start = segment_start_list[0];
+  for (i=0; i < count_segments ; i++) sorted_start_list[i] = 0 ;  
 
   /*  sorted_start_list[]   : element 0 contains the number of the segment with largest y value */
   /*  ordered_finish_list[] : element 0 contains the order of the end point of segment 0 */
@@ -179,8 +182,18 @@ void construct_poly(double *xout, double *yout,
     ordered_finish_list[i] = k = 0;
     for (j=0; j< count_segments; j++) {
       ordered_finish_list[i] += (yout[segment_finish_list[j]] > yout[segment_finish_list[i]]);
+      if (i > j && yout[segment_finish_list[j]] == yout[segment_finish_list[i]]) {
+//        Rprintf("Coinciding or crossing borders detected.\n");
+        ordered_finish_list[i]++;
+      }
       k += (yout[segment_start_list[j]] > yout[segment_start_list[i]]);
+      if (i < j && yout[segment_start_list[j]] == yout[segment_start_list[i]]) {
+//        Rprintf("Coinciding or crossing borders detected.\n");
+        k++;
+      }
     }
+  /* NOTE: in case of "wrong" polygons (e.g. strange 1d lines) 
+   * sorted_start_list may not get set correctly */
     sorted_start_list[k] = i ;
     is_used[i] = 0;
   }
@@ -189,11 +202,12 @@ void construct_poly(double *xout, double *yout,
   n = 0;
   *pcount = 0;
   while (remaining > 0) {
-    /* add segments until it closes */
+    /* start from the segment with highest y starting value: sorted_start_list[0] */
+    /* add segments until it "closes" */
     *pcount += 1;
     i = *pcount -1;
     while (i < count_segments && is_used[i]) i++;
-    if (i == count_segments) {error("shouldn't happen.\n") ; }
+    if (i == count_segments) error("Polygon closure error. No segments left.\n") ;
     /* do we have polygons on both "sides" (wrapping) or only one (clipping) ? */
     /* if sides=2, every end point of a segment is also the starting point */
     /* of segment at the other 'side', so we count differently. */
@@ -203,10 +217,12 @@ void construct_poly(double *xout, double *yout,
     closed = 0;
     poly_len=0;
     while (!closed) {
-      poly[poly_len++] = i; /*sorted_start_list[i]; */
-      if (poly_len > count_segments) error("polygon explosion.");
+      poly[poly_len++] = i; /* NOTE: the actual line segment is sorted_start_list[i], not i ! */
+      if (poly_len > count_segments) error("More polygons than line segments.");
       is_used[i] = 1;
       remaining--;
+      if (sorted_start_list[i] < 0 || sorted_start_list[i] >= count_segments) 
+        error("Polygon segment ordering error.");
       pe = ordered_finish_list[sorted_start_list[i]];
       if (pe == end_point) closed = 1;
       else {
@@ -217,14 +233,14 @@ void construct_poly(double *xout, double *yout,
     }
     /* write polygon to buffer */
     pstart = n;
-    for (j=0; j<poly_len ; j++) {
-      m=sorted_start_list[poly[j]];
+    for (j=0; j < poly_len ; j++) {
+      m = sorted_start_list[poly[j]];
       /* add some interpolated points along the boundary */
       if (j>0) {
         x0 = xbuf[n-1];
         y0 = ybuf[n-1];
         dy = (yout[segment_start_list[m]] - y0)/MAX_INTERP ;
-        for (k=1; k < MAX_INTERP; k++) {
+        if (dy != 0) for (k=1; k < MAX_INTERP; k++) {
           xbuf[n] = x0;
           ybuf[n] = y0 + k*dy;
           n++;
@@ -243,15 +259,17 @@ void construct_poly(double *xout, double *yout,
     x0 = xbuf[n-1];
     y0 = ybuf[n-1];
     dy = (ybuf[pstart] - y0)/MAX_INTERP ;
-    for (k=1; k < MAX_INTERP; k++) {
-      xbuf[n] = x0;
-      ybuf[n] = y0 + k*dy;
+    if (dy != 0) {
+      for (k=1; k < MAX_INTERP; k++) {
+        xbuf[n] = x0;
+        ybuf[n] = y0 + k*dy;
+        n++;
+        if (n >= buflen) error("Buffer too short.");
+      }
+      xbuf[n] = xbuf[pstart];
+      ybuf[n] = ybuf[pstart];
       n++;
-      if (n >= buflen) error("Buffer too short.");
     }
-    xbuf[n] = xbuf[pstart];
-    ybuf[n] = ybuf[pstart];
-    n++;
     if (n >= buflen) error("Buffer too short.");
     xbuf[n] = NA_REAL;
     ybuf[n] = NA_REAL;
@@ -380,6 +398,10 @@ void map_wrap_poly(double *xin, double *yin, int *nin,
             j = segment_finish_list[count_segments-1] + 1;
           } else count_segments = 0; /* island polygon: do nothing. */
         }
+          /* BUGFIX: it could be an artificial wrapping boundary starting at xmin/xmax -> do nothing */
+          /* -> CHECK FOR CLOSURE */
+        else if (count_segments == 1 && xout[j-1] == xout[segment_start_list[0]] &&
+                 yout[j-1] == yout[segment_start_list[0]] ) count_segments = 0;
 
         /* we don't check closure in yout : it /may/ be wrong due to starting at xmin/xmax */
         /* if the polygon doesn't close, that usually counts as a crossing */
