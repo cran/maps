@@ -1,11 +1,11 @@
-41e3b4ad066505f2737c1f859224308e *DESCRIPTION
+4ebc90670818c6fd57907f498cf85528 *DESCRIPTION
 f98062843ef434a0d133a80d4a3e9bec *NAMESPACE
 25fae1b403ec1150ade1d8a39897cb3c *R/db.r
 e14bceb9719d730c2083d49bb9252195 *R/iso.r
 215223814221788b83ec0312ad82b80b *R/map.r
 c5bc440b3bd3468a20571dcfa25386b3 *R/mapclip.r
 2499961483bffab070ac08902d8df6b6 *R/misc.r
-9a41def9b0198f59671cdd40d9b0bb70 *R/polygon.r
+543d1d39eebbcebeb830e46e6a718855 *R/polygon.r
 0a1c2b6d5134268f7a1f4ac1b6540816 *R/read_external.R
 dbc0aa2c8e89458cacd5324536618e22 *R/smooth.r
 82f30cf0378e5c0a5228ad89070471bb *R/zzz.R
@@ -37,7 +37,7 @@ b7ef910019aaa1f7225ca9ba87ba269d *data/world2MapEnv.rda
 3d84ce1f417c61e7e9da068046b9be67 *data/worldMapEnv.rda
 b2b136e6b1232bc7d1a375554df7b3ec *inst/NEWS.Rd
 373669aa8d512e2029bdcc0124bf30d3 *inst/README.md
-80395c6827029d0f7908e53f39d38d6c *man/Spatial2map.Rd
+a8a78d1875d0c6d28d9c618b74319f48 *man/Spatial2map.Rd
 5f9fab4844ba7d6a1ad6f65e8f684355 *man/area.map.Rd
 bcd90a5871cfbca677d5e2590d308d87 *man/canada.cities.Rd
 6d9fe8f475e9e0af75e299304a3b9002 *man/county.Rd
@@ -45,7 +45,7 @@ bcd90a5871cfbca677d5e2590d308d87 *man/canada.cities.Rd
 a94859ab8c594d73dd19a399291d374e *man/france.Rd
 c6f2b88b0dfdbcf81272190c100913e9 *man/identify.map.Rd
 b39d593d4b02815c823f555cf8599ee5 *man/internal.Rd
-15fc927ba01936286f10c701decb7ec0 *man/internal2.Rd
+088a473ae4b44ebaff96da6d05b12daa *man/internal2.Rd
 effae0e7508d946936599d9c3eb7bdc0 *man/iso.expand.Rd
 bd84406a4911f08ea727c1a0e86ea214 *man/iso3166.Rd
 fbad7ff24e3002faab7d421180f9ed82 *man/italy.Rd
@@ -53,14 +53,14 @@ fbad7ff24e3002faab7d421180f9ed82 *man/italy.Rd
 05153de221f510b3f77b0c165b4f881c *man/map.Rd
 f44d0c508a2f2b6cbaac31597eebb5a3 *man/map.axes.Rd
 9c632f57b793fa8354a6f86caf1bb55c *man/map.cities.Rd
-1e57c5d6532319d0ba8e988955ef32bb *man/map.scale.Rd
+2e4725f6bf728c31e1e08726946caabf *man/map.scale.Rd
 28a52f9b58db4a0f743ec06b483d8700 *man/map.text.Rd
 345930611a1a9471facfdcb9a3b644b0 *man/map.where.Rd
 8d5450090f4a9c267f1684618396daf4 *man/match.map.Rd
 69bc95dd432f418ce9a3d454623b5712 *man/nz.Rd
 6ed7be63f9c00758caad3531099422e4 *man/ozone.Rd
 e368efb53ad4d9a95938eb078ca68fd8 *man/polygon.Rd
-7b69f34becb65021b771c8262da481f6 *man/smooth.map.Rd
+9e0b1a4c7bbf4d48e2ae3aafe9f0e87a *man/smooth.map.Rd
 4d1560975e8ab208fdec65744cf2037e *man/state.Rd
 56c3ad20316e7e7be5956d41950e4e3a *man/state.carto.Rd
 45e6037e4ba35354418ccf62c03e2a32 *man/state.fips.Rd
@@ -100,7 +100,7 @@ b5b8e875ae2def75ac32ea4d06ad505b *src/lakes.line
 7be814ae5f21f6de1836406112cff018 *src/lakes.name
 c2c796a3c8d82bae2f9172db5dd61b6e *src/map.h
 4922e74678f4f3e119647c4232651e9f *src/mapclip.c
-db3ad63f28dcecd0195bc536bb2c4e08 *src/mapget.c
+bdc85362fe384cd8b9af30e7fdd6da54 *src/mapget.c
 5e9c4adf4fc41a391e3539fa708961b0 *src/nz.gon
 1baecc758797af3a5db79c56f81b16be *src/nz.gonstats
 750f995d19363927fdc64f1656f5e6ac *src/nz.line

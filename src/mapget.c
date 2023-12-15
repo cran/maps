@@ -248,7 +248,7 @@ void map_getg(char **database, int *which, int *nwhich, int *sl, int *retlines, 
 				else
 					Realloc(line, rh.nline, Polyline);
 				if(line == NULL)
-	  RBAD("No memory for polyline numbers", 0);
+	  RBAD("No memory for polyline numbers %s", "");
 				maxsize = rh.nline;
 			}
 			if(Seek(rf, rh.offset) == -1)
@@ -322,7 +322,7 @@ void map_getl(char **database, int *which, int *nwhich,
 	for(i = 0; i < *nwhich; i++) {
 		line = ABS(which[i]);
 		if(line <= 0)
-      LBAD("Polyline number must be positive", 0);
+      LBAD("Polyline number must be positive %s", "");
 		if(line > total)
       LBAD("Polyline number must be <= %d", (int)total);
 		if(Seek(lf, Loffset(line)) == -1)
@@ -351,7 +351,7 @@ void map_getl(char **database, int *which, int *nwhich,
 			else
 				Realloc(xy, lh.npair, struct pair);
 			if(xy == NULL)
-	LBAD("No memory for coordinate pairs", 0);
+	LBAD("No memory for coordinate pairs %s", "");
 			maxsize = lh.npair;
 		}
 		if(Seek(lf, lh.offset) == -1)
@@ -563,6 +563,11 @@ map_where(char **database, double *x, double *y, int *n, int *poly)
     gotpoly = 0;
     for(i = 0; i < *n; i++) {
       if(poly[i]) continue;
+      if(ISNA(x[i]) || ISNA(y[i])) {
+        /* leaving poly[i] zero would work, but then we check again at every pass */
+        poly[i] = NA_INTEGER;
+        continue;
+      }
       if(rh[j].sw.x > DEG2RAD(x[i]) || rh[j].sw.y > DEG2RAD(y[i]) ||
 	 rh[j].ne.x < DEG2RAD(x[i]) || rh[j].ne.y < DEG2RAD(y[i]))
 	continue;
