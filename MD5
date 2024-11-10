@@ -1,4 +1,4 @@
-4ebc90670818c6fd57907f498cf85528 *DESCRIPTION
+9e86c68ec98efcda0ec252f2340ca9cb *DESCRIPTION
 f98062843ef434a0d133a80d4a3e9bec *NAMESPACE
 25fae1b403ec1150ade1d8a39897cb3c *R/db.r
 e14bceb9719d730c2083d49bb9252195 *R/iso.r
@@ -100,7 +100,7 @@ b5b8e875ae2def75ac32ea4d06ad505b *src/lakes.line
 7be814ae5f21f6de1836406112cff018 *src/lakes.name
 c2c796a3c8d82bae2f9172db5dd61b6e *src/map.h
 4922e74678f4f3e119647c4232651e9f *src/mapclip.c
-bdc85362fe384cd8b9af30e7fdd6da54 *src/mapget.c
+29bb89cde588592c365a465fddad278a *src/mapget.c
 5e9c4adf4fc41a391e3539fa708961b0 *src/nz.gon
 1baecc758797af3a5db79c56f81b16be *src/nz.gonstats
 750f995d19363927fdc64f1656f5e6ac *src/nz.line
