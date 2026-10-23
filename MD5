@@ -1,8 +1,8 @@
-dfce923f235196a6f2151ef7539a577e *DESCRIPTION
+5eb783d394ac9adbb3a0655c76b2f241 *DESCRIPTION
 8225f7253af44c1bdffea765ef98ca31 *NAMESPACE
 ba4345cbc664684595f5e686e01834e3 *R/db.r
 284a213c34da318c33d43f1d4cce5048 *R/iso.r
-5fbf0a873cd5abfd9e58074b75b05ed4 *R/map.r
+20d8278822e11f4d116a4d546b14e316 *R/map.r
 c5bc440b3bd3468a20571dcfa25386b3 *R/mapclip.r
 940feb0ba4620eae528c9f215c914b8e *R/misc.r
 543d1d39eebbcebeb830e46e6a718855 *R/polygon.r
@@ -52,7 +52,7 @@ fbad7ff24e3002faab7d421180f9ed82 *man/italy.Rd
 0f7bbd6d4c8df7f1eedeeb6fc82f7459 *man/lakes.Rd
 6f3416df3f035e0fab5eb6d18d0029a6 *man/map.Rd
 f44d0c508a2f2b6cbaac31597eebb5a3 *man/map.axes.Rd
-5609f2244c4c29fde6644615bab721b4 *man/map.cities.Rd
+03e47747a6840b0a2f71a80e56c0d230 *man/map.cities.Rd
 2e4725f6bf728c31e1e08726946caabf *man/map.scale.Rd
 28a52f9b58db4a0f743ec06b483d8700 *man/map.text.Rd
 345930611a1a9471facfdcb9a3b644b0 *man/map.where.Rd
